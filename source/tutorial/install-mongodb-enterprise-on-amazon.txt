@@ -4,6 +4,12 @@ Install MongoDB Enterprise on Amazon Linux AMI
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 Overview
 --------
 
@@ -25,6 +31,8 @@ To install all of MongoDB's dependencies, run the following command:
 
 Install MongoDB Enterprise
 --------------------------
+
+.. include:: /includes/extracts/install-past-mongodb-enterprise-amazon.rst
 
 .. note::
 

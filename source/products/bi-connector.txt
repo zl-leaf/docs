@@ -6,6 +6,12 @@ MongoDB Connector for BI
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 The MongoDB Connector for BI (Business Intelligence)
 allows users to visualize their MongoDB Enterprise data using existing
 relational business intelligence tools such as Tableau.
@@ -65,9 +71,12 @@ You may edit DRDL files in the following ways:
 - Add fields,
 - Remove fields,
 - Remove tables,
-- Rename tables, so long as the ``collection`` field remains the same.
+- Rename tables, so long as the ``collection`` field remains the same,
+- Rename fields using the ``sqlname`` option
 
-Note that you can *not* currently rename fields.
+.. versionadded:: 1.1
+
+   Rename fields using the ``sqlname`` option.
 
 .. _drdl:
 
@@ -81,24 +90,27 @@ view of a MongoDB schema.
 as a guideline, and :program:`mongobischema` imports them into the Business
 Intelligence Connector.
 
-Using the `YAML <https://yaml.org/>`_ format, the file lists the databases,
-tables, and columns to be "exported" for use in the Business Intelligence tools.
-
 File Format
 ```````````
+
+Using the `YAML <https://yaml.org/>`_ format, the ``DRDL`` file lists the
+databases, tables, and columns to be "exported" for use in Business
+Intelligence tools.
+
 .. code-block:: yaml
 
    schema:
    - db: <database name>
      tables:
-     - table: <table name>
-       collection: <mongo collection name>
+     - table: <SQL table name>
+       collection: <MongoDB collection name>
        pipeline:
        - <optional pipeline elements>
        columns:
-       - name: <column name>
-         mongotype: <mongo field type>
-         sqltype: <mapped SQL type>
+       - name: <MongoDB field name>
+         sqlname: <mapped SQL column name>
+         mongotype: <MongoDB field type>
+         sqltype: <mapped SQL column type>
 
 Example
 ```````
@@ -119,6 +131,15 @@ Dates
 Timestamps
   The connector will treat any field of type :bsontype:`data_timestamp` as a
   ``varchar`` string type.
+
+Geospatial
+  .. versionadded:: 1.1.0
+
+  If a collection contains a
+  :doc:`geospatial index </applications/geospatial-indexes>`, the connector will
+  map the indexed field into an array of numeric longitude-latitude coordinates.
+
+  See :ref:`bi-geospatial` for an example.
 
 Heterogeneous Fields
   If a field can contain multiple types, :program:`mongodrdl` will pick the type
@@ -351,4 +372,61 @@ This pipeline uses :pipeline:`$unwind` to create a new record for each member of
 ``familyMembers``. The schema will track the array index in the field
 ``familyMembers_idx``.
 
+.. _bi-geospatial:
+
+Geospatial Data
+~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1.0
+
+If a collection contains a
+:doc:`geospatial index </applications/geospatial-indexes>`, the connector will
+map the indexed field into an array of numeric longitude-latitude coordinates.
+
+For example, given the following collection:
+
+.. code-block:: javascript
+
+   db.points.createIndex( { pos : "2dsphere" } )
+   db.points.insert({
+       pos : { type: "Point", coordinates: [ -73.97, 40.77 ] },
+       name: "Central Park",
+       category : "Parks"
+   })
+
+:program:`mongodrdl` will generate the following schema:
+
+.. code-block:: yaml
+
+   schema:
+   - db: test
+     tables:
+     - table: points
+       collection: points
+       pipeline: []
+       columns:
+       - name: _id
+         mongotype: bson.ObjectId
+         sqlname: _id
+         sqltype: varchar
+       - name: category
+         mongotype: string
+         sqlname: category
+         sqltype: varchar
+       - name: name
+         mongotype: string
+         sqlname: name
+         sqltype: varchar
+       - name: pos.coordinates
+         mongotype: geo.2darray
+         sqlname: pos.coordinates
+         sqltype: numeric[]
+
 .. seealso:: :program:`mongodrdl`, :program:`mongobiuser`, :program:`mongobischema`
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      Release Notes </products/release-notes/bi-connector>

@@ -435,6 +435,8 @@ type: boolean
 directive: setting
 description: |
   The port on which the HTTP interface listens.
+  
+  .. include:: /includes/fact-deprecated-http-interface.rst
 ---
 program: conf
 name: net.unixDomainSocket.enabled
@@ -1508,6 +1510,7 @@ directive: setting
 replacement:
   program: ":program:`mongod`"
   intro: "The"
+  dbpath: ":setting:`storage.dbPath`"
 inherit:
   name: storageEngine
   program: mongod
@@ -1724,8 +1727,7 @@ description: |
 
    .. versionadded:: 3.2
 
-   Enables :doc:`readConcern </reference/readConcern>` level of
-   ``"majority"``.
+   Enables :term:`read concern` level of ``"majority"``.
 ---
 program: conf
 name: sharding.configsvrMode

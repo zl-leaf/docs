@@ -543,6 +543,9 @@ description: |
   interface can increase network exposure. The {{role}} option enables the
   HTTP interface, even if the :setting:`HTTP interface <net.http.enabled>`
   option is disabled.
+
+  .. include:: /includes/fact-deprecated-http-interface.rst
+
 optional: true
 replacement:
   verb: "Permits"
@@ -579,7 +582,8 @@ name: httpinterface
 args: null
 directive: option
 description: |
-  .. versionadded:: 2.6
+
+  .. include:: /includes/fact-deprecated-http-interface.rst
 
   {{intro}} the HTTP interface. Enabling the interface can increase
   network exposure.
@@ -591,6 +595,8 @@ description: |
   .. note::
 
      - .. include:: /includes/fact-http-interface-kerberos.rst
+
+  .. versionadded:: 2.6
 
 optional: true
 replacement:
@@ -801,6 +807,9 @@ description: |
   enables the HTTP interface, even if the :setting:`HTTP interface
   <net.http.enabled>` option is disabled, and as a result can increase
   network exposure.
+
+  .. include:: /includes/fact-deprecated-http-interface.rst
+
 optional: true
 replacement:
   verb: "Enables"
@@ -1695,17 +1704,40 @@ description: |
 
      Starting in MongoDB 3.2, ``wiredTiger`` is the default.
 
-  {{intro}} storage engine for the {{program}} database. Valid
-  options include ``mmapv1`` and ``wiredTiger``.
+  {{intro}} storage engine for the {{program}} database. Available
+  values include:
+
+  .. list-table::
+     :header-rows: 1
+     :widths: 20 80
+
+     * - Value
+       - Description
+
+     * - ``mmapv1``
+       - To specify the :doc:`/core/mmapv1`.
+
+     * - ``wiredTiger``
+       - To specify the :doc:`/core/wiredtiger`.
+
+     * - ``inMemory``
+  
+       - To specify the :doc:`/core/inmemory`. The in-memory storage
+         engine is currently in **beta**. Do not use in production.
+
+         .. versionadded:: 3.2
+            Available in MongoDB Enterprise only.
+
 post: |
   If you attempt to start a {{program}} with a
-  :option:`storage.dbPath` that contains data files produced by a
+  {{dbpath}} that contains data files produced by a
   storage engine other than the one specified by {{role}}, {{program}}
   will refuse to start.
 optional: true
 default: "``wiredTiger``"
 replacement:
   intro: "Specifies the"
+  dbpath: ":option:`--dbpath`"
 ---
 program: mongod
 name: wiredTigerCacheSizeGB
@@ -2020,8 +2052,8 @@ description: |
 
    .. versionadded:: 3.2
 
-   Enables :doc:`readConcern </reference/readConcern>` level of
-   ``"majority"``. By default, ``"majority"`` level is not enabled.
+   Enables :term:`read concern` level of ``"majority"``. By default,
+   ``"majority"`` level is not enabled.
 ---
 program: mongod
 name: configsvrMode

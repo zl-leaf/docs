@@ -11,32 +11,38 @@ theme:
   jira: 'DOCS'
   sitename: 'MongoDB Docs'
   nav_excluded:
-    - /core/replica-set-members
+    - /administration/production-checklist
+    - /aggregation
+    - /applications/geospatial-indexes
+    - /contributors/getting-started
+    - /core/authorization
+    - /core/journaling
+    - /core/map-reduce
     - /core/replica-set-architectures
     - /core/replica-set-high-availability
-    - /applications/geospatial-indexes
-    - /administration/install-on-linux
+    - /core/replica-set-members
     - /core/sharded-cluster-components
-    - /security
-    - /core/authentication
-    - /core/authorization
-    - /reference/security
-    - /reference/indexes
-    - /reference/replication
-    - /reference/sharding
+    - /core/wiredtiger
+    - /installation
+    - /products/bi-connector
     - /reference/command
+    - /reference/indexes
     - /reference/method
-    - /reference/operator/query
-    - /reference/operator/update
     - /reference/operator/aggregation
+    - /reference/operator/query
     - /reference/operator/query-modifier
+    - /reference/operator/update
+    - /reference/replication
+    - /reference/security
+    - /reference/sharding
     - /release-notes/2.4
     - /release-notes/2.6
     - /release-notes/2.8
     - /release-notes/3.0
     - /release-notes/3.2
-    - /administration/production-checklist
-    - /contributors/getting-started
+    - /security
+    - /storage
+    - /tutorial/change-sharded-cluster-wiredtiger
 sidebars:
   '**':
     - 'pagenav.html'

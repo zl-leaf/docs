@@ -6,6 +6,12 @@ FAQ: MongoDB for Application Developers
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
 This document answers common questions about application
 development using MongoDB.
 
@@ -87,7 +93,7 @@ How do you aggregate data with MongoDB?
 ---------------------------------------
 
 In version 2.1 and later, you can use the new :doc:`aggregation
-framework </core/aggregation>`, with the
+framework </core/aggregation-pipeline>`, with the
 :dbcommand:`aggregate` command.
 
 MongoDB also supports :term:`map-reduce` with the

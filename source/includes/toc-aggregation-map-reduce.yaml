@@ -1,13 +1,10 @@
-file: /tutorial/aggregation-zip-code-data-set
+file: /core/map-reduce-sharded-collections
 description: |
-  Use the aggregation pipeline to group values and to calculate
-  aggregated sums and averages for a collection of United States zip
-  codes.
+  Mechanics of map-reduce operation with sharded collections.
 ---
-file: /tutorial/aggregation-with-user-preference-data
+file: /core/map-reduce-concurrency
 description: |
-  Use the pipeline to sort, normalize, and sum data on a collection
-  of user data.
+  Details the locks taken during map-reduce operations.
 ---
 file: /tutorial/map-reduce-examples
 description: |

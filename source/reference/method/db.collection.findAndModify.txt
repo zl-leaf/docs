@@ -4,6 +4,12 @@ db.collection.findAndModify()
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 .. EDITS to db.collection.findAndModify.txt must be carried over
    (possibly w modifications) to the command findAndModify.txt and vice
    versa
@@ -33,7 +39,8 @@ Definition
           new: <boolean>,
           fields: <document>,
           upsert: <boolean>,
-          bypassDocumentValidation: <boolean>
+          bypassDocumentValidation: <boolean>,
+          writeConcern: <document>
       });
 
    The :method:`db.collection.findAndModify()` method takes a document
@@ -279,3 +286,5 @@ The method returns the deleted document:
       "state" : "active",
       "rating" : 3
    }
+
+.. seealso:: :doc:`/tutorial/perform-findAndModify-quorum-reads`

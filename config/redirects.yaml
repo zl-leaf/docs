@@ -270,7 +270,7 @@ to: '/reference/method/db.collection.findAndModify'
 code: 303
 type: redirect
 outputs:
-  - after-v2.2
+  - before-v3.0
 ---
 from: '/tutorial/use-capped-collections-for-fast-writes-and-reads'
 to: '/core/crud-introduction'
@@ -853,14 +853,21 @@ code: 303
 outputs:
  - 'before-v3.0'
 ---
-from: '/reference/read-concern'
-to: '/reference/readConcern'
+from: '/reference/readConcern'
+to: '/reference/read-concern'
 type: 'redirect'
 code: 303
 outputs:
  - 'after-v3.0'
 ---
 from: '/reference/readConcern'
+to: '/core/read-operations-introduction'
+type: 'redirect'
+code: 303
+outputs:
+ - 'before-v3.0'
+---
+from: '/reference/read-concern'
 to: '/core/read-operations-introduction'
 type: 'redirect'
 code: 303
@@ -1006,4 +1013,39 @@ type: 'redirect'
 code: 303
 outputs:
   - 'before-v3.0'
+---
+from : '/core/storage-engines'
+to: '/storage'
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v3.0'
+---
+from : '/products/release-notes/bi-connector'
+to: '/'
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v3.0'
+---
+from: '/reference/method/cursor.noCursorTimeout'
+to: '/reference/method'
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v3.0'
+---
+from: '/reference/method/cursor.close'
+to: '/reference/method'
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v3.0'
+---
+from : '/reference/command/geoWalk'
+to: '/reference/command/nav-geospatial/'
+type: 'redirect'
+code: 303
+outputs:
+  - 'after-v3.0'
 ...
