@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "之前的 :term:`主节点 <primary>` 在 a :term:`故障切换 <failover>` 后重新回归 :"
 "term:`复制集 <replica set>` 时将会发生写操作的回滚。回滚只会发生在主节点的写"
-"操作 **没能** 成功在 :term:`从节点 <secondary>` 上应用就辞职的情况下。当主节"
+"操作 **没能** 成功在 :term:`从节点 <secondary>` 上应用就Down 掉的情况下。当主节"
 "点重新以一个从节点加入复制集，它将进行 \"回滚\" ，其上得写操作将与复制集中其"
 "他成员的保持一致。"
 
@@ -47,7 +47,7 @@ msgid ""
 "member of the replica set before the primary steps down *and* if that member "
 "remains available and accessible to a majority of the replica set."
 msgstr ""
-"当主节点在从节点完成写操作的复制后才辞职的或是主节点一直是可用的或是与多数节"
+"当主节点在从节点完成写操作的复制后才Down 掉的或是主节点一直是可用的或是与多数节"
 "点可以沟通的，将 *不会* 发生回滚。"
 
 #: ../source/core/replica-set-rollbacks.txt:35
