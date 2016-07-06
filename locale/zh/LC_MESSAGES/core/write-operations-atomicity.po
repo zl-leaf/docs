@@ -1,125 +1,172 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-01 21:53+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: ../source/core/write-operations-atomicity.txt:3
 msgid "Atomicity and Transactions"
-msgstr ""
+msgstr "原子性和事务处理"
 
-#: ../source/core/write-operations-atomicity.txt:7
+#: ../source/core/write-operations-atomicity.txt:13
 msgid ""
 "In MongoDB, a write operation is atomic on the level of a single document, "
-"even if the operation modifies multiple embedded documents *within* a single"
-" document."
+"even if the operation modifies multiple embedded documents *within* a single "
+"document."
 msgstr ""
+"在MongoDB中，一个写操作的原子性是基于单个文档的，即使写操作是在单个文档*内部*更"
+"改多个嵌套文档。"
 
-#: ../source/core/write-operations-atomicity.txt:11
+#: ../source/includes/extracts/concurrent-operations-multi-document-writes.rst:1
 msgid ""
-"When a single write operation modifies multiple documents, the modification "
-"of each document is atomic, but the operation as a whole is not atomic and "
-"other operations may interleave. However, you can *isolate* a single write "
-"operation that affects multiple documents using the :update:`$isolated` "
-"operator."
+"When a single write operation modifies multiple documents, the modification of "
+"each document is atomic, but the operation as a whole is not atomic and other "
+"operations may interleave. However, you can *isolate* a single write operation "
+"that affects multiple documents using the :update:`$isolated` operator."
 msgstr ""
+"当一个写操作修改了多个文档，每个文档的更新是具有原子性的，但是整个操作作为一个"
+"整体是不具有原子性的，并且与其他操作可能会有所交替。但是，您可以使用:update:`"
+"$isolated`操作将多个文档单的写操作*隔离*成单个的写操作，"
 
-#: ../source/core/write-operations-atomicity.txt:18
+#: ../source/core/write-operations-atomicity.txt:22
 msgid "``$isolated`` Operator"
-msgstr ""
-
-#: ../source/core/write-operations-atomicity.txt:20
-msgid ""
-"Using the :update:`$isolated` operator, a write operation that affect "
-"multiple documents can prevent other processes from interleaving once the "
-"write operation modifies the first document. This ensures that no client "
-"sees the changes until the write operation completes or errors out."
-msgstr ""
+msgstr "``$isolated``操作"
 
 #: ../source/core/write-operations-atomicity.txt:26
-msgid ""
-"Isolated write operation does not provide \"all-or-nothing\" atomicity. That"
-" is, an error during the write operation does not roll back all its changes "
-"that preceded the error."
-msgstr ""
+msgid "The :update:`$isolated` operator does **not** work on sharded clusters."
+msgstr ":update:`$isolated`操作在分片集群中**不**起作用。"
 
-#: ../source/core/write-operations-atomicity.txt:30
-msgid ""
-"The :update:`$isolated` operator does **not** work on sharded clusters."
-msgstr ""
-
-#: ../source/core/write-operations-atomicity.txt:32
+#: ../source/core/write-operations-atomicity.txt:28
 msgid ""
 "For an example of an update operation that uses the :update:`$isolated` "
-"operator, see :update:`$isolated`. For an example of a remove operation that"
-" uses the :update:`$isolated` operator, see :ref:`isolate-remove-"
-"operations`."
+"operator, see :update:`$isolated`. For an example of a remove operation that "
+"uses the :update:`$isolated` operator, see :ref:`isolate-remove-operations`."
 msgstr ""
+"使用:update:`$isolated`更新操作的例子请参看:update:`$isolated`，:update:`"
+"$isolated` 删除操作的的例子参看:ref: `isolate-remove-operations` 。"
 
-#: ../source/core/write-operations-atomicity.txt:38
+#: ../source/core/write-operations-atomicity.txt:34
 msgid "Transaction-Like Semantics"
-msgstr ""
+msgstr "类事务处理语句"
 
-#: ../source/core/write-operations-atomicity.txt:40
+#: ../source/core/write-operations-atomicity.txt:36
 msgid ""
 "Since a single document can contain multiple embedded documents, single-"
-"document atomicity is sufficient for many practical use cases. For cases "
-"where a sequence of write operations must operate as if in a single "
-"transaction, you can implement a :doc:`two-phase commit </tutorial/perform-"
-"two-phase-commits>` in your application."
+"document atomicity is sufficient for many practical use cases. For cases where "
+"a sequence of write operations must operate as if in a single transaction, you "
+"can implement a :doc:`two-phase commit </tutorial/perform-two-phase-commits>` "
+"in your application."
 msgstr ""
+"因为单个文档中可以包含嵌套文档，所以单个文档的原子性在很多实践场景下就能够满足"
+"需求。在需要多个连续的写操作必须像一个写操作那样保持原子性的场景下，您可以在应"
+"用中使用 :doc: `two-phase commit </tutorial/perform-two-phase-commits>` 。"
 
-#: ../source/core/write-operations-atomicity.txt:46
+#: ../source/core/write-operations-atomicity.txt:42
 msgid ""
-"However, two-phase commits can only offer transaction-*like* semantics. "
-"Using two-phase commit ensures data consistency, but it is possible for "
-"applications to return intermediate data during the two-phase commit or "
-"rollback."
+"However, two-phase commits can only offer transaction-*like* semantics. Using "
+"two-phase commit ensures data consistency, but it is possible for applications "
+"to return intermediate data during the two-phase commit or rollback."
 msgstr ""
+"但是，两阶段提交只能提供*类*事务处理的语句。使用两阶段提交保证了数据的一致性，"
+"但是在两阶段提交或者回滚时，应用是有可能返回中间数据的。"
 
-#: ../source/core/write-operations-atomicity.txt:51
+#: ../source/core/write-operations-atomicity.txt:47
 msgid ""
-"For more information on two-phase commit and rollback, see :doc:`/tutorial"
-"/perform-two-phase-commits`."
+"For more information on two-phase commit and rollback, see :doc:`/tutorial/"
+"perform-two-phase-commits`."
 msgstr ""
+"更多关于两阶段提交和回滚，参看:doc: `/tutorial/perform-two-phase-commits` 。"
 
-#: ../source/core/write-operations-atomicity.txt:57
+#: ../source/core/write-operations-atomicity.txt:53
 msgid "Concurrency Control"
-msgstr ""
+msgstr "并行处理的控制"
 
-#: ../source/core/write-operations-atomicity.txt:59
+#: ../source/core/write-operations-atomicity.txt:55
 msgid ""
-"Concurrency control allows multiple applications to run concurrently without"
-" causing data inconsistency or conflicts."
-msgstr ""
+"Concurrency control allows multiple applications to run concurrently without "
+"causing data inconsistency or conflicts."
+msgstr "并行处理的控制允许多个应用同时运行而不会造成数据的不一致或者冲突。"
 
-#: ../source/core/write-operations-atomicity.txt:62
+#: ../source/core/write-operations-atomicity.txt:0
+msgid "On this page"
+msgstr "本页内容"
+
+#: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:1
 msgid ""
-"An approach may be to create a :ref:`unique index <index-type-unique>` on a "
-"field (or fields) that should have only unique values (or unique combination"
-" of values) prevents duplicate insertions or updates that result in "
-"duplicate values. For examples of use cases, see :ref:`update() and Unique "
-"Index <update-with-unique-indexes>` and :ref:`findAndModify() and Unique "
-"Index <upsert-and-unique-index>`."
+"Using the :update:`$isolated` operator, a write operation that affects "
+"multiple documents can prevent other processes from interleaving once the "
+"write operation modifies the first document. This ensures that no client sees "
+"the changes until the write operation completes or errors out."
 msgstr ""
+"使用:update:`$isolated`写操作将影响多个文档，能够阻止其它的进程在写操作的过程中"
+"修改第一个文档。这样就保证没有客户端能够看到修改，直到写操作完成或者出错。"
 
-#: ../source/core/write-operations-atomicity.txt:69
+#: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:7
+msgid ""
+":update:`$isolated` does **not** work with :term:`sharded clusters <sharded "
+"cluster>`."
+msgstr ""
+":update:`$isolated`操作在:term: `sharded clusters <sharded cluster>` 中**不**起"
+"作用。"
+
+#: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:10
+msgid ""
+"An isolated write operation does not provide \"all-or-nothing\" atomicity. "
+"That is, an error during the write operation does not roll back all its "
+"changes that preceded the error."
+msgstr ""
+"这个隔离的写操作不提供\"所有或者全部没有\"的原子性。这就是说在写的过程中如果有"
+"错误产生不会将所有的在错误产生之前的更新全部回滚。"
+
+#: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:16
+msgid ""
+":update:`$isolated` operator causes write operations to acquire an exclusive "
+"lock on the collection, *even for document-level locking storage engines* such "
+"as WiredTiger. That is, :update:`$isolated` operator will make WiredTiger "
+"single-threaded for the duration of the operation."
+msgstr ""
+":update:`$isolated`操作将使写操作在集合上获得一个排他锁，*甚至对于文档级别的锁"
+"存储引擎*比如WiredTiger也是这样处理的。这也就是说在执行:update:`$isolated`操作"
+"运行期间会导致WiredTiger单线程运行。"
+
+#: ../source/core/write-operations-atomicity.txt:58
+msgid ""
+"One approach is to create a :ref:`unique index <index-type-unique>` on a field "
+"that can only have unique values. This prevents insertions or updates from "
+"creating duplicate data. Create a unique index on multiple fields to force "
+"uniqueness on that combination of field values. For examples of use cases, "
+"see :ref:`update() and Unique Index <update-with-unique-indexes>` and :ref:"
+"`findAndModify() and Unique Index <upsert-and-unique-index>`."
+msgstr ""
+"一个方法是在字段上创建一个唯一性的:ref: `unique index <index-type-unique>` 。这"
+"样就可以阻止插入或者更新重复的数据。在多个字段上创建唯一性索引将保证多个字段组"
+"合的唯一性。使用案例参看:ref: `update() and Unique Index <update-with-unique-"
+"indexes>` 和 :ref: `findAndModify() and Unique Index <upsert-and-unique-"
+"index>` 。"
+
+#: ../source/core/write-operations-atomicity.txt:66
 msgid ""
 "Another approach is to specify the expected current value of a field in the "
-"query predicate for the write operations. For an example, see :doc:`Update "
-"if Current </tutorial/update-if-current>`."
+"query predicate for the write operations. The two-phase commit pattern "
+"provides a variation where the query predicate includes the :ref:`application "
+"identifier <2-phase-commits-concurrency>` as well as the expected state of the "
+"data in the write operation."
 msgstr ""
+"另外一种方法是通过在写操作中使用查询断言来指定期望的字段当前值。两阶段提交模式"
+"除了提供查询断言以外还额外可以指定期望的数据写的状态ref: `application "
+"identifier <2-phase-commits-concurrency>` 。"
 
-#: ../source/core/write-operations-atomicity.txt:73
-msgid ""
-"The two-phase commit pattern provides a variation where the query predicate "
-"includes the :ref:`application identifier <2-phase-commits-concurrency>` as "
-"well as the expected state of the data in the write operation."
-msgstr ""
+#: ../source/core/write-operations-atomicity.txt:72
+msgid ":doc:`/core/read-isolation-consistency-recency`"
+msgstr ":doc:`/core/read-isolation-consistency-recency`"

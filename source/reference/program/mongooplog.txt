@@ -13,7 +13,7 @@
    :class: singlecol
 .. |tool-binary| replace:: mongooplog
 
-.. versionadded:: 2.2
+.. deprecated:: 3.2
 
 Synopsis
 --------

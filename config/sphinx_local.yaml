@@ -12,20 +12,47 @@ theme:
   sitename: 'MongoDB Docs'
   nav_excluded:
     - /administration/production-checklist
+    - /administration/indexes-management
     - /aggregation
     - /applications/geospatial-indexes
+    - /applications/indexes
     - /contributors/getting-started
+    - /core/2d
+    - /core/2dsphere
+    - /core/auditing
+    - /core/authentication
     - /core/authorization
+    - /core/databases-and-collections
+    - /core/geohaystack
+    - /core/index-single
+    - /core/index-compound
+    - /core/index-creation
+    - /core/index-hashed
+    - /core/index-multikey
+    - /core/index-partial
+    - /core/index-sparse
+    - /core/index-text
+    - /core/index-ttl
+    - /core/index-unique
     - /core/journaling
+    - /core/kerberos
     - /core/map-reduce
     - /core/replica-set-architectures
     - /core/replica-set-high-availability
     - /core/replica-set-members
+    - /replication
     - /core/sharded-cluster-components
     - /core/wiredtiger
+    - /core/write-operations-atomicity
+    - /crud
+    - /indexes
     - /installation
+    - /introduction
+    - /mongo
     - /products/bi-connector
     - /reference/command
+    - /text-search
+    - /core/index-text
     - /reference/indexes
     - /reference/method
     - /reference/operator/aggregation
@@ -35,6 +62,7 @@ theme:
     - /reference/replication
     - /reference/security
     - /reference/sharding
+    - /reference/write-concern
     - /release-notes/2.4
     - /release-notes/2.6
     - /release-notes/2.8
@@ -43,6 +71,7 @@ theme:
     - /security
     - /storage
     - /tutorial/change-sharded-cluster-wiredtiger
+    - /tutorial/query-documents
 sidebars:
   '**':
     - 'pagenav.html'

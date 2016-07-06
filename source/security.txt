@@ -20,11 +20,6 @@ If you are already familiar with security and MongoDB security
 practices, consider the :doc:`/administration/security-checklist` for a
 collection of recommended actions to protect a MongoDB deployment.
 
-.. only:: (website or singlehtml)
-
-   You can download this section in PDF form as :hardlink:`MongoDB
-   Security <MongoDB-security-guide.pdf>`.
-
 .. class:: hidden
 
    .. toctree::
@@ -36,5 +31,6 @@ collection of recommended actions to protect a MongoDB deployment.
       /core/security-encryption
       /core/auditing
       /core/security-hardening
-      /administration/security
+      /tutorial/implement-field-level-redaction
       /reference/security
+      /tutorial/create-a-vulnerability-report

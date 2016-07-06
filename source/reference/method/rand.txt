@@ -1,6 +1,6 @@
-======
-rand()
-======
+=======
+_rand()
+=======
 
 .. default-domain:: mongodb
 

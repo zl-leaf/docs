@@ -16,10 +16,10 @@ description: |
   introspects operations and reports data for analysis on performance
   and behavior.
 ---
-file: /reference/server-status
+file: /core/server-side-javascript
 description: |
-  Provides an example and a high level overview of the output of the
-  :dbcommand:`serverStatus` command.
+  Describes MongoDB's support for executing JavaScript code for
+  server-side operations.
 ---
 file: /reference/exit-codes
 description: |

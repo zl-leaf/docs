@@ -15,6 +15,8 @@ Definition
 
 .. dbcommand:: group
 
+   .. include:: /includes/extracts/admonition-group-command-alternative.rst
+
    Groups documents in a collection by
    the specified key and performs simple aggregation functions, such as
    computing counts and sums. The command is analogous to a ``SELECT

@@ -271,7 +271,7 @@ Glossary
       For a single :program:`mongod` server, a write operation is
       considered durable when it has been written to the server's
       :term:`journal` file. For a :doc:`replica set
-      </core/replication-introduction>`, a write operation is
+      </replication>`, a write operation is
       considerable durable once the write operation is durable on a
       :writeconcern:`majority of voting nodes <"majority">` in the
       replica set; i.e. written to a majority of voting nodes' journal
@@ -366,7 +366,7 @@ Glossary
       same input, whether run once or run multiple times.
 
    index
-      A data structure that optimizes queries. See :doc:`/core/indexes`.
+      A data structure that optimizes queries. See :doc:`/indexes`.
 
    initial sync
       The :term:`replica set` operation that replicates data from an
@@ -720,8 +720,8 @@ Glossary
       that includes a variety of :term:`query operators <operator>` with
       names that begin with a ``$`` character. In the :program:`mongo`
       shell, you can issue queries using the
-      :method:`~db.collection.find()` and
-      :method:`~db.collection.findOne()` methods. See
+      :method:`db.collection.find()` and
+      :method:`db.collection.findOne()` methods. See
       :ref:`read-operations-queries`.
 
    query optimizer
@@ -972,8 +972,7 @@ Glossary
      For a :term:`capped collection`, a tailable cursor is a cursor that
      remains open after the client exhausts the results in the initial
      cursor. As clients insert new documents into the capped collection,
-     the tailable cursor continues to retrieve documents. See
-     :doc:`/tutorial/create-tailable-cursor`.
+     the tailable cursor continues to retrieve documents.
 
    topology
      The state of a deployment of MongoDB instances, including

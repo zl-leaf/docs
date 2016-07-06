@@ -25,6 +25,8 @@ deployments, enable authentication for each MongoDB server.
 See :doc:`/core/authentication` and
 :doc:`/tutorial/enable-authentication`.
 
+.. _security-checklist-role-based-access-control:
+
 Configure Role-Based Access Control
 -----------------------------------
 
@@ -129,6 +131,6 @@ Consider Security Standards Compliance
 
 For applications requiring HIPAA or PCI-DSS compliance, please refer to the
 `MongoDB Security Reference Architecture
-<http://info.mongodb.com/rs/mongodb/images/MongoDB_Security_Architecture_WP.pdf>`_
+<https://www.mongodb.com/collateral/mongodb-security-architecture>`_
 to learn more about how you can use the key security
 capabilities to build compliant application infrastructure.

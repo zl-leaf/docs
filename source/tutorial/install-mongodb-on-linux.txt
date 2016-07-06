@@ -18,10 +18,15 @@ Compiled versions of MongoDB Community Edition for Linux provide a simple
 option for installing MongoDB Community Edition for other Linux systems without
 supported packages.
 
+.. note::
+   Do not use this installation method unless you have a specific need
+   that the available :ref:`Linux Packages <recommended-linux-install>`
+   do not address.
+
 Install MongoDB Community Edition
 ---------------------------------
 
-MongoDB provides archives for both 64-bit and 32-bit (depreciated) builds of
+MongoDB provides archives for both 64-bit and 32-bit (deprecated) builds of
 Linux. Follow the installation procedure appropriate for your system.
 
 .. include:: /includes/extracts/install-past-mongodb-org-tarball.rst
