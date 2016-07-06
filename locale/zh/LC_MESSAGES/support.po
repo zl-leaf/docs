@@ -73,7 +73,8 @@ msgid ""
 "questions about MongoDB. You can post and view the forum via the Google "
 "Groups web interface or subscribe to updates via email."
 msgstr "`社区支持论坛 <http://groups.google.com/group/mongodb-user>`_: "
-""
+"开放式的，基于意见或一般性问题，最适合MongoDB的讨论。你可以通过 Google Group 的web接口"
+"的方式发布和查看论坛内容，或者通过邮件订阅更新内容。"
 
 #: ../source/support.txt:49
 msgid ""
@@ -83,13 +84,13 @@ msgstr ""
 
 #: ../source/support.txt:52
 msgid "Commercial Support"
-msgstr ""
+msgstr "商业支持"
 
 #: ../source/support.txt:54
 msgid ""
 "MongoDB Inc. provides products and services to help get you to production "
 "faster with less effort and risk, including:"
-msgstr ""
+msgstr "MongoDB 公司提供产品和服务，以帮助你到达生产速度更快，较少的努力和风险，包括："
 
 #: ../source/support.txt:57
 msgid ""
