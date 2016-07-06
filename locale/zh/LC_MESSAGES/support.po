@@ -17,7 +17,7 @@ msgstr "技术支持"
 
 #: ../source/support.txt:0
 msgid "On this page"
-msgstr "本页面"
+msgstr "本页内容"
 
 #: ../source/support.txt:17
 msgid "Discuss, learn about, and get help with MongoDB."
