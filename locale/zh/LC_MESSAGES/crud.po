@@ -4,12 +4,14 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-20 16:48+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/crud.txt:3
 msgid "MongoDB CRUD Operations"
@@ -17,17 +19,19 @@ msgstr "MongoDB CRUD 操作"
 
 #: ../source/crud.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 #: ../source/crud.txt:13
 msgid ""
 "CRUD operations *create*, *read*, *update*, and *delete* :ref:`documents "
 "<bson-document-format>`."
 msgstr ""
+"CRUD操作就是 *创建*,*读取*,*更新*,*删除*  :ref:`documents <bson-document-"
+"format>`."
 
 #: ../source/crud.txt:17
 msgid "Create Operations"
-msgstr ""
+msgstr "创建操作"
 
 #: ../source/crud.txt:19
 msgid ""
@@ -35,24 +39,27 @@ msgid ""
 "to a :ref:`collection <collections>`. If the collection does not currently "
 "exist, insert operations will create the collection."
 msgstr ""
+"创建或插入操作即向  :ref:`collection <collections>` 添加新的  :ref:"
+"`documents <bson-document-format>`.如果插入时集合不存在,插入操作会创建该集"
+"合."
 
 #: ../source/crud.txt:24
 msgid ""
 "MongoDB provides the following methods to insert documents into a "
 "collection:"
-msgstr ""
+msgstr "MongoDB中提供了以下方法来插入文档到一个集合:"
 
 #: ../source/crud.txt:27
 msgid ":method:`db.collection.insert()`"
-msgstr ""
+msgstr ":method:`db.collection.insert()`"
 
 #: ../source/crud.txt:29
 msgid ":method:`db.collection.insertOne()` |versionadded|"
-msgstr ""
+msgstr ":method:`db.collection.insertOne()` |versionadded|"
 
 #: ../source/crud.txt:31
 msgid ":method:`db.collection.insertMany()` |versionadded|"
-msgstr ""
+msgstr ":method:`db.collection.insertMany()` |versionadded|"
 
 #: ../source/crud.txt:33
 msgid ""
@@ -60,111 +67,117 @@ msgid ""
 "operations in MongoDB are :doc:`atomic </core/write-operations-atomicity>` "
 "on the level of a single :doc:`document </core/document>`."
 msgstr ""
+"在MongoDB中,插入操作作用于单个 :term:`collection` .MongoDB中所有的写操作在单"
+"个  :doc:`document </core/document>` 层级上是 :doc:`atomic </core/write-"
+"operations-atomicity>`."
 
 #: ../source/crud.txt:40
 msgid "For examples, see :doc:`/tutorial/insert-documents`."
-msgstr ""
+msgstr "示例请查看 :doc:`/tutorial/insert-documents` ."
 
 #: ../source/crud.txt:45
 msgid "Read Operations"
-msgstr ""
+msgstr "读操作"
 
 #: ../source/crud.txt:47
 msgid ""
-"Read operations :ref:`documents <bson-document-format>` from a "
-":ref:`collection <collections>`; i.e. queries a collection for documents. "
+"Read operations :ref:`documents <bson-document-format>` from a :ref:"
+"`collection <collections>`; i.e. queries a collection for documents. "
 "MongoDB provides the following methods to read documents from a collection:"
 msgstr ""
+"读操作获取 :ref:`collection <collections>` 中的 :ref:`documents <bson-"
+"document-format>` ;例查询一个集合中的文档.MongoDB提供了如下方法从集合中读取"
+"文档:"
 
 #: ../source/crud.txt:52
 msgid ":method:`db.collection.find()`"
-msgstr ""
+msgstr ":method:`db.collection.find()`"
 
 #: ../source/crud.txt:54
 msgid ""
 "You can specify :ref:`query filters or criteria <read-operations-query-"
 "argument>` that identify the documents to return."
 msgstr ""
+"你可以指定 :ref:`query filters or criteria <read-operations-query-"
+"argument>` 以找到返回的文档."
 
 #: ../source/crud.txt:59
 msgid "For examples, see :doc:`/tutorial/query-documents`."
-msgstr ""
+msgstr "示例请查看 :doc:`/tutorial/query-documents`."
 
 #: ../source/crud.txt:62
 msgid "Update Operations"
-msgstr ""
+msgstr "更新操作"
 
 #: ../source/crud.txt:64
 msgid ""
-"Update operations modify existing :ref:`documents <bson-document-format>` in"
-" a :ref:`collection <collections>`. MongoDB provides the following methods "
-"to update documents of a collection:"
+"Update operations modify existing :ref:`documents <bson-document-format>` "
+"in a :ref:`collection <collections>`. MongoDB provides the following "
+"methods to update documents of a collection:"
 msgstr ""
+"更新操作修改 :ref:`collection <collections>` 中已经存在的 :ref:`documents "
+"<bson-document-format>`.MongoDB提供了以下方法去更新集合中的文档:"
 
 #: ../source/crud.txt:68
 msgid ":method:`db.collection.update()`"
-msgstr ""
+msgstr "：方法：`db.collection.update（）`"
 
 #: ../source/crud.txt:70
 msgid ":method:`db.collection.updateOne()` |versionadded|"
-msgstr ""
+msgstr "：方法：`db.collection.updateOne（）`| versionadded |"
 
 #: ../source/crud.txt:72
 msgid ":method:`db.collection.updateMany()` |versionadded|"
-msgstr ""
-"MongoDB 提供丰富的数据读取和管理手段。CRUD 指的是 *创建*, *读取*, *更新*, 和 *删除*。"
-"这些操作是所有数据库交互的基础。"
+msgstr " :ref:`documents <bson-document-format>` "
 
 #: ../source/crud.txt:74
 msgid ":method:`db.collection.replaceOne()` |versionadded|"
-msgstr ""
+msgstr " :ref:`documents <bson-document-format>` "
 
 #: ../source/crud.txt:76
 msgid ""
-
 "In MongoDB, update operations target a single collection. All write "
 "operations in MongoDB are :doc:`atomic </core/write-operations-atomicity>` "
 "on the level of a single document."
 msgstr ""
-
+"在MongoDB中,更新操作作用于单个集合.MongoDB中所有的写操作在单个  :doc:"
+"`document </core/document>` 层级上是 :doc:`atomic </core/write-operations-"
+"atomicity>`."
 
 #: ../source/crud.txt:80
 msgid ""
-"You can specify criteria, or filters, that identify the documents to update."
-" These :ref:`filters <document-query-filter>` use the same syntax as read "
-"operations."
+"You can specify criteria, or filters, that identify the documents to "
+"update. These :ref:`filters <document-query-filter>` use the same syntax as "
+"read operations."
 msgstr ""
-
+"你可以指定条件或过滤器来找到要更新的文档.这些 :ref:`filters <document-query-"
+"filter>` 使用与读操作一样的语法."
 
 #: ../source/crud.txt:86
 msgid "For examples, see :doc:`/tutorial/update-documents`."
-msgstr ""
-
+msgstr "示例请查看 :doc:`/tutorial/update-documents`."
 
 #: ../source/crud.txt:89
 msgid "Delete Operations"
-msgstr ""
-
+msgstr "删除操作"
 
 #: ../source/crud.txt:91
 msgid ""
 "Delete operations remove documents from a collection. MongoDB provides the "
 "following methods to delete documents of a collection"
-msgstr ""
-
+msgstr "删除操作即从集合中删除文档.MongoDB提供了如下方法删除集合中的文档:"
 
 #: ../source/crud.txt:94
 msgid ":method:`db.collection.remove()`"
-msgstr ""
-
+msgstr ":method:`db.collection.insert()`"
 
 #: ../source/crud.txt:96
 msgid ":method:`db.collection.deleteOne()` |versionadded|"
-msgstr ""
+msgstr ":method:`db.collection.insertOne()` |versionadded|"
 
 #: ../source/crud.txt:98
 msgid ":method:`db.collection.deleteMany()` |versionadded|"
-msgstr ""
+msgstr " :ref:`documents <bson-document-format>` "
 
 #: ../source/crud.txt:100
 msgid ""
@@ -172,57 +185,31 @@ msgid ""
 "operations in MongoDB are :doc:`atomic </core/write-operations-atomicity>` "
 "on the level of a single document."
 msgstr ""
+"在MongoDB中,删除作作用于单个集合.MongoDB中所有的写操作在单个  :doc:"
+"`document </core/document>` 层级上是 :doc:`atomic </core/write-operations-"
+"atomicity>`."
 
 #: ../source/crud.txt:104
 msgid ""
-"You can specify criteria, or filters, that identify the documents to remove."
-" These :ref:`filters <document-query-filter>` use the same syntax as read "
-"operations."
+"You can specify criteria, or filters, that identify the documents to "
+"remove. These :ref:`filters <document-query-filter>` use the same syntax as "
+"read operations."
 msgstr ""
+"你可以指定条件或过滤器来找到要删除的文档.这些 :ref:`filters <document-query-"
+"filter>` 使用与读操作一样的语法."
 
 #: ../source/crud.txt:110
 msgid "For examples, see :doc:`/tutorial/remove-documents`."
-msgstr ""
+msgstr "示例请查看 :doc:`/tutorial/remove-documents`."
 
 #: ../source/crud.txt:113
 msgid "Bulk Write"
-msgstr ""
+msgstr "批量写入"
 
 #: ../source/crud.txt:115
 msgid ""
 "MongoDB provides the ability to perform write operations in bulk. For "
 "details, see :doc:`/core/bulk-write-operations`."
 msgstr ""
-
-#~ msgid ""
-#~ "MongoDB provides rich semantics for reading and manipulating data. CRUD "
-#~ "stands for *create*, *read*, *update*, and *delete*. These terms are the "
-#~ "foundation for all interactions with the database."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/crud-introduction`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An introduction to the MongoDB data model as well as queries and data "
-#~ "manipulations."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/crud`"
-#~ msgstr ""
-
-#~ msgid "The core documentation of query and data manipulation."
-#~ msgstr ""
-
-#~ msgid ":doc:`/applications/crud`"
-#~ msgstr ""
-
-#~ msgid "Examples of basic query and data modification operations."
-#~ msgstr ""
-
-#~ msgid ":doc:`/reference/crud`"
-#~ msgstr ""
-
-#~ msgid "Reference material for the query and data manipulation interfaces."
-#~ msgstr ""
-
+"MongoDB提供了批量执行写操作的能力.欲知详情,请查看 :doc:`/core/bulk-write-"
+"operations`."
