@@ -4,13 +4,14 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-26 10:51+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.8\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
 
 #: ../source/applications/crud.txt:3
 msgid "MongoDB CRUD Tutorials"
@@ -26,7 +27,7 @@ msgstr ""
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:4
 msgid ":doc:`/tutorial/insert-documents`"
-msgstr ""
+msgstr "：DOC：`/教程/插入，documents`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:4
 msgid "Insert new documents into a collection."
@@ -34,7 +35,7 @@ msgstr "插入新文档到一个集合中。"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:7
 msgid ":doc:`/tutorial/query-documents`"
-msgstr ""
+msgstr "：DOC：`/教程/查询documents`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:7
 msgid "Find documents in a collection using search criteria."
@@ -42,23 +43,23 @@ msgstr "使用搜索条件在一个集合里查找文档。"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:10
 msgid ":doc:`/tutorial/modify-documents`"
-msgstr ""
+msgstr "：DOC：`/教程/修改 -  documents`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:10
 msgid "Modify documents in a collection"
-msgstr ""
+msgstr "修改集合中的文档"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:13
 msgid ":doc:`/tutorial/remove-documents`"
-msgstr ""
+msgstr "示例请查看 :doc:`/tutorial/remove-documents`."
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:13
 msgid "Remove documents from a collection."
-msgstr ""
+msgstr "删除集合中的文档"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:16
 msgid ":doc:`/tutorial/project-fields-from-query-results`"
-msgstr ""
+msgstr ":doc:`/tutorial/project-fields-from-query-results`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:16
 msgid "Limit which fields are returned by a query."
@@ -66,55 +67,57 @@ msgstr "限制哪些字段被查询返回。"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:20
 msgid ":doc:`/tutorial/limit-number-of-elements-in-updated-array`"
-msgstr ""
+msgstr ":doc:`/tutorial/limit-number-of-elements-in-updated-array`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:19
 msgid ""
 "Use :operator:`$push` with modifiers to sort and maintain an array of fixed "
 "size."
-msgstr ""
+msgstr "与修饰符一起使用 :operator:`$push` 来对固定大小的数组进行排序和管理."
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:25
 msgid ":doc:`/tutorial/iterate-a-cursor`"
-msgstr ""
+msgstr ":doc:`/tutorial/iterate-a-cursor`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:23
 msgid ""
 "Access documents returned by a :method:`find <db.collection.find>` query by "
 "iterating the cursor, either manually or using the iterator index."
 msgstr ""
-"通过迭代游标访问被 :method:`find <db.collection.find>` 查询返回的文档，可以手"
-"动或者使用迭代器的索引。"
+"通过迭代游标访问被 :method:`find <db.collection.find>` 查询返回的文档，可以"
+"手动或者使用迭代器的索引。"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:30
 msgid ":doc:`/tutorial/analyze-query-plan`"
-msgstr ""
+msgstr ":doc:`/tutorial/analyze-query-plan`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:28
 msgid ""
 "Use query introspection (i.e. ``explain``) to analyze the efficiency of "
 "queries and determine how a query uses available indexes."
 msgstr ""
+"使用查询自省(例如,  ``explain``)可以分析查询效率并确定某个查询是如何使用其可"
+"用的索引的."
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:33
 msgid ":doc:`/tutorial/perform-two-phase-commits`"
-msgstr ""
+msgstr ":doc:`/tutorial/perform-two-phase-commits`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:33
 msgid "Use two-phase commits when writing data to multiple documents."
-msgstr ""
+msgstr "向多个文档写入数据时使用两段提交."
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:37
 msgid ":doc:`/tutorial/update-if-current`"
-msgstr ""
+msgstr ":doc:`/tutorial/update-if-current`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:36
 msgid "Update a document only if it has not changed since it was last read."
-msgstr ""
+msgstr "只有当一个文档从它最近一次读取后没有改变时更新它."
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:42
 msgid ":doc:`/tutorial/create-tailable-cursor`"
-msgstr ""
+msgstr ":doc:`/tutorial/create-tailable-cursor`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:40
 msgid ""
@@ -126,10 +129,12 @@ msgstr ""
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:45
 msgid ":doc:`/tutorial/create-an-auto-incrementing-field`"
-msgstr ""
+msgstr ":doc:`/tutorial/create-an-auto-incrementing-field`"
 
 #: ../source/includes/toc/dfn-list-crud-tutorials.rst:45
 msgid ""
 "Describes how to create an incrementing sequence number for the ``_id`` "
 "field using a Counters Collection or an Optimistic Loop."
 msgstr ""
+"描述了如何使用计数器集合或乐观循环(本质是循环,但是被乐观地认为循环次数不多)"
+"给 ``_id`` 字段创建一个递增序列号."
