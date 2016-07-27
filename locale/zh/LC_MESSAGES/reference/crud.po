@@ -4,13 +4,14 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-27 14:42+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.8\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
 
 #: ../source/reference/crud.txt:3
 msgid "MongoDB CRUD Reference"
@@ -32,15 +33,15 @@ msgstr "说明"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:4
 msgid ":method:`cursor.count()`"
-msgstr ""
+msgstr ":method:`cursor.count()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:4
 msgid "Returns the total number of documents in a cursor."
-msgstr ""
+msgstr "返回游标中文档总数."
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:6
 msgid ":method:`cursor.explain()`"
-msgstr ""
+msgstr ":method:`cursor.explain()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:6
 msgid ""
@@ -49,7 +50,7 @@ msgstr "报告游标查询的执行计划，包括索引的使用情况。"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:8
 msgid ":method:`cursor.hint()`"
-msgstr ""
+msgstr ":method:`cursor.hint()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:8
 msgid "Forces MongoDB to use a specific index for a query."
@@ -57,7 +58,7 @@ msgstr "强制MongoDB对查询使用指定的索引。"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:10
 msgid ":method:`cursor.limit()`"
-msgstr ""
+msgstr ":method:`cursor.limit()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:10
 msgid "Constrains the size of a cursor's result set."
@@ -65,7 +66,7 @@ msgstr "限制游标结果集的大小。"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:12
 msgid ":method:`cursor.next()`"
-msgstr ""
+msgstr ":method:`cursor.next()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:12
 msgid "Returns the next document in a cursor."
@@ -73,7 +74,7 @@ msgstr "返回游标中的下一个文档。"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:14
 msgid ":method:`cursor.skip()`"
-msgstr ""
+msgstr ":method:`cursor.skip()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:14
 msgid ""
@@ -83,7 +84,7 @@ msgstr "返回一个游标，该游标仅仅在跳过或略过指定数目的文
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:16
 msgid ":method:`cursor.sort()`"
-msgstr ""
+msgstr ":method:`cursor.sort()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:16
 msgid "Returns results ordered according to a sort specification."
@@ -91,7 +92,7 @@ msgstr "返回按指定排序排好序的结果。"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:18
 msgid ":method:`cursor.toArray()`"
-msgstr ""
+msgstr ":method:`cursor.toArray()`"
 
 #: ../source/includes/toc/table-spec-crud-cursor-methods.rst:18
 msgid "Returns an array that contains all documents returned by the cursor."
@@ -103,7 +104,7 @@ msgstr "查询和数据操作相关的集合方法"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:4
 msgid ":method:`db.collection.count()`"
-msgstr ""
+msgstr ":method:`db.collection.count()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:4
 msgid ""
@@ -113,7 +114,7 @@ msgstr "包装 :dbcommand:`count` ，返回集合中所有或匹配查询的文�
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:6
 msgid ":method:`db.collection.distinct()`"
-msgstr ""
+msgstr ":method:`db.collection.distinct()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:6
 msgid ""
@@ -123,7 +124,7 @@ msgstr "返回一个文档数组，该数组中的文档的指定字段具有不
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:8
 msgid ":method:`db.collection.find()`"
-msgstr ""
+msgstr ":method:`db.collection.find()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:8
 msgid "Performs a query on a collection and returns a cursor object."
@@ -131,7 +132,7 @@ msgstr "在指定集合上执行查询并返回一个游标对象。"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:10
 msgid ":method:`db.collection.findOne()`"
-msgstr ""
+msgstr ":method:`db.collection.findOne()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:10
 msgid "Performs a query and returns a single document."
@@ -139,7 +140,7 @@ msgstr "在指定集合上执行查询并返回一个文档。"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:12
 msgid ":method:`db.collection.insert()`"
-msgstr ""
+msgstr ":method:`db.collection.insert()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:12
 msgid "Creates a new document in a collection."
@@ -147,7 +148,7 @@ msgstr "在集合中创建一个新的文档。"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:14
 msgid ":method:`db.collection.remove()`"
-msgstr ""
+msgstr ":method:`db.collection.remove()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:14
 msgid "Deletes documents from a collection."
@@ -155,7 +156,7 @@ msgstr "从集合中删除文档。"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:16
 msgid ":method:`db.collection.save()`"
-msgstr ""
+msgstr ":method:`db.collection.save()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:16
 msgid ""
@@ -168,7 +169,7 @@ msgstr ""
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:18
 msgid ":method:`db.collection.update()`"
-msgstr ""
+msgstr ":method:`db.collection.update()`"
 
 #: ../source/includes/toc/table-spec-crud-collection-methods.rst:18
 msgid "Modifies a document in a collection."
@@ -176,11 +177,11 @@ msgstr "修改集合中的文档。"
 
 #: ../source/reference/crud.txt:18
 msgid "MongoDB CRUD Reference Documentation"
-msgstr "MongoDB CRUD 参考文档"
+msgstr "MongoDB CRUD 参考文献"
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:5
 msgid ":doc:`/reference/write-concern`"
-msgstr ""
+msgstr ":doc:`/reference/write-concern`"
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:4
 msgid ""
@@ -190,7 +191,7 @@ msgstr "与MongoDB报告写操作成功时提供的保障相关的配置选项�
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:9
 msgid ":doc:`/reference/sql-comparison`"
-msgstr ""
+msgstr ":doc:`/reference/sql-comparison`"
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:8
 msgid ""
@@ -200,7 +201,7 @@ msgstr "以MongoDB操作和SQL语句展示的常见数据库操作概述。"
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:15
 msgid ":doc:`/reference/bios-example-collection`"
-msgstr ""
+msgstr ":doc:`/reference/bios-example-collection`"
 
 #: ../source/includes/toc/dfn-list-crud-reference.rst:12
 msgid ""
