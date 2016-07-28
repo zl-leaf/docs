@@ -4,140 +4,77 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-28 12:10+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/core/crud.txt:3
 msgid "MongoDB CRUD Concepts"
-msgstr "CRUD 概念"
-
+msgstr "MongoDB CRUD 概念"
 
 #: ../source/core/crud.txt:26
 msgid ":doc:`/core/query-optimization`"
-
-msgstr ""
+msgstr ":doc:`/core/query-optimization`"
 
 #: ../source/core/crud.txt:19
 msgid ":doc:`/core/distributed-queries`"
-msgstr ""
+msgstr ":doc:`/core/distributed-queries`"
 
 #: ../source/core/crud.txt:20
 msgid ":doc:`/core/distributed-write-operations`"
-msgstr ""
+msgstr ":doc:`/core/distributed-write-operations`"
 
 #: ../source/core/crud.txt:13
 msgid ""
 "This section contains information on additional concepts related to CRUD "
 "operations in MongoDB."
-msgstr ""
+msgstr "本节包含与MongoDB中CRUD操作相关的其他概念的信息。"
 
 #: ../source/core/crud.txt:22
 msgid "Atomicity, consistency, and distributed operations"
-msgstr ""
-
+msgstr "原子性,一致性,及分布式操作"
 
 #: ../source/core/crud.txt:17
 msgid ":doc:`/core/write-operations-atomicity`"
-msgstr ""
-
+msgstr ":doc:`/core/write-operations-atomicity`"
 
 #: ../source/core/crud.txt:18
 msgid ":doc:`/core/read-isolation-consistency-recency`"
-msgstr ""
-
+msgstr ":doc:`/core/read-isolation-consistency-recency`"
 
 #: ../source/core/crud.txt:21
 msgid ":doc:`/tutorial/perform-two-phase-commits`"
-msgstr ""
-
+msgstr ":doc:`/tutorial/perform-two-phase-commits`"
 
 #: ../source/core/crud.txt:22
 msgid ":doc:`/tutorial/perform-findAndModify-quorum-reads`"
-msgstr ""
+msgstr ":doc:`/tutorial/perform-findAndModify-quorum-reads`"
 
 #: ../source/core/crud.txt:28
 msgid "Query Plan, Performance, and Analysis"
-msgstr ""
+msgstr "查询计划,性能和分析"
 
 #: ../source/core/crud.txt:25
 msgid ":doc:`/core/query-plans`"
-msgstr ""
+msgstr ":doc:`/core/query-plans`"
 
 #: ../source/core/crud.txt:27
 msgid ":doc:`/tutorial/analyze-query-plan`"
-msgstr ""
+msgstr ":doc:`/tutorial/analyze-query-plan`"
 
 #: ../source/core/crud.txt:28
 msgid ":doc:`/core/write-performance`"
-msgstr ""
-
+msgstr ":doc:`/core/write-performance`"
 
 #: ../source/core/crud.txt:31
 msgid "Miscellaneous"
-msgstr ""
+msgstr "其他"
 
 #: ../source/core/crud.txt:31
 msgid ":doc:`/core/tailable-cursors`"
-msgstr ""
-
-#~ msgid ""
-#~ "The :doc:`/core/read-operations` and :doc:`/core/write-operations` documents"
-#~ " introduce the behavior and operations of read and write operations for "
-#~ "MongoDB deployments."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/read-operations`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Queries are the core operations that return data in MongoDB. Introduces "
-#~ "queries, their behavior, and performances."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/cursors`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Queries return iterable objects, called cursors, that hold the full result "
-#~ "set."
-#~ msgstr ""
-
-#~ msgid "Analyze and improve query performance."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Describes how :term:`sharded clusters <sharded cluster>` and :term:`replica "
-#~ "sets <replica set>` affect the performance of read operations."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/write-operations`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Write operations insert, update, or remove documents in MongoDB. Introduces "
-#~ "data create and modify operations, their behavior, and performances."
-#~ msgstr ""
-
-#~ msgid ":doc:`/core/write-concern`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Describes the kind of guarantee MongoDB provides when reporting on the "
-#~ "success of a write operation."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Describes how MongoDB directs write operations on :term:`sharded clusters "
-#~ "<sharded cluster>` and :term:`replica sets <replica set>` and the "
-#~ "performance characteristics of these operations."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Continue reading from :doc:`/core/write-operations` for additional "
-#~ "background on the behavior of data modification operations in MongoDB."
-#~ msgstr ""
-
+msgstr ":doc:`/core/tailable-cursors`"
