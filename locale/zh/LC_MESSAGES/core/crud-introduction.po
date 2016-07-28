@@ -1,15 +1,17 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-28 18:19+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/core/crud-introduction.txt:3
 msgid "MongoDB CRUD Introduction"
@@ -23,9 +25,14 @@ msgid ""
 "and associative arrays). Formally, MongoDB documents are :term:`BSON` "
 "documents. BSON is a binary representation of :term:`JSON` with additional "
 "type information. In the documents, the value of a field can be any of the "
-"BSON data types, including other documents, arrays, and arrays of documents."
-" For more information, see :doc:`/core/document`."
+"BSON data types, including other documents, arrays, and arrays of documents. "
+"For more information, see :doc:`/core/document`."
 msgstr ""
+"MongoDB以  *文档* 的形式存储数据,所谓的 *文档* 就是类似JSON的字段-值对.文档类"
+"似于编程语言中将键和值联系在一起的结构(例如,字典,哈希,图及关联数组).一般情况"
+"下,MongoDB的文档是 :term:`BSON` documents.BSON是包含额外类型信息的 :term:"
+"`JSON` 的二进制表示形式.在文档中,字段的值可以是任何的BSON数据类型,包括其他文"
+"档,数组,文档数组.更多信息,请参见 :doc:`/core/document`."
 
 #: ../source/core/crud-introduction.txt:19
 msgid ""
@@ -33,8 +40,8 @@ msgid ""
 "collection is a group of related documents that have a set of shared common "
 "indexes. Collections are analogous to a table in relational databases."
 msgstr ""
-"MongoDB存储所有的文档在 :term:`集合 <collection>` 里。 集合是一组相关的文"
-"档，他们拥有一套共享的通用索引。集合与关系型数据库中的表是类似的。"
+"MongoDB存储所有的文档在 :term:`集合 <collection>` 里。 集合是一组相关的文档，"
+"他们拥有一套共享的通用索引。集合与关系型数据库中的表是类似的。"
 
 #: ../source/core/crud-introduction.txt:27
 msgid "Database Operations"
@@ -97,7 +104,7 @@ msgstr "相关特性"
 
 #: ../source/core/crud-introduction.txt:65
 msgid ":doc:`Indexes </indexes>`"
-msgstr ""
+msgstr ":doc:`Indexes </indexes>`"
 
 #: ../source/core/crud-introduction.txt:67
 msgid ""
@@ -132,7 +139,7 @@ msgstr ""
 
 #: ../source/core/crud-introduction.txt:86
 msgid ":doc:`Write Concern </core/write-concern>`"
-msgstr ""
+msgstr ":doc:`Write Concern </core/write-concern>`"
 
 #: ../source/core/crud-introduction.txt:88
 msgid ""
@@ -148,7 +155,7 @@ msgstr ""
 
 #: ../source/core/crud-introduction.txt:95
 msgid ":doc:`Aggregation </aggregation>`"
-msgstr ""
+msgstr ":doc:`Aggregation </aggregation>`"
 
 #: ../source/core/crud-introduction.txt:97
 msgid ""
@@ -158,3 +165,6 @@ msgid ""
 "process a collection of documents using a versatile stage-based data "
 "processing pipeline or map-reduce operations."
 msgstr ""
+"除了基本查询之外,MongoDB还提供了一些数据聚合的特性.例如,MongoDB能够返回匹配查"
+"询的文档总数,返回某个字段不重复的值的数量,或者能使用通用的基于阶段的数据处理"
+"管道及映射化简(map-reduce)操作批量处理文档."
