@@ -4,25 +4,27 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-31 19:15-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-29 15:15+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/tutorial/query-for-null-fields.txt:5
 msgid "Query for Null or Missing Fields"
-msgstr ""
+msgstr "查询值为Null或不存在的字段"
 
 #: ../source/tutorial/query-for-null-fields.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 #: ../source/tutorial/query-for-null-fields.txt:15
 msgid ""
 "Different query operators in MongoDB treat ``null`` values differently."
-msgstr ""
+msgstr "MongoDB中不同的运算符对待 ``null`` 值不一样. "
 
 #: ../source/tutorial/query-for-null-fields.txt:17
 msgid ""
@@ -30,31 +32,38 @@ msgid ""
 "the :program:`mongo` shell. To populate the ``users`` collection referenced "
 "in the examples, run the following in :program:`mongo` shell:"
 msgstr ""
+"本页中的示例使用 :program:`mongo` shell的 :method:`db.collection.find()` 方"
+"法.在:program:`mongo` shell中运行如下命令以向示例中涉及到的 ``users`` 集合填"
+"入数据:"
 
 #: ../source/tutorial/query-for-null-fields.txt:33
 msgid "Equality Filter"
-msgstr ""
+msgstr "相等过滤器"
 
 #: ../source/tutorial/query-for-null-fields.txt:35
 msgid ""
 "The ``{ name : null }`` query matches documents that either contain the "
-"``name`` field whose value is ``null`` *or* that do not contain the ``name``"
-" field."
+"``name`` field whose value is ``null`` *or* that do not contain the "
+"``name`` field."
 msgstr ""
+" ``{ name : null }`` 查询匹配哪些包含值是 ``null``的 ``name`` 字段 *或者* 没"
+"有包含 ``name`` 字段的文档."
 
 #: ../source/tutorial/query-for-null-fields.txt:39
 msgid "Given the following query:"
-msgstr ""
+msgstr "给出如下查询:"
 
 #: ../source/tutorial/query-for-null-fields.txt:45
 msgid "The query returns both documents:"
-msgstr ""
+msgstr "该查询返回这两个文档:"
 
 #: ../source/tutorial/query-for-null-fields.txt:52
 msgid ""
 "If the query uses an index that is :ref:`sparse <index-type-sparse>`, "
 "however, then the query will only match ``null`` values, not missing fields."
 msgstr ""
+"如果该查询使用了 :ref:`sparse <index-type-sparse>` 索引,不管怎样,那么该查询"
+"将仅仅匹配 ``null`` 值,而不匹配不存在的字段."
 
 #: ../source/tutorial/query-for-null-fields.txt:56
 msgid ""
@@ -62,10 +71,13 @@ msgid ""
 "use the index unless a :method:`~cursor.hint()` explicitly specifies the "
 "index. See :ref:`index-type-sparse` for more information."
 msgstr ""
+"如果使用稀疏索引会导致一个不完整的结果,那么,除非 :method:`~cursor.hint()` 显"
+"示地指定了该索引,否则MongoDB将不会使用这个索引.更多信息请参见 :ref:`index-"
+"type-sparse`."
 
 #: ../source/tutorial/query-for-null-fields.txt:62
 msgid "Type Check"
-msgstr ""
+msgstr "类型筛查"
 
 #: ../source/tutorial/query-for-null-fields.txt:64
 msgid ""
@@ -73,31 +85,35 @@ msgid ""
 "``name`` field whose value is ``null`` *only*; i.e. the value of the "
 "``item`` field is of BSON Type ``Null`` (i.e. ``10``) :"
 msgstr ""
+"``{ name : { $type: 10 } }`` 查询 *仅仅* 匹配那些包含值是  ``null`` 的 "
+"``name`` 字段的文档,亦即 ``条目`` 字段的值是BSON类型中的  ``Null`` (即 "
+"``10`` ):"
 
 #: ../source/tutorial/query-for-null-fields.txt:73
 msgid ""
 "The query returns only the document where the ``item`` field has a ``null`` "
 "value:"
-msgstr ""
+msgstr "该查询只返回文 ``条目`` 字段是 ``null`` 值的文档:"
 
 #: ../source/tutorial/query-for-null-fields.txt:81
 msgid "Existence Check"
-msgstr ""
+msgstr "存在性筛查"
 
 #: ../source/tutorial/query-for-null-fields.txt:83
 msgid ""
 "The ``{ name : { $exists: false } }`` query matches documents that do not "
 "contain the ``item`` field:"
 msgstr ""
+" ``{ name : { $exists: false } }`` 查询匹配不包含 ``条目`` 字段的文档:"
 
 #: ../source/tutorial/query-for-null-fields.txt:90
 msgid ""
 "The query returns only the document that does *not* contain the ``item`` "
 "field:"
-msgstr ""
+msgstr "该查询只返回那些 *没有* 包含 ``条目`` 字段的文档:"
 
 #: ../source/tutorial/query-for-null-fields.txt:97
 msgid ""
 "The reference documentation for the :query:`$type` and :query:`$exists` "
 "operators."
-msgstr ""
+msgstr " :query:`$type` 和 :query:`$exists` 操作符参考文档."
