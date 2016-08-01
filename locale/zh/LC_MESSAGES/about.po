@@ -23,13 +23,15 @@ msgstr "许可证"
 
 #: ../source/about.txt:30
 msgid "Editions"
-msgstr ""
+msgstr "版本"
 
 #: ../source/about.txt:32
 msgid ""
 "In addition to the `MongoDB Manual <http://docs.mongodb.org/manual/#>`_, you"
 " can also access this content in the following editions:"
 msgstr ""
+"除了 `MongoDB Manual <http://docs.mongodb.org/manual/#>`_ ，"
+" 您也可以访问此内容的以下版本："
 
 #: ../source/about.txt:35
 msgid ":hardlink:`HTML tar.gz <manual.tar.gz>`"
@@ -42,14 +44,16 @@ msgid ""
 "Pages <manpages.tar.gz>` which are also distributed with the official "
 "MongoDB Packages."
 msgstr ""
+"MongoDB 参考文档也是 `dash <http://kapeli.com/dash>`_ 的一部分. 你也可以访问"
+" :hardlink:`MongoDB Man Pages <manpages.tar.gz>` , 这也是 MongoDB 官方软件包的一部分."
 
 #: ../source/about.txt:45
 msgid "Version and Revisions"
-msgstr ""
+msgstr "版本及修订"
 
 #: ../source/about.txt:47
 msgid "This version of the manual reflects version |version| of MongoDB."
-msgstr ""
+msgstr "这个版本的手册反映了MongoDB |version| 版本。"
 
 #: ../source/about.txt:49
 msgid ""
@@ -59,6 +63,10 @@ msgid ""
 "additions for all versions of the manual from its `GitHub repository "
 "<https://github.com/mongodb/docs>`_."
 msgstr ""
+"查看 `MongoDB 文档项目页面 <http://docs.mongodb.org>`_ "
+"查看 MongoDB 手册的所有版本及输出格式的概述。  "
+"你可以在 GitHub 版本库看到本手册完整的修订历史记录及跟踪所有版本正在进行改进和补充 "
+"<https://github.com/mongodb/docs>`_."
 
 #: ../source/about.txt:55
 msgid ""
@@ -67,16 +75,19 @@ msgid ""
 "\"|hardlink|\" and you can always reference the commit of the current manual"
 " in the :hardlink:`release.txt` file."
 msgstr ""
+"该版本反映了文档 \"|branch|\" 分支 \"|commit|\" 版本。通过 "
+"\"|hardlink|\" 访问该分支并且参考 :hardlink:`release.txt` 文件中关于当前手册的提交."
 
 #: ../source/about.txt:60
 msgid ""
 "The most up-to-date, current, and stable version of the manual is always "
 "available at \"http://docs.mongodb.org/manual/\"."
 msgstr ""
+"手册的最新版，当前版本及稳定版本可以在  \"http://docs.mongodb.org/manual/\" 得到。"
 
 #: ../source/about.txt:64
 msgid "Report an Issue or Make a Change Request"
-msgstr ""
+msgstr "报告问题和提出变更请求"
 
 #: ../source/about.txt:66
 msgid ""
@@ -84,10 +95,12 @@ msgid ""
 "ticket at the `MongoDB DOCS Project on Jira "
 "<https://jira.mongodb.org/browse/DOCS>`_."
 msgstr ""
+"报告本手册的问题和提出变更请求，请在 `MongoDB DOCS Project on Jira "
+"<https://jira.mongodb.org/browse/DOCS>`_ 提交通知单。"
 
 #: ../source/about.txt:73
 msgid "Contribute to the Documentation"
-msgstr ""
+msgstr "为文档提供帮助"
 
 #: ../source/about.txt:80
 msgid ""
@@ -96,6 +109,8 @@ msgid ""
 "of the `MongoDB project repositories on GitHub "
 "<http://github.com/mongodb>`_."
 msgstr ""
+"本文档的全部源码可以在 `mongodb/docs repository <https://github.com/mongodb/docs>`_ 得到，"
+"它是 `MongoDB project repositories on GitHub <http://github.com/mongodb>`_ 之一。"
 
 #: ../source/about.txt:85
 msgid ""
@@ -104,22 +119,28 @@ msgid ""
 "<https://github.com/mongodb/docs>`_, make a change, and issue a pull "
 "request."
 msgstr ""
+"打开 `GitHub account "
+"<https://github.com/>`_ ， fork `mongodb/docs repository "
+"<https://github.com/mongodb/docs>`_ ， 做出变更，并发出 Pull Request"
+"request."
 
 #: ../source/about.txt:90
 msgid ""
 "In order for the documentation team to accept your change, you must complete"
 " the `MongoDB Contributor Agreement <http://www.mongodb.com/contributor>`_."
 msgstr ""
+"为了使文档小组接受你的修改, 你必须先同意"
+" `MongoDB Contributor Agreement <http://www.mongodb.com/contributor>`_ 。"
 
 #: ../source/about.txt:94
 msgid ""
 "You can clone the repository by issuing the following command at your system"
 " shell:"
-msgstr ""
+msgstr "你可以在你的系统 Shell 使用以下命令来克隆仓库："
 
 #: ../source/about.txt:102
 msgid "About the Documentation Process"
-msgstr ""
+msgstr "关于文档的进程"
 
 #: ../source/about.txt:104
 msgid ""
@@ -130,20 +151,25 @@ msgid ""
 " Sphinx extensions and build tools, are available in the same repository as "
 "the documentation."
 msgstr ""
+"MongoDB 手册使用 一个建立在 `Python Docutils "
+"<http://docutils.sourceforge.net/>`_ 之上的复杂文档引擎 `Sphinx <http://sphinx-doc.org//>`_ 。"
+"`reStructured Text "
+"<http://docutils.sourceforge.net/rst.html>`_ 的源文件，以及所有必要的"
+" Sphinx 扩展和构建工具都可以在文档仓库中找到."
 
 #: ../source/about.txt:111
 msgid "For more information on the MongoDB documentation process, see:"
-msgstr ""
+msgstr "在MongoDB文档过程的更多信息，参见："
 
 #: ../source/about.txt:121
 msgid ""
 "If you have any questions, please feel free to open a :issue:`Jira Case "
 "<DOCS>`."
-msgstr ""
+msgstr "如果你有任何问题，请随时打开一个 :issue:`Jira Case <DOCS>` 。"
 
 #: ../source/about.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "本页"
 
 #: ../source/about.txt:15
 msgid ""
@@ -152,6 +178,9 @@ msgid ""
 "licensing, editions, and versions, and describes how to make a change "
 "request and how to contribute to the manual."
 msgstr ""
+"`MongoDB 手册 <http://docs.mongodb.org/manual/#>`_ 包含 "
+" MongoDB 的详细文档. 本页面介绍手册的许可、修订版本和版本，介绍了 "
+"如何提出修改的申请，及如何对手册做贡献。 "
 
 #: ../source/about.txt:23
 msgid ""
@@ -159,6 +188,9 @@ msgid ""
 "ShareAlike 3.0 United States License <http://creativecommons.org/licenses"
 "/by-nc-sa/3.0/us/>`_"
 msgstr ""
+"这项工作依据以下许可 `Creative Commons Attribution-NonCommercial-"
+"ShareAlike 3.0 United States License <http://creativecommons.org/licenses"
+"/by-nc-sa/3.0/us/>`_"
 
 #: ../source/about.txt:27
 msgid "|copy| MongoDB, Inc. 2008-|year|"
