@@ -4,120 +4,125 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-08 17:40+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/tutorial/insert-documents.txt:5
 msgid "Insert Documents"
 msgstr "插入文档"
 
-
 #: ../source/tutorial/insert-documents.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "目录"
 
 #: ../source/tutorial/insert-documents.txt:16
 msgid "Insert Methods"
-msgstr ""
-
+msgstr "插入方法"
 
 #: ../source/tutorial/insert-documents.txt:18
 msgid ""
 "MongoDB provides the following methods for inserting :ref:`documents <bson-"
 "document-format>` into a collection:"
 msgstr ""
+"MongoDB提供了如下方法向集合插入 :ref:`documents <bson-document-format>` :"
 
 #: ../source/tutorial/insert-documents.txt:21
 msgid ":ref:`write-op-insertOne`"
-msgstr ""
+msgstr ":ref:`write-op-insertOne`"
 
 #: ../source/tutorial/insert-documents.txt:23
 msgid ":ref:`write-op-insertMany`"
-msgstr ""
-"你可以通过传递文档数组到方法 :method:`db.collection.insert()` 的方式插入多个文档。"
-
+msgstr ":ref:`write-op-insertMany`"
 
 #: ../source/tutorial/insert-documents.txt:25
 msgid ":ref:`write-op-insert-method`"
-msgstr ""
-
+msgstr ":ref:`write-op-insert-method`"
 
 #: ../source/tutorial/insert-documents.txt:27
 msgid ""
-"This page provides examples of insert operations in the :program:`mongo` "
-"shell."
-msgstr ""
+"This page provides examples of insert operations in the :program:`mongo` shell."
+msgstr "本页提供了 :program:`mongo` shell中插入操作的示例."
 
 #: ../source/tutorial/insert-documents.txt:33
 msgid "Insert Behavior"
-msgstr ""
-"MongoDB提供一个用于执行批量写入的 :method:`Bulk()` API。"
-"以下操作步骤描述了如何使用 :method:`Bulk()` API向MongoDB集合中插入一组文档。"
+msgstr "插入操作的行为表现"
 
 #: ../source/tutorial/insert-documents.txt:36
-
 msgid "Collection Creation"
-msgstr ""
+msgstr "创建集合"
 
 #: ../source/tutorial/insert-documents.txt:38
 msgid ""
-"If the collection does not currently exist, insert operations will create "
-"the collection."
-msgstr ""
+"If the collection does not currently exist, insert operations will create the "
+"collection."
+msgstr "如果集合当前不存在,插入操作将创建该集合."
 
 #: ../source/tutorial/insert-documents.txt:42
 msgid "``_id`` Field"
-msgstr ""
+msgstr "``_id`` 字段"
 
 #: ../source/includes/fact-id-field.rst:1
 msgid ""
 "In MongoDB, documents stored in a collection require a unique :term:`_id` "
-"field that acts as a :term:`primary key`. If the ``_id`` field is "
-"unspecified in the documents, MongoDB uses :ref:`ObjectIds <objectid>` as "
-"the default value for the ``_id`` field; i.e. if a document does not contain"
-" a top-level ``_id`` field during an insert, the MongoDB driver adds the "
-"``_id`` field that holds an :ref:`objectid`."
+"field that acts as a :term:`primary key`. If the ``_id`` field is unspecified "
+"in the documents, MongoDB uses :ref:`ObjectIds <objectid>` as the default "
+"value for the ``_id`` field; i.e. if a document does not contain a top-level "
+"``_id`` field during an insert, the MongoDB driver adds the ``_id`` field that "
+"holds an :ref:`objectid`."
 msgstr ""
+"在MongoDB中,存储于集合中的文档需要一个唯一的 :term:`_id` 字段作为 :term:"
+"`primary key`.如果文档中未指定 ``_id`` 字段,MongoDB将使用 :ref:`ObjectIds "
+"<objectid>` 作为 ``_id`` 字段的默认值;也就是说,如果文档在插入时没有包含顶层的 "
+"``_id`` 字段,MongoDB驱动将添加持有 :ref:`objectid` 的 ``_id`` 字段."
 
 #: ../source/includes/fact-id-field.rst:8
 msgid ""
-"In addition, if the :program:`mongod` receives a document to insert that "
-"does not contain an ``_id`` field (e.g. through an update operation with an "
-":ref:`upsert option <upsert-parameter>`) :program:`mongod` will add the "
-"``_id`` field that holds an ObjectId."
+"In addition, if the :program:`mongod` receives a document to insert that does "
+"not contain an ``_id`` field (e.g. through an update operation with an :ref:"
+"`upsert option <upsert-parameter>`) :program:`mongod` will add the ``_id`` "
+"field that holds an ObjectId."
 msgstr ""
+"此外,如果 :program:`mongod` 收到的要插入的文档未包含 ``_id`` 字段(例如通过设"
+"置 :ref:`upsert option <upsert-parameter>选项的更新操作),:program:`mongod` 也会"
+"添加持有 :ref:`objectid` 的 ``_id`` 字段."
 
 #: ../source/tutorial/insert-documents.txt:47
 msgid "Atomicity"
-msgstr ""
+msgstr "原子性"
 
 #: ../source/tutorial/insert-documents.txt:49
 msgid ""
-"All write operations in MongoDB are atomic on the level of a single "
-"document. For more information on MongoDB and atomicity, see :doc:`/core"
-"/write-operations-atomicity`"
+"All write operations in MongoDB are atomic on the level of a single document. "
+"For more information on MongoDB and atomicity, see :doc:`/core/write-"
+"operations-atomicity`"
 msgstr ""
+"MongoDB中所有的写操作在单一文档层级上是原子的.更多关于MongoDB和原子性的信息,请"
+"参见 :doc:`/core/write-operations-atomicity`."
 
 #: ../source/tutorial/insert-documents.txt:56
 msgid "``db.collection.insertOne()``"
-msgstr ""
+msgstr "``db.collection.insertOne()``"
 
 #: ../source/tutorial/insert-documents.txt:60
 msgid ""
 ":method:`db.collection.insertOne()` inserts a *single* :ref:`document <bson-"
 "document-format>` into a collection."
 msgstr ""
+":method:`db.collection.insertOne()` 向集合插入 *单个* :ref:`document <bson-"
+"document-format>` ."
 
 #: ../source/tutorial/insert-documents.txt:63
 msgid ""
 "The following example inserts a new document into the ``users`` collection. "
-"The new document has three fields ``name``, ``age``, and ``status``. Since "
-"the document does not specify an ``_id`` field, MongoDB adds the ``_id`` "
-"field with an ObjectId value to the new document. See :ref:`write-op-insert-"
+"The new document has three fields ``name``, ``age``, and ``status``. Since the "
+"document does not specify an ``_id`` field, MongoDB adds the ``_id`` field "
+"with an ObjectId value to the new document. See :ref:`write-op-insert-"
 "behavior`."
 msgstr ""
 
@@ -139,28 +144,27 @@ msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:102
 msgid "``db.collection.insertMany()``"
-msgstr ""
+msgstr "``db.collection.insertMany()``"
 
 #: ../source/tutorial/insert-documents.txt:106
 msgid ""
-":method:`db.collection.insertMany()` inserts *multiple* :ref:`documents "
-"<bson-document-format>` into a collection."
+":method:`db.collection.insertMany()` inserts *multiple* :ref:`documents <bson-"
+"document-format>` into a collection."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:109
 msgid ""
 "The following example inserts three new documents into the ``users`` "
-"collection. Each document has three fields ``name``, ``age``, and "
-"``status``. Since the documents do not specify an ``_id`` field, MongoDB "
-"adds the ``_id`` field with an ObjectId value to each document. See :ref"
-":`write-op-insert-behavior`."
+"collection. Each document has three fields ``name``, ``age``, and ``status``. "
+"Since the documents do not specify an ``_id`` field, MongoDB adds the ``_id`` "
+"field with an ObjectId value to each document. See :ref:`write-op-insert-"
+"behavior`."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:138
 msgid ""
-"To verify the inserted document, :ref:`query the collection <read-"
-"operations-query-document>` by specifying a query filter on the ``_id`` "
-"field:"
+"To verify the inserted document, :ref:`query the collection <read-operations-"
+"query-document>` by specifying a query filter on the ``_id`` field:"
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:156
@@ -170,31 +174,29 @@ msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:162
 msgid "``db.collection.insert()``"
-msgstr ""
+msgstr "``db.collection.insert()``"
 
 #: ../source/tutorial/insert-documents.txt:164
 msgid ""
 ":method:`db.collection.insert()` inserts a single document or multiple "
-"documents into a collection. To insert a single document, pass a document to"
-" the method; to insert multiple documents, pass an array of documents to the"
-" method."
+"documents into a collection. To insert a single document, pass a document to "
+"the method; to insert multiple documents, pass an array of documents to the "
+"method."
 msgstr ""
-
 
 #: ../source/tutorial/insert-documents.txt:169
 msgid ""
 "The following example inserts a new document into the ``users`` collection. "
-"The new document has three fields ``name``, ``age``, and ``status``. Since "
-"the document does not specify an ``_id`` field, MongoDB adds the ``_id`` "
-"field with an ObjectId value to the document. See :ref:`write-op-insert-"
-"behavior`."
+"The new document has three fields ``name``, ``age``, and ``status``. Since the "
+"document does not specify an ``_id`` field, MongoDB adds the ``_id`` field "
+"with an ObjectId value to the document. See :ref:`write-op-insert-behavior`."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:185
 msgid ""
 "The operation returns a :method:`WriteResult` object with the status of the "
-"operation. A successful insert of the document returns the following "
-":method:`WriteResult` object:"
+"operation. A successful insert of the document returns the following :method:"
+"`WriteResult` object:"
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:193
@@ -207,26 +209,25 @@ msgstr ""
 #: ../source/tutorial/insert-documents.txt:197
 msgid ""
 "The following example inserts multiple documents into the ``users`` "
-"collection. Since the documents do not specify an ``_id`` field, MongoDB "
-"adds the ``_id`` field with an ObjectId value to each document. See :ref"
-":`write-op-insert-behavior`."
+"collection. Since the documents do not specify an ``_id`` field, MongoDB adds "
+"the ``_id`` field with an ObjectId value to each document. See :ref:`write-op-"
+"insert-behavior`."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:212
 msgid ""
-"The method returns a :method:`BulkWriteResult` object with the status of the"
-" operation. A successful insert of the documents returns the following "
-":method:`BulkWriteResult` object:"
+"The method returns a :method:`BulkWriteResult` object with the status of the "
+"operation. A successful insert of the documents returns the following :method:"
+"`BulkWriteResult` object:"
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:229
-msgid ""
-"For more information and examples, see :method:`db.collection.insert()`."
+msgid "For more information and examples, see :method:`db.collection.insert()`."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:232
 msgid "Additional Methods"
-msgstr ""
+msgstr "其他方法"
 
 #: ../source/tutorial/insert-documents.txt:234
 msgid "The following methods can also add new documents to a collection:"
@@ -239,8 +240,7 @@ msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:239
 msgid ""
-":method:`db.collection.updateOne()` when used with the ``upsert: true`` "
-"option."
+":method:`db.collection.updateOne()` when used with the ``upsert: true`` option."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:242
@@ -257,8 +257,8 @@ msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:248
 msgid ""
-":method:`db.collection.findOneAndUpdate()` when used with the ``upsert: "
-"true`` option."
+":method:`db.collection.findOneAndUpdate()` when used with the ``upsert: true`` "
+"option."
 msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:251
@@ -269,11 +269,11 @@ msgstr ""
 
 #: ../source/tutorial/insert-documents.txt:254
 msgid ":method:`db.collection.save()`."
-msgstr ""
+msgstr ":method:`db.collection.save()`."
 
 #: ../source/tutorial/insert-documents.txt:256
 msgid ":method:`db.collection.bulkWrite()`."
-msgstr ""
+msgstr ":method:`db.collection.bulkWrite()`."
 
 #: ../source/tutorial/insert-documents.txt:258
 msgid ""
@@ -281,10 +281,9 @@ msgid ""
 "examples."
 msgstr ""
 
-
 #: ../source/tutorial/insert-documents.txt:262
 msgid "Write Acknowledgement"
-msgstr ""
+msgstr "写确认"
 
 #: ../source/tutorial/insert-documents.txt:264
 msgid ""
@@ -292,44 +291,5 @@ msgid ""
 "from MongoDB for write operations. For details, see :doc:`/reference/write-"
 "concern`."
 msgstr ""
-
-#~ msgid ""
-#~ "In MongoDB, the :method:`db.collection.insert()` method adds new documents "
-#~ "into a collection."
-#~ msgstr ""
-
-#~ msgid "Insert a Document"
-#~ msgstr ""
-
-#~ msgid "Insert an Array of Documents"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can pass an array of documents to the :method:`db.collection.insert()` "
-#~ "method to insert multiple documents."
-#~ msgstr ""
-
-#~ msgid "Insert Multiple Documents with ``Bulk``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "MongoDB provides a :method:`Bulk()` API that you can use to perform multiple"
-#~ " write operations in bulk. The following sequence of operations describes "
-#~ "how you would use the :method:`Bulk()` API to insert a group of documents "
-#~ "into a MongoDB collection."
-#~ msgstr ""
-
-#~ msgid "Additional Examples and Methods"
-#~ msgstr ""
-
-#~ msgid "For more examples, see :method:`db.collection.insert()`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :method:`db.collection.update()` method, the "
-#~ ":method:`db.collection.findAndModify()`, and the "
-#~ ":method:`db.collection.save()` method can also add new documents. See the "
-#~ "individual reference pages for the methods for more information and "
-#~ "examples."
-#~ msgstr ""
-
+"在安全写情况下,你可以指定MongoDB写操作要求的确认级别.详情清参见 :doc:`/"
+"reference/write-concern`."
