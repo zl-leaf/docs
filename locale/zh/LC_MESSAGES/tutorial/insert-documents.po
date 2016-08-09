@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: 2016-08-08 18:53+0800\n"
+"PO-Revision-Date: 2016-08-09 12:31+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -127,7 +127,7 @@ msgid ""
 msgstr ""
 "如下的示例向 ``users`` 集合插入了一个新的文档.新的文档有三个字段 ``name``,"
 "``age``,和 ``status``.由于该文档未指定 ``_id`` 字段,MongoDB 向该新文档添加了值"
-"为  :ref:`objectid` 的 ``_id`` 字段."
+"为  :ref:`objectid` 的 ``_id`` 字段.参见  :ref:`write-op-insert-behavior`."
 
 #: ../source/tutorial/insert-documents.txt:79
 #: ../source/tutorial/insert-documents.txt:125
@@ -156,6 +156,8 @@ msgid ""
 ":method:`db.collection.insertMany()` inserts *multiple* :ref:`documents <bson-"
 "document-format>` into a collection."
 msgstr ""
+":method:`db.collection.insertMany()` 向集合插入 *多个* :ref:`documents <bson-"
+"document-format>`."
 
 #: ../source/tutorial/insert-documents.txt:109
 msgid ""
@@ -165,17 +167,22 @@ msgid ""
 "field with an ObjectId value to each document. See :ref:`write-op-insert-"
 "behavior`."
 msgstr ""
+"如下的示例向 ``users`` 集合插入了三个新的文档.每个文档有三个字段 ``name``,"
+"``age``,和 ``status``.由于这些文档未指定 ``_id`` 字段,MongoDB 向每个新文档添加"
+"了值为  :ref:`objectid` 的 ``_id`` 字段.参见 :ref:`write-op-insert-behavior`."
 
 #: ../source/tutorial/insert-documents.txt:138
 msgid ""
 "To verify the inserted document, :ref:`query the collection <read-operations-"
 "query-document>` by specifying a query filter on the ``_id`` field:"
 msgstr ""
+"为了验证插入了文档,通过指定 ``_id`` 字段上的查询过滤条件 :ref:`query the "
+"collection <document-query-filter>`:"
 
 #: ../source/tutorial/insert-documents.txt:156
 msgid ""
 "For more information and examples, see :method:`db.collection.insertMany()`."
-msgstr ""
+msgstr "更多信息和示例,请参见 :method:`db.collection.insertMany()`."
 
 #: ../source/tutorial/insert-documents.txt:162
 msgid "``db.collection.insert()``"
@@ -188,6 +195,8 @@ msgid ""
 "the method; to insert multiple documents, pass an array of documents to the "
 "method."
 msgstr ""
+":method:`db.collection.insert()` 向集合插入一个或多个文档.要想插入一个文档,传递"
+"一个文档给该方法;要想插入多个文档,传递文档数组给该方法."
 
 #: ../source/tutorial/insert-documents.txt:169
 msgid ""
@@ -196,6 +205,9 @@ msgid ""
 "document does not specify an ``_id`` field, MongoDB adds the ``_id`` field "
 "with an ObjectId value to the document. See :ref:`write-op-insert-behavior`."
 msgstr ""
+"如下的示例向 ``users`` 集合插入了一个新的文档.新的文档有三个字段 ``name``,"
+"``age``,和 ``status``.由于该文档未指定 ``_id`` 字段,MongoDB 向该文档添加了值"
+"为  :ref:`objectid` 的 ``_id`` 字段.参见 :ref:`write-op-insert-behavior`."
 
 #: ../source/tutorial/insert-documents.txt:185
 msgid ""
@@ -203,6 +215,8 @@ msgid ""
 "operation. A successful insert of the document returns the following :method:"
 "`WriteResult` object:"
 msgstr ""
+"该操作返回了含有操作状态的 :method:`WriteResult` 对象.插入文档成功返回如下 :"
+"method:`WriteResult` 对象:"
 
 #: ../source/tutorial/insert-documents.txt:193
 msgid ""
@@ -210,6 +224,8 @@ msgid ""
 "inserted. If the operation encounters an error, the :method:`WriteResult` "
 "object will contain the error information."
 msgstr ""
+":data:`~WriteResult.nInserted` 字段指明了插入文档的总数.如果该操作遇到了错误, :"
+"method:`WriteResult` 对象将包含该错误信息."
 
 #: ../source/tutorial/insert-documents.txt:197
 msgid ""
@@ -218,6 +234,9 @@ msgid ""
 "the ``_id`` field with an ObjectId value to each document. See :ref:`write-op-"
 "insert-behavior`."
 msgstr ""
+"如下的示例向 ``users`` 集合插入了多个文档.由于这些文档未指定 ``_id`` 字段,"
+"MongoDB 向每个新文档添加了值为  :ref:`objectid` 的 ``_id`` 字段.参见 :ref:"
+"`write-op-insert-behavior`."
 
 #: ../source/tutorial/insert-documents.txt:212
 msgid ""
@@ -225,10 +244,12 @@ msgid ""
 "operation. A successful insert of the documents returns the following :method:"
 "`BulkWriteResult` object:"
 msgstr ""
+"该方法返回了包含操作状态的 :method:`BulkWriteResult` 对象.成功插入文档返回如"
+"下 :method:`BulkWriteResult` 对象:"
 
 #: ../source/tutorial/insert-documents.txt:229
 msgid "For more information and examples, see :method:`db.collection.insert()`."
-msgstr ""
+msgstr "更多信息和示例,请参见 :method:`db.collection.insert()`."
 
 #: ../source/tutorial/insert-documents.txt:232
 msgid "Additional Methods"
@@ -236,41 +257,44 @@ msgstr "其他方法"
 
 #: ../source/tutorial/insert-documents.txt:234
 msgid "The following methods can also add new documents to a collection:"
-msgstr ""
+msgstr "以下方法也可以向集合中添加新文档:"
 
 #: ../source/tutorial/insert-documents.txt:236
 msgid ""
 ":method:`db.collection.update()` when used with the ``upsert: true`` option."
-msgstr ""
+msgstr "和``upsert: true`` 选项一起使用的 :method:`db.collection.update()`."
 
 #: ../source/tutorial/insert-documents.txt:239
 msgid ""
 ":method:`db.collection.updateOne()` when used with the ``upsert: true`` option."
-msgstr ""
+msgstr "和``upsert: true`` 选项一起使用的 :method:`db.collection.updateOne()`."
 
 #: ../source/tutorial/insert-documents.txt:242
 msgid ""
 ":method:`db.collection.updateMany()` when used with the ``upsert: true`` "
 "option."
-msgstr ""
+msgstr "和``upsert: true`` 选项一起使用的 :method:`db.collection.updateMany()` ."
 
 #: ../source/tutorial/insert-documents.txt:245
 msgid ""
 ":method:`db.collection.findAndModify()` when used with the ``upsert: true`` "
 "option."
 msgstr ""
+"和``upsert: true`` 选项一起使用的 :method:`db.collection.findAndModify()` ."
 
 #: ../source/tutorial/insert-documents.txt:248
 msgid ""
 ":method:`db.collection.findOneAndUpdate()` when used with the ``upsert: true`` "
 "option."
 msgstr ""
+"和``upsert: true`` 选项一起使用的 :method:`db.collection.findOneAndUpdate()` ."
 
 #: ../source/tutorial/insert-documents.txt:251
 msgid ""
 ":method:`db.collection.findOneAndReplace()` when used with the ``upsert: "
 "true`` option."
 msgstr ""
+"和``upsert: true`` 选项一起使用的 :method:`db.collection.findOneAndReplace()`."
 
 #: ../source/tutorial/insert-documents.txt:254
 msgid ":method:`db.collection.save()`."
@@ -284,7 +308,7 @@ msgstr ":method:`db.collection.bulkWrite()`."
 msgid ""
 "See the individual reference pages for the methods for more information and "
 "examples."
-msgstr ""
+msgstr "更多信息和示例参见这些方法各自的参考页面."
 
 #: ../source/tutorial/insert-documents.txt:262
 msgid "Write Acknowledgement"
