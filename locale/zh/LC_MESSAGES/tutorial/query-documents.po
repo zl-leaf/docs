@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: 2016-08-10 14:10+0800\n"
+"PO-Revision-Date: 2016-08-11 19:18+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -373,24 +373,32 @@ msgid ""
 "condition with ``<field>:<value>`` expressions to select all documents that "
 "contain the ``<field>`` with the specified ``<value>``:"
 msgstr ""
+":ref:`query filter document <document-query-filter>` 能够用 ``<field>:"
+"<value>`` 表达式指定相等条件并以此选出所有包含有指定 ``<value>`` 的 "
+"``<field>`` 的文档:"
 
 #: ../source/tutorial/query-documents.txt:180
 msgid ""
 "The following example retrieves from the ``users`` collection all documents "
 "where the ``status`` field has the value ``\"A\"``:"
 msgstr ""
+"下面的示例从 ``users`` 集合中检索所有 ``status`` 字段值为  ``\"A\"``的文档:"
 
 #: ../source/includes/extracts/filter-query-operators.rst:2
 msgid ""
 "A :ref:`query filter document <document-query-filter>` can use the :ref:`query "
 "operators <query-selectors>` to specify conditions in the following form:"
 msgstr ""
+":ref:`query filter document <document-query-filter>` 能以如下的形式使用 :ref:"
+"`query operators <query-selectors>` 来指定条件:"
 
 #: ../source/tutorial/query-documents.txt:192
 msgid ""
 "The following example retrieves all documents from the ``users`` collection "
 "where ``status`` equals either ``\"P\"`` or ``\"D\"``:"
 msgstr ""
+"下面的示例从 ``users`` 集合中检索所有 ``status`` 等于 ``\"P\"`` 或 ``\"D\"`` 的"
+"文档:"
 
 #: ../source/tutorial/query-documents.txt:215
 msgid ""
@@ -398,24 +406,31 @@ msgid ""
 "where the ``status`` equals ``\"A\"`` **and** ``age`` is less than (:query:`"
 "$lt`) ``30``:"
 msgstr ""
+"下面的示例从 ``users`` 集合中检索所有 ``status`` 等于 ``\"A\"`` **并且** "
+"``age`` 小于 (:query:`$lt`) ``30`` 的文档:"
 
 #: ../source/tutorial/query-documents.txt:223
 msgid ""
 "See :ref:`comparison operators <query-selectors-comparison>` for other "
 "comparison operators."
 msgstr ""
+"其他比较运算符请参阅 :ref:`comparison operators <query-selectors-comparison>`."
 
 #: ../source/tutorial/query-documents.txt:234
 msgid ""
 "The following example retrieves all documents in the collection where the "
 "``status`` equals ``\"A\"`` **or** ``age`` is less than (:query:`$lt`) ``30``:"
 msgstr ""
+"下面的示例从 ``users`` 集合中检索所有 ``status`` 等于 ``\"A\"`` **或者** "
+"``age`` 小于 (:query:`$lt`) ``30`` 的文档:"
 
 #: ../source/tutorial/query-documents.txt:247
 msgid ""
 "Queries which use :ref:`comparison operators <query-selectors-comparison>` are "
 "subject to :ref:`type-bracketing`."
 msgstr ""
+"使用 :ref:`comparison operators <query-selectors-comparison>` 的查询遵守 :ref:"
+"`type-bracketing`."
 
 #: ../source/tutorial/query-documents.txt:256
 msgid ""
@@ -423,6 +438,8 @@ msgid ""
 "the collection where the``status`` equals ``\"A\"`` **and** *either* ``age`` "
 "is less than than (:query:`$lt`) ``30`` *or* ``type`` equals ``1``:"
 msgstr ""
+"在下面的例子中,复合查询文档选择出集合中所有 ``status`` 等于  ``\"A\"`` **并且"
+"** *要么*  ``age`` 小于 (:query:`$lt`) ``30`` *要么* ``type`` 等于 ``1``的文档:"
 
 #: ../source/tutorial/query-documents.txt:274
 msgid "Query on Embedded Documents"
@@ -435,6 +452,9 @@ msgid ""
 "match. Equality matches on an embedded document require an *exact* match of "
 "the specified ``<value>``, including the field order."
 msgstr ""
+"使用``{ <field>: <value> }``并且 \"<value>\" 为要匹配文档的查询文档来指定匹配整"
+"个内嵌文档的完全相等条件.(要使)相等条件匹配上内嵌文档需要指定  ``<value>`` 包括"
+"字段顺序的 *精确* 匹配."
 
 #: ../source/tutorial/query-documents.txt:289
 msgid ""
@@ -443,6 +463,8 @@ msgid ""
 "``artist`` equal to ``\"Picasso\"`` and ``food`` equal to ``\"pizza\"``, in "
 "that order:"
 msgstr ""
+"在下面的例子中,查询匹配所有 ``favorites`` 字段是以该种顺序只包含 等于 ``"
+"\"Picasso\"``的 ``artist`` 和等于 ``\"pizza\"`` 的 ``food`` 字段的内嵌文档:"
 
 #: ../source/tutorial/query-documents.txt:307
 msgid ""
@@ -450,6 +472,8 @@ msgid ""
 "documents where the ``favorites`` field is an embedded document that includes "
 "the field ``artist`` equal to ``\"Picasso\"`` and may contain other fields:"
 msgstr ""
+"在下面的例子中,查询使用 :term:`dot notation` 匹配所有 ``favorites`` 字段是包含"
+"等于 ``\"Picasso\"`` 的字段 ``artist``(可能还包含其他字段) 的内嵌文档:"
 
 #: ../source/tutorial/query-documents.txt:319
 msgid "Query on Arrays"
@@ -461,20 +485,22 @@ msgid ""
 "an array that holds exactly two elements, ``\"blue\"``, and ``\"black\"``, in "
 "this order:"
 msgstr ""
+"下面的例子查询所有字段 ``badges`` 是一个正好有两个元素: ``\"blue\"`` 和 ``"
+"\"black\"`` (以这种顺序)的数组的文档:"
 
 #: ../source/tutorial/query-documents.txt:355
 msgid "The query matches the following document:"
-msgstr ""
+msgstr "该查询匹配如下文档:"
 
 #: ../source/tutorial/query-documents.txt:380
 msgid ""
 "The following example queries for all documents where ``badges`` is an array "
 "that contains ``\"black\"`` as one of its elements:"
-msgstr ""
+msgstr "下面的例子查询所有 ``badges`` "
 
 #: ../source/tutorial/query-documents.txt:387
 msgid "The query matches the following documents:"
-msgstr ""
+msgstr "该查询匹配如下文档:"
 
 #: ../source/tutorial/query-documents.txt:432
 msgid ""
@@ -482,8 +508,8 @@ msgid ""
 "documents where the ``badges`` is an array that contains ``\"black\"`` as the "
 "first element:"
 msgstr ""
-"使用 :query:`$elemMatch` 操作符为内嵌文档数组指定复合条件，以查询数组中只是一个"
-"内嵌文档满足所有指定添加的文档。"
+"在下面的例子中,查询使用 the :term:`dot notation` 匹配所有 ``dadges`` 是第一个元"
+"素为``\"black\"`` 的数组的文档:"
 
 #: ../source/tutorial/query-documents.txt:470
 msgid ""
@@ -491,14 +517,16 @@ msgid ""
 "contains at least one element that is greater than (:query:`$gt`) ``15`` and "
 "less than (:query:`$lt`) ``20``:"
 msgstr ""
-"下面示例查询 ``memos`` 数组中至少有一个内嵌文档同时包含 ``memo`` 和 ``by`` 字段"
-"并且值分别为 ``'on time'`` 与 ``'shipping'`` 的所有文档："
+"下面的例子查询 ``finished`` 数组至少包含一个大于 (:query:`$gt`) ``15`` 并且小"
+"于 (:query:`$lt`) ``20`` 的元素的文档:"
 
 #: ../source/tutorial/query-documents.txt:478
 msgid ""
 "The operation returns the following documents, whose ``finished`` array "
 "contains at least one element which meets both criteria:"
 msgstr ""
+"该操作返回如下文档----这些文档的 ``finished`` 数组至少含有一个满足两个条件的元"
+"素:"
 
 #: ../source/tutorial/query-documents.txt:512
 msgid ""
@@ -508,6 +536,9 @@ msgid ""
 "can satisfy the less than ``20`` condition, or a single element can satisfy "
 "both:"
 msgstr ""
+"下面的例子查询 ``finished`` 数组包含以某种组合满足查询条件的元素的文档;例如,一"
+"个元素满足大于 ``15`` 的条件并且有另一个元素满足小于 ``20`` 的条件,或者有一个元"
+"素满足了这两个条件:"
 
 #: ../source/tutorial/query-documents.txt:572
 msgid ""
@@ -515,6 +546,8 @@ msgid ""
 "array whose first element (i.e. index is ``0``) is a document that contains "
 "the field ``points`` whose value is less than or equal to ``55``:"
 msgstr ""
+"下面的例子选择出所有 ``points`` 包含第一个元素(即索引为 ``0`` )是一个包含值小于"
+"或等于 ``55`` 的字段 ``points`` 的文档的数组的文档:"
 
 #: ../source/tutorial/query-documents.txt:604
 msgid ""
@@ -522,6 +555,8 @@ msgid ""
 "with at least one embedded document that contains the field ``points`` whose "
 "value is less than or equal to ``55``:"
 msgstr ""
+"下面的例子选择出所有 ``points`` 是一个至少有一个包含值小于或等于 ``55`` 的字段 "
+"``points`` 的内嵌文档的数组的文档:"
 
 #: ../source/tutorial/query-documents.txt:651
 msgid ""
@@ -529,6 +564,8 @@ msgid ""
 "least one embedded document that contains both the field ``points`` less than "
 "or equal to ``70`` and the field ``bonus`` equal to ``20``:"
 msgstr ""
+"下面的例子查询 ``points`` 数组有至少一个包含 ``points`` 小于等于 ``70`` 并且字"
+"段 ``bonus`` 等于 ``20`` 的内嵌文档的文档:"
 
 #: ../source/tutorial/query-documents.txt:679
 msgid ""
@@ -538,6 +575,9 @@ msgid ""
 "and another element satisfies the ``bonus`` equal to ``20`` condition, or a "
 "single element satisfies both criteria:"
 msgstr ""
+"下面的例子查询了 ``points`` 数组包含了以某种组合满足查询条件的元素的文档;例如,"
+"一个元素满足 ``points`` 小于等于 ``70`` 的条件并且有另一个元素满足 ``bonus`` 等"
+"于 ``20`` 的条件,或者一个元素同时满足两个条件:"
 
 #: ../source/tutorial/query-documents.txt:718
 msgid "Additional Methods"
@@ -556,6 +596,8 @@ msgid ""
 "In :doc:`aggregation pipeline </core/aggregation-pipeline>`, the :pipeline:`"
 "$match` pipeline stage provides access to MongoDB queries."
 msgstr ""
+"在 :doc:`aggregation pipeline </core/aggregation-pipeline>` 中, :pipeline:`"
+"$match` 管道阶段提供对MongoDB查询的访问."
 
 #: ../source/tutorial/query-documents.txt:735
 msgid "Read Isolation"
@@ -567,6 +609,8 @@ msgid ""
 "sharding>`, read concern allows clients to choose a level of isolation for "
 "their reads."
 msgstr ""
+"对于 :doc:`replica sets </replication>` 和复制集  :doc:`shards </sharding>` 的"
+"读取,安全读级别允许客户端选择他们读取的隔离等级."
 
 #: ../source/tutorial/query-documents.txt:743
 msgid "For more information, see :doc:`/reference/read-concern`."
@@ -578,3 +622,5 @@ msgid ""
 "from the default value ``20``. See :ref:`mongo-shell-executing-queries` for "
 "more information."
 msgstr ""
+"你可以使用 ``DBQuery.shellBatchSize`` 改变默认值为 ``20`` 的迭代次数.更多信息请"
+"参阅  :ref:`mongo-shell-executing-queries`."
