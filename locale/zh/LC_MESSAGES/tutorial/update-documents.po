@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-31 19:15-0400\n"
-"PO-Revision-Date: 2016-08-12 15:34+0800\n"
+"PO-Revision-Date: 2016-08-13 17:06+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -118,6 +118,7 @@ msgid ""
 "document that wholly replaces the matching documents except for the ``_id`` "
 "field, and"
 msgstr ""
+"更新文档----指定要执行的修改或替换文档---完全替换匹配文档(除了 ``_id`` 字段)"
 
 #: ../source/tutorial/update-documents.txt:68
 msgid "an options document."
@@ -150,6 +151,8 @@ msgid ""
 "replace an existing document with a replacement document that has a "
 "different ``_id`` field value."
 msgstr ""
+"一旦设定,你不能更新 ``_id`` 字段的值,你也不能用有不同 ``_id`` 字段值的替换文"
+"档替换已经存在的文档."
 
 #: ../source/tutorial/update-documents.txt:88
 msgid "Document Size"
@@ -162,6 +165,8 @@ msgid ""
 "the allocated space for that document, the update operation relocates the "
 "document on disk."
 msgstr ""
+"当执行更新操作增加了文档大小,超过了为该文档分配的空间时,更新操作会在磁盘上重"
+"定位该文档."
 
 #: ../source/tutorial/update-documents.txt:95
 msgid "Field Order"
@@ -171,17 +176,19 @@ msgstr "字段顺序"
 msgid ""
 "MongoDB preserves the order of the document fields following write "
 "operations *except* for the following cases:"
-msgstr ""
+msgstr "MongoDB遵循写操作保持文档字段顺序,*除了* 如下的情况:"
 
 #: ../source/includes/fact-update-field-order.rst:10
 msgid "The ``_id`` field is always the first field in the document."
-msgstr ""
+msgstr "``-id`` 字段始终是文档中的第一个字段."
 
 #: ../source/includes/fact-update-field-order.rst:12
 msgid ""
 "Updates that include :update:`renaming <$rename>` of field names may result "
 "in the reordering of fields in the document."
 msgstr ""
+"更新中包括 :update:`renaming <$rename>` 字段名称 可能会导致文档中的字段重新"
+"排序."
 
 #: ../source/includes/fact-update-field-order.rst:17
 msgid ""
@@ -189,6 +196,8 @@ msgid ""
 "order in a document. Before version 2.6, MongoDB did not actively preserve "
 "the order of the fields in a document."
 msgstr ""
+"在2.6版本开始,MongoDB主动尝试保持在文档中的字段的顺序。 2.6版本之前，MongoDB"
+"不会主动保持文档中的字段的顺序。"
 
 #: ../source/tutorial/update-documents.txt:102
 msgid "``Upsert`` Option"
@@ -203,12 +212,17 @@ msgid ""
 "If there are matching documents, then the operation modifies or replaces "
 "the matching document or documents."
 msgstr ""
+"如果 :method:`db.collection.update()`, :method:`db.collection."
+"updateOne()`, :method:`db.collection.updateMany()`, 或者 :method:`db."
+"collection.replaceOne()` 包含 ``upsert : true``  **并且** 没有文档匹配指定的"
+"过滤器,那么此操作会创建一个新文档并插入它.如果有匹配的文档,那么此操作修改或"
+"替换匹配的单个或多个文档."
 
 #: ../source/tutorial/update-documents.txt:112
 msgid ""
 "For details on the new document created, see the individual reference pages "
 "for the methods."
-msgstr ""
+msgstr "有关创建新文档的细节,请参阅这些方法各自的参考页面."
 
 #: ../source/tutorial/update-documents.txt:116
 msgid "Example Collection"
@@ -222,12 +236,17 @@ msgid ""
 "cursor is automatically iterated up to 20 times [#set-shell-batch-size]_ to "
 "print up to the first 20 documents in the results."
 msgstr ""
+"本页示例使用 :program:`mongo` shell中的 :method:`db.collection.find()` 方法."
+"在  :program:`mongo` shell 中,如果返回的游标没有赋给使用 ``var`` 关键字的变"
+"量,那么该游标会自动迭代20次 [#set-shell-batch-size]_ 来打印出结果中的前20个"
+"文档."
 
 #: ../source/tutorial/update-documents.txt:125
 msgid ""
 "To populate the ``users`` collection referenced in the examples, run the "
 "following in :program:`mongo` shell:"
 msgstr ""
+"要添加示例中涉及的 ``users`` 集合,在 :program:`mongo` shell中运行如下命令:"
 
 #: ../source/tutorial/update-documents.txt:130
 msgid ""
@@ -235,22 +254,26 @@ msgid ""
 "``_id`` values, you need to :method:`drop <db.collection.drop()>` the "
 "collection (``db.users.drop()``) before inserting the example documents."
 msgstr ""
+"如果 ``users`` 集合中已经包含了相同  ``_id`` 值的文档,你需要在插入示例文档"
+"前 :method:`drop <db.collection.drop()>` 该集合( ``db.users.drop()`` )."
 
 #: ../source/tutorial/update-documents.txt:228
 msgid "Update Specific Fields in a Document"
-msgstr ""
+msgstr "更新文档中指定字段"
 
 #: ../source/tutorial/update-documents.txt:230
 msgid ""
 "To change a field in a document, MongoDB provides :manual:`update operators "
 "</reference/operator/update>`, such as :update:`$set` to modify values."
 msgstr ""
+"为了修改文档中的字段,MongoDB 提供了 :manual:`update operators </reference/"
+"operator/update>`,例如用来修改值的 :update:`$set` "
 
 #: ../source/tutorial/update-documents.txt:234
 msgid ""
 "To specify the modification to perform using update operators, use an "
 "update document of the form:"
-msgstr ""
+msgstr "要用更新操作符指定要执行的修改,使用(如下)形式的更新文档:"
 
 #: ../source/tutorial/update-documents.txt:245
 msgid ""
@@ -258,10 +281,12 @@ msgid ""
 "field does not exist. See the individual :manual:`update operator </"
 "reference/operator/update>` reference."
 msgstr ""
+"如果字段不存在,一些更新操作符,例如  :update:`$set`会创建该字段.请参阅单独"
+"的 :manual:`update operator </reference/operator/update>` 参考."
 
 #: ../source/tutorial/update-documents.txt:252
 msgid "``db.collection.updateOne()``"
-msgstr ""
+msgstr "``db.collection.updateOne()``"
 
 #: ../source/tutorial/update-documents.txt:256
 msgid ""
@@ -269,12 +294,17 @@ msgid ""
 "on the ``users`` collection to update the *first* document that matches the "
 "filter ``favorites.artist`` equals ``\"Picasso\"``. The update operation:"
 msgstr ""
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.updateOne()` 方法来更"
+"新匹配过滤条件-- ``favorites.artist`` 等于 ``\"Picasso\"`` 的 *第一个* 文档."
+"更新操作:"
 
 #: ../source/tutorial/update-documents.txt:261
 msgid ""
 "uses the :update:`$set` operator to update the value of the ``favorites."
 "food`` field to ``\"pie\"`` and the value of the ``type`` field to ``3``,"
 msgstr ""
+"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"pie\"``并更"
+"新 ``type`` 字段的值到 ``3``,"
 
 #: ../source/tutorial/update-documents.txt:265
 #: ../source/tutorial/update-documents.txt:299
@@ -285,15 +315,18 @@ msgid ""
 "not exist, :update:`$currentDate` will create the field. See :update:`"
 "$currentDate` for details."
 msgstr ""
+"使用 :update:`$currentDate` 操作符更新 ``lastModified`` 字段的值到当前日期."
+"如果  ``lastModified`` 字段不存在,  :update:`$currentDate` 会创建该字段.详情"
+"请参阅 :update:`$currentDate`."
 
 #: ../source/tutorial/update-documents.txt:280
 msgid ""
 "For more information and examples, see :method:`db.collection.updateOne()`."
-msgstr ""
+msgstr "更多信息和示例,请参阅 :method:`db.collection.updateOne()`."
 
 #: ../source/tutorial/update-documents.txt:287
 msgid "``db.collection.updateMany()``"
-msgstr ""
+msgstr "``db.collection.updateMany()``"
 
 #: ../source/tutorial/update-documents.txt:291
 msgid ""
@@ -301,6 +334,9 @@ msgid ""
 "on the ``users`` collection to update all documents that matches the filter "
 "``favorites.artist`` equals ``\"Picasso\"``. The update operation:"
 msgstr ""
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.updateMany()` 方法来"
+"更新所有匹配过滤条件-- ``favorites.artist`` 等于 ``\"Picasso\"`` 的文档.更新"
+"操作:"
 
 #: ../source/tutorial/update-documents.txt:295
 msgid ""
@@ -308,16 +344,18 @@ msgid ""
 "artist`` field to ``\"Pisanello\"`` and the value of the ``type`` field to "
 "``3``,"
 msgstr ""
+"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"Pisanello"
+"\"`` 并更新 ``type`` 字段的值到 ``3``,"
 
 #: ../source/tutorial/update-documents.txt:314
 msgid ""
 "For more information and examples, see :method:`db.collection.updateMany()`."
-msgstr ""
+msgstr "更多信息和示例，请参阅：方法：`db.collection.updateMany（）`。"
 
 #: ../source/tutorial/update-documents.txt:318
 #: ../source/tutorial/update-documents.txt:389
 msgid "``db.collection.update``"
-msgstr ""
+msgstr "``db.collection.update``"
 
 #: ../source/tutorial/update-documents.txt:320
 msgid ""
@@ -325,22 +363,29 @@ msgid ""
 "the ``users`` collection to update the *first* document that matches the "
 "filter ``favorites.artist`` equals ``\"Pisanello\"``. The update operation:"
 msgstr ""
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法来更新"
+"匹配过滤条件-- ``favorites.artist`` 等于 ``\"Pisanello\"`` 的 *第一个* 文档."
+"更新操作:"
 
 #: ../source/tutorial/update-documents.txt:324
 msgid ""
 "uses the :update:`$set` operator to update the value of the ``favorites."
 "food`` field to ``\"pizza\"`` and the value of the ``type`` field to ``0``,"
 msgstr ""
+"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"pizza\"``并"
+"更新 ``type`` 字段的值到 ``0``,"
 
 #: ../source/tutorial/update-documents.txt:343
 msgid ""
 "To update multiple documents using the :method:`db.collection.update()`, "
 "include the :ref:`multi: true <multi-parameter>` option:"
 msgstr ""
+"使用  :method:`db.collection.update()`并包含 :ref:`multi: true <multi-"
+"parameter>` 选项来更新多个文档:"
 
 #: ../source/tutorial/update-documents.txt:359
 msgid "Replace the Document"
-msgstr ""
+msgstr "文档替换"
 
 #: ../source/tutorial/update-documents.txt:361
 msgid ""
@@ -350,6 +395,9 @@ msgid ""
 "replacing a document, the replacement document must consist of only "
 "``<field> : <value>``."
 msgstr ""
+"要更新除 ``_id`` 字段的文档的整个内容,传递一个全新的文档给:method:`db."
+"collection.replaceOne()` 给 :method:`db.collection.update()`作为第二个参数."
+"当替换文档时,替换文档必须仅仅由  ``<field> : <value>`` 组成."
 
 #: ../source/tutorial/update-documents.txt:367
 msgid ""
@@ -358,10 +406,13 @@ msgid ""
 "the ``_id`` field is immutable; however, if you do include the ``_id`` "
 "field, it must have the same value as the current value."
 msgstr ""
+"替换文档可以有不同于原文档的字段.在替换文档中,由于 ``_id`` 字段是不变的,所"
+"以,你可以省略 ``_id`` 字段;不论如何,如果你包含了 ``_id`` 字段,它的值必须和当"
+"前的值相同."
 
 #: ../source/tutorial/update-documents.txt:375
 msgid "``db.collection.replaceOne``"
-msgstr ""
+msgstr "``db.collection.replaceOne``"
 
 #: ../source/tutorial/update-documents.txt:377
 msgid ""
@@ -369,6 +420,8 @@ msgid ""
 "on the ``users`` collection to replace the *first* document that matches "
 "the filter ``name`` equals ``\"sue\"`` with the new document:"
 msgstr ""
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.replaceOne()` 将匹配"
+"过滤条件--- ``name`` 等于 ``\"sue\"`` 的 *第一个* 文档替换为新文档:"
 
 #: ../source/tutorial/update-documents.txt:391
 msgid ""
@@ -376,6 +429,8 @@ msgid ""
 "the ``users`` collection to replace the *first* document that matches the "
 "filter ``name`` equals ``\"xyz\"`` with the new document:"
 msgstr ""
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法将匹配"
+"过滤条件--- ``name`` 等于 ``\"xyz\"`` 的 *第一个* 文档替换为新文档:"
 
 #: ../source/tutorial/update-documents.txt:403
 msgid "Additional Methods"
