@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yingmin zhou <csuyingminzhou@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,229 +13,235 @@ msgstr ""
 
 #: ../source/reference/bson-types.txt:3
 msgid "BSON Types"
-msgstr ""
+msgstr "BSON 类型"
 
 #: ../source/reference/bson-types.txt:13
 msgid ""
 ":term:`BSON` is a binary serialization format used to store documents and "
 "make remote procedure calls in MongoDB. The BSON specification is located at"
 " `bsonspec.org <http://bsonspec.org/>`_."
-msgstr ""
+msgstr ":term:`BSON` 是一种MongoDB中用于存储文档以及进行远程进程调用的二进制序列化格式。"
+"详细的BSON介绍位于："
+" `bsonspec.org <http://bsonspec.org/>`_."
 
 #: ../source/includes/fact-bson-types.rst:9
 msgid "Double"
-msgstr ""
+msgstr "Double"
 
 #: ../source/includes/fact-bson-types.rst:10
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../source/includes/fact-bson-types.rst:14
 #: ../source/reference/bson-types.txt:71
 msgid "String"
-msgstr ""
+msgstr "字符串"
 
 #: ../source/includes/fact-bson-types.rst:15
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../source/includes/fact-bson-types.rst:19
 #: ../source/includes/fact-sort-order.rst:8
 msgid "Object"
-msgstr ""
+msgstr "对象"
 
 #: ../source/includes/fact-bson-types.rst:20
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../source/includes/fact-bson-types.rst:24
 #: ../source/includes/fact-sort-order.rst:9
 msgid "Array"
-msgstr ""
+msgstr "数组"
 
 #: ../source/includes/fact-bson-types.rst:25
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../source/includes/fact-bson-types.rst:29
 msgid "Binary data"
-msgstr ""
+msgstr "二进制数据"
 
 #: ../source/includes/fact-bson-types.rst:30
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../source/includes/fact-bson-types.rst:34
 msgid "Undefined"
-msgstr ""
+msgstr "未定义"
 
 #: ../source/includes/fact-bson-types.rst:35
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../source/includes/fact-bson-types.rst:37
 msgid "Deprecated."
-msgstr ""
+msgstr "已过期。"
 
 #: ../source/includes/fact-bson-types.rst:40
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../source/includes/fact-bson-types.rst:44
 #: ../source/includes/fact-sort-order.rst:12
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: ../source/includes/fact-bson-types.rst:45
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../source/includes/fact-bson-types.rst:49
 #: ../source/includes/fact-sort-order.rst:13
 #: ../source/reference/bson-types.txt:143
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: ../source/includes/fact-bson-types.rst:50
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../source/includes/fact-bson-types.rst:54
 #: ../source/includes/fact-sort-order.rst:5
 msgid "Null"
-msgstr ""
+msgstr "空"
 
 #: ../source/includes/fact-bson-types.rst:55
 msgid "10"
-msgstr ""
+msgstr "10"
 
 #: ../source/includes/fact-bson-types.rst:59
 #: ../source/includes/fact-sort-order.rst:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "正则表达式"
 
 #: ../source/includes/fact-bson-types.rst:60
 msgid "11"
-msgstr ""
+msgstr "11"
 
 #: ../source/includes/fact-bson-types.rst:69
 msgid "JavaScript"
-msgstr ""
+msgstr "JavaScript"
 
 #: ../source/includes/fact-bson-types.rst:70
 msgid "13"
-msgstr ""
+msgstr "13"
 
 #: ../source/includes/fact-bson-types.rst:74
 msgid "Symbol"
-msgstr ""
+msgstr "符号"
 
 #: ../source/includes/fact-bson-types.rst:75
 msgid "14"
-msgstr ""
+msgstr "14"
 
 #: ../source/includes/fact-bson-types.rst:79
 msgid "JavaScript (with scope)"
-msgstr ""
+msgstr "JavaScript （带范围）"
 
 #: ../source/includes/fact-bson-types.rst:80
 msgid "15"
-msgstr ""
+msgstr "15"
 
 #: ../source/includes/fact-bson-types.rst:84
 msgid "32-bit integer"
-msgstr ""
+msgstr "32位整数"
 
 #: ../source/includes/fact-bson-types.rst:85
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../source/includes/fact-bson-types.rst:89
 #: ../source/includes/fact-sort-order.rst:14
 msgid "Timestamp"
-msgstr ""
+msgstr "时间戳"
 
 #: ../source/includes/fact-bson-types.rst:90
 msgid "17"
-msgstr ""
+msgstr "17"
 
 #: ../source/includes/fact-bson-types.rst:94
 msgid "64-bit integer"
-msgstr ""
+msgstr "64位整数"
 
 #: ../source/includes/fact-bson-types.rst:95
 msgid "18"
-msgstr ""
+msgstr "18"
 
 #: ../source/includes/fact-bson-types.rst:99
 msgid "Min key"
-msgstr ""
+msgstr "最小键值"
 
 #: ../source/includes/fact-bson-types.rst:104
 msgid "Max key"
-msgstr ""
+msgstr "最大键值"
 
 #: ../source/includes/fact-bson-types.rst:105
 msgid "127"
-msgstr ""
+msgstr "127"
 
 #: ../source/reference/bson-types.txt:23
 msgid "To determine a field's type, see :ref:`check-types-in-shell`."
-msgstr ""
+msgstr "可使用  :ref:`check-types-in-shell` 确定某个字段的类型。"
 
 #: ../source/reference/bson-types.txt:25
 msgid ""
 "If you convert BSON to JSON, see the :doc:`Extended JSON </reference"
 "/mongodb-extended-json>` reference."
 msgstr ""
-
+"查阅:doc:`Extended JSON </reference"
+"/mongodb-extended-json>` 参考文件了解如何将BSON转为JSON。"
 #: ../source/reference/bson-types.txt:32
 msgid "Comparison/Sort Order"
-msgstr ""
+msgstr "比较/排序顺序"
 
 #: ../source/includes/fact-sort-order.rst:1
 msgid ""
 "When comparing values of different :term:`BSON` types, MongoDB uses the "
 "following comparison order, from lowest to highest:"
 msgstr ""
+"在比较不同  :term:`BSON` 类型的值时，MongoDB使用下面的比较顺序（从低到高）： "
 
 #: ../source/includes/fact-sort-order.rst:4
 msgid "MinKey (internal type)"
-msgstr ""
+msgstr "最小键值 （内部类型）"
 
 #: ../source/includes/fact-sort-order.rst:6
 msgid "Numbers (ints, longs, doubles)"
-msgstr ""
+msgstr "数字（整型，长整型，double）"
 
 #: ../source/includes/fact-sort-order.rst:7
 msgid "Symbol, String"
-msgstr ""
+msgstr "符号，字符串"
 
 #: ../source/includes/fact-sort-order.rst:10
 msgid "BinData"
-msgstr ""
+msgstr "二进制数据"
 
 #: ../source/includes/fact-bson-types.rst:39
 #: ../source/includes/fact-sort-order.rst:11
 #: ../source/reference/bson-types.txt:43
 msgid "ObjectId"
-msgstr ""
+msgstr "ObjectId"
 
 #: ../source/includes/fact-sort-order.rst:16
 msgid "MaxKey (internal type)"
-msgstr ""
+msgstr "最大键值（内部类型）"
 
 #: ../source/includes/fact-sort-order.rst:18
 msgid ""
 "MongoDB treats some types as equivalent for comparison purposes. For "
 "instance, numeric types undergo conversion before comparison."
 msgstr ""
+"MongoDB 在比较的过程中，把一些类型看成相等，例如，数值类型会在比较之前进行转化。"
 
 #: ../source/includes/fact-sort-order.rst:21
 msgid ""
 "Date objects sort before Timestamp objects. Previously Date and Timestamp "
 "objects sorted together."
 msgstr ""
+"日期对象排在时间戳对象之前。之前数据集时间戳对象一起进行排序。"
 
 #: ../source/includes/fact-sort-order.rst:25
 msgid ""
@@ -243,6 +249,8 @@ msgid ""
 " As such, a sort on the ``a`` field in documents ``{ }`` and ``{ a: null }``"
 " would treat the documents as equivalent in sort order."
 msgstr ""
+"MongoDB将会把不存在的字段当做一个空的BSON对象。"
+"这样的话，对文档  ``{ }`` 和 ``{ a: null }`` 在 ``a`` 字段上进行排序，在排序顺序上将会看做相等。"
 
 #: ../source/includes/fact-sort-order.rst:29
 msgid ""
@@ -254,28 +262,32 @@ msgid ""
 " of an empty array (e.g. ``[ ]``) treats the empty array as less than "
 "``null`` or a missing field."
 msgstr ""
+"在数组中，小于比较或者升序排列会比较数组中最小的元素，大于比较或者降序排列会比较数组中最大的元素。"
+"因此，在比较一个字段值为单元素数组（例如， ``[ 1 ]`` ）与一个非数组字段（例如， ``2`` ）时，"
+"比较的是 ``1`` 和 ``2`` 。一个空数组（例如， ``[ ]``）的比较会将空数组处理为小于 ``null`` 或缺失字段。"
 
 #: ../source/includes/fact-sort-order.rst:37
 msgid "MongoDB sorts ``BinData`` in the following order:"
-msgstr ""
+msgstr "MongoDB 使用下列的书序对 ``二进制数据`` 进行排序："
 
 #: ../source/includes/fact-sort-order.rst:39
 msgid "First, the length or size of the data."
-msgstr ""
+msgstr "首先，数据的长度或大小。"
 
 #: ../source/includes/fact-sort-order.rst:41
 msgid "Then, by the BSON one-byte subtype."
-msgstr ""
+msgstr "接着，通过BSON一位的子类型。"
 
 #: ../source/includes/fact-sort-order.rst:43
 msgid "Finally, by the data, performing a byte-by-byte comparison."
-msgstr ""
+msgstr "最后，通过对数据进行逐位的比较。"
 
 #: ../source/reference/bson-types.txt:36
 msgid ""
 "The following sections describe special considerations for particular BSON "
 "types."
 msgstr ""
+"下面的部分描述了对特定BSON类型的特殊考量。"
 
 #: ../source/reference/bson-types.txt:73
 msgid ""
@@ -286,6 +298,9 @@ msgid ""
 "In addition, MongoDB :query:`$regex` queries support UTF-8 in the regex "
 "string."
 msgstr ""
+"BSON字符串都是UTF-8编码。一般说来，每种编程语言的驱动程序在序列化和反序列化BSON的时候，"
+"都会从语言的字符串形式转化为UTF-8。这就使得使用BSON字符串简单存储大多数国际字符变为可能。"
+" [#sort-string-internationalization]_ 此外，MongoDB :query:`$regex` 查询支持正则字符串中使用UTF-8。"
 
 #: ../source/reference/bson-types.txt:80
 msgid ""
@@ -294,10 +309,14 @@ msgid ""
 "internally :method:`sort() <cursor.sort()>` uses the C++ ``strcmp`` api, the"
 " sort order may handle some characters incorrectly."
 msgstr ""
+"对于使用UTF-8字符集的字符串，在字符串上使用 :method:`sort() "
+"<cursor.sort()>` 理论上来说都是正确的。然而，由于内部的"
+" :method:`sort() <cursor.sort()>` 方法使用的是 C++的 ``strcmp`` api，排序时可能出错误处理某些字符串。"
+
 
 #: ../source/reference/bson-types.txt:89
 msgid "Timestamps"
-msgstr ""
+msgstr "时间戳"
 
 #: ../source/reference/bson-types.txt:91
 msgid ""
@@ -305,29 +324,35 @@ msgid ""
 "associated with the regular :ref:`document-bson-type-date` type. Timestamp "
 "values are a 64 bit value where:"
 msgstr ""
+"BSON有一个特殊的时间戳类型用于 MongoDB *内部* 使用，与普通的"
+"  :ref:`document-bson-type-date` 类型不相关。 时间戳值是一个64位的值。其中："
 
 #: ../source/reference/bson-types.txt:95
 msgid ""
 "the first 32 bits are a ``time_t`` value (seconds since the Unix epoch)"
 msgstr ""
+"前32位是一个 ``time_t`` 值（与Unix新纪元相差的秒数）"
 
 #: ../source/reference/bson-types.txt:97
 msgid ""
 "the second 32 bits are an incrementing ``ordinal`` for operations within a "
 "given second."
 msgstr ""
+"后32位是在某秒中操作的一个递增的``序数``。 "
 
 #: ../source/reference/bson-types.txt:100
 msgid ""
 "Within a single :program:`mongod` instance, timestamp values are always "
 "unique."
 msgstr ""
+"在单个  :program:`mongod`  实例中，时间戳值通常是唯一的。 "
 
 #: ../source/reference/bson-types.txt:103
 msgid ""
 "In replication, the :term:`oplog` has a ``ts`` field. The values in this "
 "field reflect the operation time, which uses a BSON timestamp value."
 msgstr ""
+"在复制集中，  :term:`oplog`  有一个 ``ts`` 字段。这个字段中的值使用BSON时间戳表示了操作时间。"
 
 #: ../source/reference/bson-types.txt:109
 msgid ""
@@ -335,6 +360,8 @@ msgid ""
 "application development, you will want to use the BSON date type. See :ref"
 ":`document-bson-type-date` for more information."
 msgstr ""
+"BSON时间戳类型主要用于 MongoDB*内部* 使用 。在大多数情况下的应用开发中，你可以使用BSON日期类型。查阅 :ref"
+":`document-bson-type-date` 了解更多信息。 "
 
 #: ../source/reference/bson-types.txt:114
 msgid ""
@@ -343,18 +370,22 @@ msgid ""
 " timestamp value. For example, if you create an insert a document with a "
 "timestamp value, as in the following operation:"
 msgstr ""
+"如果你插入一个在一级字段中包含空BSON时间戳的文档，MongoDB服务器将会使用当前的时间戳值替换空的时间戳。"
+"例如，如果你使用下面的操作插入一个包含时间戳值的文档："
 
 #: ../source/reference/bson-types.txt:125
 msgid ""
 "Then, the :method:`db.test.find() <db.collection.find()>` operation will "
 "return a document that resembles the following:"
 msgstr ""
+"然后， :method:`db.test.find() <db.collection.find()>`  操作将会返回一个类似于下面的文档："
 
 #: ../source/reference/bson-types.txt:132
 msgid ""
 "If ``ts`` were a field in an embedded document, the server would have left "
 "it as an empty timestamp value."
 msgstr ""
+"如果 ``ts`` 是一个嵌入文档中的字段，服务器将会继续让其保持空的时间戳值。"
 
 #: ../source/reference/bson-types.txt:135
 msgid ""
@@ -362,6 +393,8 @@ msgid ""
 "first two fields, including ``_id``, of an inserted document. Now MongoDB "
 "will replace any top-level field."
 msgstr ""
+"之前，服务器只会替换插入文档内前两个字段中（包括``_id``）的空时间戳值。"
+"现在，MongoDB将会对任何一级字段中的空时间戳进行替换。"
 
 #: ../source/reference/bson-types.txt:145
 msgid ""
@@ -369,23 +402,28 @@ msgid ""
 "since the Unix epoch (Jan 1, 1970). This results in a representable date "
 "range of about 290 million years into the past and future."
 msgstr ""
+"BSON日期是一个64位整数，表示当前距离Unix新纪元（1970年1月1日）的毫秒数。"
+"这样就保证了过去和未来2.9亿年的可表示日期范围。"
 
 #: ../source/reference/bson-types.txt:150
 msgid ""
 "The `official BSON specification <http://bsonspec.org/#/specification>`_ "
 "refers to the BSON Date type as the *UTC datetime*."
 msgstr ""
+"正式的BSON说明 <http://bsonspec.org/#/specification>`_  "
+"将BSON日期类型成为 *UTC 时间*。"
 
 #: ../source/reference/bson-types.txt:153
 msgid ""
 "BSON Date type is signed. [#unsigned-date]_ Negative values represent dates "
 "before 1970."
 msgstr ""
+"BSON日期类型是有符号的。 [#unsigned-date]_  负数表示1970年之前的日期。"
 
 #: ../source/reference/bson-types.txt:0 ../source/reference/bson-types.txt:0
 #: ../source/reference/bson-types.txt:0 ../source/reference/bson-types.txt:0
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../source/reference/bson-types.txt:183
 msgid ""
@@ -395,10 +433,14 @@ msgid ""
 "re-index if you created an index on ``Date`` values with an earlier version,"
 " and dates before 1970 are relevant to your application."
 msgstr ""
+"在2.0版本之前， ``日期`` 值被错误地表示为 *无符号整数*，"
+"大大地影响了 ``日期`` 字段上的排序、范围查询以及索引。"
+"由于在升级过程中不会重建索引，所以如果您是在早期版本中在 ``日期`` 字段上创建的索引，"
+"请对与应用相关的、1970年前的日期进行重新索引。"
 
 #: ../source/reference/bson-types.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 #: ../source/reference/bson-types.txt:17
 msgid ""
@@ -406,114 +448,116 @@ msgid ""
 "type has a corresponding number and string alias that can be used with the "
 ":query:`$type` operator to query documents by BSON type."
 msgstr ""
+"BSON在文档中支持以下数据类型。每种数据类型有一个对应的数据以及对应的字符串别名，"
+"可以使用 :query:`$type` 操作符对文档进行查询得到BSON类型。"
 
 #: ../source/includes/fact-bson-types.rst:4
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../source/includes/fact-bson-types.rst:5
 msgid "Number"
-msgstr ""
+msgstr "数值"
 
 #: ../source/includes/fact-bson-types.rst:6
 msgid "Alias"
-msgstr ""
+msgstr "别名"
 
 #: ../source/includes/fact-bson-types.rst:7
 msgid "Notes"
-msgstr ""
+msgstr "备注"
 
 #: ../source/includes/fact-bson-types.rst:11
 msgid "\"double\""
-msgstr ""
+msgstr "\"double\""
 
 #: ../source/includes/fact-bson-types.rst:16
 msgid "\"string\""
-msgstr ""
+msgstr "\"string\""
 
 #: ../source/includes/fact-bson-types.rst:21
 msgid "\"object\""
-msgstr ""
+msgstr "\"object\""
 
 #: ../source/includes/fact-bson-types.rst:26
 msgid "\"array\""
-msgstr ""
+msgstr "\"array\""
 
 #: ../source/includes/fact-bson-types.rst:31
 msgid "\"binData\""
-msgstr ""
+msgstr "\"binData\""
 
 #: ../source/includes/fact-bson-types.rst:36
 msgid "\"undefined\""
-msgstr ""
+msgstr "\"undefined\""
 
 #: ../source/includes/fact-bson-types.rst:41
 msgid "\"objectId\""
-msgstr ""
+msgstr "\"objectId\""
 
 #: ../source/includes/fact-bson-types.rst:46
 msgid "\"bool\""
-msgstr ""
+msgstr "\"bool\""
 
 #: ../source/includes/fact-bson-types.rst:51
 msgid "\"date\""
-msgstr ""
+msgstr "\"date\""
 
 #: ../source/includes/fact-bson-types.rst:56
 msgid "\"null\""
-msgstr ""
+msgstr "\"null\""
 
 #: ../source/includes/fact-bson-types.rst:61
 msgid "\"regex\""
-msgstr ""
+msgstr "\"regex\""
 
 #: ../source/includes/fact-bson-types.rst:64
 msgid "DBPointer"
-msgstr ""
+msgstr "\"DBPointer\""
 
 #: ../source/includes/fact-bson-types.rst:65
 msgid "12"
-msgstr ""
+msgstr "12"
 
 #: ../source/includes/fact-bson-types.rst:66
 msgid "\"dbPointer\""
-msgstr ""
+msgstr "\"dbPointer\""
 
 #: ../source/includes/fact-bson-types.rst:71
 msgid "\"javascript\""
-msgstr ""
+msgstr "\"javascript\""
 
 #: ../source/includes/fact-bson-types.rst:76
 msgid "\"symbol\""
-msgstr ""
+msgstr "\"symbol\""
 
 #: ../source/includes/fact-bson-types.rst:81
 msgid "\"javascriptWithScope\""
-msgstr ""
+msgstr "\"javascriptWithScope\""
 
 #: ../source/includes/fact-bson-types.rst:86
 msgid "\"int\""
-msgstr ""
+msgstr "\"int\""
 
 #: ../source/includes/fact-bson-types.rst:91
 msgid "\"timestamp\""
-msgstr ""
+msgstr "\"timestamp\""
 
 #: ../source/includes/fact-bson-types.rst:96
 msgid "\"long\""
-msgstr ""
+msgstr "\"long\""
 
 #: ../source/includes/fact-bson-types.rst:100
 msgid "-1"
-msgstr ""
+msgstr "-1"
 
 #: ../source/includes/fact-bson-types.rst:101
 msgid "\"minKey\""
-msgstr ""
+msgstr "\"minKey\""
 
 #: ../source/includes/fact-bson-types.rst:106
 msgid "\"maxKey\""
-msgstr ""
+msgstr "\"maxKey\""
 
 #: ../source/reference/bson-types.txt:45
 msgid ""
@@ -521,22 +565,24 @@ msgid ""
 "values consists of 12-bytes, where the first four bytes are a timestamp that"
 " reflect the ObjectId's creation, specifically:"
 msgstr ""
+"ObjectIds非常小、一般是唯一的、生成速度快并且有序的。"
+"ObjectId值由12个字节组成，其中，前4位是一个表明ObjectId创建时间的时间戳，详细说来："
 
 #: ../source/includes/fact-ObjectId-construct.rst:1
 msgid "a 4-byte value representing the seconds since the Unix epoch,"
-msgstr ""
+msgstr "4个字节表示当前距离Unix新纪元的秒数，"
 
 #: ../source/includes/fact-ObjectId-construct.rst:3
 msgid "a 3-byte machine identifier,"
-msgstr ""
+msgstr "3字节表示机器标识，"
 
 #: ../source/includes/fact-ObjectId-construct.rst:5
 msgid "a 2-byte process id, and"
-msgstr ""
+msgstr "2字节表示进程id，以及"
 
 #: ../source/includes/fact-ObjectId-construct.rst:7
 msgid "a 3-byte counter, starting with a random value."
-msgstr ""
+msgstr "一个3字节的计数器，从一个随机值开始计数。"
 
 #: ../source/includes/fact-id-field.rst:1
 msgid ""
@@ -547,6 +593,9 @@ msgid ""
 " a top-level ``_id`` field during an insert, the MongoDB driver adds the "
 "``_id`` field that holds an :ref:`objectid`."
 msgstr ""
+"在MongoDB中，存储在集合中的文档需要一个唯一的 :term:`_id` 字段来作为 :term:`primary key` 。"
+"如果 ``_id" 字段在文档中没有指定，MongoDB使用 :ref:`ObjectIds <objectid>` 作为``_id`` 字段的默认值。"
+"例如，如果在插入文档时，该文档不包括一级的 ``_id`` 字段，MongoDB的驱动程序将会增加存储着 :ref:`objectid` 的 ``_id`` 字段。"
 
 #: ../source/includes/fact-id-field.rst:8
 msgid ""
@@ -555,24 +604,31 @@ msgid ""
 ":ref:`upsert option <upsert-parameter>`) :program:`mongod` will add the "
 "``_id`` field that holds an ObjectId."
 msgstr ""
+"此外，如果  :program:`mongod`  接收到一个待插入文档，并没有包含 ``_id``字段（例如，在一个 :ref:`upsert option <upsert-parameter>` "
+" 更新操作中）， :program:`mongod`  将会自动增加一个包含ObjectId的 ``_id`` 字段。"
 
 #: ../source/reference/bson-types.txt:53
 msgid ""
 "MongoDB clients should add an ``_id`` field with a unique ObjectId. Using "
 "ObjectIds for the ``_id`` field provides the following additional benefits:"
 msgstr ""
+"MongoDB客户端应该增加一个存储唯一ObjectId的``_id``字段。"
+"使用ObjectIds 用于``_id`` 字段有以下几个优势："
 
 #: ../source/reference/bson-types.txt:57
 msgid ""
 "in the :program:`mongo` shell, you can access the creation time of the "
 "``ObjectId``, using the :method:`ObjectId.getTimestamp()` method."
 msgstr ""
+"在 :program:`mongo` shell中，你可以使用  :method:`ObjectId.getTimestamp()` 方法获得 ``ObjectId`` 的创建时间。"
 
 #: ../source/reference/bson-types.txt:60
 msgid ""
 "sorting on an ``_id`` field that stores ``ObjectId`` values is roughly "
 "equivalent to sorting by creation time."
 msgstr ""
+"在存储着 ``ObjectId`` 的``_id`` 字段上的排序大致上等价于通过创建时间进行排序。"
+
 
 #: ../source/includes/fact-ObjectId-timestamp-order.rst:1
 msgid ""
@@ -583,10 +639,13 @@ msgid ""
 " skew between clients can also result in non-strict ordering even for values"
 " because client drivers generate ``ObjectId`` values."
 msgstr ""
+"在同一秒内，``ObjectdId``的顺序以及生成时间并不严格相同。"
+"在多系统或者当系统多进程、多线程生成数据中在同一秒内，``ObjectId``d的值并不表示严格的插入顺序。"
+"不同客户端之间的始终摆动也有可能造成不严格的值排序，因为客户端的驱动程序生成 ``ObjectId`` 值。"
 
 #: ../source/reference/bson-types.txt:66
 msgid ":method:`ObjectId()`"
-msgstr ""
+msgstr ":method:`ObjectId()`"
 
 #~ msgid ""
 #~ "BSON supports the following data types as values in documents. Each data "
