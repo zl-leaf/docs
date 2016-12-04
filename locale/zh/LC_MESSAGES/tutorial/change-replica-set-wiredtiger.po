@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-31 19:15-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xbsura <xbsura@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,27 +13,27 @@ msgstr ""
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:3
 msgid "Change Replica Set to WiredTiger"
-msgstr ""
+msgstr "将复制集模式下的 MongoDB 存储引擎切换到 WiredTiger"
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:7
 msgid ""
 "The WiredTiger storage engine is available. Also, replica sets may have "
 "members with different storage engines."
-msgstr ""
+msgstr "WiredTiger 引擎目前是可用的. 而且, 同一个副本集中可以存在多种不同的存储引擎."
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:11
 msgid "WiredTiger is the new default storage engine for MongoDB."
-msgstr ""
+msgstr "在 MongoDB 最新版本中, WiredTiger 作为默认引擎出现."
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:14
 msgid ""
 "This tutorial gives an overview of changing the storage engine of a member "
 "of a :term:`replica set` to :ref:`WiredTiger <storage-wiredtiger>`."
-msgstr ""
+msgstr "这篇文档告诉你, 如何将 :term:`replica set` 的存储引擎切换到 :ref:`WiredTiger <storage-wiredtiger>`."
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:19
 msgid "Considerations"
-msgstr ""
+msgstr "注意事项"
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:21
 msgid ""
@@ -42,7 +42,7 @@ msgid ""
 "fashion. Before changing all the members to use WiredTiger, you may prefer "
 "to run with mixed storage engines for some period. However, performance can "
 "vary according to workload."
-msgstr ""
+msgstr "复制集的不同成员可以使用不同的存储引擎. 因此, 你可以将复制集中的成员逐个升级为 WiredTiger 引擎, 在某些场景下, 你可能希望在一个复制集中同时运行多种存储引擎, 此时, 性能会随负载有所变动."
 
 #: ../source/includes/fact-wiredtiger-minimum-version.rst:1
 msgid ""
@@ -51,29 +51,32 @@ msgid ""
 "see the guides on :doc:`Upgrading to MongoDB 3.0 </release-"
 "notes/3.0-upgrade>` or :doc:`Upgrading to MongoDB 3.2 </release-"
 "notes/3.2-upgrade>` before proceeding with changing your storage engine."
-msgstr ""
+msgstr "要使用 WiredTiger 引擎, MongoDB 版本必须为 3.0 或以上. 如果需要从"
+"更低版本的 MongoDB 升级, 在更改存储引擎之前, 需要参考 :doc:`升级到 MongoDB 3.0 </release-"
+"notes/3.0-upgrade>` 或者 :doc:`升级到 MongoDB 3.2 </release-notes/3.2-upgrade>`."
 
 #: ../source/includes/2.6-3.0-mixed-version-wiredTiger-restriction.rst:1
 msgid ""
 "Before enabling the new WiredTiger storage engine, ensure that all replica "
 "set/sharded cluster members are running at least MongoDB version 2.6.8, and "
 "preferably version 3.0.0 or newer."
-msgstr ""
+msgstr "在使用新的 WiredTiger 存储引擎之前, 要确保分片/复制集中的成员的 MongoDB 版本"
+"至少为 2.6.8, 如果能到3.0或者最新是更好的选择."
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:32
 msgid "Procedure"
-msgstr ""
+msgstr "步骤"
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:34
 msgid ""
 "This procedure completely removes a :term:`secondary` replica set member's "
 "data, starts :program:`mongod` with WiredTiger, and performs an "
 ":doc:`initial sync </tutorial/resync-replica-set-member>`."
-msgstr ""
+msgstr "这个步骤将复制集中 :term:`secondary` 的数据完全移除, 然后使用 WiredTiger 存储引擎重启 :program:`mongod, 利用 :doc:`初始化同步 </tutorial/resync-replica-set-member>` 完成数据同步."
 
 #: ../source/tutorial/change-replica-set-wiredtiger.txt:38
 msgid ""
 "To update all members of the replica set to use WiredTiger, update the "
 ":term:`secondary` members first. Then step down the :term:`primary`, and "
 "update the stepped-down member."
-msgstr ""
+msgstr "在升级复制集中的成员存储引擎时, 首先升级 :term:`secondary` 成员. 然后将 :term:`primary` 降级为从节点, 之后升级降级为从节点的成员."
