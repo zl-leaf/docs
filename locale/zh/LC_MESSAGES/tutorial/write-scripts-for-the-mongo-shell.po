@@ -4,266 +4,291 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-12-04 21:10+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
+"Language-Team: MongoDB Chinese Community <admin@mongoing.com>\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:3
 msgid "Write Scripts for the ``mongo`` Shell"
-msgstr ""
+msgstr " ``mongo`` Shell 中写脚本"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:19
 msgid ""
-"This tutorial provides an introduction to writing JavaScript that uses the "
-":program:`mongo` shell to access MongoDB."
-msgstr ""
+"This tutorial provides an introduction to writing JavaScript that uses the :"
+"program:`mongo` shell to access MongoDB."
+msgstr "本教程提供了如何在  ``mongo`` Shell 中写JavaScript来操作MongoDB的介绍。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:25
 msgid "Opening New Connections"
-msgstr ""
+msgstr "打开新连接"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:27
 msgid ""
-"From the :program:`mongo` shell or from a JavaScript file, you can "
-"instantiate database connections using the :method:`Mongo()` constructor:"
+"From the :program:`mongo` shell or from a JavaScript file, you can instantiate "
+"database connections using the :method:`Mongo()` constructor:"
 msgstr ""
+"在 :program:`mongo` shell 或者 JavaScript文件中，你可以使用  :method:`Mongo()` "
+"构造函数来实例化数据库连接："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:37
 msgid ""
 "Consider the following example that instantiates a new connection to the "
-"MongoDB instance running on localhost on the default port and sets the "
-"global ``db`` variable to ``myDatabase`` using the :method:`~Mongo.getDB()` "
-"method:"
+"MongoDB instance running on localhost on the default port and sets the global "
+"``db`` variable to ``myDatabase`` using the :method:`~Mongo.getDB()` method:"
 msgstr ""
+"考虑下面的示例，实例化一个到本机默认端口上运行的MongoDB实例的新连接，并且使"
+"用  :method:`~Mongo.getDB()`  方法将全局的 ``db`` 变量设置为   ``myDatabase`` "
+"："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:47
 msgid ""
-"If connecting to a MongoDB instance that has enforces access control, you "
-"can use the :method:`db.auth()` method to authenticate."
+"If connecting to a MongoDB instance that has enforces access control, you can "
+"use the :method:`db.auth()` method to authenticate."
 msgstr ""
+"如果连接到一个需要读取控制的MongoDB实例，你可以使用  :method:`db.auth()`  方法"
+"进行授权。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:50
 msgid ""
 "Additionally, you can use the :method:`connect()` method to connect to the "
-"MongoDB instance. The following example connects to the MongoDB instance "
-"that is running on ``localhost`` with the non-default port ``27020`` and set"
-" the global ``db`` variable:"
+"MongoDB instance. The following example connects to the MongoDB instance that "
+"is running on ``localhost`` with the non-default port ``27020`` and set the "
+"global ``db`` variable:"
 msgstr ""
+"此外，你可以使用 :method:`connect()` 方法连接到MongoDB实例。下面的示例 连接到运"
+"行在 ``localhost`` 非默认端口 ``27020`` 上的MongoDB实例，并且设置了全局的 "
+"``db`` 变量："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:59
 msgid ":doc:`/reference/method/`"
-msgstr ""
+msgstr ":doc:`/reference/method/`"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:62
 msgid "Differences Between Interactive and Scripted ``mongo``"
-msgstr ""
+msgstr "交互式和脚本化 ``mongo`` 的区别"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:64
 msgid ""
 "When writing scripts for the :program:`mongo` shell, consider the following:"
-msgstr ""
+msgstr "当在  :program:`mongo` shell 中使用脚本时，考虑下列因素："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:67
 msgid ""
-"To set the ``db`` global variable, use the :method:`~Mongo.getDB()` method "
-"or the :method:`connect()` method. You can assign the database reference to "
-"a variable other than ``db``."
+"To set the ``db`` global variable, use the :method:`~Mongo.getDB()` method or "
+"the :method:`connect()` method. You can assign the database reference to a "
+"variable other than ``db``."
 msgstr ""
+"为了设置 ``db`` 全局变量，使用 :method:`~Mongo.getDB()`  或者  :method:"
+"`connect()`  方法。你可以将数据库引用复制给除了``db`` 之外的变量。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:81
 msgid ""
 "You **cannot** use any shell helper (e.g. ``use <dbname>``, ``show dbs``, "
 "etc.) inside the JavaScript file because they are not valid JavaScript."
 msgstr ""
+"你 **不能** 在JavaScript文件中使用任何shell帮助 （例如，`use <dbname>``, "
+"``show dbs `` 等），因为它们都不是合法的JavaScript。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:85
 msgid ""
 "The following table maps the most common :program:`mongo` shell helpers to "
 "their JavaScript equivalents."
 msgstr ""
+"下面的表格中将最常见的  :program:`mongo`  shell帮助映射到它们对应的JavaScript。"
 
 #: ../source/includes/table/helpers-to-javascript.rst:4
 msgid "Shell Helpers"
-msgstr ""
+msgstr "Shell 帮助"
 
 #: ../source/includes/table/helpers-to-javascript.rst:6
 msgid "JavaScript Equivalents"
-msgstr ""
+msgstr "JavaScript 等量"
 
 #: ../source/includes/table/helpers-to-javascript.rst:8
 msgid "``show dbs``, ``show databases``"
-msgstr ""
+msgstr "``show dbs``, ``show databases``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:16
 msgid "``use <db>``"
-msgstr ""
+msgstr "``use <db>``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:24
 msgid "``show collections``"
-msgstr ""
+msgstr "``show collections``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:32
 msgid "``show users``"
-msgstr ""
+msgstr "``show users``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:40
 msgid "``show roles``"
-msgstr ""
+msgstr "``show roles``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:48
 msgid "``show log <logname>``"
-msgstr ""
+msgstr "``show log <logname>``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:56
 msgid "``show logs``"
-msgstr ""
+msgstr "``show logs``"
 
 #: ../source/includes/table/helpers-to-javascript.rst:64
 msgid "``it``"
-msgstr ""
+msgstr "``it``"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:90
 msgid ""
 "In interactive mode, :program:`mongo` prints the results of operations "
 "including the content of all cursors. In scripts, either use the JavaScript "
-"``print()`` function or the :program:`mongo` specific ``printjson()`` "
-"function which returns formatted JSON."
+"``print()`` function or the :program:`mongo` specific ``printjson()`` function "
+"which returns formatted JSON."
 msgstr ""
+"在交互模式中，  :program:`mongo` 打印出包括所有游标内容在内的操作结果。在脚本"
+"中，使用 JavaScript ``print()`` 函数或者  :program:`mongo` 中特定的 "
+"``printjson`` 函数返回形式化的JSON。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:0
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:97
 msgid ""
-"To print all items in a result cursor in :program:`mongo` shell scripts, use"
-" the following idiom:"
+"To print all items in a result cursor in :program:`mongo` shell scripts, use "
+"the following idiom:"
 msgstr ""
+"为了打印出  :program:`mongo` shell脚本中结果游标的所有条目，使用下列命令："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:110
 msgid "Scripting"
-msgstr ""
+msgstr "脚本"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:112
 msgid "From the system prompt, use :program:`mongo` to evaluate JavaScript."
-msgstr ""
+msgstr "根据系统提示，使用  :program:`mongo` 来计算 JavaScript的值。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:115
 msgid "``--eval`` option"
-msgstr ""
+msgstr "``--eval`` 选项"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:117
 msgid ""
-"Use the :option:`--eval <mongo --eval>` option to :program:`mongo` to pass "
-"the shell a JavaScript fragment, as in the following:"
+"Use the :option:`--eval <mongo --eval>` option to :program:`mongo` to pass the "
+"shell a JavaScript fragment, as in the following:"
 msgstr ""
+" :program:`mongo`  后使用  :option:`--eval <mongo --eval>` 选项来将一个"
+"JavaScript模块发送给shell，如下所示："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:124
 msgid ""
-"This returns the output of :method:`db.getCollectionNames()` using the "
-":program:`mongo` shell connected to the :program:`mongod` or "
-":program:`mongos` instance running on port ``27017`` on the ``localhost`` "
-"interface."
+"This returns the output of :method:`db.getCollectionNames()` using the :"
+"program:`mongo` shell connected to the :program:`mongod` or :program:`mongos` "
+"instance running on port ``27017`` on the ``localhost`` interface."
 msgstr ""
+"这将返回使用   :program:`mongo` shell 连接到运行在 ``localhost`` 接口 "
+"``27017`` 端口上  :program:`mongod`  或  :program:`mongos` 实例的  :method:`db."
+"getCollectionNames()`  输出。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:132
 msgid "Execute a JavaScript file"
-msgstr ""
+msgstr "执行JavaScript文件"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:134
 msgid ""
-"You can specify a ``.js`` file to the :program:`mongo` shell, and "
-":program:`mongo` will execute the JavaScript directly. Consider the "
-"following example:"
+"You can specify a ``.js`` file to the :program:`mongo` shell, and :program:"
+"`mongo` will execute the JavaScript directly. Consider the following example:"
 msgstr ""
+"你可以想  :program:`mongo` shell 指定一个 ``.js`` 文件，  :program:`mongo`  将"
+"会直接运行JavaScript。考虑下面的示例："
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:142
 msgid ""
-"This operation executes the ``myjsfile.js`` script in a :program:`mongo` "
-"shell that connects to the ``test`` :term:`database` on the "
-":program:`mongod` instance accessible via the ``localhost`` interface on "
-"port ``27017``."
+"This operation executes the ``myjsfile.js`` script in a :program:`mongo` shell "
+"that connects to the ``test`` :term:`database` on the :program:`mongod` "
+"instance accessible via the ``localhost`` interface on port ``27017``."
 msgstr ""
+"该操作在连接到``localhost`` 接口 ``27017`` 端口 :program:`mongod`  实例上 "
+"``test``   :term:`database`  的:program:`mongo` shell 中执行 ``myjsfile.js`` 脚"
+"本。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:147
 msgid ""
-"Alternately, you can specify the mongodb connection parameters inside of the"
-" javascript file using the ``Mongo()`` constructor. See :ref:`mongo-shell-"
-"new-connections` for more information."
+"Alternately, you can specify the mongodb connection parameters inside of the "
+"javascript file using the ``Mongo()`` constructor. See :ref:`mongo-shell-new-"
+"connections` for more information."
 msgstr ""
+"相应地，你可以使用javascript文件中的 ``Mongo()`` 构造函数来指定mongodb连接草"
+"书。 查阅  :ref:`mongo-shell-new-connections`  了解更多信息。"
 
 #: ../source/includes/fact-execute-javascript-from-shell.rst:1
 msgid ""
-"You can execute a ``.js`` file from within the :program:`mongo` shell, using"
-" the :method:`load()` function, as in the following:"
+"You can execute a ``.js`` file from within the :program:`mongo` shell, using "
+"the :method:`load()` function, as in the following:"
 msgstr ""
+"你可以在  :program:`mongo` shell 中使用 :method:`load()` 函数运行 ``.js`` 文"
+"件，如下所示："
 
 #: ../source/includes/fact-execute-javascript-from-shell.rst:8
 msgid "This function loads and executes the :file:`myjstest.js` file."
-msgstr ""
+msgstr "该函数导入并运行了  :file:`myjstest.js` 文件。"
 
 #: ../source/includes/fact-execute-javascript-from-shell.rst:10
 msgid ""
 "The :method:`load()` method accepts relative and absolute paths. If the "
-"current working directory of the :program:`mongo` shell is :file:`/data/db`,"
-" and the :file:`myjstest.js` resides in the :file:`/data/db/scripts` "
-"directory, then the following calls within the :program:`mongo` shell would "
-"be equivalent:"
+"current working directory of the :program:`mongo` shell is :file:`/data/db`, "
+"and the :file:`myjstest.js` resides in the :file:`/data/db/scripts` directory, "
+"then the following calls within the :program:`mongo` shell would be equivalent:"
 msgstr ""
+":method:`load()` 方法可接受相对路径和绝对路径。如果 :program:`mongo` shell 当前"
+"的工作目录位于  :file:`/data/db`， 而文件  :file:`myjstest.js`  位于  :file:`/"
+"data/db/scripts`  目录，那么下面两种在 :program:`mongo`  中的调用将会等价。"
 
 #: ../source/includes/fact-execute-javascript-from-shell.rst:21
 msgid ""
 "There is no search path for the :method:`load()` function. If the desired "
-"script is not in the current working directory or the full specified path, "
-":program:`mongo` will not be able to access the file."
+"script is not in the current working directory or the full specified path, :"
+"program:`mongo` will not be able to access the file."
 msgstr ""
+" :method:`load()` 函数并没有搜索路径。如果需要运行的甲苯不再当前的工作目录或者"
+"完全指定的目录下，   :program:`mongo`  将会读取不到文件。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:13
 msgid ""
 "You can write scripts for the :program:`mongo` shell in JavaScript that "
 "manipulate data in MongoDB or perform administrative operation. For more "
-"information about the :program:`mongo` shell, see the :ref:`running-js-"
-"scripts-in-mongo-on-mongod-host` section for more information about using "
-"these :program:`mongo` script."
+"information about the :program:`mongo` shell, see the :ref:`running-js-scripts-"
+"in-mongo-on-mongod-host` section for more information about using these :"
+"program:`mongo` script."
 msgstr ""
+"你可以在  :program:`mongo`  shell中使用JavaScript脚本来操作MongoDB中的数据或者"
+"执行管理操作。了解更多关于  :program:`mongo`  shell的信息，请查阅   :ref:"
+"`running-js-scripts-in-mongo-on-mongod-host`  部分了解关于使用 :program:"
+"`mongo`  脚本的更多信息。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:71
 msgid ""
-"Write operations in the :program:`mongo` shell use a write concern of "
-":ref:`{ w: 1 } <wc-w>` by default. If performing bulk operations, use the "
-":method:`Bulk()` methods. See :ref:`write-methods-incompatibility` for more "
+"Write operations in the :program:`mongo` shell use a write concern of :ref:"
+"`{ w: 1 } <wc-w>` by default. If performing bulk operations, use the :method:"
+"`Bulk()` methods. See :ref:`write-methods-incompatibility` for more "
 "information."
 msgstr ""
+":program:`mongo`  shell中的写入操作默认使用一个 :ref:`{ w: 1 } <wc-w>`  的写入"
+"关注。如果执行批量操作，使用  :method:`Bulk()`  方法。查阅  :ref:`write-"
+"methods-incompatibility`  了解更多信息。"
 
 #: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:76
 msgid ""
 "Before MongoDB 2.6, call :method:`db.getLastError()` explicitly to wait for "
 "the result of :doc:`write operations </crud>`."
 msgstr ""
-
-#~ msgid ""
-#~ "You can write scripts for the :program:`mongo` shell in JavaScript that "
-#~ "manipulate data in MongoDB or perform administrative operation. For more "
-#~ "information about the :program:`mongo` shell see "
-#~ ":doc:`/administration/scripting`, and see the :ref:`running-js-scripts-in-"
-#~ "mongo-on-mongod-host` section for more information about using these "
-#~ ":program:`mongo` script."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Write operations in the :program:`mongo` shell use the \"safe writes\" by "
-#~ "default. If performing bulk operations, use the :method:`Bulk()` methods. "
-#~ "See :ref:`write-methods-incompatibility` for more information."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Before MongoDB 2.6, call :method:`db.getLastError()` explicitly to wait for "
-#~ "the result of :doc:`write operations </core/write-operations>`."
-#~ msgstr ""
+"在MongoDB 2.6之前，显示调用  :method:`db.getLastError()`  方法获取 :doc:`write "
+"operations </crud>` 的结果。"
