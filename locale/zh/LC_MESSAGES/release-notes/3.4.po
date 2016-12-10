@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+Yi# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2008-2016
 # This file is distributed under the same license as the mongodb-manual
 # package.
@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -1511,40 +1511,4 @@ msgstr ""
 #: ../source/release-notes/3.4.txt:758
 msgid ""
 "If you need guidance on upgrading to 3.4, `MongoDB offers major version "
-"upgrade services <https://www.mongodb.com/products/consulting?jmp=docs>`_"
-" to help ensure a smooth transition without interruption to your MongoDB "
-"application."
-msgstr ""
-
-# c3d185c3bb9c46849c721c35dc670154
-#: ../source/release-notes/3.4.txt:774
-msgid "Known Issues in 3.4.0"
-msgstr ""
-
-# 2f772c94c83946c99cecac1bc0673be6
-#: ../source/release-notes/3.4.txt:776
-msgid "List of known issues in the 3.4.0 release:"
-msgstr ""
-
-# 56db566927594f869483816039b75d78
-#: ../source/release-notes/3.4.txt:778
-msgid ""
-":issue:`SERVER-27124`: :rsconf:`protocolVersion: 0 <protocolVersion>` "
-"cannot properly support :readconcern:`\"majority\"` read concern."
-msgstr ""
-
-# 164fbee4b1ae491996d50744368dbc18
-#: ../source/release-notes/3.4.txt:781
-msgid ""
-":issue:`SERVER-27195`: Using collation with documents containing fields "
-"of BSON type ``Symbol``, which is deprecated, is not supported and may "
-"lead to undefined behavior."
-msgstr ""
-
-# e0d81c49a45c4ea493b5a08d4f9fdb66
-#: ../source/release-notes/3.4.txt:785
-msgid ""
-":issue:`SERVER-27207`: Find on view with sort through :program:`mongos` "
-"may incorrectly return empty result set."
-msgstr ""
-
+"upgrade services <https://www.m
