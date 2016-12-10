@@ -5,11 +5,11 @@ source:
 ---
 level: 1
 source:
-  file: toc-sharded-cluster-operations.yaml
-  ref: /core/tag-aware-sharding
+  file: toc-sharding-landing.yaml
+  ref: /core/zone-sharding
 ---
 level: 1
 source:
-  file: toc-sharded-cluster-data.yaml
-  ref: /tutorial/administer-shard-tags
+  file: toc-sharding-zones.yaml
+  ref: /tutorial/manage-shard-zone
 ...

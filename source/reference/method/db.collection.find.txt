@@ -51,6 +51,8 @@ The ``<value>`` can be any of the following:
 
 - Expression using a :doc:`/reference/operator/projection`.
 
+  .. include:: /includes/extracts/views-unsupported-projection-operators.rst
+
 .. note::
 
    For the ``_id`` field, you do not have to explicitly specify ``_id:
@@ -62,6 +64,8 @@ A ``projection`` *cannot* contain *both* include and exclude
 specifications, except for the exclusion of the ``_id`` field. In
 projections that *explicitly include* fields, the ``_id`` field is the
 only field that you can *explicitly exclude*.
+
+
 
 Cursor Handling
 ~~~~~~~~~~~~~~~
@@ -558,6 +562,18 @@ returns all remaining documents:
 
    db.bios.find().skip( 5 )
 
+Specify Collation
+`````````````````
+
+.. include:: /includes/extracts/collation-description.rst
+
+The :method:`~cursor.collation` method specifies the :ref:`collation
+<collation>` for the :method:`db.collection.find()` operation.
+
+.. code-block:: javascript
+
+   db.bios.find( { "name.last": "hopper" } ).collation( { locale: "en_US", strength: 1 } )
+
 Combine Cursor Methods
 ``````````````````````
 
@@ -573,3 +589,5 @@ The two statements are equivalent; i.e. the order in which you chain
 the :method:`~cursor.limit()` and the :method:`~cursor.sort()` methods
 is not significant. Both statements return the first five documents, as
 determined by the ascending sort order on 'name'.
+
+

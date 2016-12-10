@@ -3,48 +3,75 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese (http://www.transifex.com/projects/p/mongodb-manual/"
 "language/zh/)\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
+# a3328f8c573b4bd3b186c5f78c1ed17e
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:3
 msgid "Migrate a Sharded Cluster to Different Hardware"
 msgstr "迁移集群到新的硬件系统中"
 
+# 6d924ac0098c4fc693ca403a85692e13
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt
+msgid "On this page"
+msgstr ""
+
+# b98712e3e68e4232b583f443993a75a8
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:13
+msgid ""
+"The tutorial is specific to MongoDB |version|. For earlier versions of "
+"MongoDB, refer to the corresponding version of the MongoDB Manual."
+msgstr ""
+
+# 82b45c8086cb4c6898c7a94206431d03
+#: ../source/includes/fact-mirrored-config-servers-deprecated.rst:1
+msgid ""
+"Starting in MongoDB 3.2, config servers for sharded clusters can be "
+"deployed as a :doc:`replica set </replication>`. The replica set config "
+"servers must run the :doc:`WiredTiger storage engine </core/wiredtiger>`."
+" MongoDB 3.2 deprecates the use of three mirrored :program:`mongod` "
+"instances for config servers."
+msgstr ""
+
+# 1de829744d724a74bdef2ae689d8a0f9
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:20
 msgid ""
-"This procedure moves the components of the :term:`sharded cluster` to a new "
-"hardware system without downtime for reads and writes."
+"This procedure moves the components of the :term:`sharded cluster` to a "
+"new hardware system without downtime for reads and writes."
 msgstr ""
 "这篇教程在不中断集群读写的情况下,"
 "将一个完整的 :term:`sharded cluster` 迁移到新的硬件系统中."
 
+# f6b6289748f44a2682a19001f3dfc6a7
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:23
 msgid ""
-"While the migration is in progress, do not attempt to change to the "
-":doc:`cluster metadata </core/sharded-cluster-metadata>`. Do not use any "
-"operation that modifies the cluster metadata *in any way*. For example, do "
-"not create or drop databases, create or drop collections, or use any "
-"sharding commands."
+"While the migration is in progress, do not attempt to change to the :ref"
+":`sharding-internals-config-database`. Do not use any operation that "
+"modifies the cluster metadata *in any way*. For example, do not create or"
+" drop databases, create or drop collections, or use any sharding "
+"commands."
 msgstr ""
 "在迁移进行时,不要试图改变 :doc:`集群的元信息 </core/sharded-cluster-metadata>`. "
 "不要使用可能导致集群元信息改变的任何操作,比如创建或者删除数据库,集合,或者"
 "使用分片命令."
 
+# fe3d98859d364f12b24aff24df39ce7a
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:29
 msgid ""
 "If your cluster includes a shard backed by a :term:`standalone` "
-":program:`mongod` instance, consider :doc:`converting the standalone to a "
-"replica set </tutorial/convert-standalone-to-replica-set>` to simplify "
-"migration and to let you keep the cluster online during future maintenance. "
-"Migrating a shard as standalone is a multi-step process that may require "
-"downtime."
+":program:`mongod` instance, consider :doc:`converting the standalone to a"
+" replica set </tutorial/convert-standalone-to-replica-set>` to simplify "
+"migration and to let you keep the cluster online during future "
+"maintenance. Migrating a shard as standalone is a multi-step process that"
+" may require downtime."
 msgstr ""
 "如果你的集群包含了 :term:`standalone` 的 :program:`mongod` ,使用 "
 ":doc:`将单机mongod转化为复制集 </tutorial/convert-standalone-to-replica-set>` "
@@ -52,29 +79,34 @@ msgstr ""
 "集群中存在单机节点,在迁移时会有宕机时间."
 
 
+# c581e0f0dfe14f378177724f46d2ee43
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:39
 
 msgid "Disable the Balancer"
 msgstr "禁用均衡"
 
+# 5c118df016ea49c6b006f7a3ee901962
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:41
 msgid ""
-"Disable the balancer to stop :doc:`chunk migration </core/sharding-chunk-"
-"migration>` and do not perform any metadata write operations until the "
-"process finishes. If a migration is in progress, the balancer will complete "
-"the in-progress migration before stopping."
+"Disable the balancer to stop :doc:`chunk migration </core/sharding-"
+"balancer-administration>` and do not perform any metadata write "
+"operations until the process finishes. If a migration is in progress, the"
+" balancer will complete the in-progress migration before stopping."
 msgstr ""
 "禁用均衡以停止 :doc:`数据块迁移 </core/sharding-chunk-migration>`,"
 "并且在流程结束之前不要更改集群的元信息."
 "如果有迁移正在运行中,均衡器会在这次迁移结束后再停止."
 
+# 01529cbdae154e849ff5bd266d47d4c2
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:47
 msgid ""
-"To disable the balancer, connect to one of the cluster's :program:`mongos` "
-"instances and issue the following method:"
+"To disable the balancer, connect to one of the cluster's "
+":program:`mongos` instances and issue the following method:"
 msgstr ""
 "要禁用均衡,连接到一个 :program:`mongos` 上,并执行以下方法:"
 
+# 01ef32fd814e4282a933f64a1ba1b970
+# 07b506b2a97845d6b5f0feaf88e0b917
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:54
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:219
 msgid ""
@@ -83,32 +115,114 @@ msgid ""
 msgstr ""
 "使用 :method:`sh.getBalancerState()` 检查均衡状态."
 
+# f22eab8623b84ac1a609528aa6b5433f
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:57
-msgid ""
-"For more information, see :ref:`sharding-balancing-disable-temporarily`."
+msgid "For more information, see :ref:`sharding-balancing-disable-temporarily`."
 msgstr ""
 "参见 :ref:`sharding-balancing-disable-temporarily` 获得更多信息."
 
+# f006687bb5ec4e5b9b96ae9a5f9234a8
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:62
 msgid "Migrate Each Config Server Separately"
 msgstr "单独迁移每台配置服务器"
 
 
+# a175fda956fb47e7acc58c5ebec1f614
+#: ../source/includes/fact-csrs-versionchanged.rst:1
+msgid ""
+"Starting in MongoDB 3.2, config servers for sharded clusters can be "
+"deployed as a :doc:`replica set </replication>` (CSRS) instead of three "
+"mirrored config servers (SCCC). Using a replica set for the config "
+"servers improves consistency across the config servers, since MongoDB can"
+" take advantage of the standard replica set read and write protocols for "
+"the config data. In addition, using a replica set for config servers "
+"allows a sharded cluster to have more than 3 config servers since a "
+"replica set can have up to 50 members. To deploy config servers as a "
+"replica set, the config servers must run the :doc:`WiredTiger storage "
+"engine </core/wiredtiger>`."
+msgstr ""
+
+# bd0b23df0c3a455ca70a2deaf6563d66
+#: ../source/includes/fact-csrs-versionchanged.rst:12
+msgid ""
+"In version 3.4, MongoDB removes support for SCCC config servers. To "
+"upgrade your config servers from SCCC to CSRS, see :doc:`/tutorial"
+"/upgrade-config-servers-to-replica-set`."
+msgstr ""
+
+# db07ff3c972e4a9daf5f8a1a8d0337fd
+#: ../source/includes/fact-config-server-replica-set-restrictions.rst:1
+msgid ""
+"The following restrictions apply to a replica set configuration when used"
+" for config servers:"
+msgstr ""
+
+# b9db26e496dc49bd9f6a834f7da6687f
+#: ../source/includes/fact-config-server-replica-set-restrictions.rst:4
+msgid "Must have zero :doc:`arbiters </core/replica-set-arbiter>`."
+msgstr ""
+
+# f4bbb590ad924e3182db65928a0aa8ac
+#: ../source/includes/fact-config-server-replica-set-restrictions.rst:6
+msgid "Must have no :doc:`delayed members </core/replica-set-delayed-member>`."
+msgstr ""
+
+# 022b0150cefa4aca8eb231ef76cf30af
+#: ../source/includes/fact-config-server-replica-set-restrictions.rst:9
+msgid ""
+"Must build indexes (i.e. no member should have "
+":data:`~replSetGetConfig.members[n].buildIndexes` setting set to false)."
+msgstr ""
+
+# 2394b7c0ecb449cc88ef1f0854a215ec
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:70
+msgid "For each member of the config server replica set:"
+msgstr ""
+
+# df49f8fcc3c94065ab9bad77aeb2533f
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:72
+msgid "Replace the secondary members before replacing the primary."
+msgstr ""
+
+# 57925e444e8941ce9d25125216fdde9f
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:80
 
 msgid "Restart the ``mongos`` Instances"
 msgstr "重启 ``mongos``"
 
 
+# f3ae80275ea74c3aaff562a0b64a9806
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:84
+msgid ""
+"With replica set config servers, the :program:`mongos` instances specify "
+"in the :option:`--configdb` or :setting:`sharding.configDB` setting the "
+"config server replica set name and at least one of the replica set "
+"members. The :program:`mongos` instances for the sharded cluster must "
+"specify the same config server replica set name but can specify different"
+" members of the replica set."
+msgstr ""
+
+# aa3586599b0243758b63d5afbd957ccd
+#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:91
+msgid ""
+"If a :program:`mongos` instance specifies a migrated replica set member "
+"in the :option:`--configdb` or :setting:`sharding.configDB` setting, "
+"update the config server setting for the next time you restart the "
+":program:`mongos` instance."
+msgstr ""
+
+# eff9c98d8c6d4d67b8020b275ce1df8a
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:96
 
 msgid "For more information, see :ref:`sharding-setup-start-mongos`."
 msgstr "参见 :ref:`sharding-setup-start-mongos` 获得更多信息."
 
+# 03c423a863f94bbfb3cc0de3ced5ffe3
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:101
 msgid "Migrate the Shards"
 msgstr "迁移分片"
 
+# 3b58771139f74ca7a571a72e29a3c2f7
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:103
 msgid ""
 "Migrate the shards one at a time. For each shard, follow the appropriate "
@@ -116,70 +230,82 @@ msgid ""
 msgstr ""
 "一次迁移一个数据分片,对于每个分片,按照以下章节进行迁移."
 
+# 8f0e75c77e414839a19c795dd91efc64
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:109
 msgid "Migrate a Replica Set Shard"
 msgstr "迁移一个复制集的分片"
 
+# c7e694315be248d28bb8118b3c33b911
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:111
 msgid ""
-"To migrate a sharded cluster, migrate each member separately. First migrate "
-"the non-primary members, and then migrate the :term:`primary` last."
+"To migrate a sharded cluster, migrate each member separately. First "
+"migrate the non-primary members, and then migrate the :term:`primary` "
+"last."
 msgstr ""
 "要迁移一个集群,需要单独迁移每个成员,首先迁移非主成员,最后迁移 :term:`primary` ."
 
+# ac91efd6c6914f019e36914612775e1e
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:115
 msgid ""
 "If the replica set has two voting members, add an :doc:`arbiter </core"
-"/replica-set-arbiter>` to the replica set to ensure the set keeps a majority"
-" of its votes available during the migration. You can remove the arbiter "
-"after completing the migration."
+"/replica-set-arbiter>` to the replica set to ensure the set keeps a "
+"majority of its votes available during the migration. You can remove the "
+"arbiter after completing the migration."
 msgstr ""
 "如果复制集有两个投票成员,添加一个 :doc:`仲裁节点 </core/replica-set-arbiter>` "
 "以保证在迁移过程中能够保证有大多数节点在线."
 "在迁移结束后可以移除这个仲裁节点."
 
+# 27b5447298d24d2786f89aad350962b9
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:123
 msgid "Migrate a Member of a Replica Set Shard"
 msgstr "迁移复制集的一个成员"
 
+# 5be1c95ebb164f82bdb37fdbea5be5ad
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:125
 msgid ""
-"Shut down the :program:`mongod` process. To ensure a clean shutdown, use the"
-" :dbcommand:`shutdown` command."
+"Shut down the :program:`mongod` process. To ensure a clean shutdown, use "
+"the :dbcommand:`shutdown` command."
 msgstr ""
 "关闭 :program:`mongod` 实例,为了确保安全关闭,使用 :dbcommand:`shutdown` 命令."
 
+# 41947ac1e0f54b8595bda7f89c2c698e
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:128
 msgid ""
-"Move the data directory (i.e., the :setting:`~storage.dbPath`) to the new "
-"machine."
+"Move the data directory (i.e., the :setting:`~storage.dbPath`) to the new"
+" machine."
 msgstr ""
 "将数据目录(即 :setting:`~storage.dbPath` )转移到新机器上."
 
+# 4708c3754ea942b6890a2e1a8bee84f2
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:131
 msgid "Restart the :program:`mongod` process at the new location."
 msgstr "在新机器上启动 :program:`mongod` ."
 
+# 25a295eef98f41cd9e60ca2d2dbe7d60
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:134
 msgid "Connect to the replica set's current primary."
 msgstr "连接到复制集当前的主节点上."
 
+# 4ee277d4de634297ac8f280b20f88993
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:136
 msgid ""
-"If the hostname of the member has changed, use :method:`rs.reconfig()` to "
-"update the :doc:`replica set configuration document </reference/replica-"
+"If the hostname of the member has changed, use :method:`rs.reconfig()` to"
+" update the :doc:`replica set configuration document </reference/replica-"
 "configuration>` with the new hostname."
 msgstr ""
 "如果新节点的域名发生变化,使用 :method:`rs.reconfig()` "
 "更新 :doc:`复制集配置文档 </reference/replica-configuration>` ."
 
+# 379f6029cc6a45f2ab8c33cbf0f97163
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:140
 msgid ""
-"For example, the following sequence of commands updates the hostname for the"
-" instance at position ``2`` in the ``members`` array:"
+"For example, the following sequence of commands updates the hostname for "
+"the instance at position ``2`` in the ``members`` array:"
 msgstr ""
 "举例,下面的命令过程将成员中位于第 ``2`` 位的域名进行更新:"
 
+# 6fff9f29754541b1a560f36fde42c6f4
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:150
 msgid ""
 "For more information on updating the configuration document, see :ref"
@@ -187,10 +313,12 @@ msgid ""
 msgstr ""
 "参见 :ref:`replica-set-reconfiguration-usage` 获得更多更新配置文档的信息."
 
+# 0d3edb866eff4039ba52b043ccba47c4
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:153
 msgid "To confirm the new configuration, issue :method:`rs.conf()`."
 msgstr "使用 :method:`rs.conf()` 确认使用了新的配置."
 
+# 13cd2d44abac46feb977475a4f86958b
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:155
 msgid ""
 "Wait for the member to recover. To check the member's state, issue "
@@ -198,27 +326,30 @@ msgid ""
 msgstr ""
 "等待所有成员恢复正常,使用 :method:`rs.status()` 检测成员状态."
 
+# 9195348b4703457988f52a97700128a8
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:159
 msgid "Migrate the Primary in a Replica Set Shard"
 msgstr "迁移复制集中的主节点"
 
+# cfe6a788bbff44b680774d4e6dd06727
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:161
 msgid ""
-"While migrating the replica set's primary, the set must elect a new primary."
-" This failover process which renders the replica set unavailable to perform "
-"reads or accept writes for the duration of the election, which typically "
-"completes quickly. If possible, plan the migration during a maintenance "
-"window."
+"While migrating the replica set's primary, the set must elect a new "
+"primary. This failover process which renders the replica set unavailable "
+"to perform reads or accept writes for the duration of the election, which"
+" typically completes quickly. If possible, plan the migration during a "
+"maintenance window."
 msgstr ""
 "在迁移主节点的时候,需要复制集选举出一个新的主节点,在进行选举的时候,复制集将"
 "读写,通常,这只会持续很短的时间,不过,应该尽可能在影响较小的时间段内迁移"
 "主节点."
 
+# 657e732712f1451fafb93500d4640e57
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:167
 msgid ""
 "Step down the primary to allow the normal :ref:`failover <replica-set-"
-"failover>` process.  To step down the primary, connect to the primary and "
-"issue the either the :dbcommand:`replSetStepDown` command or the "
+"failover>` process.  To step down the primary, connect to the primary and"
+" issue the either the :dbcommand:`replSetStepDown` command or the "
 ":method:`rs.stepDown()` method. The following example shows the "
 ":method:`rs.stepDown()` method:"
 msgstr ""
@@ -226,62 +357,68 @@ msgstr ""
 "要将主节点降级,连接到一个主节点,使用 :dbcommand:`replSetStepDown` 方法或者"
 "使用 :method:`rs.stepDown()` 方法,下面的例子使用了 :method:`rs.stepDown()` 方法进行降级:"
 
+# c5c2ee8dbedc4c2fa82412005f865e4e
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:178
 msgid ""
 "Once the primary has stepped down and another member has become "
-":replstate:`PRIMARY` state. To migrate the stepped-down primary, follow the "
-":ref:`migrate-replica-set-shard-member` procedure"
+":replstate:`PRIMARY` state. To migrate the stepped-down primary, follow "
+"the :ref:`migrate-replica-set-shard-member` procedure"
 msgstr ""
 "等主节点降级为从节点,另一个成员成为 :replstate:`PRIMARY` 之后,可以"
 "按照 :ref:`migrate-replica-set-shard-member` 迁移这个降级了的节点."
 
+# 7d2f7b5d8d2d4a5382b6c7ed7a976009
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:182
 msgid ""
-"You can check the output of :method:`rs.status()` to confirm the change in "
-"status."
+"You can check the output of :method:`rs.status()` to confirm the change "
+"in status."
 msgstr ""
 "可以使用 :method:`rs.status()` 来确认状态的改变."
 
+# ac89adf9d6864ae2b6aa3f80cc104a67
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:186
 msgid "Migrate a Standalone Shard"
 msgstr "迁移一个单机分片"
 
+# ee78718de3b04c1f839b26971e0196bb
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:188
 msgid ""
-"The ideal procedure for migrating a standalone shard is to :doc:`convert the"
-" standalone to a replica set </tutorial/convert-standalone-to-replica-set>` "
-"and then use the procedure for :ref:`migrating a replica set shard <migrate-"
-"replica-set-shard>`. In production clusters, all shards should be replica "
-"sets, which provides continued availability during maintenance windows."
+"The ideal procedure for migrating a standalone shard is to :doc:`convert "
+"the standalone to a replica set </tutorial/convert-standalone-to-replica-"
+"set>` and then use the procedure for :ref:`migrating a replica set shard "
+"<migrate-replica-set-shard>`. In production clusters, all shards should "
+"be replica sets, which provides continued availability during maintenance"
+" windows."
 msgstr ""
 "迁移一个单节点分片合理的方法是首先按照 :doc:`将单节点mongod转化为复制集 </tutorial/convert-standalone-to-replica-set>` "
 ",再按照 :ref:`迁移复制集分片 <migrate-replica-set-shard>` 进行迁移."
 "在生产环境中,所有的分片都应该是复制集."
 
+# 57308ffc83154ae293127c75bf02cb9c
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:196
 msgid ""
-"Migrating a shard as standalone is a multi-step process during which part of"
-" the shard may be unavailable. If the shard is the :term:`primary shard` for"
-" a database,the process includes the :dbcommand:`movePrimary` command. While"
-" the :dbcommand:`movePrimary` runs, you should stop modifying data in that "
-"database. To migrate the standalone shard, use the :doc:`/tutorial/remove-"
-"shards-from-cluster` procedure."
-msgstr "迁移一个单节点分片需要很多步骤,某些步骤会导致分片不可用."
-"如果这个分片是某个数据库的 :term:`primary shard` ,还需要调用 :dbcommand:`movePrimary` ,"
-"在使用这个命令期间,不能修改这个数据库上的数据."
-"参见 :doc:`/tutorial/remove-shards-from-cluster` 获得迁移单节点分片的过程."
+"Migrating a shard as standalone is a multi-step process during which part"
+" of the shard may be unavailable. If the shard is the :term:`primary "
+"shard` for a database,the process includes the :dbcommand:`movePrimary` "
+"command. While the :dbcommand:`movePrimary` runs, you should stop "
+"modifying data in that database. To migrate the standalone shard, use the"
+" :doc:`/tutorial/remove-shards-from-cluster` procedure."
+msgstr ""
 
+# 1fa4a0ac82ef45f7b59daff6090496d7
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:207
 msgid "Re-Enable the Balancer"
 msgstr "重新开启均衡"
 
+# abab1c5b78de4c04b5b6163d7e532b7e
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:209
 msgid ""
 "To complete the migration, re-enable the balancer to resume :doc:`chunk "
-"migrations </core/sharding-chunk-migration>`."
+"migrations </core/sharding-balancer-administration>`."
 msgstr ""
 "重新打开均衡器,恢复 :doc:`数据块迁移 </core/sharding-chunk-migration>` 以完成迁移."
 
+# ec9bee06c72645e3a9c5ab1384ddd5e2
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:212
 msgid ""
 "Connect to one of the cluster's :program:`mongos` instances and pass "
@@ -290,103 +427,16 @@ msgstr ""
 "连接到一个 :program:`mongos` 上,使用 :method:`sh.setBalancerState()` 方法并"
 "传递 ``true`` 参数."
 
+# 748148a0704b4ba9b0bd59ffabc2a465
 #: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:222
 msgid "For more information, see :ref:`sharding-balancing-enable`."
 
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:0
-msgid "On this page"
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:13
-msgid ""
-"The tutorial is specific to MongoDB |version|. For earlier versions of "
-"MongoDB, refer to the corresponding version of the MongoDB Manual."
-msgstr ""
-
-#: ../source/includes/fact-mirrored-config-servers-deprecated.rst:1
-#: ../source/includes/fact-mirrored-config-servers-deprecated.rst:1
-msgid ""
-"Starting in MongoDB 3.2, config servers for sharded clusters can be deployed"
-" as a :doc:`replica set </core/replication-introduction>`. The replica set "
-"config servers must run the :doc:`WiredTiger storage engine "
-"</core/wiredtiger>`. MongoDB 3.2 deprecates the use of three mirrored "
-":program:`mongod` instances for config servers."
-msgstr ""
-
-#: ../source/includes/fact-config-server-replica-set-restrictions.rst:1
-msgid ""
-"The following restrictions apply to a replica set configuration when used "
-"for config servers:"
-msgstr ""
-
-#: ../source/includes/fact-config-server-replica-set-restrictions.rst:4
-msgid "Must have zero :doc:`arbiters </core/replica-set-arbiter>`."
-msgstr ""
-
-#: ../source/includes/fact-config-server-replica-set-restrictions.rst:6
-msgid ""
-"Must have no :doc:`delayed members </core/replica-set-delayed-member>`."
-msgstr ""
-
-#: ../source/includes/fact-config-server-replica-set-restrictions.rst:9
-msgid ""
-"Must build indexes (i.e. no member should have "
-":data:`~replSetGetConfig.members[n].buildIndexes` setting set to false)."
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:70
-msgid "For each member of the config server replica set:"
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:72
-msgid "Replace the secondary members before replacing the primary."
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:84
-msgid ""
-"With replica set config servers, the :program:`mongos` instances specify in "
-"the :option:`--configdb` or :setting:`sharding.configDB` setting the config "
-"server replica set name and at least one of the replica set members. The "
-":program:`mongos` instances for the sharded cluster must specify the same "
-"config server replica set name but can specify different members of the "
-"replica set."
-msgstr ""
-
-#: ../source/tutorial/migrate-sharded-cluster-to-new-hardware.txt:91
-msgid ""
-"If a :program:`mongos` instance specifies a migrated replica set member in "
-"the :option:`--configdb` or :setting:`sharding.configDB` setting, update the"
-" config server setting for the next time you restart the :program:`mongos` "
-"instance."
 msgstr ""
 
 #~ msgid "To migrate a cluster to new hardware, perform the following tasks."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Migrate each :ref:`config server <sharding-config-server>` by starting with "
-#~ "the *last* config server listed in the :setting:`~sharding.configDB` string."
-#~ " Proceed in reverse order of the :setting:`~sharding.configDB` string. "
-#~ "Migrate and restart a config server before proceeding to the next. Do not "
-#~ "rename a config server during this process."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If the name or address that a sharded cluster uses to connect to a config "
-#~ "server changes, you must restart **every** :program:`mongod` and "
-#~ ":program:`mongos` instance in the sharded cluster. Avoid downtime by using "
-#~ "CNAMEs to identify config servers within the MongoDB deployment."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "See :doc:`/tutorial/migrate-config-servers-with-different-hostnames` for "
-#~ "more information."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Start with the *last* config server listed in :setting:`~sharding.configDB`."
 #~ msgstr ""
 
 #~ msgid "Shut down the config server."
@@ -395,59 +445,46 @@ msgstr ""
 #~ msgid "This renders all config data for the sharded cluster \"read only.\""
 #~ msgstr ""
 
-#~ msgid ""
-#~ "Change the DNS entry that points to the system that provided the old config "
-#~ "server, so that the *same* hostname points to the new system. How you do "
-#~ "this depends on how you organize your DNS and hostname resolution services."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Copy the contents of :setting:`~storage.dbPath` from the old config server "
-#~ "to the new config server."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For example, to copy the contents of :setting:`~storage.dbPath` to a machine"
-#~ " named ``mongodb.config2.example.net``, you might issue a command similar to"
-#~ " the following:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Start the config server instance on the new system. The default invocation "
-#~ "is:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If the :setting:`~sharding.configDB` string will change as part of the "
-#~ "migration, you must shut down *all* :program:`mongos` instances before "
-#~ "changing the :setting:`~sharding.configDB` string. This avoids errors in the"
-#~ " sharded cluster over :setting:`~sharding.configDB` string conflicts."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If the :setting:`~sharding.configDB` string will remain the same, you can "
-#~ "migrate the :program:`mongos` instances sequentially or all at once."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Shut down the :program:`mongos` instances using the :dbcommand:`shutdown` "
-#~ "command. If the :setting:`~sharding.configDB` string is changing, shut down "
-#~ "*all* :program:`mongos` instances."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If the hostname has changed for any of the config servers, update the "
-#~ ":setting:`~sharding.configDB` string for each :program:`mongos` instance. "
-#~ "The :program:`mongos` instances must all use the same "
-#~ ":setting:`~sharding.configDB` string. The strings must list identical host "
-#~ "names in identical order."
-#~ msgstr ""
-
 #~ msgid "Tip"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Restart the :program:`mongos` instances being sure to use the updated "
-#~ ":setting:`~sharding.configDB` string if hostnames have changed."
+#~ "While the migration is in progress, "
+#~ "do not attempt to change to the"
+#~ " :doc:`cluster metadata </core/sharded-"
+#~ "cluster-metadata>`. Do not use any "
+#~ "operation that modifies the cluster "
+#~ "metadata *in any way*. For example, "
+#~ "do not create or drop databases, "
+#~ "create or drop collections, or use "
+#~ "any sharding commands."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Disable the balancer to stop :doc:`chunk"
+#~ " migration </core/sharding-chunk-migration>` "
+#~ "and do not perform any metadata "
+#~ "write operations until the process "
+#~ "finishes. If a migration is in "
+#~ "progress, the balancer will complete the"
+#~ " in-progress migration before stopping."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To complete the migration, re-enable "
+#~ "the balancer to resume :doc:`chunk "
+#~ "migrations </core/sharding-chunk-migration>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Starting in MongoDB 3.2, config servers"
+#~ " for sharded clusters can be deployed"
+#~ " as a :doc:`replica set </core"
+#~ "/replication-introduction>`. The replica set "
+#~ "config servers must run the "
+#~ ":doc:`WiredTiger storage engine </core/wiredtiger>`."
+#~ " MongoDB 3.2 deprecates the use of"
+#~ " three mirrored :program:`mongod` instances "
+#~ "for config servers."
 #~ msgstr ""
 

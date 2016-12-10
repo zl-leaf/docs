@@ -13,7 +13,15 @@ Restore a Sharded Cluster
 Overview
 --------
 
-You can restore a sharded cluster either from :doc:`snapshots
+.. important::
+
+   In version 3.4, MongoDB removes support for SCCC config servers. To
+   upgrade your config servers from SCCC to CSRS, see
+   :doc:`/tutorial/upgrade-config-servers-to-replica-set`.
+
+   The following procedure applies to |version| config servers.
+
+You can restore a :term:`sharded cluster` either from :doc:`snapshots
 </tutorial/backup-with-filesystem-snapshots>` or from :term:`BSON`
 :doc:`database dumps
 </tutorial/backup-sharded-cluster-with-database-dumps>` created by the
@@ -25,6 +33,14 @@ You can restore a sharded cluster either from :doc:`snapshots
 
 Procedures
 ----------
+
+.. versionchanged:: 3.4
+
+.. include:: /includes/fact-3.4-shardsvr-required.rst
+
+The following procedures assume shard :program:`mongod` instances
+include the ``--shardsvr`` and ``--port`` options (or corresponding
+settings in the configuration file).
 
 .. _restore-sharded-cluster-with-snapshots:
 

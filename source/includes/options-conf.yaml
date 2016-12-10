@@ -1162,6 +1162,8 @@ post: |
   The {{role}} setting is available only for :program:`mongod`.
 
   .. include:: /includes/not-available-for-inmemory-storage-engine.rst
+  
+  .. include:: /includes/extracts/no-journaling-writeConcernMajorityJournalDefault-false.rst
 
 ---
 program: conf
@@ -1392,30 +1394,6 @@ inherit:
   file: options-mongos.yaml
 ---
 program: conf
-name: sharding.autoSplit
-type: boolean
-directive: setting
-default: true
-replacement:
-  program: ":program:`mongos`"
-description: |
-  Enables or disables the automatic splitting of chunks for
-  :term:`sharded collections <sharding>`. If {{role}} is ``false`` on
-  all {{program}} instances, MongoDB does not create new chunks as the
-  data in a collection grows.
-
-  Because any {{program}} in a cluster can create a split,
-  to totally disable splitting in a cluster, you must set {{role}}
-  to ``false`` on all {{program}}.
-post: |
-
-  .. warning::
-
-     With auto-splitting disabled, the data in your sharded
-     cluster may become imbalanced over time. Disable with caution.
-optional: true
----
-program: conf
 name: sharding.configDB
 type: string
 directive: setting
@@ -1424,19 +1402,6 @@ replacement:
   intro: "The"
 inherit:
   name: configdb
-  program: mongos
-  file: options-mongos.yaml
----
-program: conf
-name: sharding.chunkSize
-type: integer
-default: 64
-directive: setting
-replacement:
-  program: ":program:`mongos`"
-  intro: "The"
-inherit:
-  name: chunkSize
   program: mongos
   file: options-mongos.yaml
 ---
@@ -1489,6 +1454,7 @@ inherit:
 program: conf
 name: storage.wiredTiger.engineConfig.cacheSizeGB
 directive: setting
+type: "float"
 replacement:
   program: ":program:`mongod`"
   intro: "The"
@@ -1590,6 +1556,18 @@ description: |
    to ``true`` to pass in encryption keys and configurations.
 
   .. include:: /includes/fact-enterprise-only-admonition.rst
+---
+program: conf
+name: security.transitionToAuth
+directive: setting
+type: boolean
+default: false
+inherit:
+  name: transitionToAuth
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
 ---
 program: conf
 name: security.encryptionCipherMode
@@ -1768,10 +1746,169 @@ inherit:
 ---
 program: conf
 name: storage.inMemory.engineConfig.inMemorySizeGB
-type: number
+type: float
 directive: setting
 inherit:
   name: inMemorySizeGB
   program: mongod
   file: options-mongod.yaml
+---
+program: conf
+name: security.redactClientLogData
+type: boolean
+directive: setting
+inherit:
+  name: redactClientLogData
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+---
+program: conf
+name: security.ldap.servers
+type: string
+directive: setting
+inherit:
+  name: ldapServers
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+---
+program: conf
+name: security.ldap.bind.queryUser
+type: string
+directive: setting
+inherit:
+  name: ldapQueryUser
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  queryPassword: ":setting:`~security.ldap.bind.queryPassword`" 
+  bindWithOSDefaults: ":setting:`~security.ldap.bindWithOSDefaults`"
+  role: ":setting:`~security.ldap.bind.queryUser`"
+  transform: :setting:`security.ldap.userToDNMapping`
+---
+program: conf
+name: security.ldap.bind.queryPassword
+type: string
+directive: setting
+inherit:
+  name: ldapQueryPassword
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  queryUser: ":setting:`~security.ldap.bind.queryUser`"
+  role: ":setting:`~security.ldap.bind.queryPassword`"
+---
+program: conf
+name: security.ldap.bind.useOSDefaults
+type: boolean
+directive: setting
+inherit:
+  name: ldapBindWithOSDefaults
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  queryUser: ":setting:`~security.ldap.bind.queryUser`"
+  queryPassword: ":setting:`~security.ldap.bind.queryPassword`"
+  role: ":setting:`~security.ldap.bind.useOSDefaults`"
+---
+program: conf
+name: security.ldap.bind.method
+type: string
+directive: setting
+inherit:
+  name: ldapBindMethod
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  queryUser: ":setting:`~security.ldap.queryUser`"
+  queryPassword: ":setting:`~security.ldap.queryPassword`"
+  role: ":setting:`~security.ldap.bind.method`"
+---
+program: conf
+name: security.ldap.bind.saslMechanisms
+type: string
+directive: setting
+inherit:
+  name: ldapBindSASLMechanisms
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  bindMethod: :setting:`~security.ldap.bind.method`
+---
+program: conf
+name: security.ldap.transportSecurity
+type: string
+directive: setting
+inherit:
+  name: ldapTransportSecurity
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  role: ":setting:`~security.ldap.transportSecurity`"
+---
+program: conf
+name: security.ldap.timeoutMS
+type: int
+directive: setting
+inherit:
+  name: ldapTimeoutMS
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  role: ":setting:`~security.ldap.timeoutMS`"
+---
+program: conf
+name: security.ldap.userToDNMapping
+type: string
+directive: setting
+inherit:
+  name: ldapUserToDNMapping
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
+  role: ":setting:`~security.ldap.userToDNMapping`"
+---
+program: conf
+name: security.ldap.authz.queryTemplate
+type: string
+directive: setting
+inherit:
+  name: ldapAuthzQueryTemplate
+  program: mongod
+  file: options-mongod.yaml
+replacement:
+  program: ":program:`mongod`"
+  mapping: :setting:`~security.ldap.userToDNMapping`
+---
+program: conf
+name: setParameter.ldapUserCacheInvalidationInterval
+type: int
+directive: setting
+default: 30
+pre: |
+  For use with {{program}} servers using :ref:`security-ldap-external`.
+
+  The interval (in seconds) {{program}} waits
+  between external user cache flushes. After {{program}} flushes the external
+  user cache, the next operation an LDAP-authorized user, MongoDB
+  reacquires authorization data from the LDAP server.
+ 
+  Increasing the value specified increases the amount of time
+  {{program}} and the LDAP server can be out of sync, but reduces the load on
+  the LDAP server. Conversely, decreasing the value specified
+  decreases the time {{program}} and the LDAP server can be out of sync while
+  increasing the load on the LDAP server.
+replacement:
+  program: ":program:`mongod` or :program:`mongos`"
 ...

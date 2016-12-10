@@ -3,58 +3,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 19:15-0400\n"
-"PO-Revision-Date: 2016-07-02 15:07+0800\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Greg Huang <debin.huang@gmail.com>\n"
-"Language-Team: \n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 1.8.8\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 57fea7e1266f430196982d40e7bc33cd
 #: ../source/core/read-isolation-consistency-recency.txt:3
 msgid "Read Isolation, Consistency, and Recency"
 msgstr "读隔离、一致性和时近性"
 
-#: ../source/core/read-isolation-consistency-recency.txt:0
+# debb09a8f6f146bea9343bf4aea83aac
+#: ../source/core/read-isolation-consistency-recency.txt
 msgid "On this page"
 msgstr "本页内容"
 
+# b12d5e521e934d669abc3ab50322fa5c
 #: ../source/core/read-isolation-consistency-recency.txt:14
 msgid "Isolation Guarantees"
 msgstr "隔离的保证"
 
+# b383f2aa442942ff97a7d4d7878338e3
 #: ../source/core/read-isolation-consistency-recency.txt:17
 msgid "Read Uncommitted"
 msgstr "读的无限制性"
 
+# 341f44fc202445bc8a81ee1d65533922
 #: ../source/includes/extracts/concurrent-operations-read-uncommitted.rst:1
 msgid ""
 "In MongoDB, clients can see the results of writes before the writes are :"
 "term:`durable`:"
 msgstr "在MongoDB中客户端可以在写操作:term:`durable`之前看到写的结果："
 
+# fd57a17bb4c64359a644d3fc87d9a8bf
 #: ../source/includes/list-visibility-of-data.rst:1
 msgid ""
 "Regardless of :doc:`write concern </reference/write-concern>`, other "
-"clients using :readconcern:`\"local\"` (i.e. the default) readConcern can "
-"see the result of a write operation before the write operation is "
+"clients using :readconcern:`\"local\"` (i.e. the default) readConcern can"
+" see the result of a write operation before the write operation is "
 "acknowledged to the issuing client."
 msgstr ""
 "不管 :doc:`write concern </reference/write-concern>` 如何，其它客户端使用:"
 "readconcern:`\"local\"`（这是默认的）readConern可以在写操作通知到发出请求的"
 "客户端之前看到写操作的结果。"
 
+# 5cf6956b31b34eee879007f8bcb6b493
 #: ../source/includes/list-visibility-of-data.rst:6
 msgid ""
-"Clients using :readconcern:`\"local\"` (i.e. the default) readConcern can "
-"read data which may be subsequently :doc:`rolled back </core/replica-set-"
-"rollbacks>`."
+"Clients using :readconcern:`\"local\"` (i.e. the default) readConcern can"
+" read data which may be subsequently :doc:`rolled back </core/replica-"
+"set-rollbacks>`."
 msgstr ""
 "客户端使用:readconcern:`\"local\"`（默认的）readConcern可以读到可能在接下来"
 "被:doc: `rolled back </core/replica-set-rollbacks>` 的数据。"
 
+# cc33a70f8e2f4c6c92cfe1a1fba069bc
 #: ../source/core/read-isolation-consistency-recency.txt:21
 msgid ""
 "Read uncommitted is the default isolation level and applies to :program:"
@@ -64,84 +71,93 @@ msgstr ""
 "读的无限制性是读的默认隔离级别，并且对于:program:`mongod`单节点实例以及复制"
 "集和分片集群都是一样的。"
 
+# 528bab8fc90447909f98097860d2f103
 #: ../source/core/read-isolation-consistency-recency.txt:26
 msgid "Read Uncommitted And Single Document Atomicity"
 msgstr "读的无限制性与单个文档的原子性"
 
+# b1f56ba024de4382b8873f827d21f9a6
 #: ../source/includes/extracts/concurrent-operations-single-document-write.rst:1
 msgid ""
 "Write operations are atomic with respect to a single document; i.e. if a "
-"write is updating multiple fields in the document, a reader will never see "
-"the document with only some of the fields updated."
+"write is updating multiple fields in the document, a reader will never "
+"see the document with only some of the fields updated."
 msgstr ""
 "写操作对于单个文档是具有原子性的，这就是说如果一个写正在一个文档中更新多个字"
 "段，一个读取者将不会看到只有部分的字段被更新的结果。"
 
+# 4b223ed7f6ab480d9bd3a8d6fbb2bca4
 #: ../source/includes/extracts/concurrent-operations-single-document-write.rst:5
 msgid ""
 "With a standalone :program:`mongod` instance, a set of read and write "
-"operations to a single document is serializable. With a replica set, a set "
-"of read and write operations to a single document is serializable *only* in "
-"the absence of a rollback."
+"operations to a single document is serializable. With a replica set, a "
+"set of read and write operations to a single document is serializable "
+"*only* in the absence of a rollback."
 msgstr ""
 "对于一个单节点:program:`mongod`实例，一系列对于单个文档的读和写操作是顺序"
 "的。对于复制集*只有*在缺少回滚的情况下才会对单个文档的一系列操作具有顺序性。"
 
+# ffcf1b137ba84f96aea4455d7de9f456
 #: ../source/core/read-isolation-consistency-recency.txt:30
 msgid ""
-"However, although the readers may not see a *partially* updated document, "
-"read uncommitted means that concurrent readers may still see the updated "
-"document before the changes are :term:`durable`."
+"However, although the readers may not see a *partially* updated document,"
+" read uncommitted means that concurrent readers may still see the updated"
+" document before the changes are :term:`durable`."
 msgstr ""
 "尽管读取者不可能看到*部分*更新的文档，但是读的无限制性意味着并发的读取者还是"
 "可以在更新:term:`durable`之前看到已经更新的文档。"
 
+# df6a1ba4b1724b5e89fa0f93bf6c227f
 #: ../source/core/read-isolation-consistency-recency.txt:35
 msgid "Read Uncommitted And Multiple Document Write"
 msgstr "读的无限制性与多个文档写"
 
+# e969e6eec42640eda9497d2d61bcfe42
 #: ../source/includes/extracts/concurrent-operations-multi-document-writes.rst:1
 msgid ""
-"When a single write operation modifies multiple documents, the modification "
-"of each document is atomic, but the operation as a whole is not atomic and "
-"other operations may interleave. However, you can *isolate* a single write "
-"operation that affects multiple documents using the :update:`$isolated` "
-"operator."
+"When a single write operation modifies multiple documents, the "
+"modification of each document is atomic, but the operation as a whole is "
+"not atomic and other operations may interleave. However, you can "
+"*isolate* a single write operation that affects multiple documents using "
+"the :update:`$isolated` operator."
 msgstr ""
 "当单个写操作更改多个文档时，更改每个文档是具有原子性的，但是整个操作是没有原"
 "子性的而且其他操作可能会参杂其中。但是您可以使用:update:`$isolated`*隔离*单"
 "个写操作更改多个文档。"
 
+# 6c6e8f567bbe4d41a3ea302f6a7c1ae0
 #: ../source/core/read-isolation-consistency-recency.txt:39
 msgid ""
-"Without isolating the multi-document write operations, MongoDB exhibits the "
-"following behavior:"
-msgstr "如果不隔离多个文档的写操作，MongoDB将展现以下行为："
+"Without isolating the multi-document write operations, MongoDB exhibits "
+"the following behavior:"
+msgstr ""
 
+# 69659be5b73e41499946250aa2b5a71a
 #: ../source/includes/extracts/concurrent-operations-multi-document-writes-no-isolation.rst:2
 msgid ""
-"Non-point-in-time read operations. Suppose a read operation begins at time "
-"*t*\\ :sub:`1` and starts reading documents. A write operation then commits "
-"an update to one of the documents at some later time *t*\\ :sub:`2`. The "
-"reader may see the updated version of the document, and therefore does not "
-"see a point-in-time snapshot of the data."
+"Non-point-in-time read operations. Suppose a read operation begins at "
+"time *t*\\ :sub:`1` and starts reading documents. A write operation then "
+"commits an update to one of the documents at some later time *t*\\ "
+":sub:`2`. The reader may see the updated version of the document, and "
+"therefore does not see a point-in-time snapshot of the data."
 msgstr ""
 "\"无时间点\"的读操作。假设一个读操作在时间*t*\\ :sub:`1`开始读取文档。接下来"
 "一个时间*t*\\ :sub:`2`写操作更新了这个文档。这个读操作可能看到的文档是已经更"
 "新后的版本，因此没有“时间点”的快照数据可以读取。"
 
+# 8a454003d9c5450ea9a2688c248d2e0d
 #: ../source/includes/extracts/concurrent-operations-multi-document-writes-no-isolation.rst:9
 msgid ""
-"Non-serializable operations. Suppose a read operation reads a document *d*"
-"\\ :sub:`1` at time *t*\\ :sub:`1` and a write operation updates *d*\\ :sub:"
-"`1` at some later time *t*\\ :sub:`3`. This introduces a read-write "
-"dependency such that, if the operations were to be serialized, the read "
-"operation must precede the write operation. But also suppose that the write "
-"operation updates document *d*\\ :sub:`2` at time *t*\\ :sub:`2` and the "
-"read operation subsequently reads *d*\\ :sub:`2` at some later time *t*\\ :"
-"sub:`4`. This introduces a write-read dependency which would instead "
-"require the read operation to come *after* the write operation in a "
-"serializable schedule. There is a dependency cycle which makes "
+"Non-serializable operations. Suppose a read operation reads a document "
+"*d*\\ :sub:`1` at time *t*\\ :sub:`1` and a write operation updates *d*\\"
+" :sub:`1` at some later time *t*\\ :sub:`3`. This introduces a read-write"
+" dependency such that, if the operations were to be serialized, the read "
+"operation must precede the write operation. But also suppose that the "
+"write operation updates document *d*\\ :sub:`2` at time *t*\\ :sub:`2` "
+"and the read operation subsequently reads *d*\\ :sub:`2` at some later "
+"time *t*\\ :sub:`4`. This introduces a write-read dependency which would "
+"instead require the read operation to come *after* the write operation in"
+" a serializable schedule. There is a dependency cycle which makes "
 "serializability impossible."
 msgstr ""
 "“无序性”操作。假设一个读操作读取一个文档*d*\\ :sub:`1`在时间*t*\\ :sub:`1`，"
@@ -151,67 +167,76 @@ msgstr ""
 "`2`在更晚些的时间*t*\\ :sub:`4`。这里又引入了写读依赖这将使读操作要在写操作*"
 "之后*按照顺序执行。这样的一个循环依赖将导致整个顺序化无法实现。"
 
+# 3c2d0acd059a41e696eca533268cfa1b
 #: ../source/includes/extracts/concurrent-operations-multi-document-writes-no-isolation.rst:22
 msgid ""
-"Reads may miss matching documents that are updated during the course of the "
-"read operation."
-msgstr "读取操作的这个特性可能会错误匹配到已经更新的文档。"
+"Reads may miss matching documents that are updated during the course of "
+"the read operation."
+msgstr ""
 
+# 31b994a23a0e4a258224bcb9250018f6
 #: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:1
 msgid ""
 "Using the :update:`$isolated` operator, a write operation that affects "
-"multiple documents can prevent other processes from interleaving once the "
-"write operation modifies the first document. This ensures that no client "
-"sees the changes until the write operation completes or errors out."
+"multiple documents can prevent other processes from interleaving once the"
+" write operation modifies the first document. This ensures that no client"
+" sees the changes until the write operation completes or errors out."
 msgstr ""
 "使用:update:`$isolated`操作，一个写操作将影响多个文档并能够保证在第一个文档"
 "写操作开始其他进程不会参杂在其中。这将保证不会有客户端看到更新直到写操作完成"
 "或者出现错误。"
 
+# f4002133d95b4d0e81cc5ebd81b916a4
 #: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:7
 msgid ""
-":update:`$isolated` does **not** work with :term:`sharded clusters <sharded "
-"cluster>`."
+":update:`$isolated` does **not** work with :term:`sharded clusters "
+"<sharded cluster>`."
 msgstr ""
 ":update:`$isolated`在:term:`sharded clusters <sharded cluster>`**不**起作用"
 
+# 11a7b74beec844f8a418927efab15489
 #: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:10
 msgid ""
-"An isolated write operation does not provide \"all-or-nothing\" atomicity. "
-"That is, an error during the write operation does not roll back all its "
-"changes that preceded the error."
+"An isolated write operation does not provide \"all-or-nothing\" "
+"atomicity. That is, an error during the write operation does not roll "
+"back all its changes that preceded the error."
 msgstr ""
 "一个隔离的写操作不提供\"所有或者全部没有\"的原子性。这就是说在写的过程中如果"
 "有错误产生不会将所有的在错误产生之前的更新全部回滚。"
 
+# 5496e012c3e84f05a01710f4db1c2eb5
 #: ../source/includes/extracts/concurrent-operations-isolate-operator.rst:16
 msgid ""
 ":update:`$isolated` operator causes write operations to acquire an "
-"exclusive lock on the collection, *even for document-level locking storage "
-"engines* such as WiredTiger. That is, :update:`$isolated` operator will "
-"make WiredTiger single-threaded for the duration of the operation."
+"exclusive lock on the collection, *even for document-level locking "
+"storage engines* such as WiredTiger. That is, :update:`$isolated` "
+"operator will make WiredTiger single-threaded for the duration of the "
+"operation."
 msgstr ""
 ":update:`$isolated`操作将使写操作在集合上获得一个排他锁，*甚至对于文档级别的"
 "锁存储引擎*比如WiredTiger也是这样处理的。这也就是说在执行:update:`$isolated`"
 "操作运行期间会导致WiredTiger单线程运行。"
 
+# 37591167b0ee4baaa0a3842dc5b6d21e
 #: ../source/core/read-isolation-consistency-recency.txt:46
 msgid ":doc:`/core/write-operations-atomicity`"
 msgstr ":doc: `/core/write-operations-atomicity` "
 
+# 1918db260bc64f708005ef2ca708d547
 #: ../source/core/read-isolation-consistency-recency.txt:51
 msgid "Cursor Snapshot"
 msgstr "游标快照"
 
+# 261c4500635c4d60a29076a00d57c011
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:2
 msgid ""
 "MongoDB cursors can return the same document more than once in some "
-"situations. As a cursor returns documents other operations may interleave "
-"with the query. If some of these operations are :doc:`updates </tutorial/"
-"update-documents>` that cause the document to move (in the case of MMAPv1, "
-"caused by document growth) or that change the indexed field on the index "
-"used by the query; then the cursor will return the same document more than "
-"once."
+"situations. As a cursor returns documents other operations may interleave"
+" with the query. If some of these operations are :doc:`updates </tutorial"
+"/update-documents>` that cause the document to move (in the case of "
+"MMAPv1, caused by document growth) or that change the indexed field on "
+"the index used by the query; then the cursor will return the same "
+"document more than once."
 msgstr ""
 "MongoDB的游标可以在某些情况下不止一次返回同一个文档。当一个游标返回文档时其"
 "他操作有可能会参杂在查询之中。如果这些操作有些是:doc:`updates </tutorial/"
@@ -219,26 +244,29 @@ msgstr ""
 "样的情况产生）或者修改了查询中使用到的索引，这样有可能导致游标会返回同一个文"
 "档多次。"
 
+# 078ffaf767a94fbd8cc6c1e3f7cc53d0
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:10
 msgid ""
-"In very specific cases, you can isolate the cursor from returning the same "
-"document more than once by using the :method:`cursor.snapshot()` method. :"
-"method:`~cursor.snapshot()` guarantees that the query will return each "
-"document no more than once."
+"In very specific cases, you can isolate the cursor from returning the "
+"same document more than once by using the :method:`cursor.snapshot()` "
+"method. :method:`~cursor.snapshot()` guarantees that the query will "
+"return each document no more than once."
 msgstr ""
 "在非常特殊的案例中，您可以使用:method:`cursor.snapshot()`方法阻止游标返回同"
 "一个文档多次。:method:`~cursor.snapshot()`保证了查询将返回每个文档不会多于一"
 "次。"
 
+# 80087fb176304fb195d4140a318e4b6d
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:18
 msgid ""
-"The :method:`~cursor.snapshot()` does not guarantee that the data returned "
-"by the query will reflect a single moment in time *nor* does it provide "
-"isolation from insert or delete operations."
+"The :method:`~cursor.snapshot()` does not guarantee that the data "
+"returned by the query will reflect a single moment in time *nor* does it "
+"provide isolation from insert or delete operations."
 msgstr ""
 "方法:method:`~cursor.snapshot()`不会保证查询返回的数据能够反映最新的单个文档"
 "同时也*不会*提供阻止插入和删除的操作。"
 
+# 20922fc4b16c4b3ebd4fc4992dade325
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:23
 msgid ""
 "You **cannot** use :method:`~cursor.snapshot()` with :term:`sharded "
@@ -247,6 +275,7 @@ msgstr ""
 "您**不能**在:term:`sharded collections <sharding>`中使用:method:`~cursor."
 "snapshot()`。"
 
+# be3ffa2bf34644049c3aec241829eff6
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:26
 msgid ""
 "You **cannot** use :method:`~cursor.snapshot()` with the :method:`~cursor."
@@ -255,62 +284,25 @@ msgstr ""
 "您**不能**与:method:`~cursor.sort()`或者:method:`~cursor.hint()`同时使用:"
 "method:`~cursor.snapshot()`方法。"
 
+# 9f2a4599cecd45eba74f693be6bbc700
 #: ../source/includes/extracts/isolate-cursor-snapshot.rst:29
 msgid ""
-"As an alternative, if your collection has a field or fields that are never "
-"modified, you can use a *unique* index on this field or these fields to "
-"achieve a similar result as the :method:`~cursor.snapshot()`. Query with :"
-"method:`~cursor.hint()` to explicitly force the query to use that index."
+"As an alternative, if your collection has a field or fields that are "
+"never modified, you can use a *unique* index on this field or these "
+"fields to achieve a similar result as the :method:`~cursor.snapshot()`. "
+"Query with :method:`~cursor.hint()` to explicitly force the query to use "
+"that index."
 msgstr ""
 "作为替换方案，如果您的集合中有一个或者多个字段不会被更改，您可以在这个或者多"
 "个字段上使用*唯一性*索引来达到与:method:`~cursor.snapshot()`相同的效果。查询"
 "的时候使用:method:`~cursor.hint()` 声明强制走这个索引。"
 
-#: ../source/core/read-isolation-consistency-recency.txt:56
-msgid "Consistency Guarantees"
-msgstr "一致性的保证"
-
-#: ../source/core/read-isolation-consistency-recency.txt:59
-msgid "Monotonic Reads"
-msgstr "单体读"
-
-#: ../source/includes/extracts/monotonic-reads.rst:1
-msgid ""
-"MongoDB provides monotonic reads from a standalone :program:`mongod` "
-"instance. Suppose an application performs a sequence of operations that "
-"consists of a read operation *R*\\ :sub:`1` followed later in the sequence "
-"by another read operation *R*\\ :sub:`2`. If the application performs the "
-"sequence on a standalone :program:`mongod` instance, the later read *R*\\ :"
-"sub:`2` never returns results that reflect an earlier state than that "
-"returned from *R*\\ :sub:`1`; i.e. *R*\\ :sub:`2` returns data that is "
-"monotonically increasing in recency from *R*\\ :sub:`1`."
-msgstr ""
-"MongoDB在单节点:program:`mongod`实例中提供单体读取模式。假设一个应用进行了一"
-"系列的操作，包含了一个读操作*R*\\ :sub:`1`接下来另外一个读操作*R*\\ :sub:"
-"`2`。如果应用的操作是在单节点 :program:`mongod`实例中顺序运行，后面的*R*\\ :"
-"sub:`2`读操作返回的结果将不会影响*R*\\ :sub:`1`读操作较早返回的状态，也就是"
-"说*R*\\ :sub:`2`返回数据是在*R*\\ :sub:`1`基础上具有时近性的单体增加。"
-
-#: ../source/includes/extracts/monotonic-reads.rst:13
-msgid ""
-"For replica sets and sharded clusters, MongoDB provides monotonic reads if "
-"read operations specify :doc:`/reference/read-concern` ``\"majority\"`` and "
-"read preference :readmode:`primary`."
-msgstr ""
-"对于复制集和分片集群，MongoDB提供单体读取的条件是读操作指定:doc:`/reference/"
-"read-concern` ``\"majority\"``并且读操作将偏好:readmode:`primary`。"
-
-#: ../source/includes/extracts/monotonic-reads.rst:17
-msgid ""
-"In previous versions, MongoDB cannot make monotonic read guarantees from "
-"replica sets and sharded clusters."
-msgstr ""
-"在以前的版本中，MongoDB不能在复制集和分片集群中使用单体操作来保证读操作。"
-
-#: ../source/core/read-isolation-consistency-recency.txt:64
+# f1588be493e5426dac239043dece3fb7
+#: ../source/core/read-isolation-consistency-recency.txt:57
 msgid "Monotonic Writes"
 msgstr "单体写"
 
+# ccfa66dcd1be44f28f46509b0d99f2b8
 #: ../source/includes/extracts/monotonic-writes.rst:1
 msgid ""
 "MongoDB provides  monotonic write guarantees for standalone :program:"
@@ -318,60 +310,114 @@ msgid ""
 msgstr ""
 "MongoDB在单节点:program:`mongod`实例、复制集和分片集群中都提供单体写的保证。"
 
+# 73d57296d1524e3680bda2fe1506ba00
 #: ../source/includes/extracts/monotonic-writes.rst:4
 msgid ""
-"Suppose an application performs a sequence of operations that consists of a "
-"write operation *W*\\ :sub:`1` followed later in the sequence by a write "
-"operation *W*\\ :sub:`2`. MongoDB guarantees that *W*\\ :sub:`1` operation "
-"precedes *W*\\ :sub:`2`."
+"Suppose an application performs a sequence of operations that consists of"
+" a write operation *W*\\ :sub:`1` followed later in the sequence by a "
+"write operation *W*\\ :sub:`2`. MongoDB guarantees that *W*\\ :sub:`1` "
+"operation precedes *W*\\ :sub:`2`."
 msgstr ""
 "假设一个应用进行了一系列的操作包括了一个写操作*W*\\ :sub:`1`并在接下来进行了"
 "另外一个写操作*W*\\ :sub:`2`。MongoDB将保证*W*\\ :sub:`1`操作在*W*\\ :sub:"
 "`2`之前进行。"
 
-#: ../source/core/read-isolation-consistency-recency.txt:69
-msgid "Recency"
-msgstr "时近性"
-
-#: ../source/includes/extracts/replica-read-consistency-single-primary.rst:2
-msgid ""
-"In MongoDB, in a replica set with one primary member [#edge-cases-2-"
-"primaries]_,"
-msgstr "在MongoDB的复制集中使用一个主成员节点[#edge-cases-2-primaries]_，"
-
-#: ../source/includes/extracts/replica-read-consistency-single-primary.rst:5
-msgid ""
-"With :readconcern:`\"local\"` ``readConcern``, reads from the primary "
-"reflect the latest writes in absence of a failover;"
+# af35979a9e17434d86ee13f01bce4f70
+#: ../source/core/read-isolation-consistency-recency.txt:64
+msgid "Real Time Order"
 msgstr ""
-"使用:readconcern:`\"local\"` ``readConcern``操作，读取主成员节点将导致后面的"
-"写入操作不能进行故障转移。"
 
-#: ../source/includes/extracts/replica-read-consistency-single-primary.rst:8
+# 5959522c8f0244299763d9a2e4559bbd
+#: ../source/core/read-isolation-consistency-recency.txt:68
 msgid ""
-"With :readconcern:`\"majority\"` ``readConcern``, read operations from the "
-"primary or the secondaries have :term:`eventual consistency`."
+"For read and write operations on the primary, issuing read operations "
+"with :readconcern:`\"linearizable\"` read concern and write operations "
+"with :writeconcern:`\"majority\"` write concern enables multiple threads "
+"to perform reads and writes on a single document as if a single thread "
+"performed these operations in real time; that is, the corresponding "
+"schedule for these reads and writes is considered linearizable."
 msgstr ""
-"使用:readconcern:`\"majority\"` ``readConcern``操作，读取主成员节点或者次要"
-"节点的数据将会有:term:`eventual consistency`。"
 
-#: ../source/includes/footnote-two-primaries-edge-cases.rst:1
-msgid ""
-"In :ref:`some circumstances <edge-cases>`, two nodes in a replica set may "
-"*transiently* believe that they are the primary, but at most, one of them "
-"will be able to complete writes with :writeconcern:`{ w: \"majority\" } <"
-"\"majority\">` write concern. The node that can complete :writeconcern:"
-"`{ w: \"majority\" } <\"majority\">` writes is the current primary, and the "
-"other node is a former primary that has not yet recognized its demotion, "
-"typically due to a :term:`network partition`. When this occurs, clients "
-"that connect to the former primary may observe stale data despite having "
-"requested read preference :readmode:`primary`, and new writes to the former "
-"primary will eventually roll back."
-msgstr ""
-"在:ref:`some circumstances <edge-cases>`中，复制集中的两个节点可能会在*极短*"
-"的时间内都认为自己是主节点，但是至多他们中的一个可以使用writeconcern:`{ w: "
-"\"majority\" } <\"majority\">`完成写操作的write concern。完成:writeconcern:"
-"`{ w: \"majority\" } <\"majority\">`写入操作的节点将是主节点，而另外一个还没"
-"有意识到自己已经降级的节点，通常降级的原因是由于:term:`network partition`。"
-"当这种情况发生后连接到这个降级节点的客户端会发现这些数据已经不是最新的了，尽"
-"管请求使用了读偏好:readmode:`primary`，新写入这个前主节点的数据最终将回滚。"
+#~ msgid "Consistency Guarantees"
+#~ msgstr ""
+
+#~ msgid "Monotonic Reads"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "MongoDB provides monotonic reads from a"
+#~ " standalone :program:`mongod` instance. Suppose"
+#~ " an application performs a sequence "
+#~ "of operations that consists of a "
+#~ "read operation *R*\\ :sub:`1` followed "
+#~ "later in the sequence by another "
+#~ "read operation *R*\\ :sub:`2`. If the"
+#~ " application performs the sequence on "
+#~ "a standalone :program:`mongod` instance, the"
+#~ " later read *R*\\ :sub:`2` never "
+#~ "returns results that reflect an earlier"
+#~ " state than that returned from *R*\\"
+#~ " :sub:`1`; i.e. *R*\\ :sub:`2` returns "
+#~ "data that is monotonically increasing in"
+#~ " recency from *R*\\ :sub:`1`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For replica sets and sharded clusters,"
+#~ " MongoDB provides monotonic reads if "
+#~ "read operations specify :doc:`/reference/read-"
+#~ "concern` ``\"majority\"`` and read preference"
+#~ " :readmode:`primary`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In previous versions, MongoDB cannot "
+#~ "make monotonic read guarantees from "
+#~ "replica sets and sharded clusters."
+#~ msgstr ""
+
+#~ msgid "Recency"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In MongoDB, in a replica set with"
+#~ " one primary member [#edge-"
+#~ "cases-2-primaries]_,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With :readconcern:`\"local\"` ``readConcern``, reads"
+#~ " from the primary reflect the latest"
+#~ " writes in absence of a failover;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With :readconcern:`\"majority\"` ``readConcern``, "
+#~ "read operations from the primary or "
+#~ "the secondaries have :term:`eventual "
+#~ "consistency`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In :ref:`some circumstances <edge-cases>`, "
+#~ "two nodes in a replica set may "
+#~ "*transiently* believe that they are the"
+#~ " primary, but at most, one of "
+#~ "them will be able to complete "
+#~ "writes with :writeconcern:`{ w: \"majority\""
+#~ " } <\"majority\">` write concern. The "
+#~ "node that can complete :writeconcern:`{ "
+#~ "w: \"majority\" } <\"majority\">` writes "
+#~ "is the current primary, and the "
+#~ "other node is a former primary "
+#~ "that has not yet recognized its "
+#~ "demotion, typically due to a "
+#~ ":term:`network partition`. When this occurs,"
+#~ " clients that connect to the former"
+#~ " primary may observe stale data "
+#~ "despite having requested read preference "
+#~ ":readmode:`primary`, and new writes to "
+#~ "the former primary will eventually roll"
+#~ " back."
+#~ msgstr ""
+

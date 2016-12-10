@@ -1,6 +1,6 @@
-===========
+======
 killOp
-===========
+======
 
 .. default-domain:: mongodb
 
@@ -22,10 +22,10 @@ Definition
    :method:`db.killOp()` helper.
    To find operations and their corresponding IDs,
    see :method:`db.currentOp()`.
+   
+   .. |command| replace:: killOp
 
    The ``killOp`` command must be run against the ``admin`` database.
-
-   .. |command| replace:: :dbcommand:`killOp`
 
    .. include:: /includes/fact-dbcommand.rst
 
@@ -37,7 +37,18 @@ Definition
 
    .. include:: /includes/apiargs/method-db.killOp-param.rst
 
-   .. include:: /includes/warning-terminating-operations.rst
+   .. include:: /includes/extracts/warning-terminating-ops-command.rst
+
+Access Control
+--------------
+
+On systems running with :setting:`~security.authorization`, to kill
+operations not owned by the user, the user must have access that
+includes the :authaction:`killop` privilege action.
+
+.. versionchanged:: 3.2.9
+   On :program:`mongod` instances, users can kill their own operations
+   even without the :authaction:`killop` privilege action.
 
 Example
 -------

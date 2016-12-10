@@ -47,7 +47,7 @@ Terminate a Command
 ```````````````````
 
 Consider a potentially long running operation using
-:dbcommand:`distinct` to return each distinct``collection`` field that
+:dbcommand:`distinct` to return each distinct ``collection`` field that
 has a ``city`` key:
 
 .. code-block:: javascript
@@ -85,7 +85,7 @@ the target operation by operation ID.
 
    db.killOp(<opId>)
 
-.. include:: /includes/warning-terminating-operations.rst
+.. include:: /includes/extracts/warning-terminating-ops-method.rst
 
 .. related:: To return a list of running operations see
    :method:`db.currentOp()`.

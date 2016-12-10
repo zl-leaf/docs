@@ -3,33 +3,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
+# a6df5de3f17148d3b4f3911c224ba9a5
 #: ../source/reference/method/cursor.count.txt:3
 msgid "cursor.count()"
 msgstr "cursor.count()"
 
+# 26d6b3c673c845ccb60f96d1ce095e80
+#: ../source/reference/method/cursor.count.txt
+msgid "On this page"
+msgstr ""
+
+# f05d91244ba2479fb9010da817a56e9e
 #: ../source/reference/method/cursor.count.txt:14
 msgid "Definition"
 msgstr "说明"
 
+# 047ed6c5abf446a7a37ee2000d71fbc0
 #: ../source/reference/method/cursor.count.txt:18
 msgid ""
-"Counts the number of documents referenced by a cursor. Append the :method:"
-"`~cursor.count()` method to a :method:`~db.collection.find()` query to "
-"return the number of matching documents. The operation does not perform the "
-"query but instead counts the results that would be returned by the query."
+"Counts the number of documents referenced by a cursor. Append the "
+":method:`~cursor.count()` method to a :method:`~db.collection.find()` "
+"query to return the number of matching documents. The operation does not "
+"perform the query but instead counts the results that would be returned "
+"by the query."
 msgstr ""
 "返回游标引用的文档记录数。在 :method:`~db.collection.find()` 方法后追加 :"
 "method:`~cursor.count()` 方法来查询匹配的文档记录数。这个操作并没有执行完整的"
 "查询，它只取得本次查询可以返回的结果的数量。"
 
+# 404857005c1a44078b0644545df962f4
 #: ../source/reference/method/cursor.count.txt:24
 msgid ""
 "MongoDB supports the use of :method:`~cursor.hint()` with :method:`~cursor."
@@ -38,56 +49,65 @@ msgstr ""
 "MongoDB 支持 :method:`~cursor.hint()` 方法和 :method:`~cursor.count()` 方法联"
 "合使用。参见 :ref:`count-method-hint` 中的例子。"
 
+# 8b7980b1c3464e9fa81a793fed4db119
 #: ../source/reference/method/cursor.count.txt:29
 msgid "The :method:`~cursor.count()` method has the following prototype form:"
 msgstr " :method:`~cursor.count()` 方法的格式如下："
 
+# 4aeaeb69e8fe428595c87e63a28a3d74
 #: ../source/reference/method/cursor.count.txt:36
 msgid "The :method:`~cursor.count()` method has the following parameter:"
 msgstr " :method:`~cursor.count()` 方法可接收如下参数："
 
+# 42754cab7f944df58cf52d880181936b
 #: ../source/reference/method/cursor.count.txt:41
 msgid ""
-"MongoDB also provides an equivalent :method:`db.collection.count()` as an "
-"alternative to the ``db.collection.find(<query>).count()`` construct."
+"MongoDB also provides an equivalent :method:`db.collection.count()` as an"
+" alternative to the ``db.collection.find(<query>).count()`` construct."
 msgstr ""
 "MongoDB 提供了与 :method:`db.collection.count()` 方法效果相同的 ``db."
 "collection.find(<query>).count()`` 方法，可以任选一个使用。"
 
+# a711670769a84da6afafcdaf8fb4a31d
 #: ../source/reference/method/cursor.count.txt:45
 msgid ":method:`cursor.size()`"
 msgstr ""
 
+# 124da664bd5d44d7a6f005e140e7924b
 #: ../source/reference/method/cursor.count.txt:48
 msgid "Behavior"
 msgstr "行为"
 
+# f2b985b0c11345dbbb96030ed9d66e6c
 #: ../source/reference/method/cursor.count.txt:51
 msgid "Sharded Clusters"
 msgstr "分片集群"
 
+# 5b90f976b25f488f81dbc86eaf43b957
 #: ../source/includes/extracts/fact-count-on-sharded-clusters-method-cursor.count.rst:1
 msgid ""
 "On a sharded cluster, :method:`~cursor.count()` can result in an "
-"*inaccurate* count if :term:`orphaned documents <orphaned document>` exist "
-"or if a :doc:`chunk migration </core/sharding-chunk-migration>` is in "
-"progress."
+"*inaccurate* count if :term:`orphaned documents <orphaned document>` "
+"exist or if a :doc:`chunk migration </core/sharding-balancer-"
+"administration>` is in progress."
 msgstr ""
 "在分片集群中, |计数操作| 如果存在孤立的文档记录（ :term:`orphaned documents "
 "<orphaned document>` ）或分片移动 （ :doc:`chunk migration </core/sharding-"
 "chunk-migration>` ）进程正在运行，会返回一个 *错误的* 数值。"
 
+# ad6a3b218137463cb4de931388a5309e
 #: ../source/includes/extracts/fact-count-on-sharded-clusters-method-cursor.count.rst:5
 msgid ""
-"To avoid these situations, on a sharded cluster, use the :pipeline:`$group` "
-"stage of the :method:`db.collection.aggregate()` method to :group:`$sum` the "
-"documents. For example, the following operation counts the documents in a "
-"collection:"
+"To avoid these situations, on a sharded cluster, use the "
+":pipeline:`$group` stage of the :method:`db.collection.aggregate()` "
+"method to :group:`$sum` the documents. For example, the following "
+"operation counts the documents in a collection:"
 msgstr ""
 "为了避免这些情况，在分片集群中，可以使用聚合函数（  :method:`db.collection."
 "aggregate()`  ）中的 :pipeline:`$group` 操作符对集合执行求和（ :group:`"
 "$sum` ）。例如，下面的操作计算集合中的文档数量："
 
+# b6f282e8aeb04b2aab31b204a1b287d4
 #: ../source/includes/extracts/fact-count-on-sharded-clusters-method-cursor.count.rst:18
 msgid ""
 "To get a count of documents that match a query condition, include the :"
@@ -95,114 +115,141 @@ msgid ""
 msgstr ""
 "如果想要进行带查询条件的计数，使用 :pipeline:`$match` 操作符是个好方法："
 
+# 1886c816f7a5439dae461e4e00be2710
 #: ../source/includes/extracts/fact-count-on-sharded-clusters-method-cursor.count.rst:30
 msgid "See :ref:`match-perform-a-count` for an example."
 msgstr "参见 :ref:`match-perform-a-count` 中的例子。"
 
+# 92b4607bdbb6430cb3f510165bd773b3
 #: ../source/reference/method/cursor.count.txt:56
 msgid "Index Use"
 msgstr "使用索引"
 
+# 45e8953fc29b4025bdef0ddb5daaec38
 #: ../source/includes/fact-count-index-use.rst:1
 msgid "Consider a collection with the following index:"
 msgstr "参考包含如下索引的集合："
 
+# 50374537adb34cd88ed47344715ddbcf
 #: ../source/includes/fact-count-index-use.rst:7
 msgid ""
-"When performing a count, MongoDB can return the count using only the index "
-"if:"
+"When performing a count, MongoDB can return the count using only the "
+"index if:"
 msgstr ""
 "正在执行计数时，如果满足以下条件，MongoDB 会返回只用索引计算出来的数量："
 
+# c696f11e814e46d4998f0676e01ccea6
 #: ../source/includes/fact-count-index-use.rst:10
 msgid "the query can use an index,"
 msgstr "查询可以使用索引"
 
+# 7611fb4f25084ee085f9324e329f3d13
 #: ../source/includes/fact-count-index-use.rst:12
 msgid "the query only contains conditions on the keys of the index, *and*"
 msgstr "查询条件中只包含创建过索引的键，*并且*"
 
+# df96996c9ec342a3bffcf91c5f1cacaf
 #: ../source/includes/fact-count-index-use.rst:14
 msgid "the query predicates access a single contiguous range of index keys."
 msgstr "查询只需要使用索引中一块连续的区域："
 
+# 93251576b52641deb40441a5f7b467f4
 #: ../source/includes/fact-count-index-use.rst:16
 msgid ""
-"For example, the following operations can return the count using only the "
-"index:"
-msgstr "例如：下面的操作会返回只用索引计算的数量："
+"For example, the following operations can return the count using only the"
+" index:"
+msgstr ""
 
+# 743a5c830ae949bc81bee2dc24867bb5
 #: ../source/includes/fact-count-index-use.rst:25
 msgid ""
 "If, however, the query can use an index but the query predicates do not "
-"access a single contiguous range of index keys or the query also contains "
-"conditions on fields outside the index, then in addition to using the index, "
-"MongoDB must also read the documents to return the count."
+"access a single contiguous range of index keys or the query also contains"
+" conditions on fields outside the index, then in addition to using the "
+"index, MongoDB must also read the documents to return the count."
 msgstr ""
 "无论何时，如果查询可以使用索引但不是只访问索引中一块连续的区域，或者查询条件"
 "中包含索引以外的字段，这时就不能使用索引，MongoDB 只能读取文档来返回计算的数"
 "量。"
 
+# 3cc4a38c539f409d8a0a1627668a56a1
 #: ../source/includes/fact-count-index-use.rst:37
 msgid ""
-"In such cases, during the initial read of the documents, MongoDB pages the "
-"documents into memory such that subsequent calls of the same count operation "
-"will have better performance."
+"In such cases, during the initial read of the documents, MongoDB pages "
+"the documents into memory such that subsequent calls of the same count "
+"operation will have better performance."
 msgstr ""
 
+# 8825d542c92a47d89fc5747c6820f075
 #: ../source/reference/method/cursor.count.txt:61
 msgid "Examples"
 msgstr ""
 
+# a91aa2c268944ef481d9f9cbddb72cbb
 #: ../source/reference/method/cursor.count.txt:63
 msgid "The following are examples of the :method:`~cursor.count()` method."
 msgstr ""
 
+# ff81e86212b64c21abb33d8ac02c9bbe
 #: ../source/reference/method/cursor.count.txt:66
 msgid "Count All Documents"
 msgstr ""
 
+# 10848b6f09a042218b00c948398a9f6a
 #: ../source/reference/method/cursor.count.txt:68
 msgid ""
-"The following operation counts the number of all documents in the ``orders``"
-" collection:"
+"The following operation counts the number of all documents in the "
+"``orders`` collection:"
 msgstr ""
 
+# c8b009661a8345e78570b3f89d147ebe
 #: ../source/reference/method/cursor.count.txt:76
 msgid "Count Documents That Match a Query"
 msgstr ""
 
+# 50a6f6d7b2c64553b005e4775c12957d
 #: ../source/reference/method/cursor.count.txt:78
 msgid ""
-"The following operation counts the number of the documents in the ``orders``"
-" collection with the field ``ord_dt`` greater than ``new "
+"The following operation counts the number of the documents in the "
+"``orders`` collection with the field ``ord_dt`` greater than ``new "
 "Date('01/01/2012')``:"
 msgstr ""
 
+# ae94006310e84cdc8ebd88b0653e4214
 #: ../source/reference/method/cursor.count.txt:87
 msgid "Limit Documents in Count"
 msgstr ""
 
+# 24156ae7fc0e485f88e86b2ff7f6676a
 #: ../source/reference/method/cursor.count.txt:89
 msgid ""
-"The following operation counts the number of the documents in the ``orders``"
-" collection with the field ``ord_dt`` greater than ``new "
-"Date('01/01/2012')`` *taking into account* the effect of the ``limit(5)``:"
+"The following operation counts the number of the documents in the "
+"``orders`` collection with the field ``ord_dt`` greater than ``new "
+"Date('01/01/2012')`` *taking into account* the effect of the "
+"``limit(5)``:"
 msgstr ""
 
+# fe9a7678d33a4a19a60461da2708600a
 #: ../source/reference/method/cursor.count.txt:101
 msgid "Specify the Index to Use"
 msgstr ""
 
+# 355019fa1c9a498c819ddbc86efbf1e6
 #: ../source/reference/method/cursor.count.txt:103
 msgid ""
-"The following operation uses the index named ``\"status_1\"``, which has the"
-" index key specification of ``{ status: 1 }``, to return a count of the "
-"documents in the ``orders`` collection with the field ``ord_dt`` greater "
-"than ``new Date('01/01/2012')`` and the ``status`` field is equal to "
-"``\"D\"``:"
+"The following operation uses the index named ``\"status_1\"``, which has "
+"the index key specification of ``{ status: 1 }``, to return a count of "
+"the documents in the ``orders`` collection with the field ``ord_dt`` "
+"greater than ``new Date('01/01/2012')`` and the ``status`` field is equal"
+" to ``\"D\"``:"
 msgstr ""
 
-#: ../source/reference/method/cursor.count.txt:0
-msgid "On this page"
-msgstr ""
+#~ msgid ""
+#~ "On a sharded cluster, "
+#~ ":method:`~cursor.count()` can result in an "
+#~ "*inaccurate* count if :term:`orphaned "
+#~ "documents <orphaned document>` exist or "
+#~ "if a :doc:`chunk migration </core/sharding-"
+#~ "chunk-migration>` is in progress."
+#~ msgstr ""
+

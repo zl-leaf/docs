@@ -75,19 +75,11 @@ type: document
 ---
 arg_name: param
 description: |
-  Used in conjunction with the ``update`` field.
-
-  When ``true``, |operation| creates a new
-  document if no document matches the ``query``, or if documents match
-  the ``query``, |operation| performs an
-  update. To avoid multiple upserts, ensure that the ``query`` fields
-  are :ref:`uniquely indexed <index-type-unique>`.
-
-  The default is ``false``.
+  .. include:: /includes/extracts/findAndModify-behavior-method.rst
 interface: method
 name: upsert
 operation: db.collection.findAndModify
-optional: true
+optional: false # Set to false w/ "Optional" in extract due to giza issue
 position: 7
 type: boolean
 ---
@@ -124,4 +116,13 @@ operation: db.collection.findAndModify
 optional: true
 position: 10
 type: integer
+---
+name: collation
+source:
+  ref: collation
+  file: apiargs-dbcommand-aggregate-field.yaml
+arg_name: param
+interface: method
+operation: db.collection.findAndModify
+position: 11
 ...

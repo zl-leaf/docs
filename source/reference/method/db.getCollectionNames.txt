@@ -15,8 +15,8 @@ Definition
 
 .. method:: db.getCollectionNames()
 
-   Returns an array containing the names of all collections in the
-   current database.
+   Returns an array containing the names of all collections and
+   :doc:`views </core/views>` in the current database.
 
 Considerations
 --------------
@@ -27,6 +27,11 @@ Considerations
 .. |method| replace:: :method:`db.getCollectionNames()`
 
 .. include:: /includes/fact-wiredtiger-compatibility-with-old-shells.rst
+
+Required Access
+---------------
+
+.. include:: /includes/extracts/actions-db.getCollectionNames.rst
 
 Example
 -------

@@ -30,13 +30,12 @@ type: document
 ---
 arg_name: param
 description: |
-  When ``true``, if no documents match the ``filter``, a new document is 
-  inserted based on the ``replacement`` document.
+  .. include:: /includes/extracts/replaceOne-behavior-method.rst
   
 interface: method
 name: upsert
 operation: db.collection.replaceOne
-optional: true
+optional: false # Set to false w/ "Optional" in extract due to giza issue
 position: 3
 type: boolean
 ---
@@ -49,6 +48,16 @@ interface: method
 name: writeConcern
 operation: db.collection.replaceOne
 optional: true
-position: 2
+position: 4
 type: document
+---
+arg_name: param
+name: collation
+source:
+  ref: collation
+  file: apiargs-dbcommand-aggregate-field.yaml
+arg_name: param
+interface: method
+operation: db.collection.update
+position: 5
 ...

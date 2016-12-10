@@ -3,121 +3,94 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
+# bbca321c277f40b1a0631139e0d8809a
 #: ../source/core/replica-set-high-availability.txt:8
 msgid "Replica Set High Availability"
 msgstr "复制集的高可用"
 
-#: ../source/core/replica-set-high-availability.txt:43
-msgid ""
-"Replica sets remove \"rollback\" data when needed without intervention. "
-"Administrators must apply or discard rollback data manually."
-msgstr ""
-
-
-#: ../source/core/replica-set-high-availability.txt:1
-msgid "replica set"
-
-msgstr ""
-"复制集成员拥有者相同的数据集副本但是在其他方面却是独立的。一旦主节点不可用"
-"了，复制集就会进行 :doc:`选举 </core/replica-set-elections>` 来推选出新的主节"
-"点。在一些特殊情况下，复制集的故障切换可能是需要 :doc:`回滚 </core/replica-"
-"set-rollbacks>` 。 [#rollback-automatic]_ "
-
-
-#: ../source/core/replica-set-high-availability.txt:1
-msgid "failover"
-
-msgstr ""
-"复制集的架构直观的影响着故障切换时的结果。为了能够有效的故障切换，请确保至少"
-"有一个节点能够顺利升职为主节点。保证在拥有核心业务系统的数据中心中拥有复制集"
-"中多数节点。让多数能够参与投票的节点或是所有可以成为主节点的节点在这个数据中"
-"心中。但是，如果节点间网络不通将会让其无法参与并成为多数节点。"
-
+# 3238faf9f62e48439862886a82dbfd91
 #: ../source/core/replica-set-high-availability.txt:18
 msgid ""
-":term:`Replica sets <replica set>` provide high availability using automatic"
-" :term:`failover`. Failover allows a :term:`secondary` member to become "
-":term:`primary` if the current primary becomes unavailable."
+":term:`Replica sets <replica set>` provide high availability using "
+"automatic :term:`failover`. Failover allows a :term:`secondary` member to"
+" become :term:`primary` if the current primary becomes unavailable."
 msgstr ""
 "如果不人工进行介入，复制集将会删除 \"回滚\"的数据。管理员必须手动应用或丢弃这"
 "些数据。"
 
 
+# f43165d506a64cb5963bca02bec806e5
 #: ../source/core/replica-set-high-availability.txt:24
 msgid ""
 "MongoDB introduces a version 1 of the replication protocol "
 "(:rsconf:`protocolVersion: 1 <protocolVersion>`) to reduce replica set "
 "failover time and accelerates the detection of multiple simultaneous "
-"primaries. New replica sets will, by default, use :rsconf:`protocolVersion: "
-"1 <protocolVersion>`. Previous versions of MongoDB use version 0 of the "
-"protocol. To upgrade existing replica sets to use :rsconf:`protocolVersion: "
-"1 <protocolVersion>`, see :ref:`3.2-upgrade-replica-set`."
+"primaries. New replica sets will, by default, use "
+":rsconf:`protocolVersion: 1 <protocolVersion>`. Previous versions of "
+"MongoDB use version 0 of the protocol."
 msgstr ""
 
-
-#: ../source/core/replica-set-high-availability.txt:33
+# fc6525fa4e3745bf85f578cefe5c0096
+#: ../source/core/replica-set-high-availability.txt:31
 msgid ""
-
-"Replica set members keep the same data set but are otherwise independent. If"
-" the primary becomes unavailable, an eligible secondary holds an "
+"Replica set members keep the same data set but are otherwise independent."
+" If the primary becomes unavailable, an eligible secondary holds an "
 ":doc:`election </core/replica-set-elections>` to elect itself as a new "
 "primary. In some situations, the failover process may undertake a "
 ":doc:`rollback </core/replica-set-rollbacks>`. [#rollback-automatic]_"
 msgstr ""
 
-#~ msgid ""
-#~ ":term:`Replica sets <replica set>` provide high availability using automatic"
-#~ " :term:`failover`. Failover allows a :term:`secondary` member to become "
-#~ ":term:`primary` if primary is unavailable. Failover, in most situations does"
-#~ " not require manual intervention."
-#~ msgstr ""
+# 13e5059bdbc044ed94095db375191a13
+#: ../source/core/replica-set-high-availability.txt:41
+msgid ""
+"Replica sets remove \"rollback\" data when needed without intervention. "
+"Administrators must apply or discard rollback data manually."
+msgstr ""
+
+# 227b6ce94a4c40d59c4990878a6ea580
+#: ../source/core/replica-set-high-availability.txt:1
+msgid "replica set"
+msgstr ""
+
+# 227b6ce94a4c40d59c4990878a6ea580
+#: ../source/core/replica-set-high-availability.txt:1
+msgid "failover"
+msgstr ""
 
 #~ msgid ""
-#~ "Replica set members keep the same data set but are otherwise independent. If"
-#~ " the primary becomes unavailable, the replica set holds an :doc:`election "
-#~ "</core/replica-set-elections>` to select a new primary. In some situations, "
-#~ "the failover process may require a :doc:`rollback </core/replica-set-"
-#~ "rollbacks>`. [#rollback-automatic]_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The deployment of a replica set affects the outcome of failover situations. "
-#~ "To support effective failover, ensure that one facility can elect a primary "
-#~ "if needed. Choose the facility that hosts the core application systems to "
-#~ "host the majority of the replica set. Place a majority of voting members and"
-#~ " all the members that can become primary in this facility. Otherwise, "
-#~ "network partitions could prevent the set from being able to form a majority."
 #~ msgstr ""
 
 #~ msgid "Failover Processes"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "The replica set recovers from the loss of a primary by holding an election. "
-#~ "Consider the following:"
-#~ msgstr ""
-
-
 #~ msgid ":doc:`/core/replica-set-elections`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Elections occur when the primary becomes unavailable and the replica set "
-#~ "members autonomously select a new primary."
 #~ msgstr ""
 
 #~ msgid ":doc:`/core/replica-set-rollbacks`"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "A rollback reverts write operations on a former primary when the member "
-#~ "rejoins the replica set after a failover."
+#~ "MongoDB introduces a version 1 of "
+#~ "the replication protocol (:rsconf:`protocolVersion:"
+#~ " 1 <protocolVersion>`) to reduce replica"
+#~ " set failover time and accelerates "
+#~ "the detection of multiple simultaneous "
+#~ "primaries. New replica sets will, by "
+#~ "default, use :rsconf:`protocolVersion: 1 "
+#~ "<protocolVersion>`. Previous versions of "
+#~ "MongoDB use version 0 of the "
+#~ "protocol. To upgrade existing replica "
+#~ "sets to use :rsconf:`protocolVersion: 1 "
+#~ "<protocolVersion>`, see :ref:`3.2-upgrade-"
+#~ "replica-set`."
 #~ msgstr ""
+

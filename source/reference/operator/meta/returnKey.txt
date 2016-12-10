@@ -1,23 +1,12 @@
-:orphan:
-
 ==========
 $returnKey
 ==========
 
 .. default-domain:: mongodb
 
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: singlecol
-
 .. operator:: $returnKey
 
-   .. deprecated:: 3.2
-
-      The :operator:`$returnKey` operator is deprecated. 
-      Use :method:`cursor.returnKey()` instead.
+   .. include:: /includes/extracts/mongo-shell-deprecated-meta-operator-returnKey.rst
 
    Only return the index field or fields for the results of the query. If
    :operator:`$returnKey` is set to ``true`` and the query does not use

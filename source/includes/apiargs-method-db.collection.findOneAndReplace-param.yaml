@@ -71,24 +71,12 @@ type: number
 ---
 arg_name: param
 description: |
-   When ``true``, :method:`~db.collection.findOneAndReplace()` creates a new 
-   document if no document matches the ``filter``. If a document matches the 
-   filter, the method performs a replacement.
-   
-   The new document is created using the equality conditions from the 
-   ``filter`` with the ``replacement`` document.
-   
-   Comparison conditions like :query:`$gt` or :query:`$lt` are ignored.
-   
-   Returns ``null`` after inserting the new document, unless 
-   ``returnNewDocument`` is ``true``.
-   
-   Defaults to ``false``.
+  .. include:: /includes/extracts/findOneAndReplace-behavior-method.rst
    
 interface: method
 name: upsert
 operation: db.collection.findOneAndReplace
-optional: true
+optional: false # Set to false w/ "Optional" in extract due to giza issue
 position: 6
 type: boolean
 ---
@@ -105,4 +93,13 @@ operation: db.collection.findOneAndReplace
 optional: true
 position: 7
 type: boolean
+---
+name: collation
+source:
+  ref: collation
+  file: apiargs-dbcommand-aggregate-field.yaml
+arg_name: param
+interface: method
+operation: db.collection.findOneAndReplace
+position: 8
 ...

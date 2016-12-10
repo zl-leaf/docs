@@ -21,9 +21,6 @@ description: |
   Must contain only
   :doc:`update operators</reference/operator/update>`.
   
-  The ``<replacement>`` document cannot specify an ``_id`` value that differs 
-  from the replaced document.
-  
 interface: method
 name: update
 operation: db.collection.findOneAndUpdate
@@ -71,30 +68,18 @@ type: number
 ---
 arg_name: param
 description: |
-   When ``true``, :method:`~db.collection.findOneAndUpdate()` creates a new 
-   document if no document matches the ``filter``. If a document matches the 
-   filter, the method performs an update.
-   
-   The new document is created using the equality conditions from the 
-   ``filter`` with the modifications from the ``update`` document.
-   
-   Comparison conditions like :query:`$gt` or :query:`$lt` are ignored.
-   
-   Returns ``null`` after inserting the new document, unless 
-   ``returnNewDocument`` is ``true``.
-   
-   Defaults to ``false``.
+   .. include:: /includes/extracts/findOneAndUpdate-behavior-method.rst
    
 interface: method
 name: upsert
 operation: db.collection.findOneAndUpdate
-optional: true
+optional: false # Set to false w/ "Optional" in extract due to giza issue
 position: 6
 type: boolean
 ---
 arg_name: param
 description: |
-   When ``true``, returns the replacement document instead of the original 
+   When ``true``, returns the updated document instead of the original 
    document.
    
    Defaults to ``false``.
@@ -105,4 +90,13 @@ operation: db.collection.findOneAndUpdate
 optional: true
 position: 7
 type: boolean
+---
+name: collation
+source:
+  ref: collation
+  file: apiargs-dbcommand-aggregate-field.yaml
+arg_name: param
+interface: method
+operation: db.collection.findOneAndUpdate
+position: 8
 ...

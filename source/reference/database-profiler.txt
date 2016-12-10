@@ -30,6 +30,10 @@ use normal MongoDB queries on the :data:`system.profile
    database, the profiler will profile some write activity, even for
    databases that are otherwise read-only.
 
+.. versionchanged:: 3.4
+
+.. include:: /includes/fact-diagnostic-info.rst
+
 Example ``system.profile`` Document
 -----------------------------------
 
@@ -51,7 +55,8 @@ example document reflects a find operation:
       "keysExamined" : 2,
       "docsExamined" : 2,
       "cursorExhausted" : true,
-      "keyUpdates" : 0,
+      "keysInserted" : 0,
+      "keysDeleted" : 0,
       "writeConflicts" : 0,
       "numYield" : 0,
       "locks" : {
@@ -123,6 +128,7 @@ example document reflects a find operation:
       },
       "ts" : ISODate("2015-09-03T15:26:14.948Z"),
       "client" : "127.0.0.1",
+      "appName" : "MongoDB Shell",
       "allUsers" : [ ],
       "user" : ""
    }
@@ -157,12 +163,17 @@ operation.
 
    The type of operation. The possible values are:
 
-   - ``insert``
-   - ``query``
-   - ``update``
-   - ``remove``
-   - ``getmore``
    - ``command``
+   - ``count``
+   - ``distinct``
+   - ``geoNear``
+   - ``getMore``
+   - ``group``
+   - ``insert``
+   - ``mapReduce``
+   - ``query``
+   - ``remove``
+   - ``update``
 
 .. data:: system.profile.ns
 
@@ -207,8 +218,7 @@ operation.
 
    .. versionchanged:: 3.2.0
 
-      Renamed from ``system.profile.nscanned``.
-
+   Renamed from ``system.profile.nscanned``.
    The number of :doc:`index </indexes>` keys that MongoDB scanned in
    order to carry out the operation.
 
@@ -216,6 +226,13 @@ operation.
    than :data:`~system.profile.nreturned`, the database is scanning many
    index keys to find the result documents. Consider creating or
    adjusting indexes to improve query performance..
+
+   .. versionchanged:: 3.4
+
+   ``keysExamined`` is available for the following commands and
+   operations:
+
+   .. include:: /includes/fact-command-diagnostics.rst
 
 .. data:: system.profile.docsExamined
 
@@ -226,7 +243,16 @@ operation.
    The number of documents in the collection that MongoDB scanned in
    order to carry out the operation.
 
+   .. versionchanged:: 3.4
+
+   ``docsExamined`` is available for the following commands and
+   operations:
+
+   .. include:: /includes/fact-command-diagnostics.rst
+
 .. data:: system.profile.moved
+
+   *Removed in 3.4.*
 
    .. versionchanged:: 3.0.0
 
@@ -260,6 +286,19 @@ operation.
    it receives the documents from a cursor. The field only appears when
    the value is ``true``.
 
+   .. versionchanged:: 3.4
+
+   ``hasSortStage`` is available for the following commands and
+   operations:
+
+   - ``find`` (:ref:`OP_QUERY<wire-op-query>` and
+     :dbcommand:`command<find>`)
+   - ``getMore`` (:ref:`OP_GET_MORE<wire-op-query>` and
+     :dbcommand:`command<getMore>`)
+   - :dbcommand:`findAndModify`
+   - :dbcommand:`mapReduce`
+   - :dbcommand:`aggregate`
+
 .. data:: system.profile.ndeleted
 
    The number of documents deleted by the operation.
@@ -286,12 +325,28 @@ operation.
    A boolean that indicates the update operation's ``upsert`` option
    value. Only appears if ``upsert`` is true.
 
-.. data:: system.profile.keyUpdates
+.. data:: system.profile.fastmodinsert
+
+   .. deprecated:: 3.4
+
+   Records the number of update operations that match all of the
+   following criteria:
+
+   - Are upserts (that result in an insert)
+   - Do not use a modifier operation such as :update:`$set`
+
+.. data:: system.profile.keysInserted
+
+   The number of index keys inserted for a given write operation.
+
+.. data:: system.profile.keysDeleted
+
+   *Removed in 3.4.*
 
    The number of :doc:`index </indexes>` keys the update changed in
-   the operation. Changing an index key
-   carries a small performance cost because the database must remove the old
-   key and inserts a new key into the B-tree index.
+   the operation. Changing an index key carries a small performance
+   cost because the database must remove the old key and inserts a new
+   key into the B-tree index.
 
 .. data:: system.profile.writeConflicts
 
@@ -437,6 +492,10 @@ operation.
 
    For some operations, such as :method:`db.eval()`, the client is
    ``0.0.0.0:0`` instead of an actual client.
+
+.. data:: system.profile.appName
+
+   .. include:: /includes/fact-client-appname.rst
 
 .. data:: system.profile.allUsers
 

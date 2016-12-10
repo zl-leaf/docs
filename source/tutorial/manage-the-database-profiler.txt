@@ -1,8 +1,8 @@
 .. _database-profiler:
 
-==========================================
-Analyze Performance of Database Operations
-==========================================
+=================
+Database Profiler
+=================
 
 .. default-domain:: mongodb
 
@@ -187,7 +187,7 @@ parameters to :program:`mongod` at startup or within the
 
 .. code-block:: sh
 
-   mongod --profile=1 --slowms=15
+   mongod --profile 1 --slowms 15
 
 This sets the profiling level to ``1``, which collects profiling data
 for slow operations only, and defines slow operations as those that
@@ -342,3 +342,10 @@ To change the size of the :data:`system.profile
 stop the secondary, run it as a standalone, and then perform the steps
 above. When done, restart the standalone as a member of the replica set.
 For more information, see :doc:`/tutorial/perform-maintence-on-replica-set-members`.
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/database-profiler

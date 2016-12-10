@@ -17,7 +17,7 @@ and becomes "stale." When this occurs, you must completely
 resynchronize the member by removing its data and performing an
 :ref:`initial sync <replica-set-initial-sync>`.
 
-This tutorial addresses both resyncing a stale member and to creating a
+This tutorial addresses both resyncing a stale member and creating a
 new member using seed data from another member. When syncing a member,
 choose a time when the system has the bandwidth to move a large amount
 of data. Schedule the synchronization during a time of low usage or
@@ -39,10 +39,11 @@ MongoDB provides two options for performing an initial sync:
 
 .. index:: replica set; sync
 .. index:: replica set; resync
-.. _replica-set-auto-resync-stale-member:
 
 Procedures
 ----------
+
+.. _replica-set-auto-resync-stale-member:
 
 Automatically Sync a Member
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,7 +62,7 @@ If the instance has no data, you can simply follow the
 new member to a replica set.
 
 You can also force a :program:`mongod` that is already a member of the
-set to to perform an initial sync by restarting the instance without
+set to  perform an initial sync by restarting the instance without
 the content of the :setting:`~storage.dbPath` as follows:
 
 a. Stop the member's :program:`mongod` instance.
@@ -102,10 +103,10 @@ However, in most cases you cannot copy data files from a running
 :program:`mongod` instance to another because the data files will change
 during the file copy operation.
 
-.. important:: If copying data files, you must copy the content of the ``local``
-   database.
+.. important:: If copying data files, ensure that your copy includes
+   the content of the ``local`` database.
 
-You *cannot* use a :program:`mongodump` backup for the data files,
+You *cannot* use a :program:`mongodump` backup for the data files:
 **only a snapshot backup**. For approaches to capturing a consistent
 snapshot of a running :program:`mongod` instance, see the
 :doc:`/core/backups` documentation.

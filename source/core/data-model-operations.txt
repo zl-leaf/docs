@@ -88,7 +88,7 @@ Sharding
 
 MongoDB uses :term:`sharding` to provide horizontal scaling. These
 clusters support deployments with large data sets and high-throughput
-operations. Sharding allows users to :term:`partition` a
+operations. Sharding allows users to :term:`partition <data partition>` a
 :term:`collection` within a database to distribute the collection's
 documents across a number of :program:`mongod` instances or
 :term:`shards <shard>`.
@@ -100,7 +100,7 @@ performance, and can enable or prevent query isolation and increased
 write capacity. It is important to consider carefully the field or
 fields to use as the shard key.
 
-See :doc:`/core/sharding-introduction` and
+See :doc:`/sharding` and
 :doc:`/core/sharding-shard-key` for more information.
 
 .. _data-model-indexes:

@@ -64,7 +64,7 @@
    * - DBPointer
      - 12
      - "dbPointer"
-     -
+     - Deprecated.
 
    * - JavaScript
      - 13
@@ -74,7 +74,7 @@
    * - Symbol
      - 14
      - "symbol"
-     -
+     - Deprecated.
 
    * - JavaScript (with scope)
      - 15
@@ -95,7 +95,12 @@
      - 18
      - "long"
      -
-
+   
+   * - Decimal128
+     - 19
+     - "decimal"
+     - New in version 3.4.
+   
    * - Min key
      - -1
      - "minKey"

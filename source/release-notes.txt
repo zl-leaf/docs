@@ -12,12 +12,12 @@ versions. Release notes also include instructions for upgrade.
 Current Stable Release
 ~~~~~~~~~~~~~~~~~~~~~~
 
-(*3.2-series*)
+(*3.4-series*)
 
 .. toctree::
    :maxdepth: 1
 
-   /release-notes/3.2
+   /release-notes/3.4
 
 Previous Stable Releases
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,6 +25,7 @@ Previous Stable Releases
 .. toctree::
    :maxdepth: 1
 
+   /release-notes/3.2
    /release-notes/3.0
    /release-notes/2.6
    /release-notes/2.4
@@ -34,6 +35,8 @@ Previous Stable Releases
    /release-notes/1.6
    /release-notes/1.4
    /release-notes/1.2
+
+
 
 .. end-include-here
 

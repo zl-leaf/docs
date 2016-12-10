@@ -8,6 +8,8 @@ include only a subset of these settings:
      _id: <string>,
      version: <int>,
      protocolVersion: <number>,
+     writeConcernMajorityJournalDefault: <boolean>,
+     configsvr: <boolean>,
      members: [
        {
          _id: <int>,
@@ -27,7 +29,9 @@ include only a subset of these settings:
        heartbeatIntervalMillis : <int>,
        heartbeatTimeoutSecs: <int>,
        electionTimeoutMillis : <int>,
+       catchUpTimeoutMillis : <int>,
        getLastErrorModes : <document>,
-       getLastErrorDefaults : <document>
+       getLastErrorDefaults : <document>,
+       replicaSetId: <ObjectId>
      }
    }

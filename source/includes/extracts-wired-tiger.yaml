@@ -41,10 +41,10 @@ content: |
 ---
 ref: wt-cache-setting
 content: |
-   To adjust the size of the WiredTiger cache, see
+   To adjust the size of the WiredTiger internal cache, see
    :setting:`storage.wiredTiger.engineConfig.cacheSizeGB` and
    :option:`--wiredTigerCacheSizeGB`. Avoid increasing the WiredTiger
-   cache size above its default value.
+   internal cache size above its default value.
 ---
 ref: wt-cache-eviction
 content: |
@@ -112,7 +112,7 @@ content: |
 ---
 ref: wt-configure-cache
 content: |
-   .. include:: /includes/extracts/wt-cache-default-setting.rst
+   .. include:: /includes/extracts/wt-cache-utilization.rst
 
    .. include:: /includes/extracts/wt-cache-setting.rst
 
@@ -137,31 +137,30 @@ source:
 replacement:
   cachesetting: ":option:`--wiredTigerCacheSizeGB`"
 ---
+ref: wt-cache-utilization
+content: |
+   With WiredTiger, MongoDB utilizes both the WiredTiger internal cache
+   and the filesystem cache.
+
+   .. include:: /includes/extracts/wt-cache-default-setting.rst
+
+   .. include:: /includes/extracts/wt-filesystem-cache.rst
+---
 ref: wt-cache-default-setting
 content: |
-   With WiredTiger, MongoDB utilizes both the WiredTiger cache and the
-   filesystem cache.
+   
+   Starting in 3.4, the WiredTiger internal cache, by default, will use
+   the larger of either:
 
-   .. versionchanged:: 3.2
+   - 50% of RAM minus 1 GB, or
 
-      Starting in MongoDB 3.2, the WiredTiger cache, by default, will use
-      the larger of either:
-
-      - 60% of RAM minus 1 GB, or
-
-      - 1 GB.
-
-      For systems with up to 10 GB of RAM, the new default setting is
-      less than or equal to the 3.0 default setting (For
-      MongoDB 3.0, the WiredTiger cache uses either 1 GB or half of the
-      installed physical RAM, whichever is larger).
-
-      For systems with more than 10 GB of RAM, the new default setting
-      is greater than the 3.0 setting.
-
-   Via the filesystem cache, MongoDB automatically uses all free memory
-   that is not used by the WiredTiger cache or by other processes. Data
-   in the filesystem cache is compressed.
+   - 256 MB.
+---
+ref: wt-filesystem-cache
+content: |
+  Via the filesystem cache, MongoDB automatically uses all free memory
+  that is not used by the WiredTiger cache or by other processes. Data
+  in the filesystem cache is compressed.
 ---
 ref: wt-snapshot-frequency
 content: |

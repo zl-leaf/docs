@@ -32,14 +32,20 @@ mapReduce
                        scope: <document>,
                        jsMode: <boolean>,
                        verbose: <boolean>,
-                       bypassDocumentValidation: <boolean>
+                       bypassDocumentValidation: <boolean>,
+                       collation: <document>
                      }
                    )
 
    Pass the name of the collection to the ``mapReduce`` command
    (i.e. ``<collection>``) to use as the source documents to perform
-   the map reduce operation. The command also accepts the following
-   parameters:
+   the map reduce operation. 
+
+   .. note::
+
+      .. include:: /includes/extracts/views-unsupported-mapReduce.rst
+   
+   The command also accepts the following parameters:
 
    .. include:: /includes/apiargs/command-mapReduce-field.rst
 
@@ -62,13 +68,7 @@ mapReduce
                    )
 
    .. include:: /includes/extracts/admonition-js-prevalence-mapReduce.rst
-
-.. note::
-
-   .. versionchanged:: 2.4
-
-   .. include:: /includes/fact-group-map-reduce-where-limitations-in-24.rst
-
+   
 .. _mapreduce-map-cmd:
 
 .. include:: /includes/parameters-map-reduce.rst
@@ -93,6 +93,30 @@ mapReduce
    :start-after: start-out
    :end-before: end-out
 
+Required Access
+---------------
+
+If your MongoDB deployment enforces authentication, the user executing
+the :dbcommand:`mapReduce` command must possess the following
+privilege actions:
+
+Map-reduce with ``{out : inline}`` output option:
+- :authaction:`find`
+
+Map-reduce with the ``replace`` action when :ref:`outputting to a
+collection <mapreduce-out-mtd>`:
+- :authaction:`find`,
+- :authaction:`insert`,
+- :authaction:`replace`
+
+Map-reduce with the ``merge`` or ``reduce`` actions when
+:ref:`outputting to a collection <mapreduce-out-mtd>`:
+- :authaction:`find`,
+- :authaction:`insert`,
+- :authaction:`update`
+
+The :authrole:`readWrite` built-in role provides the necessary
+permissions to perform map-reduce aggregation.
 
 Map-Reduce Examples
 -------------------

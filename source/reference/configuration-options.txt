@@ -1,3 +1,5 @@
+.. _configuration-options:
+
 ==========================
 Configuration File Options
 ==========================
@@ -7,7 +9,7 @@ Configuration File Options
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: singlecol
 
 The following page describes the configuration options available in
@@ -50,7 +52,7 @@ settings that you may adapt to your local configuration:
 
 .. note::
 
-   YAML does not support tab characters for indention: use spaces instead.
+   YAML does not support tab characters for indentation: use spaces instead.
 
 .. code-block:: yaml
 
@@ -349,7 +351,9 @@ Core Options
       keyFile: <string>
       clusterAuthMode: <string>
       authorization: <string>
+      transitionToAuth: <boolean>
       javascriptEnabled:  <boolean>
+      redactClientLogData: <boolean>
       sasl:
          hostName: <string>
          serviceName: <string>
@@ -365,6 +369,19 @@ Core Options
          clientCertificateFile: <string>
          clientCertificatePassword: <string>
          serverCAFile: <string>
+      ldap:
+         servers: <string>
+         bind:
+            method: <string>
+            saslMechanism: <string>
+            queryUser: <string>
+            queryPassword: <string>
+            useOSDefaults: <boolean>
+         transportSecurity: <string>
+         timeoutMS: <int>
+         userToDNMapping: <string>
+         authz:
+            queryTemplate: <string>
 
 .. include:: /includes/option/setting-conf-security.keyFile.rst
 
@@ -372,7 +389,11 @@ Core Options
 
 .. include:: /includes/option/setting-conf-security.authorization.rst
 
+.. include:: /includes/option/setting-conf-security.transitionToAuth.rst
+
 .. include:: /includes/option/setting-conf-security.javascriptEnabled.rst
+
+.. include:: /includes/option/setting-conf-security.redactClientLogData.rst
 
 .. _encryption-key-management-conf-options:
 
@@ -431,10 +452,63 @@ Key Management Configuration Options
 
 .. include:: /includes/option/setting-conf-security.sasl.saslauthdSocketPath.rst
 
+.. _security.ldap.options:
+
+``security.ldap`` Options
+`````````````````````````
+
+.. code-block:: yaml
+   
+   security:
+      ldap:
+         servers: <string>
+         bind:
+            method: <string>
+            saslMechanism: <string>
+            queryUser: <string>
+            queryPassword: <string>
+            useOSDefaults: <boolean>
+         transportSecurity: <string>
+         timeoutMS: <int>
+         userToDNMapping: <string>
+         authz:
+            queryTemplate: <string>
+         
+.. include:: /includes/option/setting-conf-security.ldap.servers.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.bind.queryUser.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.bind.queryPassword.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.bind.useOSDefaults.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.bind.method.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.bind.saslMechanisms.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.transportSecurity.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.timeoutMS.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.userToDNMapping.rst
+
+.. include:: /includes/option/setting-conf-security.ldap.authz.queryTemplate.rst
+
+
 ``setParameter`` Option
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/option/setting-conf-setParameter.rst
+
+LDAP Parameters
+```````````````
+
+.. include:: /includes/option/setting-conf-setParameter.ldapUserCacheInvalidationInterval.rst
+
+.. code-block:: yaml
+
+   setParameter:
+      ldapUserCacheInvalidationInterval: <int>
 
 ``storage`` Options
 ~~~~~~~~~~~~~~~~~~~
@@ -649,25 +723,22 @@ Text Search Options
 ``mongos``\ -only Options
 -------------------------
 
+.. versionchanged:: 3.4
+
+   MongoDB 3.4 removes ``sharding.chunkSize`` and
+   ``sharding.autoSplit`` settings.
+
 .. code-block:: yaml
 
    replication:
       localPingThresholdMs: <int>
 
    sharding:
-      autoSplit: <boolean>
       configDB: <string>
-      chunkSize: <int>
 
 .. include:: /includes/option/setting-conf-replication.localPingThresholdMs.rst
 
-.. include:: /includes/option/setting-conf-sharding.autoSplit.rst
-
 .. include:: /includes/option/setting-conf-sharding.configDB.rst
-
-.. include:: /includes/option/setting-conf-sharding.chunkSize.rst
-
-.. include:: /includes/option/setting-conf-sharding.configsvrMode.rst
 
 Windows Service Options
 -----------------------

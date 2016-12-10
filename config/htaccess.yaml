@@ -75,6 +75,13 @@ outputs:
   - 'master'
 ---
 from: '/mongodb-manual.epub'
+to: '/mongodb-manual-v3.2.epub'
+type: 'redirect'
+code: 301
+outputs:
+  - 'v3.2'
+---
+from: '/mongodb-manual.epub'
 to: '/mongodb-manual-v3.0.epub'
 type: 'redirect'
 code: 301
@@ -4716,6 +4723,216 @@ outputs:
 ---
 from: '/tutorial/enable-internal-authentication'
 to: '/tutorial/enforce-keyfile-access-control-in-existing-replica-set'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding-introduction'
+to: '/sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding'
+to: '/sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-architectures'
+to: '/core/sharded-cluster-components'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-architectures-production'
+to: '/core/sharded-cluster-components'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-architectures-test'
+to: '/core/sharded-cluster-components'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-operations'
+to: '/sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-mechanics'
+to: '/sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding-chunk-migration'
+to: '/core/sharding-balancer-administration'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding-chunk-splitting'
+to: '/core/sharding-data-partitioning'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding-shard-key-indexes'
+to: '/core/sharding-shard-key'
+type: 'redirect'
+code: 301
+outputs: 
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-metadata'
+to: '/core/sharded-cluster-config-servers'
+type: 'redirect'
+code: 301
+outputs: 
+  - 'after-v3.0'
+---
+from: '/administration/sharded-clusters'
+to: '/sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/administration/sharded-cluster-deployment'
+to: '/tutorial/deploy-shard-cluster'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/tutorial/choose-a-shard-key'
+to: '/core/sharding-shard-key'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/tutorial/shard-collection-with-a-hashed-shard-key'
+to: '/core/hashed-sharding'
+type: 'redirect'
+code: 301
+outputs: 
+  - 'after-v3.0'
+---
+from: '/administration/sharded-cluster-maintenance'
+to: '/administration/sharded-cluster-administration'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/administration/sharded-cluster-data'
+to: '/administration/sharded-cluster-administration'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/hashed-sharding'
+to: '/tutorial/shard-collection-with-a-hashed-shard-key'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/core/ranged-sharding'
+to: '/core/sharding-introduction'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/tutorial/deploy-sharded-cluster-ranged-sharding'
+to: '/tutorial/deploy-shard-cluster'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/core/sharded-cluster-administration'
+to: '/core/sharded-cluster-mechanics'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/core/sharded-cluster-metadata'
+to: '/core/sharded-cluster-config-servers'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharding-balancer-administration'
+to: '/core/sharding-chunk-migration'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/tutorial/configure-sharded-cluster-balancer'
+to: '/tutorial/manage-sharded-cluster-balancer'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/tutorial/deploy-sharded-cluster-hashed-sharding'
+to: '/tutorial/shard-collection-with-a-hashed-shard-key'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/tutorial/shard-gridfs-data'
+to: '/core/gridfs'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/tutorial/sharding-data-partitioning'
+to: '/core/sharding-chunk-splitting'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/core/sharding-balancer-administration'
+to: '/core/sharding-balancing'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v3.0'
+---
+from: '/core/sharding-balancing'
+to: '/core/sharding-balancer-administration'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v3.0'
+---
+from: '/core/sharded-cluster-high-availability'
+to: '/tutorial/troubleshoot-sharded-clusters'
 type: 'redirect'
 code: 301
 outputs:

@@ -3,78 +3,91 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
-"PO-Revision-Date: 2016-08-01 16:13+0800\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: zh\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 3704957830b44451b1fef589baa95a31
 #: ../source/tutorial/remove-documents.txt:5
 msgid "Delete Documents"
 msgstr "删除文档"
 
-#: ../source/tutorial/remove-documents.txt:0
+# 18cac7f6ca364dd0b7e0979036279cc7
+#: ../source/tutorial/remove-documents.txt
 msgid "On this page"
 msgstr "目录"
 
+# a72d07acd5da497a81222ef26d544dda
 #: ../source/tutorial/remove-documents.txt:16
 msgid "Delete Methods"
 msgstr "删除的方法"
 
+# 1299fd13ae1545158af2e449f3bea14e
 #: ../source/tutorial/remove-documents.txt:18
 msgid ""
-"MongoDB provides the following methods to delete documents of a collection:"
-msgstr "MongoDB提供以下方法来删除集合中的文档:"
+"MongoDB provides the following methods to delete documents of a "
+"collection:"
+msgstr ""
 
+# 9ff48655f6404189b9c6852076a91cb1
 #: ../source/tutorial/remove-documents.txt:24
 msgid ":method:`db.collection.remove()`"
 msgstr ":method:`db.collection.remove()`"
 
+# c02153eae73c4dc8a04350fcd4a50448
 #: ../source/tutorial/remove-documents.txt:25
 msgid "Delete a single document or all documents that match a specified filter."
-msgstr "删除单个或所有匹配指定过滤条件的文档."
+msgstr ""
 
+# eb78d9ade602428dadb969040efa23a6
 #: ../source/tutorial/remove-documents.txt:27
 msgid ":method:`db.collection.deleteOne()`"
 msgstr ":method:`db.collection.deleteOne()`"
 
+# 5ef5d415745e46bab7839f24f4e93f36
 #: ../source/tutorial/remove-documents.txt:29
 msgid ""
-"Delete at most a single document that match a specified filter even though "
-"multiple documents may match the specified filter."
-msgstr "删除最多一个匹配指定过滤条件的文档,即使有多个文档可以匹配指定的过滤条件."
+"Delete at most a single document that match a specified filter even "
+"though multiple documents may match the specified filter."
+msgstr ""
 
+# 955d085f1e38435c8ba70ab8a94d6c8f
 #: ../source/tutorial/remove-documents.txt:34
 msgid ":method:`db.collection.deleteMany()`"
 msgstr ":method:`db.collection.deleteMany()`"
 
+# 25d9b74161c542f49f766dca9be8e8c1
 #: ../source/tutorial/remove-documents.txt:36
 msgid "Delete all documents that match a specified filter."
 msgstr "删除所有匹配指定过滤条件的文档."
 
+# 02bd73c2c8224686ae8ec36ffa6e0d28
 #: ../source/tutorial/remove-documents.txt:40
 msgid ""
-"You can specify criteria, or filters, that identify the documents to update. "
-"These :ref:`filters <document-query-filter>` use the same syntax as read "
-"operations:"
+"You can specify criteria, or filters, that identify the documents to "
+"delete. These :ref:`filters <document-query-filter>` use the same syntax "
+"as read operations:"
 msgstr ""
 "你可以指定条件或过滤器来找到要删除的文档.这些 :ref:`filters <document-query-"
 "filter>` 使用与读操作相同的语法:"
 
+# d52cf843e0aa444cab696103b3d0ffc8
 #: ../source/includes/extracts/filter-equality.rst:2
 msgid ""
-"A :ref:`query filter document <document-query-filter>` can specify equality "
-"condition with ``<field>:<value>`` expressions to select all documents that "
-"contain the ``<field>`` with the specified ``<value>``:"
+"A :ref:`query filter document <document-query-filter>` can specify "
+"equality condition with ``<field>:<value>`` expressions to select all "
+"documents that contain the ``<field>`` with the specified ``<value>``:"
 msgstr ""
 ":ref:`query filter document <document-query-filter>` 能够用 ``<field>:"
 "<value>`` 表达式指定相等条件并以此选出所有包含指定 ``<value>`` 的 ``<field>`` "
 "的文档:"
 
+# c92c98c22e9e4687973220f62666b308
 #: ../source/includes/extracts/filter-query-operators.rst:2
 msgid ""
 "A :ref:`query filter document <document-query-filter>` can use the :ref:`query "
@@ -83,148 +96,178 @@ msgstr ""
 " :ref:`query filter document <document-query-filter>` 能以如下的形式使用 :ref:"
 "`query operators <query-selectors>` 来指定条件:"
 
+# 3d631903c6064257af4a56dbf57ea1ef
 #: ../source/tutorial/remove-documents.txt:52
 msgid "Delete Behavior"
 msgstr "删除的行为表现"
 
+# 6a5c100024da4690866ca4d3fc0a6d10
 #: ../source/tutorial/remove-documents.txt:55
 msgid "Indexes"
 msgstr "索引"
 
+# 21d220e26ded4da0a1c929df2553a4e7
 #: ../source/tutorial/remove-documents.txt:57
 msgid ""
-"Delete operations do not drop indexes, even if deleting all documents from a "
-"collection."
-msgstr "删除操作不会删除索引,即使删除了一个集合的所有文档."
+"Delete operations do not drop indexes, even if deleting all documents "
+"from a collection."
+msgstr ""
 
+# eea6a9bd36d143189fca6687d40f77a7
 #: ../source/tutorial/remove-documents.txt:61
 msgid "Atomicity"
 msgstr "原子性"
 
+# b6476b5db8c645e1a7bf27c42ce4b372
 #: ../source/tutorial/remove-documents.txt:63
 msgid ""
-"All write operations in MongoDB are atomic on the level of a single document. "
-"For more information on MongoDB and atomicity, see :doc:`/core/write-"
-"operations-atomicity`"
+"All write operations in MongoDB are atomic on the level of a single "
+"document. For more information on MongoDB and atomicity, see :doc:`/core"
+"/write-operations-atomicity`."
 msgstr ""
 "MongoDB中所有的写操作在单一文档层级上是原子的.更多关于MongoDB和原子性的信息,请"
 "参见 :doc:`/core/write-operations-atomicity`."
 
+# f8280db4a8304e64a0abf5fcdb461b7c
 #: ../source/tutorial/remove-documents.txt:68
 msgid "Example Collection"
 msgstr "示例集合"
 
+# ca871502a63e4391be27453e8f155e0d
 #: ../source/tutorial/remove-documents.txt:70
 msgid ""
 "This page provides examples of remove operations in the :program:`mongo` "
-"shell. To populate the ``users`` collection referenced in the examples, run "
-"the following in :program:`mongo` shell:"
+"shell. To populate the ``users`` collection referenced in the examples, "
+"run the following in :program:`mongo` shell:"
 msgstr ""
 "本页提供了在 :program:`mongo` shell中删除操作的例子.在:program:`mongo` shell中"
 "运行如下命令以向例子中涉及到的 ``users`` 集合填入数据:"
 
+# 4b2bc5e6614f42ebae747b8c3d5b3dbb
 #: ../source/tutorial/remove-documents.txt:76
 msgid ""
-"If the ``users`` collection already contains documents with the same ``_id`` "
-"values, you need to :method:`drop <db.collection.drop()>` the collection (``db."
-"users.drop()``) before inserting the example documents."
+"If the ``users`` collection already contains documents with the same "
+"``_id`` values, you need to :method:`drop <db.collection.drop()>` the "
+"collection (``db.users.drop()``) before inserting the example documents."
 msgstr ""
 "如果 ``users`` 集合中已经包含了相同  ``_id`` 值的文档,你需要在插入示例文档前 :"
 "method:`drop <db.collection.drop()>` 该集合( ``db.users.drop()`` )."
 
+# 3d169a3a1f4d4bd8bbd64caa1e15d388
 #: ../source/tutorial/remove-documents.txt:174
 msgid "Delete All Documents"
 msgstr "删除所有文档"
 
+# fe9be0e00cc94d62afa58471e13ba1b2
 #: ../source/tutorial/remove-documents.txt:176
 msgid ""
 "To remove all documents from a collection, pass an empty :ref:`filter "
-"<document-query-filter>` document ``{}`` to either the :method:`db.collection."
-"deleteMany()` or the :method:`db.collection.remove()` method."
+"<document-query-filter>` document ``{}`` to either the "
+":method:`db.collection.deleteMany()` or the "
+":method:`db.collection.remove()` method."
 msgstr ""
 "要想从集合中删除所有文档,传递一个空的 :ref:`filter <document-query-filter>` "
 "document ``{}`` 给 :method:`db.collection.deleteMany()` 或 :method:`db."
 "collection.remove()` 方法."
 
+# 1f23903c0a71493c99231864627cd396
+# 06f682c4d6e94b488f1670d8665cfd8a
 #: ../source/tutorial/remove-documents.txt:182
 #: ../source/tutorial/remove-documents.txt:224
 msgid "``db.collection.deleteMany()``"
 msgstr "``db.collection.deleteMany()``"
 
+# c0f615aaeea54835a78b8063b5ccf84f
 #: ../source/tutorial/remove-documents.txt:184
 msgid ""
-"The following example uses the :method:`db.collection.deleteMany()` method to "
-"delete *all* documents from the ``users`` collection:"
+"The following example uses the :method:`db.collection.deleteMany()` "
+"method to delete *all* documents from the ``users`` collection:"
 msgstr ""
 "如下的例子使用 :method:`db.collection.deleteMany()` 方法从 ``users`` 集合中删除"
 "了 *所有* 文档:"
 
+# 3dcc0a52461f4fb0b62bfa56ad425871
+# 3ffbd349dc4e4ec7a1c772220044a532
 #: ../source/tutorial/remove-documents.txt:191
 #: ../source/tutorial/remove-documents.txt:234
 msgid "The method returns a document with the status of the operation:"
 msgstr "该方法返回了操作状态的文档:"
 
+# 972d754c56ea4863b5359a053e51d380
 #: ../source/tutorial/remove-documents.txt:197
 msgid ""
-"For more information and examples, see :method:`db.collection.deleteMany()`."
-msgstr "更多信息和示例,请参见 :method:`db.collection.deleteMany()`."
+"For more information and examples, see "
+":method:`db.collection.deleteMany()`."
+msgstr ""
 
+# bde434b3f0f8489eae82df960816c6fb
+# 31e45fd5377f489e9e07d5d6a273e5ce
+# 09d1b563e32e43bcb6765b2b423f713d
 #: ../source/tutorial/remove-documents.txt:200
 #: ../source/tutorial/remove-documents.txt:241
 #: ../source/tutorial/remove-documents.txt:276
 msgid "``db.collection.remove()``"
 msgstr "``db.collection.remove()``"
 
+# 472a5d69fbbd4b93b7b6ca43c94cacc5
 #: ../source/tutorial/remove-documents.txt:202
 msgid ""
-"Alternatively, the following example uses the :method:`db.collection.remove()` "
-"method to delete *all* documents from the ``users`` collection:"
+"Alternatively, the following example uses the "
+":method:`db.collection.remove()` method to delete *all* documents from "
+"the ``users`` collection:"
 msgstr ""
 "作为另一种过选择,如下的例子使用了 :method:`db.collection.remove()` 方法从 "
 "``users`` 集合中删除 *所有* 文档:"
 
+# d8bd6fa579e74665bd58adfc24f01232
 #: ../source/tutorial/remove-documents.txt:210
 msgid ""
-"To delete all documents from a collection, it may be more efficient to use "
-"the :method:`db.collection.drop()` method to drop the entire collection, "
-"including the indexes, and then recreate the collection and rebuild the "
-"indexes."
+"To delete all documents from a collection, it may be more efficient to "
+"use the :method:`db.collection.drop()` method to drop the entire "
+"collection, including the indexes, and then recreate the collection and "
+"rebuild the indexes."
 msgstr ""
 "要想从一个集合里删除所有文档，使用 :method:`~db.collection.drop()` 方法删除整个"
 "集合,包括索引然后重建该集合和索引或许会更高效."
 
+# 1f2dc8b98c7d45faa13c87c355f7a941
 #: ../source/tutorial/remove-documents.txt:216
 msgid "Delete All Documents that Match a Condition"
 msgstr "删除满足条件的所有文档"
 
+# c11486e3249b4d05a0572eebcc545bfd
 #: ../source/tutorial/remove-documents.txt:218
 msgid ""
-"To delete all documents that match a deletion criteria, pass a :ref:`filter "
-"<document-query-filter>` parameter to either :method:`db.collection."
-"deleteMany()` method or the :method:`db.collection.remove()` method."
+"To delete all documents that match a deletion criteria, pass a "
+":ref:`filter <document-query-filter>` parameter to either "
+":method:`db.collection.deleteMany()` method or the "
+":method:`db.collection.remove()` method."
 msgstr ""
 "要想删除匹配删除条件的所有文档，传递 :ref:`filter <document-query-filter>` 参数"
 "给  :method:`db.collection.deleteMany()` 方法或 :method:`db.collection."
 "remove()` 方法."
 
+# f0c30f7cf2cb4826b84b530021b36bb8
 #: ../source/tutorial/remove-documents.txt:226
 msgid ""
-"The following example uses :method:`db.collection.deleteMany()` to remove all "
-"documents from the ``users`` collection where the ``status`` field equals ``\"A"
-"\"``:"
+"The following example uses :method:`db.collection.deleteMany()` to remove"
+" all documents from the ``users`` collection where the ``status`` field "
+"equals ``\"A\"``:"
 msgstr ""
 "如下例子使用 :method:`db.collection.deleteMany()` 从 ``users`` 集合中删除所有 "
 "``status`` 字段等于  ``\"A\"`` 的文档:"
 
+# 54435aac1cb64f3ea7bf9db8e1e3b47b
 #: ../source/tutorial/remove-documents.txt:243
 msgid ""
-"Alternatively, the following example uses :method:`db.collection.remove()` to "
-"remove all documents from the ``users`` collection where the ``status`` field "
-"equals ``\"P\"``:"
+"Alternatively, the following example uses "
+":method:`db.collection.remove()` to remove all documents from the "
+"``users`` collection where the ``status`` field equals ``\"P\"``:"
 msgstr ""
 "作为另一种选择如下例子使用 :method:`db.collection.remove()` 从 ``users`` 集合中"
 "删除所有 ``status`` 字段等于  ``\"A\"`` 的文档:"
 
+# 5a3a79d7b9c44a238a202fca74b74042
 #: ../source/tutorial/remove-documents.txt:251
 msgid ""
 "For large deletion operations, it may be more efficient to copy the documents "
@@ -234,33 +277,39 @@ msgstr ""
 "对于大量的删除操作，把你想要保留的文档复制到一个新的集合然后使用 :method:`db."
 "collection.drop()` 方法删除原集合或许会更高效。"
 
+# 73980f9e734f4827a618c5047a50962c
 #: ../source/tutorial/remove-documents.txt:257
 msgid "Remove Only One Document that Matches a Condition"
 msgstr "仅删除一个满足条件的文档"
 
+# 693657d2131b4f58b1fc3e3ea8f487e4
 #: ../source/tutorial/remove-documents.txt:259
 msgid ""
-"To delete at most a single document that match a specified filter,even though "
-"multiple documents may match the specified filter, use either the :method:`db."
-"collection.deleteOne()` method or the :method:`db.collection.remove()` method "
-"with the ``<justOne>`` parameter set to ``true`` or ``1``."
+"To delete at most a single document that match a specified filter,even "
+"though multiple documents may match the specified filter, use either the "
+":method:`db.collection.deleteOne()` method or the "
+":method:`db.collection.remove()` method with the ``<justOne>`` parameter "
+"set to ``true`` or ``1``."
 msgstr ""
 "要想最多删除一个满足指定过滤条件的文档(即使多个文档可以满足该指定过滤条件)，使"
 "用 :method:`db.collection.deleteOne()` 方法或使用 :method:`db.collection."
 "remove()` 方法并将  ``<justOne>`` 参数设置为 ``true`` 或 ``1``."
 
+# a0210484da654ff194d9d98850a6316a
 #: ../source/tutorial/remove-documents.txt:266
 msgid "``db.collection.deleteOne()``"
 msgstr "``db.collection.deleteOne()``"
 
+# 3e98ec3a70674726a84277e25607f0da
 #: ../source/tutorial/remove-documents.txt:268
 msgid ""
-"The following example uses :method:`db.collection.deleteOne()` to delete the "
-"*first* document where ``status`` is ``\"D\"``."
+"The following example uses :method:`db.collection.deleteOne()` to delete "
+"the *first* document where ``status`` is ``\"D\"``."
 msgstr ""
 "如下例子使用 :method:`db.collection.deleteOne()` 删除 *第一个*  ``status`` 字段"
 "等于  ``\"A\"`` 的文档:"
 
+# f1d611bc14ab4ce5a0055e76cea8d63f
 #: ../source/tutorial/remove-documents.txt:278
 msgid ""
 "Alternatively, the following example uses the :method:`db.collection.remove()` "
@@ -271,56 +320,97 @@ msgstr ""
 "``<justOne>`` 参数设置为``1`` 来删除 *第一个*  ``status`` 字段等于  ``\"A\"`` "
 "的文档:"
 
+# d5dcd49dee5241a2baaaf67504fb7131
 #: ../source/tutorial/remove-documents.txt:287
 msgid ":ref:`delete-additional-methods`"
 msgstr ":ref:`delete-additional-methods`"
 
+# 0ffb1c446d1247a997cf9e548515bf2b
 #: ../source/tutorial/remove-documents.txt:292
 msgid "Additional Methods"
 msgstr "其他方法"
 
+# 40807bfb74c441aea3ac63c795942f95
 #: ../source/tutorial/remove-documents.txt:294
 msgid "The following methods can also delete documents from a collection:"
 msgstr "如下方法也可以从集合中删除文档:"
 
+# b4d16606f52f44a8a7514e7591d40804
 #: ../source/tutorial/remove-documents.txt:296
 msgid ":method:`db.collection.findOneAndDelete()`."
 msgstr ":method:`db.collection.findOneAndDelete()`."
 
+# e89f4837de48435d821400d053596096
 #: ../source/tutorial/remove-documents.txt:298
 msgid ""
-":ref:`findOneAndDelete() <findAndModify-wrapper-sorted-remove>` provides a "
-"sort option. The option allows for the deletion of the first document sorted "
-"by the specified order."
+":ref:`findOneAndDelete() <findAndModify-wrapper-sorted-remove>` provides "
+"a sort option. The option allows for the deletion of the first document "
+"sorted by the specified order."
 msgstr ""
 ":ref:`findOneAndDelete() <findAndModify-wrapper-sorted-remove>` 提供了一个排序"
 "选项.该选项允许删除以指定顺序排序的文档中的第一个文档."
 
+# 7360b5ff7c2242809d1059367e1db3d2
 #: ../source/tutorial/remove-documents.txt:302
 msgid ":method:`db.collection.findOneAndModify()`."
 msgstr ":method:`db.collection.findOneAndModify()`."
 
+# f57a162535574e94b8ea3b0c6554e98e
 #: ../source/tutorial/remove-documents.txt:304
 msgid ""
-":method:`db.collection.findOneAndModify()` provides a sort option. The option "
-"allows for the deletion of the first document sorted by the specified order."
+":method:`db.collection.findOneAndModify()` provides a sort option. The "
+"option allows for the deletion of the first document sorted by the "
+"specified order."
 msgstr ""
 ":method:`db.collection.findOneAndModify()` 提供了一个排序选项.该选项允许删除以"
 "指定顺序排序的文档中的第一个文档."
 
+# cb920a698bab43dd89c413e16a336800
 #: ../source/tutorial/remove-documents.txt:308
 msgid ":method:`db.collection.bulkWrite()`."
 msgstr ":method:`db.collection.bulkWrite()`."
 
+# e54c8e364c5d4c8d950f553f1a4bcd46
 #: ../source/tutorial/remove-documents.txt:311
 msgid "Write Acknowledgement"
 msgstr "写确认"
 
+# 66e8cb8ebcaf4df7862eaf4bc78bf5e9
 #: ../source/tutorial/remove-documents.txt:313
 msgid ""
-"With write concerns, you can specify the level of acknowledgement requested "
-"from MongoDB for write operations. For details, see :doc:`/reference/write-"
-"concern`."
+"With write concerns, you can specify the level of acknowledgement "
+"requested from MongoDB for write operations. For details, see "
+":doc:`/reference/write-concern`."
 msgstr ""
-"在安全写情况下,你可以指定MongoDB写操作要求的确认级别.详情清参见 :doc:`/"
-"reference/write-concern`."
+
+#~ msgid "Remove Documents"
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Remove All Documents"
+#~ msgstr ""
+
+#~ msgid "Remove Documents that Match a Condition"
+#~ msgstr ""
+
+#~ msgid "Remove a Single Document that Matches a Condition"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can specify criteria, or filters,"
+#~ " that identify the documents to "
+#~ "update. These :ref:`filters <document-"
+#~ "query-filter>` use the same syntax as"
+#~ " read operations:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All write operations in MongoDB are "
+#~ "atomic on the level of a single"
+#~ " document. For more information on "
+#~ "MongoDB and atomicity, see :doc:`/core"
+#~ "/write-operations-atomicity`"
+#~ msgstr ""
+

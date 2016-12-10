@@ -105,6 +105,11 @@ Glossary
       overwrites its oldest entries when it reaches its maximum size.
       The MongoDB :term:`oplog` that is used in :term:`replication` is a
       capped collection. See :doc:`/core/capped-collections`.
+      
+   cardinality
+      The measure of the number of elements within a set of values.
+      For example, the set ``A = { 2, 4, 6 }`` contains 3 elements, 
+      and has a cardinality of 3. See :ref:`shard-key-cardinality`. 
 
    checksum
       A calculated value used to ensure data integrity.
@@ -117,7 +122,7 @@ Glossary
       they grow beyond the configured chunk size, which by default is
       64 megabytes. MongoDB migrates chunks when a shard contains too
       many chunks of a collection relative to other shards. See
-      :ref:`sharding-data-partitioning` and :doc:`/core/sharded-cluster-mechanics`.
+      :ref:`sharding-data-partitioning` and :ref:`sharding-balancing`.
 
    client
       The application layer that uses a database for data persistence
@@ -199,6 +204,11 @@ Glossary
    data directory
       The file-system location where the :program:`mongod` stores data
       files. The :setting:`~storage.dbPath` option specifies the data directory.
+      
+   data partition
+      A distributed system architecture that splits data into ranges.
+      :term:`Sharding` uses partitioning. See
+      :ref:`sharding-data-partitioning`.
 
    data-center awareness
       A property that allows clients to address members in a system
@@ -272,10 +282,9 @@ Glossary
       considered durable when it has been written to the server's
       :term:`journal` file. For a :doc:`replica set
       </replication>`, a write operation is
-      considerable durable once the write operation is durable on a
-      :writeconcern:`majority of voting nodes <"majority">` in the
-      replica set; i.e. written to a majority of voting nodes' journal
-      files.
+      considered durable once the write operation is durable on a
+      majority of voting nodes; i.e. written to a majority of voting
+      nodes' journals.
 
    election
       The process by which members of a :term:`replica set` select a
@@ -291,8 +300,6 @@ Glossary
       system to propagate gradually. In a database system, this means
       that readable members are not required to reflect the latest
       writes at all times.
-
-      .. include:: /includes/extracts/replica-read-consistency-single-primary.rst
 
    expression
       In the context of :term:`aggregation framework`, expressions are
@@ -370,8 +377,8 @@ Glossary
 
    initial sync
       The :term:`replica set` operation that replicates data from an
-      existing replica set member to a new or restored replica set
-      member. See :ref:`replica-set-initial-sync`.
+      existing replica set member to a new replica set member. See
+      :ref:`replica-set-initial-sync`.
 
    intent lock
       A :term:`lock` on a resource that indicates that the holder
@@ -612,20 +619,16 @@ Glossary
       See :ref:`administration-monitoring-page-faults` and
       :ref:`faq-storage-page-faults`.
 
-   partition
-      A distributed system architecture that splits data into ranges.
-      :term:`Sharding` uses partitioning. See
-      :ref:`sharding-data-partitioning`.
-
    passive member
       A member of a :term:`replica set` that cannot become primary
       because its :rsconf:`members[n].priority` is
       ``0``. See :doc:`/core/replica-set-priority-0-member`.
 
    pcap
-      A packet-capture format used by :program:`mongosniff` to record
-      packets captured from network interfaces and display them as
-      human-readable MongoDB operations. See :ref:`mongosniff-options`.
+      A packet-capture format that :program:`mongoreplay` can use to
+      produce a BSON-formatted playback file to play back to another
+      MongoDB instance. See: :toolcommand:`mongoreplay record <record>` 
+      for more information.
 
    PID
       A process identifier. UNIX-like systems assign a unique-integer
@@ -890,13 +893,13 @@ Glossary
       Snappy is the default compression
       library for MongoDB's use of :ref:`WiredTiger
       <storage-wiredtiger>`. See `Snappy
-      <https://google.github.io/snappy/>`_ and the `WiredTiger compression
-      documentation <http://source.wiredtiger.com/2.4.1/compression.html>`_
+      <https://google.github.io/snappy/>`_ and the :wtdocs:`WiredTiger compression
+      documentation </compression.html>`
       for more information.
 
    split
       The division between :term:`chunks <chunk>` in a :term:`sharded
-      cluster`. See :doc:`/core/sharding-chunk-splitting`.
+      cluster`. See :doc:`/core/sharding-data-partitioning`.
 
    SQL
       Structured Query Language (SQL) is a common special-purpose
@@ -934,17 +937,6 @@ Glossary
       system, this means that any system that can provide data must
       reflect the latest writes at all times. 
 
-      .. include:: /includes/extracts/replica-read-consistency-single-primary.rst
-
-   stale
-      Refers to the amount of time a :term:`secondary` member of a
-      :term:`replica set` trails behind the current state of the
-      :term:`primary's <primary>`\ :term:`oplog`. If a secondary
-      becomes too stale, it can no longer use replication to catch up
-      to the current state of the primary. See
-      :doc:`/core/replica-set-oplog` and :doc:`/core/replica-set-sync`
-      for more information.
-
    sync
       The :term:`replica set` operation where members replicate data
       from the :term:`primary`. Sync first occurs when MongoDB creates
@@ -959,11 +951,15 @@ Glossary
       system. See :setting:`~systemLog.syslogFacility`.
 
    tag
-     A label applied to a replica set member or shard and used by
+     A label applied to a replica set member and used by
      clients to issue data-center-aware operations. For more information
-     on using tags with replica sets and with shards, see the following
-     sections of this manual: :ref:`replica-set-read-preference-tag-sets`
-     and :ref:`shards-tag-sets`.
+     on using tags with replica sets, see the following
+     sections of this manual: :ref:`replica-set-read-preference-tag-sets`.
+     
+     .. versionchanged:: 3.4
+     
+        In MongoDB 3.4, sharded cluster :term:`zones <zone>` replace 
+        :term:`tags <tag>`.
 
    tag set
      A document containing zero or more :term:`tags <tag>`.
@@ -1061,9 +1057,22 @@ Glossary
       at the cost of more CPU, compared to MongoDB's use of
       :term:`snappy`. You can configure :ref:`WiredTiger
       <storage-wiredtiger>` to use zlib as its compression library. See
-      http://www.zlib.net and the `WiredTiger compression documentation
-      <http://source.wiredtiger.com/2.4.1/compression.html>`_ for more
+      http://www.zlib.net and the :wtdocs:`WiredTiger compression documentation
+      </compression.html>` for more
       information.
+      
+   zone
+      .. versionadded:: 3.4
+   
+         A grouping of documents based on ranges of :term:`shard key` values
+         for a given sharded collection. Each shard in the sharded cluster can
+         associate with one or more zones. In a balanced cluster, MongoDB
+         directs reads and writes covered by a zone only to those shards
+         inside the zone. See the :ref:`zone-sharding` manual page for more
+         information.
+         
+         Zones supersede functionality described by :term:`tags <tag>` in
+         MongoDB 3.2.
 
 .. [#edge-cases-2-primaries]
 

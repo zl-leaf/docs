@@ -92,7 +92,7 @@ description: "Internal diagnostic method for shard cluster."
 ---
 name: ":method:`db.collection.group()`"
 file: /reference/method/db.collection.group
-description: "Provides simple data aggregation function. Groups documents in a collection by a key, and processes the results. Use :method:`~db.collection.aggregate()` for more complex data aggregation."
+description: "Deprecated. Provides simple data aggregation function. Groups documents in a collection by a key, and processes the results. Use :method:`~db.collection.aggregate()` for more complex data aggregation."
 ---
 name: ":method:`db.collection.insert()`"
 file: /reference/method/db.collection.insert
@@ -109,6 +109,10 @@ description: "Inserts several new document in a collection."
 name: ":method:`db.collection.isCapped()`"
 file: /reference/method/db.collection.isCapped
 description: "Reports if a collection is a :term:`capped collection`."
+---
+name: ":method:`db.collection.latencyStats()`"
+file: /reference/method/db.collection.latencyStats
+description: "Returns latency statistics for a collection."
 ---
 name: ":method:`db.collection.mapReduce()`"
 file: /reference/method/db.collection.mapReduce

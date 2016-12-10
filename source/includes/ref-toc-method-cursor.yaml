@@ -1,3 +1,7 @@
+name: ":method:`cursor.addOption()`"
+file: /reference/method/cursor.addOption
+description: "Adds special wire protocol flags that modify the behavior of the query.'"
+---
 name: ":method:`cursor.batchSize()`"
 file: /reference/method/cursor.batchSize
 description: "Controls the number of documents MongoDB will return to the client in a single network message."
@@ -5,6 +9,10 @@ description: "Controls the number of documents MongoDB will return to the client
 name: ":method:`cursor.close()`"
 file: /reference/method/cursor.close
 description: "Close a cursor and free associated server resources."
+---
+name: ":method:`cursor.collation()`"
+file: /reference/method/cursor.collation
+description: "Specifies the collation for the cursor returned by the :method:`db.collection.find()`."
 ---
 name: ":method:`cursor.comment()`"
 file: /reference/method/cursor.comment

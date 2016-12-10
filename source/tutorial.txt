@@ -2,6 +2,8 @@
 .. _tutorial:
 .. _tutorials:
 
+:orphan:
+
 =================
 MongoDB Tutorials
 =================
@@ -68,18 +70,14 @@ Sharding
 - :doc:`/tutorial/convert-replica-set-to-replicated-shard-cluster`
 - :doc:`/tutorial/add-shards-to-shard-cluster`
 - :doc:`/tutorial/remove-shards-from-cluster`
-- :doc:`/tutorial/migrate-config-servers-with-same-hostname`
-- :doc:`/tutorial/migrate-config-servers-with-different-hostnames`
 - :doc:`/tutorial/replace-config-server`
 - :doc:`/tutorial/migrate-sharded-cluster-to-new-hardware`
 - :doc:`/tutorial/backup-sharded-cluster-metadata`
-- :doc:`/tutorial/backup-small-sharded-cluster-with-mongodump`
 - :doc:`/tutorial/backup-sharded-cluster-with-filesystem-snapshots`
 - :doc:`/tutorial/backup-sharded-cluster-with-database-dumps`
-- :doc:`/tutorial/restore-single-shard`
 - :doc:`/tutorial/restore-sharded-cluster`
 - :doc:`/tutorial/schedule-backup-window-for-sharded-clusters`
-- :doc:`/tutorial/administer-shard-tags`
+- :doc:`/tutorial/manage-shard-zone`
 
 Basic Operations
 ~~~~~~~~~~~~~~~~
@@ -112,7 +110,6 @@ Development Patterns
 --------------------
 
 - :doc:`/tutorial/perform-two-phase-commits`
-- :doc:`/tutorial/enforce-unique-keys-for-sharded-collections`
 - :doc:`/tutorial/aggregation-zip-code-data-set`
 - :doc:`/tutorial/aggregation-with-user-preference-data`
 - :doc:`/tutorial/model-data-for-keyword-search`

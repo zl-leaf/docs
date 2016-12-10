@@ -1,0 +1,173 @@
+ref: collation-versionadded
+content: |
+   .. versionadded:: 3.4
+
+   .. include:: /includes/extracts/collation-description.rst
+---
+ref: collation-description
+content: |
+   :doc:`Collation </reference/collation>` allows users to specify
+   language-specific rules for string comparison, such as rules for
+   lettercase and accent marks.
+
+---
+ref: collation-collection-level
+content: |
+   If you specify a collation at the collection level:
+
+   - Indexes on that collection will be created with that collation unless
+     the index creation operation explictly specify a different collation.
+
+   - Operations on that collection use the collection's default
+     collation unless they explictly specify a different collation.
+---
+ref: collation-unspecified
+content: |
+   If no collation is specified for the collection or for the
+   operations, MongoDB uses the simple binary comparison used in prior
+   versions for string comparisons.
+---
+ref: collation-option-specification
+content: |
+
+   The collation option has the following syntax:
+
+   .. code-block:: javascript
+
+      collation: {
+         locale: <string>,
+         caseLevel: <boolean>,
+         caseFirst: <string>,
+         strength: <int>,
+         numericOrdering: <boolean>,
+         alternate: <string>,
+         maxVariable: <string>,
+         backwards: <boolean>
+      }
+
+   When specifying collation, the ``locale`` field is mandatory; all
+   other collation fields are optional. For descriptions of the fields,
+   see :ref:`collation-document-fields`.
+---
+ref: collation-document
+content: |
+   .. code-block:: javascript
+
+      {
+         locale: <string>,
+         caseLevel: <boolean>,
+         caseFirst: <string>,
+         strength: <int>,
+         numericOrdering: <boolean>,
+         alternate: <string>,
+         maxVariable: <string>,
+         backwards: <boolean>
+      }
+
+   When specifying collation, the ``locale`` field is mandatory; all
+   other collation fields are optional. For descriptions of the fields,
+   see :ref:`collation-document-fields`.
+---
+ref: collation-index-options
+content: |
+   Unlike other index options, you can create multiple indexes on the same
+   key(s) with different collations. To create indexes with the same key
+   pattern but different collations, you must supply unique index names.
+---
+ref: collation-index-collection
+content: |-
+   If you have specified a collation at the collection level, then:
+
+   - If you do not specify a collation when creating the index, MongoDB
+     creates the index with that collation.
+
+   - If you do specify a collation when creating the index, MongoDB
+     creates the index with the specified collation.
+---
+ref: collation-index-tip
+content: |-
+
+   .. tip::
+
+      By specifying a collation ``strength`` of ``1`` or ``2``, you can
+      create a case-insensitive index. Index with a collation ``strength``
+      of ``1`` is both diacritic- and case-insensitive.
+---
+ref: collation-index
+content: |-
+   .. include:: /includes/extracts/collation-index-collection.rst
+
+   .. include:: /includes/extracts/collation-index-tip.rst
+
+   .. include:: /includes/extracts/collation-index-options.rst
+---
+ref: collation-option
+content: |
+   Specifies the :ref:`collation <collation>`  to use for the operation.
+
+   .. include:: /includes/extracts/collation-description.rst
+
+   .. include:: /includes/extracts/collation-option-specification.rst
+
+   If the collation is unspecified but the collection has a
+   default collation (see :method:`db.createCollection()`), the
+   operation uses the collation specified for the collection.
+
+   .. include:: /includes/extracts/collation-unspecified.rst
+
+   .. versionadded:: 3.4
+---
+ref: collation-operations-table
+content: |-
+
+   .. list-table::
+      :header-rows: 1
+
+      * - Commands
+        - ``mongo`` Shell Methods
+
+      * - :dbcommand:`create`
+        - | :method:`db.createCollection()`
+          | :method:`db.createView()`
+
+      * - :dbcommand:`createIndexes`
+        - :method:`db.collection.createIndex()`
+
+      * - :dbcommand:`aggregate`
+        - :method:`db.collection.aggregate()`
+
+      * - :dbcommand:`distinct`
+        - :method:`db.collection.distinct()`
+
+      * - :dbcommand:`findAndModify`
+        - | :method:`db.collection.findAndModify()`
+          | :method:`db.collection.findOneAndDelete()`
+          | :method:`db.collection.findOneAndReplace()`
+          | :method:`db.collection.findOneAndUpdate()` 
+
+      * - :dbcommand:`find`
+
+        - :method:`cursor.collation()` to specify collation for
+          :method:`db.collection.find()`
+
+      * - :dbcommand:`mapReduce`
+
+        - :method:`db.collection.mapReduce()`
+
+      * - :dbcommand:`delete`
+        - | :method:`db.collection.deleteOne()`
+          | :method:`db.collection.deleteMany()`
+          | :method:`db.collection.remove()`
+
+      * - :dbcommand:`update`
+
+        - | :method:`db.collection.update()`
+          | :method:`db.collection.updateOne()`,
+          | :method:`db.collection.updateMany()`,
+          | :method:`db.collection.replaceOne()`
+
+      * - 
+
+        - Individual update, replace, and delete operations in
+          :method:`db.collection.bulkWrite()`.
+...

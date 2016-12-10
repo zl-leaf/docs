@@ -33,6 +33,31 @@ Minor Releases
 
       /release-notes/3.0-changelog
 
+.. _3.0.14-release-notes:
+
+3.0.14 -- Nov 4, 2016
+~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- Incorrect memory access on 3.0.13 triggers segmentation fault: :issue:`SERVER-26889`
+
+.. _3.0.13-release-notes:
+
+3.0.13 -- Oct 31, 2016
+~~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- Debian 8(Jessie) packages: :issue:`SERVER-18329`
+
+- Upgrade to Perl compatible regular expressions (PCRE 8.39): :issue:`SERVER-24662`
+
+- Limit memory usage during 2dsphere index build: :issue:`SERVER-25075`
+
+- `All issues closed in 3.0.13
+  <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS%2C%20WiredTiger)%20AND%20fixVersion%20%3D%203.0.13%20AND%20resolution%20%3D%20Fixed%20>`_
+
 .. _3.0.12-release-notes:
 
 3.0.12 -- May 9, 2016
@@ -643,7 +668,7 @@ MongoDB builds are available for Windows Server 2003 and Windows Vista
 version is Windows Server 2008.
 
 .. seealso::
-   :ref:`3.0-compatibility-platform-support`, :ref:`faq-32-bit-limitations`
+   :ref:`3.0-compatibility-platform-support`
 
 Package Repositories
 ~~~~~~~~~~~~~~~~~~~~

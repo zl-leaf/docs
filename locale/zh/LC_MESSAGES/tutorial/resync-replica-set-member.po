@@ -3,72 +3,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 3b33366e3c1344618869ce5e86c73f2d
 #: ../source/tutorial/resync-replica-set-member.txt:3
 msgid "Resync a Member of a Replica Set"
 msgstr "复制集成员的重新同步"
 
+# ecf71e30fc65428f8161fc7f0108ba49
+#: ../source/tutorial/resync-replica-set-member.txt
+msgid "On this page"
+msgstr ""
+
+# d4086425860c4e23bf9ee20d2c56dba4
 #: ../source/tutorial/resync-replica-set-member.txt:13
 msgid ""
-"A :term:`replica set` member becomes \"stale\" when its replication process "
-"falls so far behind that the :term:`primary` overwrites oplog entries the "
-"member has not yet replicated. The member cannot catch up and becomes "
-"\"stale.\" When this occurs, you must completely resynchronize the member by "
-"removing its data and performing an :ref:`initial sync <replica-set-initial-"
-"sync>`."
+"A :term:`replica set` member becomes \"stale\" when its replication "
+"process falls so far behind that the :term:`primary` overwrites oplog "
+"entries the member has not yet replicated. The member cannot catch up and"
+" becomes \"stale.\" When this occurs, you must completely resynchronize "
+"the member by removing its data and performing an :ref:`initial sync "
+"<replica-set-initial-sync>`."
+msgstr ""
+
+# 432adf823544440484c774c72df0aab5
+#: ../source/tutorial/resync-replica-set-member.txt:20
+msgid ""
+"This tutorial addresses both resyncing a stale member and creating a new "
+"member using seed data from another member. When syncing a member, choose"
+" a time when the system has the bandwidth to move a large amount of data."
+" Schedule the synchronization during a time of low usage or during a "
+"maintenance window."
 msgstr ""
 "当复制失败，且落后于  :term:`primary`  中oplog最大可承受的范围的时候，:term:"
 "`replica set`  成员将变为 \"陈旧\" （stale）。该节点无法追上主节点就变的 “陈"
 "旧”了。当发生这种情况时，我们就不得不删除其数据文件，并通过 :ref:`initial "
 "sync <replica-set-initial-sync>` 来重新同步。"
 
+# 6185b25dd8684d429912f50f8b1787fb
 #: ../source/tutorial/resync-replica-set-member.txt:26
 msgid "MongoDB provides two options for performing an initial sync:"
 msgstr "MongoDB提供2中初始化同步（initial sync）的方式："
 
+# 5770bfc62b0040f695cf93b0b7fa97b7
 #: ../source/tutorial/resync-replica-set-member.txt:28
 msgid ""
-"Restart the :program:`mongod` with an empty data directory and let MongoDB's "
-"normal initial syncing feature restore the data. This is the more simple "
-"option but may take longer to replace the data."
+"Restart the :program:`mongod` with an empty data directory and let "
+"MongoDB's normal initial syncing feature restore the data. This is the "
+"more simple option but may take longer to replace the data."
 msgstr ""
 "清空数据目录，重启 :program:`mongod` 实例，让MongoDB进行正常的初始化同步。这"
 "是个简单的方式，但是耗时较长。"
 
+# 966b151056334425945dae19f89679cc
 #: ../source/tutorial/resync-replica-set-member.txt:32
 msgid "See :ref:`replica-set-auto-resync-stale-member`."
 msgstr "参考  :ref:`replica-set-auto-resync-stale-member` 。"
 
+# cd2fb86d56b94cfb901d9e6a514ebe2a
 #: ../source/tutorial/resync-replica-set-member.txt:34
 msgid ""
 "Restart the machine with a copy of a recent data directory from another "
-"member in the replica set. This procedure can replace the data more quickly "
-"but requires more manual steps."
+"member in the replica set. This procedure can replace the data more "
+"quickly but requires more manual steps."
 msgstr ""
 "为该机器从其他节点上复制一份最近的数据文件，并重启。本方式操作步骤较多，但是"
 "最为快速。"
 
+# 87cd02fe3b6440d4b23096605b25d04c
 #: ../source/tutorial/resync-replica-set-member.txt:38
 msgid "See :ref:`replica-set-resync-by-copying`."
 msgstr "参考 :ref:`replica-set-resync-by-copying` 。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:45
+# add5f49ec42a47f8a23cb6704b7fdafd
+#: ../source/tutorial/resync-replica-set-member.txt:44
 msgid "Procedures"
 msgstr "步骤"
 
-#: ../source/tutorial/resync-replica-set-member.txt:48
+# ef88cd0bbdd046949de2c2141f9fe110
+#: ../source/tutorial/resync-replica-set-member.txt:49
 msgid "Automatically Sync a Member"
 msgstr "自动同步"
 
-#: ../source/tutorial/resync-replica-set-member.txt:50
+# 4f6e84c32dec4b72bf7c3d32cd96209d
+#: ../source/tutorial/resync-replica-set-member.txt:51
 msgid ""
 "During initial sync, :program:`mongod` will remove the content of the :"
 "setting:`~storage.dbPath`."
@@ -76,18 +101,20 @@ msgstr ""
 "在初始化同步的过程中，:program:`mongod` 将会清空 :setting:`~storage.dbPath` "
 "中的内容。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:53
+# 14d2e92ccf2148e39ed4442222cc5617
+#: ../source/tutorial/resync-replica-set-member.txt:54
 msgid ""
-"This procedure relies on MongoDB's regular process for :ref:`initial sync "
-"<replica-set-initial-sync>`. This will store the current data on the member. "
-"For an overview of MongoDB initial sync process, see the :ref:`replica-set-"
-"syncing` section."
+"This procedure relies on MongoDB's regular process for :doc:`Replica Set "
+"Syncing </core/replica-set-sync>`. This will store the current data on "
+"the member. For an overview of MongoDB initial sync process, see the "
+":doc:`Replica Set Syncing </core/replica-set-sync>` section."
 msgstr ""
 "该步骤依靠MongoDB 自身的定期进程 :ref:`initial sync <replica-set-initial-"
 "sync>` 。这将恢复节点上最新的数据。有关MongoDB初始化恢复，请参考 :ref:"
 "`replica-set-syncing` 。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:58
+# 82268fef50ba449e9bd544c0fe67f8c0
+#: ../source/tutorial/resync-replica-set-member.txt:59
 msgid ""
 "If the instance has no data, you can simply follow the :doc:`/tutorial/"
 "expand-replica-set` or :doc:`/tutorial/replace-replica-set-member` procedure "
@@ -96,26 +123,29 @@ msgstr ""
 "如果该实例没有数据，我们可以通过 :doc:`/tutorial/expand-replica-set`  或是  :"
 "doc:`/tutorial/replace-replica-set-member` 来为复制集新增一个节点。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:63
+# 1ce6ce22912342dc9a295927a8c2be1a
+#: ../source/tutorial/resync-replica-set-member.txt:64
 msgid ""
-"You can also force a :program:`mongod` that is already a member of the set "
-"to to perform an initial sync by restarting the instance without the content "
-"of the :setting:`~storage.dbPath` as follows:"
+"You can also force a :program:`mongod` that is already a member of the "
+"set to  perform an initial sync by restarting the instance without the "
+"content of the :setting:`~storage.dbPath` as follows:"
 msgstr ""
 "我们也可以通过指定一个空的 :setting:`~storage.dbPath` 并重启来将一个复制集中"
 "的 :program:`mongod` 实例强制初始化同步。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:67
+# 759c15072184403cbb4d8b85560daab7
+#: ../source/tutorial/resync-replica-set-member.txt:68
 msgid ""
-"Stop the member's :program:`mongod` instance. To ensure a clean shutdown, "
-"use the :method:`db.shutdownServer()` method from the :program:`mongo` shell "
-"or on Linux systems, the :option:`mongod --shutdown` option."
+"Stop the member's :program:`mongod` instance. To ensure a clean shutdown,"
+" use the :method:`db.shutdownServer()` method from the :program:`mongo` "
+"shell or on Linux systems, the :option:`mongod --shutdown` option."
 msgstr ""
 "关闭 :program:`mongod`  进程。通过在 :program:`mongo` 窗口中使用 :method:`db."
 "shutdownServer()` 命令或者在Linux系统中使用 :option:`mongod --shutdown`  参数"
 "来安全关闭。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:72
+# 3ddb64280c5e4ae78feb733b67cd8d4e
+#: ../source/tutorial/resync-replica-set-member.txt:73
 msgid ""
 "Delete all data and sub-directories from the member's data directory. By "
 "removing the data :setting:`~storage.dbPath`, MongoDB will perform a "
@@ -124,43 +154,50 @@ msgstr ""
 "清空复制集节点的数据目录和其子目录，清除 :setting:`~storage.dbPath` 中的数"
 "据，MongoDB将会进行重新复制。可以考虑在这么做之前先做备份以防万一。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:76
+# f1739a0ff6834a5daf0ebec281a82a16
+#: ../source/tutorial/resync-replica-set-member.txt:77
 msgid ""
 "At this point, the :program:`mongod` will perform an initial sync. The "
-"length of the initial sync process depends on the size of the database and "
-"network connection between members of the replica set."
+"length of the initial sync process depends on the size of the database "
+"and network connection between members of the replica set."
 msgstr ""
 "这时， :program:`mongod` 将会进行初始化复制。初始化复制的耗时，将取决于数据库"
 "数据量和两节点之间的网络情况。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:81
+# 6ad308a45a7244e68b62b68f0b3b302e
+#: ../source/tutorial/resync-replica-set-member.txt:82
 msgid ""
-"Initial sync operations can impact the other members of the set and create "
-"additional traffic to the primary and can only occur if another member of "
-"the set is accessible and up to date."
+"Initial sync operations can impact the other members of the set and "
+"create additional traffic to the primary and can only occur if another "
+"member of the set is accessible and up to date."
 msgstr ""
 "初始化复制将会影响其他节点，也会加大主节点的网络流量压力，且只会在有一个节点"
 "数据是最新的且连接无问题的时候进行。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:89
+# 2499f4d4b9fe45acbec60645aad373e2
+#: ../source/tutorial/resync-replica-set-member.txt:90
 msgid "Sync by Copying Data Files from Another Member"
 msgstr "通过从其他节点复制数据文件来同步"
 
-#: ../source/tutorial/resync-replica-set-member.txt:91
+# 90f9a194417d44d0bc9edd3965e49915
+#: ../source/tutorial/resync-replica-set-member.txt:92
 msgid ""
-"This approach \"seeds\" a new or stale member using the data files from an "
-"existing member of the replica set. The data files **must** be sufficiently "
-"recent to allow the new member to catch up with the :term:`oplog`. Otherwise "
-"the member would need to perform an initial sync."
+"This approach \"seeds\" a new or stale member using the data files from "
+"an existing member of the replica set. The data files **must** be "
+"sufficiently recent to allow the new member to catch up with the "
+":term:`oplog`. Otherwise the member would need to perform an initial "
+"sync."
 msgstr ""
 "本方法通过使用已有节点上的数据文件来进行。数据文件 **必须** 是较新的（能够追"
 "上  :term:`oplog` ）.不然的话该节点还是需要进行初始化复制。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:98
+# 13a71fd63dde44deb8e28f36f29bb3b3
+#: ../source/tutorial/resync-replica-set-member.txt:99
 msgid "Copy the Data Files"
 msgstr "复制数据文件"
 
-#: ../source/tutorial/resync-replica-set-member.txt:100
+# a247cfa1350c4f46819adb22553d21b2
+#: ../source/tutorial/resync-replica-set-member.txt:101
 msgid ""
 "You can capture the data files as either a snapshot or a direct copy. "
 "However, in most cases you cannot copy data files from a running :program:"
@@ -170,27 +207,32 @@ msgstr ""
 "我们可以直接复制数据文件也可以通过镜像。然而，大多数情况下，我们不应该复制未"
 "关闭的 :program:`mongod` 实例的数据文件，因为复制过程中数据文件是会变动的。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:105
+# f9760034ca3742338729f1ba232f81f5
+#: ../source/tutorial/resync-replica-set-member.txt:106
 msgid ""
-"If copying data files, you must copy the content of the ``local`` database."
-msgstr "在复制数据文件的时候，我们也必须复制 ``local`` 数据库的数据文件。"
+"If copying data files, ensure that your copy includes the content of the "
+"``local`` database."
+msgstr ""
 
-#: ../source/tutorial/resync-replica-set-member.txt:108
+# aed92cc2b5e94dfbb0afdd6a46561bcf
+#: ../source/tutorial/resync-replica-set-member.txt:109
 msgid ""
-"You *cannot* use a :program:`mongodump` backup for the data files, **only a "
-"snapshot backup**. For approaches to capturing a consistent snapshot of a "
-"running :program:`mongod` instance, see the :doc:`/core/backups` "
+"You *cannot* use a :program:`mongodump` backup for the data files: **only"
+" a snapshot backup**. For approaches to capturing a consistent snapshot "
+"of a running :program:`mongod` instance, see the :doc:`/core/backups` "
 "documentation."
 msgstr ""
 "我们*不应该*使用 :program:`mongodump`  的备份作为数据文件，**仅使用文件快照"
 "** 。关于如何在运行中的 :program:`mongod` 实例中获得一致性的数据文件，参考  :"
 "doc:`/core/backups` 。"
 
-#: ../source/tutorial/resync-replica-set-member.txt:114
+# a60a0af52bc34e1c9aad0b4cafe33032
+#: ../source/tutorial/resync-replica-set-member.txt:115
 msgid "Sync the Member"
 msgstr "同步节点"
 
-#: ../source/tutorial/resync-replica-set-member.txt:116
+# 9aa4e2fb21da4b06ac797e31e2e358ec
+#: ../source/tutorial/resync-replica-set-member.txt:117
 msgid ""
 "After you have copied the data files from the \"seed\" source, start the :"
 "program:`mongod` instance and allow it to apply all operations from the "
@@ -199,38 +241,73 @@ msgstr ""
 "在我们复制了其他节点的数据文件后，启动 :program:`mongod` 实例，其会追赶最新的"
 "数据直到数据一致。"
 
+# 17b0057a5d3c4daa82ae002ad9a5a1d3
+# d9be7f05215949a99a3219df8f156fad
+# 8b674ab67afb42a8abfb01796141475a
 #: ../source/tutorial/resync-replica-set-member.txt:40
 #: ../source/tutorial/resync-replica-set-member.txt:41
-#: ../source/tutorial/resync-replica-set-member.txt:85
+#: ../source/tutorial/resync-replica-set-member.txt:86
 msgid "replica set"
 msgstr "复制集"
 
+# 17b0057a5d3c4daa82ae002ad9a5a1d3
 #: ../source/tutorial/resync-replica-set-member.txt:40
 msgid "sync"
 msgstr "同步"
 
+# d9be7f05215949a99a3219df8f156fad
+# 8b674ab67afb42a8abfb01796141475a
 #: ../source/tutorial/resync-replica-set-member.txt:41
-#: ../source/tutorial/resync-replica-set-member.txt:85
+#: ../source/tutorial/resync-replica-set-member.txt:86
 msgid "resync"
 msgstr "重新同步"
 
-#: ../source/tutorial/resync-replica-set-member.txt:0
-msgid "On this page"
-msgstr ""
-
-#: ../source/tutorial/resync-replica-set-member.txt:20
-msgid ""
-"This tutorial addresses both resyncing a stale member and to creating a new "
-"member using seed data from another member. When syncing a member, choose a "
-"time when the system has the bandwidth to move a large amount of data. "
-"Schedule the synchronization during a time of low usage or during a "
-"maintenance window."
-msgstr ""
+#~ msgid ""
+#~ msgstr ""
 
 #~ msgid ""
-#~ "This tutorial addressed both resyncing a stale member and to creating a new "
-#~ "member using seed data from another member. When syncing a member, choose a "
-#~ "time when the system has the bandwidth to move a large amount of data. "
-#~ "Schedule the synchronization during a time of low usage or during a "
-#~ "maintenance window."
+#~ "This procedure relies on MongoDB's "
+#~ "regular process for :ref:`initial sync "
+#~ "<replica-set-initial-sync>`. This will "
+#~ "store the current data on the "
+#~ "member. For an overview of MongoDB "
+#~ "initial sync process, see the :ref"
+#~ ":`replica-set-syncing` section."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "You can also force a :program:`mongod`"
+#~ " that is already a member of "
+#~ "the set to to perform an initial"
+#~ " sync by restarting the instance "
+#~ "without the content of the "
+#~ ":setting:`~storage.dbPath` as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If copying data files, you must "
+#~ "copy the content of the ``local`` "
+#~ "database."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You *cannot* use a :program:`mongodump` "
+#~ "backup for the data files, **only "
+#~ "a snapshot backup**. For approaches to"
+#~ " capturing a consistent snapshot of a"
+#~ " running :program:`mongod` instance, see "
+#~ "the :doc:`/core/backups` documentation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This tutorial addresses both resyncing a"
+#~ " stale member and to creating a "
+#~ "new member using seed data from "
+#~ "another member. When syncing a member,"
+#~ " choose a time when the system "
+#~ "has the bandwidth to move a large"
+#~ " amount of data. Schedule the "
+#~ "synchronization during a time of low "
+#~ "usage or during a maintenance window."
+#~ msgstr ""
+

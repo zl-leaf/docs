@@ -85,23 +85,26 @@ a :program:`mongod` instance into JSON, CSV, or TSV.
 Diagnostic Tools
 ----------------
 
-:program:`mongostat`, :program:`mongotop`, and :program:`mongosniff`
+:program:`mongostat` and :program:`mongotop`
 provide diagnostic information related to the current operation of a
 :program:`mongod` instance.
 
-.. note::
+:program:`mongoreplay` is a traffic capture and replay tool for MongoDB
+that you can use to inspect and record commands sent to a MongoDB
+instance, and then replay those commands back onto another host at a
+later time.
 
-   Because :program:`mongosniff` depends on :term:`libpcap
-   <pcap>`, most distributions of MongoDB do *not* include
-   :program:`mongosniff`.
+MongoDB 3.4 provides :program:`mongoldap` for testing native operating system
+LDAP configuration options against a running LDAP server or set of servers.
 
 .. toctree::
    :maxdepth: 1
 
    /reference/program/mongostat
    /reference/program/mongotop
-   /reference/program/mongosniff
    /reference/program/mongoperf
+   /reference/program/mongoreplay
+   /reference/program/mongoldap
 
 GridFS
 ------

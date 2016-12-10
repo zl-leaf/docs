@@ -56,6 +56,8 @@ To specify the keyfile, use the :setting:`security.keyFile` setting or
 For an example of keyfile internal authentication, see
 :doc:`/tutorial/enforce-keyfile-access-control-in-existing-replica-set`.
 
+.. _internal-auth-x509:
+
 x.509
 -----
 
@@ -90,6 +92,7 @@ see :doc:`/tutorial/upgrade-keyfile-to-x509`.
       :titlesonly:
 
       /tutorial/enforce-keyfile-access-control-in-existing-replica-set
+      /tutorial/enforce-keyfile-access-control-in-existing-replica-set-without-downtime
       /tutorial/deploy-replica-set-with-keyfile-access-control
       /tutorial/enforce-keyfile-access-control-in-existing-sharded-cluster
       /tutorial/deploy-sharded-cluster-with-keyfile-access-control

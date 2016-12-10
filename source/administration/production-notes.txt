@@ -23,23 +23,40 @@ MongoDB Binaries
 Supported Platforms
 ~~~~~~~~~~~~~~~~~~~
 
-MongoDB provides builds for the following supported platforms. For
-running **in production**, refer to the
+For running **in production**, refer to the
 :ref:`prod-notes-recommended-platforms` for operating system
 recommendations.
-
-.. include:: /includes/fact-platforms.rst
 
 .. versionchanged:: 3.2
    MongoDB can now use the :ref:`WiredTiger storage engine <storage-wiredtiger>`
    on all supported platforms.
+
+x86_64
+``````
+
+.. include:: /includes/fact-platform-x86_64.rst
+
+ARM64
+`````
+
+.. include:: /includes/fact-platform-arm64.rst
+
+PPC64LE (MongoDB Enterprise Edition)
+````````````````````````````````````
+
+.. include:: /includes/fact-platform-ppc64le.rst
+
+s390x (MongoDB Enterprise Edition)
+``````````````````````````````````
+
+.. include:: /includes/fact-platform-s390x.rst
 
 .. _prod-notes-recommended-platforms:
 
 Recommended Platforms
 ~~~~~~~~~~~~~~~~~~~~~
 
-While MongoDB supports a variety of platorms, the following operating
+While MongoDB supports a variety of platforms, the following operating
 systems are recommended for production use:
 
 - Amazon Linux
@@ -62,19 +79,6 @@ All MongoDB releases are available on the `Downloads
 <http://www.mongodb.org/downloads>`_ page is a good place to verify the
 current stable release, even if you are installing via a package
 manager.
-
-Use 64-bit Builds
-~~~~~~~~~~~~~~~~~
-
-Always use 64-bit builds for production.
-
-.. important::
-   .. include:: /includes/fact-deprecated-32bit.rst
-
-Although the 32-bit builds exist for Linux and Windows, they are **unsuitable** for
-production deployments. 32-bit builds also do **not** support the
-WiredTiger storage engine. For more information, see the :ref:`32-bit
-limitations page <faq-32-bit-limitations>`
 
 MongoDB ``dbPath``
 ------------------
@@ -157,10 +161,7 @@ Read Concern
 
 .. versionadded:: 3.2
 
-If using :readconcern:`"majority"` :doc:`read concern
-</reference/read-concern>`, use :writeconcern:`{ w: "majority" }
-<"majority">` :doc:`write concern </reference/write-concern>` for write
-operations to ensure that a single thread can read its own writes.
+.. include:: /includes/fact-read-own-writes.rst
 
 .. include:: /includes/fact-enable-majority-readConcern.rst
 
@@ -281,6 +282,15 @@ reads/writes in the (``ar|aw``) column.
 
 .. include:: /includes/extracts/wt-configure-cache.rst
 
+Compression and Encryption
+``````````````````````````
+
+When using encryption, CPUs equipped with AES-NI instruction-set
+extensions show significant performance advantages.
+If you are using MongoDB Enterprise with the
+:ref:`encrypted-storage-engine`, choose a CPU that supports AES-NI for
+better performance.
+
 .. seealso:: :ref:`prod-notes-concurrency`
 
 Use Solid State Disks (SSDs)
@@ -288,7 +298,6 @@ Use Solid State Disks (SSDs)
 
 MongoDB has good results and a good price-performance ratio with
 SATA SSD (Solid State Disk).
-
 
 Use SSD if available and economical. Spinning disks can be
 performant, but SSDs' capacity for random I/O operations works well
@@ -346,16 +355,20 @@ When running MongoDB on Linux, you should disable *zone reclaim* in the
 
    sudo sysctl -w vm.zone_reclaim_mode=0
 
-Then, you should use the ``numactl`` command to start the MongoDB programs
-(:program:`mongod`, including the :doc:`config servers
-</core/sharded-cluster-config-servers>`; :program:`mongos`; and clients) in
-the following manner:
+Then, you should use ``numactl`` to start your
+:program:`mongod` instances, including the :doc:`config servers
+</core/sharded-cluster-config-servers>`, :program:`mongos` instances, and any clients.
+If you do not have the ``numactl`` command, refer to the documentation for
+your operating system to install the ``numactl`` package.
+
+The following operation demonstrates how to start a MongoDB instance
+using ``numactl``:
 
 .. code-block:: sh
 
    numactl --interleave=all <path> <options>
 
-where ``<path>`` is the path to the program you are starting, and ``<options>``
+The ``<path>`` is the path to the program you are starting and the ``<options>``
 are any optional arguments to pass to the program.
 
 To fully disable NUMA behavior, you must perform both operations. For more
@@ -419,7 +432,9 @@ Separate Components onto Different Storage Devices
 
 For improved performance, consider separating your database's data,
 journal, and logs onto different storage devices, based on your application's
-access and write pattern.
+access and write pattern. Mount the components as separate filesystems
+and use symbolic links to map each component's path to the device
+storing it.
 
 For the WiredTiger storage engine, you can also store the indexes on a
 different storage device. See
@@ -433,13 +448,25 @@ different storage device. See
 
 .. _virtualized-disks-scheduling:
 
-Scheduling for Virtual Devices
-``````````````````````````````
+Scheduling
+``````````
 
-Local block devices attached to virtual machine instances via the
-hypervisor should use a *noop* scheduler for best performance. The
+Scheduling for Virtual or Cloud Hosted Devices
+++++++++++++++++++++++++++++++++++++++++++++++
+
+For local block devices attached to a virtual machine instance via
+the hypervisor or hosted by a cloud hosting provider, the guest operating system
+should use a *noop* scheduler for best performance. The
 *noop* scheduler allows the operating system to defer I/O scheduling to
 the underlying hypervisor.
+
+Scheduling for Physical Servers
++++++++++++++++++++++++++++++++
+
+For physical servers, the operating system should use a *deadline*
+scheduler. The *deadline* scheduler caps maximum latency per request
+and maintains a good disk throughput that is best for disk-intensive
+database applications.
 
 Architecture
 ------------
@@ -454,12 +481,12 @@ set deployments.
 Sharded Clusters
 ~~~~~~~~~~~~~~~~
 
-See the :doc:`Sharded Cluster Production Architecture
-</core/sharded-cluster-architectures-production>` document for an
+See :doc:`Sharded Cluster Production Architecture
+</core/sharded-cluster-components>` for an
 overview of recommended sharded cluster architectures for production
 deployments.
 
-.. seealso:: :doc:`/applications/design-notes`
+.. seealso:: :doc:`/administration/production-checklist-development`
 
 Compression
 -----------
@@ -550,10 +577,10 @@ consider the following recommendations:
   :ref:`MongoDB on NUMA Hardware <production-numa>`.
 
 - Problems have been reported when using MongoDB with SELinux enabled.
-  To avoid issues, disable SELinux when possible. 
-  
+  To avoid issues, disable SELinux when possible.
+
   If you are using SELinux on Red Hat, you must configure SELinux
-  to be able to run MongoDB. See: 
+  to be able to run MongoDB. See:
   :ref:`Configure SELinux for MongoDB <install-rhel-configure-selinux>`
   and :ref:`Configure SELinux for MongoDB Enterprise
   <install-enterprise-rhel-configure-selinux>` for the required
@@ -561,9 +588,17 @@ consider the following recommendations:
 
   .. include:: /includes/fact-selinux-server-side-js.rst
 
-For the **MMAPv1** storage engine:
-
 .. _readahead:
+
+For the **WiredTiger** storage engine:
+
+- Set the readahead setting to 0 or 16. Setting a higher readahead
+  benefits sequential I/O operations. However, since MongoDB disk
+  access patterns are generally random, setting a higher readahead
+  provides limited benefit. As such, for most workloads, a readahead of
+  0 or 16 provides optimal MongoDB performance.
+
+For the **MMAPv1** storage engine:
 
 - Ensure that readahead settings for the block devices that store the
   database files are appropriate. For random access use patterns, set
@@ -690,8 +725,8 @@ instances directly from |MMS|. See :mms-docs:`Configure AWS Integration
 Azure
 `````
 
-Use `Premium Storage 
-<https://azure.microsoft.com/en-us/documentation/articles/storage-premium-storage/>`_. 
+Use `Premium Storage
+<https://azure.microsoft.com/en-us/documentation/articles/storage-premium-storage/>`_.
 Microsoft Azure offers two general types of storage:
 Standard storage, and Premium storage. MongoDB on Azure has better
 performance when using Premium storage than it does with Standard
@@ -737,7 +772,7 @@ Disable VMWare's Migration with vMotion ("live migration"). The live migration o
 a virtual machine can cause performance problems and affect
 :doc:`replica set </core/replica-set-high-availability>` and
 :doc:`sharded cluster high availability
-</core/sharded-cluster-high-availability>` mechanisms.
+</tutorial/troubleshoot-sharded-clusters>` mechanisms.
 
 It is possible to clone a virtual machine running MongoDB.
 You might use this function to

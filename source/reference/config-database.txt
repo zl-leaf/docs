@@ -1,3 +1,4 @@
+
 .. index:: internals; config database
 .. index:: sharding; config database
 .. _config-database:
@@ -37,11 +38,11 @@ You can return a list of the collections, with the following helper:
 
    show collections
 
-The config database is for internal use only, and during normal
+The config database is mainly for internal use, and during normal
 operations you should never manually insert or store data in it.
 However, if you need to verify the write availability of a config
-server, you can insert a document into a test collection (after
-making sure that no collection of that name already exists):
+server, you can insert a document into a test collection (after making
+sure that no collection of that name already exists):
 
 .. warning:: Modification of the ``config`` database on a functioning
    system may lead to instability or inconsistent data sets. If you
@@ -250,27 +251,29 @@ Collections
 
    .. include:: /includes/admonition-config-db-is-internal.rst
 
-   The :data:`~config.locks` collection stores a distributed lock. This
-   ensures that only one :program:`mongos` instance can perform
-   administrative tasks on the cluster at once. The :program:`mongos`
-   acting as :term:`balancer` takes a lock by inserting a document
-   resembling the following into the ``locks`` collection.
+   The :data:`~config.locks` collection stores the distributed locks. The
+   primary of the config server replica set takes a lock by
+   inserting a document resembling the following into the ``locks``
+   collection.
 
    .. code-block:: javascript
 
       {
-          "_id" : "balancer",
-          "process" : "example.net:40000:1350402818:16807",
-          "state" : 2,
-          "ts" : ObjectId("507daeedf40e1879df62e5f3"),
-          "when" : ISODate("2012-10-16T19:01:01.593Z"),
-          "who" : "example.net:40000:1350402818:16807:Balancer:282475249",
-          "why" : "doing balance round"
+         "_id" : "balancer",
+         "state" : 2,
+         "ts" : ObjectId("581178035b3b7dcb772022cd"),
+         "who" : "ConfigServer:Balancer",
+         "process" : "ConfigServer",
+         "when" : ISODate("2016-10-27T03:44:03.007Z"),
+         "why" : "CSRS Balancer"
       }
 
-   If a :program:`mongos` holds the balancer lock, the ``state`` field
-   has a value of ``2``, which means that balancer is active. The ``when`` field
-   indicates when the balancer began the current operation.
+   .. versionchanged:: 3.4
+
+      As of version 3.4, the ``state`` field will always have a value
+      ``2`` to prevent any legacy :program:`mongos` instances from
+      performing the balancing operation. The ``when`` field specifies
+      the time when the config server member became the primary.
 
 .. data:: config.mongos
 
@@ -301,9 +304,14 @@ Collections
 
    - Chunk size. To change chunk size,
      see :doc:`/tutorial/modify-chunk-size-in-sharded-cluster`.
+     The specified ``chunksize`` value is in megabytes.
 
    - Balancer status. To change status,
      see :ref:`sharding-balancing-disable-temporarily`.
+
+   - Autosplit. To enable or disable the autosplit flag, use the
+     corresponding :method:`sh.enableAutoSplit()` method or
+     :method:`sh.disableAutoSplit()` method.
 
    The following is an example ``settings`` collection:
 
@@ -311,6 +319,7 @@ Collections
 
       { "_id" : "chunksize", "value" : 64 }
       { "_id" : "balancer", "stopped" : false }
+      { "_id" : "autosplit", "enabled" : true }
 
 .. data:: config.shards
 
@@ -325,8 +334,8 @@ Collections
 
       { "_id" : "shard0000", "host" : "shard1/localhost:30000" }
 
-   If the shard has :ref:`tags <tag-aware-sharding>` assigned, this
-   document has a ``tags`` field, that holds an array of the tags, as
+   If the shard has :ref:`zones <zone-sharding>` assigned, this
+   document has a ``tags`` field, that holds an array of the assigned zones, as
    in the following example:
 
    .. code-block:: javascript
@@ -337,8 +346,8 @@ Collections
 
    .. include:: /includes/admonition-config-db-is-internal.rst
 
-   The :data:`~config.tags` collection holds documents for each tagged
-   shard key range in the cluster. The documents in the
+   The :data:`~config.tags` collection holds documents for each zone
+   range in the cluster. The documents in the
    :data:`~config.tags` collection resemble the following:
 
    .. code-block:: javascript

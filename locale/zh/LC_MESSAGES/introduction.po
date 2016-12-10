@@ -3,180 +3,248 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 19:15-0400\n"
-"PO-Revision-Date: 2016-06-28 22:37+0800\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
-"Language-Team: \n"
-"Language: zh\n"
-"X-Generator: Poedit 1.8.8\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 92ca4fbbd97f4927921343d3bcf84c59
 #: ../source/introduction.txt:3
 msgid "Introduction to MongoDB"
 msgstr "MongoDB简介"
 
-#: ../source/introduction.txt:0
+# d47a5f1a0481435e9f0b2e5bd9bdb21d
+#: ../source/introduction.txt
 msgid "On this page"
 msgstr "本页内容"
 
+# 220e645f61424d80b3403972af1e62b2
 #: ../source/introduction.txt:13
 msgid ""
-"MongoDB is an open-source document database that provides high performance, "
-"high availability, and automatic scaling."
-msgstr "MongoDB是一个开源文档型数据库，能够提供高性能、高可用性以及自动拓展。"
+"MongoDB is an open-source document database that provides high "
+"performance, high availability, and automatic scaling."
+msgstr ""
 
+# 4e14af6a94c8437b8557e3a7bd59d903
 #: ../source/introduction.txt:17
 msgid "Document Database"
 msgstr "文档数据库"
 
+# eec2f60ccc63457ea935a99c57170f28
 #: ../source/introduction.txt:19
 msgid ""
 "A record in MongoDB is a document, which is a data structure composed of "
-"field and value pairs. MongoDB documents are similar to JSON objects. The "
-"values of fields may include other documents, arrays, and arrays of "
+"field and value pairs. MongoDB documents are similar to JSON objects. The"
+" values of fields may include other documents, arrays, and arrays of "
 "documents."
 msgstr ""
 "MongoDB中的一条记录就是一个文档，是一个数据结构，由字段和值对组成。MongoDB文"
 "档与JSON对象类似。字段的值有可能包括其它文档、数组以及文档数组。"
 
+# 63aa9d1f56be49f5a495306c28fecbc3
 #: ../source/introduction.txt:26
 msgid "The advantages of using documents are:"
 msgstr "使用文档的优势在于："
 
+# 659e3fcc67d24fc198f7dde0f9eb2a2a
 #: ../source/introduction.txt:28
 msgid ""
 "Documents (i.e. objects) correspond to native data types in many "
 "programming languages."
-msgstr "文档（例如，对象）对应许多编程语言中自然的数据类型。"
+msgstr ""
 
+# 4e5c2d4da2f84c4c9e056e67a0690cd5
 #: ../source/introduction.txt:31
 msgid "Embedded documents and arrays reduce need for expensive joins."
 msgstr "嵌入文档及数组减少了昂贵的joins操作的需求。"
 
+# fb139740c0624644b7e0fc1d80901b20
 #: ../source/introduction.txt:33
 msgid "Dynamic schema supports fluent polymorphism."
 msgstr "动态的设计模式支持流畅的多态。"
 
+# 6dc4e11563c14b3ea1f89c90d5e92504
 #: ../source/introduction.txt:36
 msgid "Key Features"
 msgstr "主要特征"
 
+# 3e91985033bf486b812097eff2bad735
 #: ../source/introduction.txt:39
 msgid "High Performance"
 msgstr "高性能"
 
+# 076f718d620f4723805064493a3cab1a
 #: ../source/introduction.txt:41
 msgid "MongoDB provides high performance data persistence. In particular,"
 msgstr "MongoDB提供高性能的数据持久化。特别是，"
 
+# 62957ada8e434845bc467cccea49d980
 #: ../source/introduction.txt:43
-msgid ""
-"Support for embedded data models reduces I/O activity on database system."
-msgstr "对嵌入数据模型的支持降低了数据库系统中的输入/输出活动。"
+msgid "Support for embedded data models reduces I/O activity on database system."
+msgstr ""
 
+# 9766669854904a97b82d8541b8c727f6
 #: ../source/introduction.txt:46
 msgid ""
-"Indexes support faster queries and can include keys from embedded documents "
-"and arrays."
-msgstr "索引支持更快的查询，并且可以包括嵌入文档和数组的键。"
+"Indexes support faster queries and can include keys from embedded "
+"documents and arrays."
+msgstr ""
 
+# 065a6182be9541778aa637062c84e3a8
 #: ../source/introduction.txt:50
 msgid "Rich Query Language"
 msgstr "丰富的查询语言"
 
+# 15c8d32ed8754f38bedf096cea9d6243
 #: ../source/introduction.txt:52
 msgid ""
 "MongoDB supports a rich query language to support :doc:`read and write "
-"operations </crud>` as well as:"
-msgstr "MongoDB支持丰富的查询语言支持  :doc:`  读写操作 </crud>`  以及："
+"operations (CRUD) </crud>` as well as:"
+msgstr ""
 
+# 6567dd6efca0451e92a67eccbf3c4324
 #: ../source/introduction.txt:55
-msgid ":doc:`data aggregation </core/aggregation-pipeline>`"
-msgstr ":doc:` 数据聚合 </core/aggregation-pipeline>`"
+msgid ":doc:`Data Aggregation </core/aggregation-pipeline>`"
+msgstr ""
 
+# 21981471477c4ca5b6ee31dc96e2e722
 #: ../source/introduction.txt:57
 msgid ""
-":query:`Text Search <$text>` and :doc:`Geospatial Queries </tutorial/"
-"geospatial-tutorial>`."
+":doc:`Text Search </text-search>` and :doc:`Geospatial Queries </tutorial"
+"/geospatial-tutorial>`."
 msgstr ""
 ":query:` 文本检索 <$text>` 以及  :doc:` 地理空间查询 </tutorial/geospatial-"
 "tutorial>` 。"
 
+# ec8a3a8599854931a8e384c481269f18
 #: ../source/introduction.txt:61
 msgid "High Availability"
 msgstr "高可用性"
 
+# 4ea8cc5416a74d06b5413c92e7d7d2d8
 #: ../source/introduction.txt:63
 msgid ""
-"MongoDB's replication facility, called :ref:`replica set <replication-"
-"introduction>`, provides:"
+"MongoDB's replication facility, called :doc:`replica set </replication>`,"
+" provides:"
 msgstr ""
 "MongoDB的复制设施，也叫作   :ref:` 复制集 <replication-introduction>` 提供"
 "了："
 
+# 513dba4eff474fca9a84fadf9302a1a5
 #: ../source/introduction.txt:66
 msgid "*automatic* failover and"
 msgstr "*自动的* 故障恢复以及"
 
+# 79a255e6dad44c739ef581e916a0492c
 #: ../source/introduction.txt:68
 msgid "data redundancy."
 msgstr "数据冗余。"
 
+# 001084d0f504450ea4ea2576b0eeaaf0
 #: ../source/introduction.txt:70
 msgid ""
-"A :ref:`replica set <replication-introduction>` is a group of MongoDB "
-"servers that maintain the same data set, providing redundancy and "
-"increasing data availability."
+"A :doc:`replica set </replication>` is a group of MongoDB servers that "
+"maintain the same data set, providing redundancy and increasing data "
+"availability."
 msgstr ""
 " :ref:`  复制集 <replication-introduction>`  是一组MongoDB服务器维护着相同的"
 "数据集，提供了冗余从而提高了数据的可用性。"
 
+# 29b7f59a2bb14fb4b79c053a09747e68
 #: ../source/introduction.txt:75
 msgid "Horizontal Scalability"
 msgstr "水平扩展能力"
 
+# a1a5834e20814ec29e7044d4f91f49d1
 #: ../source/introduction.txt:77
 msgid ""
-"MongoDB provides horizontal scalability as part of its *core* functionality:"
-msgstr "MongoDB提供了水平拓展能力作为它  *核心* 功能的一部分："
+"MongoDB provides horizontal scalability as part of its *core* "
+"functionality:"
+msgstr ""
 
+# 13210082014e43549ea0b72c244810bc
 #: ../source/introduction.txt:80
 msgid ""
-":ref:`Sharding <sharding-introduction>` distributes data across a cluster "
-"of machines."
-msgstr ":ref:` 分片 <sharding-introduction>` 将数据分发到机器集群中。"
+":ref:`Sharding <sharding-introduction>` distributes data across a cluster"
+" of machines."
+msgstr ""
 
+# 0aeb47afeac2442ab5bf40ab5d8d5ff1
 #: ../source/introduction.txt:83
 msgid ""
-"Tag aware sharding allows for directing data to specific shards, such as to "
-"take into consideration geographic distribution of the shards."
+"MongoDB 3.4 supports creating :ref:`zones <zone-sharding>` of data based "
+"on the :term:`shard key`. In a balanced cluster, MongoDB directs reads "
+"and writes covered by a zone only to those shards inside the zone. See "
+"the :ref:`zone-sharding` manual page for more information."
 msgstr ""
 "Tag aware 分片运行直接将数据引导到特定的分片，例如，考虑分片的地理分布等，"
 
-#: ../source/introduction.txt:87
+# 28f0738000a34910a04354169af53aee
+#: ../source/introduction.txt:89
 msgid "Support for Multiple Storage Engines"
 msgstr "多个存储引擎的支持"
 
-#: ../source/introduction.txt:89
+# 7e38838b6b9c4ab89bb99d523eb47c78
+#: ../source/introduction.txt:91
 msgid ""
-"MongoDB supports :doc:`multiple storage engines </core/storage-engines>`, "
-"such as:"
-msgstr "MongoDB支持  :doc:` 多个存储引擎 </core/storage-engines>` ，例如："
+"MongoDB supports :doc:`multiple storage engines </core/storage-engines>`,"
+" such as:"
+msgstr ""
 
-#: ../source/introduction.txt:92
+# d25dc0baf32b46bd919e74c24005a70b
+#: ../source/introduction.txt:94
 msgid ":doc:`/core/wiredtiger` and"
 msgstr ":doc:`/core/wiredtiger`  以及"
 
-#: ../source/introduction.txt:94
+# bfde503fc17742babdbac9d072ff5121
+#: ../source/introduction.txt:96
 msgid ":doc:`/core/mmapv1`."
 msgstr ":doc:`/core/mmapv1`."
 
-#: ../source/introduction.txt:96
+# b4fdf28808f6452f97c13538a30f0e42
+#: ../source/introduction.txt:98
 msgid ""
 "In addition, MongoDB provides pluggable storage engine API that allows "
 "third parties to develop storage engines for MongoDB."
 msgstr ""
-"此外，MongoDB还提供了可插拔的存储引擎API，能够允许第三方开发MongoDB的存储引"
-"擎。"
+
+#~ msgid ""
+#~ "MongoDB supports a rich query language"
+#~ " to support :doc:`read and write "
+#~ "operations </crud>` as well as:"
+#~ msgstr ""
+
+#~ msgid ":doc:`data aggregation </core/aggregation-pipeline>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":query:`Text Search <$text>` and "
+#~ ":doc:`Geospatial Queries </tutorial/geospatial-"
+#~ "tutorial>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "MongoDB's replication facility, called "
+#~ ":ref:`replica set <replication-introduction>`, "
+#~ "provides:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A :ref:`replica set <replication-"
+#~ "introduction>` is a group of MongoDB "
+#~ "servers that maintain the same data "
+#~ "set, providing redundancy and increasing "
+#~ "data availability."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tag aware sharding allows for directing"
+#~ " data to specific shards, such as "
+#~ "to take into consideration geographic "
+#~ "distribution of the shards."
+#~ msgstr ""
+

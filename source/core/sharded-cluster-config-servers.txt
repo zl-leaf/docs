@@ -15,17 +15,39 @@ Config Servers
    :depth: 1
    :class: singlecol
 
-Config servers store the :doc:`metadata </core/sharded-cluster-metadata>`
-for a sharded cluster.
+.. important::
 
-.. warning::
+   .. include:: /includes/3.4-sccc-unsupported.rst
 
-   If the config servers become inaccessible, the cluster is not
-   accessible. If you cannot recover the data on a config server, the
-   cluster will be inoperable.
+Config servers store the metadata for a :term:`sharded cluster`. The metadata
+reflects state and organization for all data and components within the
+sharded cluster. The metadata includes the list of chunks on every shard and
+the ranges that define the chunks.
+
+The :program:`mongos` instances cache this data and use it to route
+read and write operations to the correct shards. :program:`mongos`
+updates the cache when there are metadata changes for the cluster, such
+as :ref:`sharding-chunk-splits` or :doc:`adding a
+shard</tutorial/add-shards-to-shard-cluster>`. Shards also read chunk
+metadata from the config servers.
+
+The config servers also store :doc:`authentication` configuration
+information such as :doc:`Role-Based Access
+Control</core/authorization>` or :doc:`internal
+authentication</core/security-internal-authentication>` settings for
+the cluster.
 
 MongoDB also uses the config servers to manage distributed locks.
 
+Each sharded cluster must have its own config servers. Do not use the
+same config servers for different sharded clusters.
+
+.. warning::
+
+   Administrative operations conducted on config servers may have significant
+   impact on sharded cluster performance and availability. Depending on the
+   number of config servers impacted, the cluster may be read-only or
+   offline for a period of time.
 
 .. _csrs:
 .. _replset-config-servers:
@@ -33,25 +55,11 @@ MongoDB also uses the config servers to manage distributed locks.
 Replica Set Config Servers
 --------------------------
 
-.. versionchanged:: 3.2
+.. versionchanged:: 3.4
 
-   .. include:: /includes/fact-csrs-versionchanged.rst
+.. include:: /includes/fact-csrs-versionchanged.rst
 
 .. include:: /includes/fact-config-server-replica-set-restrictions.rst
-
-Earlier versions of MongoDB required *exactly three* mirrored
-:program:`mongod` instances to act as the config servers. If you are using
-*mirrored* config servers, each server's system clock must be within 30
-seconds of each other server for the distributed lock manager to work
-properly. With *mirrored* config servers, minimize clock skew by running the
-network time protocol (NTP) ``ntpd`` on your servers. MongoDB 3.2 deprecates
-the use of three mirrored :program:`mongod` instances for config servers.
-
-With replica set config servers, clock skew does not affect distributed lock
-management.
-
-Each sharded cluster must have its own config servers. Do not use the
-same config servers for different sharded clusters.
 
 .. index:: config databases
 .. index:: database, config
@@ -61,30 +69,43 @@ same config servers for different sharded clusters.
 Read and Write Operations on Config Servers
 -------------------------------------------
 
-Config servers store the cluster's metadata in the :doc:`config
-database </reference/config-database>`. The :program:`mongos` instances
-cache this data and use it to route reads and writes to shards.
+The ``admin`` database and the :doc:`config database
+</reference/config-database>` exist on the config servers.
 
-MongoDB only writes data to the config servers when the metadata changes,
-such as
+Writes to Config Servers
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-- after a :doc:`chunk migration </core/sharding-chunk-migration>`, or
+The ``admin`` database contains the collections related to the
+authentication and authorization as well as the other :ref:`system.*
+collections <metadata-system-collections>` for internal use.
 
-- after a :doc:`chunk split </core/sharding-chunk-splitting>`.
+The :doc:`config database </reference/config-database>` contains the
+collections that contain the sharded cluster metadata. MongoDB writes
+data to the :doc:`config database </reference/config-database>` when
+the metadata changes, such as after a :doc:`chunk migration
+</core/sharding-balancer-administration>` or a :doc:`chunk split
+</core/sharding-data-partitioning>`.
 
-When writing to the replica set config servers, MongoDB uses a
-:ref:`write concern <wc-w>` of ``"majority"``.
+Users should avoid writing directly to the config database in the
+course of normal operation or maintenance.
 
-MongoDB reads data from the config server in the following cases:
+When writing to the config servers, MongoDB uses a :ref:`write concern
+<wc-w>` of ``"majority"``.
 
-- A new :program:`mongos` starts for the first time, or an existing
-  :program:`mongos` restarts.
+Reads from Config Servers
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- After change in the cluster metadata, such as after a chunk
-  migration.
+MongoDB reads from the ``admin`` database for authentication and
+authorization data and other internal uses.
+
+MongoDB reads from the ``config`` database when a :program:`mongos`
+starts or after a change in the metadata, such as after a chunk
+migration. Shards also read chunk metadata from the config servers.
 
 When reading from the replica set config servers, MongoDB uses a
 :doc:`/reference/read-concern` level of :readconcern:`"majority"`.
+
+.. _config-server-availability:
 
 Config Server Availability
 --------------------------
@@ -100,7 +121,7 @@ servers. As such, if all config server members become unavailable, you
 can still use the cluster if you do not restart the :program:`mongos`
 instances until after the config servers are accessible again. If you
 restart the :program:`mongos` instances before the config servers are
-available, the :program:`mongos` will be unable to route reads and writes.
+available, the :program:`mongos` cannot route reads and writes.
 
 Clusters become inoperable without the cluster metadata. To ensure that
 the config servers remain available and intact, backups of config
@@ -110,3 +131,51 @@ low activity load.
 
 See :ref:`sharding-config-servers-and-availability` for more
 information.
+
+.. _sharding-internals-config-database:
+
+Sharded Cluster Metadata
+------------------------
+
+Config servers store metadata in the :doc:`/reference/config-database`.
+
+.. important:: Always back up the ``config`` database before doing any
+   maintenance on the config server.
+
+To access the ``config`` database, issue the following command from the
+:program:`mongo` shell:
+
+.. code-block:: javascript
+
+   use config
+
+In general, you should *never* edit the content of the ``config``
+database directly. The ``config`` database contains the following
+collections:
+
+- :data:`~config.changelog`
+- :data:`~config.chunks`
+- :data:`~config.collections`
+- :data:`~config.databases`
+- :data:`~config.lockpings`
+- :data:`~config.locks`
+- :data:`~config.mongos`
+- :data:`~config.settings`
+- :data:`~config.shards`
+- :data:`~config.version`
+
+For more information on these collections and their role in sharded
+clusters, see :doc:`/reference/config-database`. See
+:ref:`config-server-read-write-ops` for more information about reads
+and updates to the metadata.
+
+Sharded Cluster Security
+------------------------
+
+Use :doc:`/core/security-internal-authentication` to enforce intra-cluster
+security and prevent unauthorized cluster components from accessing the
+cluster. You must start each :program:`mongod` in the cluster with the
+appropriate security settings in order to enforce internal authentication.
+
+See :doc:`/tutorial/deploy-sharded-cluster-with-keyfile-access-control` for a
+tutorial on deploying a secured sharded cluster.

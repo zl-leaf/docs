@@ -11,7 +11,7 @@ it:
 base:
   links:
     - { 'manual': 'master' }
-    - { 'v3.2': 'master' }
+    - { 'v3.4': 'master' }
   targets:
     - 'html'
     - 'man'

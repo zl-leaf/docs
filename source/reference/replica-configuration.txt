@@ -78,13 +78,58 @@ Replica Set Configuration Fields
    Version of the :ref:`replica set election protocol
    <3.2-rel-notes-rs-enhancements>`. 
 
-   Set to ``1`` to enable the :ref:`replication election enhancements
-   <3.2-rel-notes-rs-enhancements>` introduced in MongoDB 3.2. 
-
    By default, new replica sets in MongoDB 3.2 use ``protocolVersion: 1``.
    Previous versions of MongoDB use version 0 of the protocol and
    cannot run as members of a replica set configuration that specifies
    ``protocolVersion`` 1.
+
+.. rsconf:: writeConcernMajorityJournalDefault
+
+   .. versionadded:: 3.4
+
+   *Type*: boolean
+
+   *Default*: true if ``protocolVersion`` is 1 and false if ``protocolVersion`` is 0
+
+   Determines the behavior of :writeconcern:`{ w: "majority" }
+   <"majority">` write concern if the write concern does not explicitly
+   specify the journal option :ref:`j <wc-j>`.
+   
+   The following table lists the ``writeConcernMajorityJournalDefault``
+   values and the associated :writeconcern:`{ w: "majority" }
+   <"majority">` behavior:
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 15 85
+
+      * - Value
+        - ``{ w: "majority" }`` Behavior
+
+      * - true
+
+        - MongoDB acknowledges the write operation after a majority of
+          the voting members have written to the on-disk journal.
+
+          .. important::
+
+             All voting members of the replica set must run with
+             journaling when ``writeConcernMajorityJournalDefault``
+             is ``true``.
+
+             .. include:: /includes/extracts/no-journaling-writeConcernMajorityJournalDefault-true.rst
+
+      * - false
+
+        - MongoDB acknowledges the write operation after a majority of
+          the voting members have applied the operation in
+          memory.
+
+          .. warning::
+
+             .. include:: /includes/extracts/no-journaling-writeConcernMajorityJournalDefault-false.rst
+
+   .. seealso:: :ref:`wc-ack-behavior`
 
 ``members``
 ~~~~~~~~~~~
@@ -386,6 +431,10 @@ Replica Set Configuration Fields
       respond in time, other members mark the delinquent member as
       inaccessible.
 
+      The setting only applies when using :rsconf:`protocolVersion: 0`. 
+      When using :rsconf:`protocolVersion: 1` the relevant setting is 
+      :rsconf:`settings.electionTimeoutMillis`.
+
    .. rsconf::  settings.electionTimeoutMillis
 
       .. versionadded:: 3.2
@@ -406,6 +455,29 @@ Replica Set Configuration Fields
         sensitivity to primary node or network slowness or spottiness.
 
       The setting only applies when using :rsconf:`protocolVersion: 1`.
+      
+   .. rsconf::  settings.catchUpTimeoutMillis
+
+      .. versionadded:: 3.4
+
+      *Optional*.
+
+      *Type*: int
+
+      *Default*: 2000 (2 seconds)
+
+      Time limit in milliseconds for a newly elected primary to sync
+      (catch up) with the other replica set members that may have more
+      recent writes. Specifying a higher time limit may reduce the
+      amount of data that the other members would need to roll back
+      after an election but may increase the failover time.
+
+      The newly elected primary ends the catchup period early once it
+      is fully caught up with other members of the set. During the
+      catchup period, the newly elected primary is unavailable for
+      writes from clients.
+
+      The setting only applies when using :rsconf:`protocolVersion: 1`.
 
    .. rsconf::  settings.heartbeatIntervalMillis
 
@@ -414,3 +486,14 @@ Replica Set Configuration Fields
       *Internal use only*.
 
       The frequency in milliseconds of the heartbeats.
+
+   .. rsconf::  settings.replicaSetId
+
+      .. versionadded:: 3.2
+
+      *Type*: ObjectId
+
+      The ObjectId associated with the replica set and automatically
+      created during :method:`rs.initiate()` or
+      :dbcommand:`replSetInitate`. You cannot change the
+      :setting:`~settings.replicaSetId`.

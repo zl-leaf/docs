@@ -5,6 +5,7 @@
 #   /includes/options-mongos.yaml
 #   /includes/options-conf.yaml
 #
+
 program: mongod
 name: help
 aliases: -h
@@ -385,71 +386,6 @@ replacement:
   storage_engine: :option:`--storageEngine`
 ---
 program: mongod
-name: diaglog
-args: <value>
-default: 0
-directive: option
-description: |
-  .. deprecated:: 2.6
-
-  {{role}} is for internal use and not intended for most users.
-
-  Creates a very verbose :term:`diagnostic log` for troubleshooting and
-  recording various errors. MongoDB writes these log files in the
-  :setting:`~storage.dbPath` directory in a series of files that begin with the
-  string ``diaglog`` and end with the initiation time of the logging as a
-  hex string.
-
-  The specified value configures the level of verbosity:
-
-  .. list-table::
-     :header-rows: 1
-     :widths: 20 40
-
-     * - Value
-
-       - Setting
-
-     * - 0
-
-       - Off. No logging.
-
-     * - 1
-
-       - Log write operations.
-
-     * - 2
-
-       - Log read operations.
-
-     * - 3
-
-       - Log both read and write operations.
-
-     * - 7
-
-       - Log write and some read operations.
-
-  You can use the :program:`mongosniff` tool to replay this output for
-  investigation. Given a typical diaglog file located at
-  ``/data/db/diaglog.4f76a58c``, you might use a command in the following
-  form to read these files:
-
-  .. code-block:: sh
-
-     mongosniff --source DIAGLOG /data/db/diaglog.4f76a58c
-
-  .. warning::
-
-     Setting the diagnostic level to ``0`` will cause :program:`mongod`
-     to stop writing data to the :term:`diagnostic log` file. However,
-     the :program:`mongod` instance will continue to keep the file open,
-     even if it is no longer writing data to the file. If you want to
-     rename, move, or delete the diagnostic log you must cleanly shut
-     down the :program:`mongod` instance before doing so.
-optional: true
----
-program: mongod
 name: directoryperdb
 args: null
 directive: option
@@ -493,7 +429,11 @@ inherit:
   program: _shared
   file: options-shared.yaml
 post: |
+
   .. include:: /includes/not-available-for-inmemory-storage-engine.rst
+
+  .. include:: /includes/extracts/no-journaling-writeConcernMajorityJournalDefault-false.rst
+
 ---
 program: mongod
 name: journalOptions
@@ -859,19 +799,19 @@ program: mongod
 name: repairpath
 args: <path>
 default: |
-  A ``_tmp`` directory within the path specified by the :setting:`~storage.dbPath` option.
+  A ``_tmp_repairDatabase_<num>`` directory under the :setting:`~storage.dbPath`.
 directive: option
 description: |
   {{intro}} working directory that MongoDB will use during the
-  :option:`--repair` operation. After :option:`--repair` completes,
-  the data files in {{dbpath}} and the {{role}}
-  directory is empty.
+  :option:`--repair` operation. When :option:`--repair` completes, the
+  {{role}} directory is empty, and
+  :setting:`~storage.dbPath` contains the repaired files.
 post: |
   The {{role}} must be within the :setting:`~storage.dbPath`. You can
   specify a symlink to {{role}} to use a path on a different file
   system.
 
-  .. include:: /includes/not-available-for-inmemory-storage-engine.rst
+  Only available for :program:`mongod` instance using the MMAPv1 storage engine.
 
   .. SEE: SERVER-4266
 optional: true
@@ -1177,40 +1117,46 @@ name: configsvr
 args: null
 directive: option
 description: |
-  Declares that this {{program}} instance serves as the
-  :term:`config database` of a sharded cluster. When running with
-  this option, clients (i.e. other cluster components) will not be
-  able to write data to any database other than ``config`` and
-  ``admin``. The default port for a {{program}} with this option is
+  
+  *Required if starting a config server.*
+  
+  Declares that this {{program}} instance serves as the :ref:`config
+  server <sharded-cluster-config-server>` of a sharded cluster. When
+  running with this option, clients (i.e. other cluster components)
+  will not be able to write data to any database other than ``config``
+  and ``admin``. The default port for a {{program}} with this option is
   ``27019`` and the default :option:`--dbpath` directory is
   ``/data/configdb``, unless specified.
 
-  If using :doc:`/core/mmapv1`, {{role}} option also sets :option:`--smallfiles`.
+  .. important::
+
+     Starting in 3.4, you must deploy config servers as a replica set.
+     The use of the deprecated mirrored :program:`mongod` instances as
+     config servers (SCCC) is no longer supported. To convert your
+     config servers from SCCC to CSRS, see
+     :doc:`/tutorial/upgrade-config-servers-to-replica-set`.
+
+     The replica set config servers (CSRS) must run the
+     :doc:`WiredTiger storage engine </core/wiredtiger>`.
 
   The {{role}} option creates a local :term:`oplog`.
 
   Do not use the {{role}} option with :option:`--shardsvr`. Config
   servers cannot be a shard server.
-
-  .. versionchanged:: 3.2
-
-     .. include:: /includes/fact-mirrored-config-servers-deprecated.rst
-
-     In previous versions, {{role}} could not be used in conjunction with
-     :option:`--replSet`.
-   
-optional: true
+optional: false
 ---
 program: mongod
 name: shardsvr
 args: null
 directive: option
 description: |
+  *Required if starting a shard server.*
+  
   Configures this {{program}} instance as a shard in a
-  partitioned cluster. The default port for these instances is
+  sharded cluster. The default port for these instances is
   ``27018``.  The only effect of {{role}} is to change
   the port number.
-optional: true
+optional: false
 ---
 program: mongod
 name: sslOnNormalPorts
@@ -1658,8 +1604,7 @@ description: |
   .. versionadded:: 3.0.0
 
   Specifies the WiredTiger storage engine configuration at start up
-  time. See the `WiredTiger storage engine options
-  <http://source.wiredtiger.com/2.4.1/group__wt.html#ga9e6adae3fc6964ef837a62795c7840ed>`_.
+  time. See the :wtdocs:`WiredTiger storage engine options </group__wt.html>`.
 optional: true
 ---
 program: mongod
@@ -1670,8 +1615,8 @@ description: |
   .. versionadded:: 3.0.0
 
   {{intro}} WiredTiger settings for all new collections.
-  See the `WiredTiger collection-level options
-  <http://source.wiredtiger.com/2.4.1/struct_w_t___s_e_s_s_i_o_n.html#a358ca4141d59c345f401c58501276bbb>`_.
+  See the :wtdocs:`WiredTiger collection-level options
+  </struct_w_t___s_e_s_s_i_o_n.html>`.
 optional: true
 replacement:
   intro: "Changes"
@@ -1684,8 +1629,8 @@ description: |
   .. versionadded:: 3.0.0
 
   {{intro}} WiredTiger settings for all new indexes.
-  See the `WiredTiger collection-level options
-  <http://source.wiredtiger.com/2.4.1/struct_w_t___s_e_s_s_i_o_n.html#a358ca4141d59c345f401c58501276bbb>`_.
+  See the :wtdocs:`WiredTiger collection-level options
+  </struct_w_t___s_e_s_s_i_o_n.html>`.
 optional: true
 replacement:
   intro: "Changes"
@@ -1763,18 +1708,26 @@ program: mongod
 name: wiredTigerCacheSizeGB
 directive: option
 optional: true
-args: "number"
+args: "float"
 description: |
 
-  .. versionadded:: 3.0
+   {{intro}} maximum size of the internal cache that WiredTiger will
+   use for all data.
 
-  {{intro}} maximum size of the cache that WiredTiger will use for all
-  data. 
+   .. versionchanged:: 3.4
 
-  .. include:: /includes/extracts/wt-cache-default-setting.rst
+      Values can range from 256MB to 10TB and can be a float. In
+      addition, the default value has also changed.
 
-  Avoid increasing the WiredTiger cache size above its default
-  value.
+   .. include:: /includes/extracts/wt-cache-default-setting.rst
+
+   Avoid increasing the WiredTiger internal cache size above its
+   default value.
+
+   With WiredTiger, MongoDB utilizes both the WiredTiger internal cache
+   and the filesystem cache.
+
+   .. include:: /includes/extracts/wt-filesystem-cache.rst
 
 post: |
   .. include:: /includes/extracts/wt-cache-additional-constraints-mongod-cmdline-option.rst
@@ -2064,7 +2017,7 @@ name: configsvrMode
 optional: true
 args: <string>
 description: |
-   .. versionadded:: 3.2
+   **Available in MongoDB 3.2 version only**
 
    If set to ``sccc``, indicates that the config servers are deployed
    as three mirrored :program:`mongod` instances, even if one or more
@@ -2080,12 +2033,14 @@ directive: option
 program: mongod
 name: inMemorySizeGB
 optional: true
-args: <number>
+args: <float>
 default: |
    50% of physical RAM less 1 GB
 directive: option
 description: |
-   .. versionadded:: 3.2
+   .. versionchanged:: 3.4
+
+      Values can range from 256MB to 10TB and can be a float.
 
    Maximum amount of memory to allocate for :doc:`in-memory storage
    engine </core/inmemory>` data, including indexes, oplog if the
@@ -2127,4 +2082,500 @@ optional: true
 replacement:
    dbpath: "``--dbpath``"
    defaultParanoia: "``--noMoveParanoia``"
+---
+program: mongod
+name: transitionToAuth
+args: null
+directive: option
+description: |
+  .. versionadded:: 3.4
+
+     Allows the {{program}} to accept and create authenticated and
+     non-authenticated connections to and from other :program:`mongod`
+     and :program:`mongos` instances in the deployment. Used for
+     performing rolling transition of replica sets or sharded clusters
+     from a no-auth configuration to :ref:`internal authentication
+     <inter-process-auth>`. Requires specifying a :ref:`internal
+     authentication <inter-process-auth>` mechanism such as
+     :option:`--keyfile`.
+
+  For example, if using :ref:`keyfiles <internal-auth-keyfile>` for
+  :ref:`internal authentication <inter-process-auth>`, the {{program}} creates
+  an authenticated connection with any :program:`mongod` or :program:`mongos`
+  in the deployment using a matching keyfile. If the security mechanisms do
+  not match, the {{program}} utilizes a non-authenticated connection instead.
+
+  A {{program}} running with {{role}} does not enforce :ref:`user access
+  controls <authorization>`. Users may connect to your deployment without any
+  access control checks and perform read, write, and administrative operations.
+
+  .. note::
+    
+     A {{program}} running with :ref:`internal authentication
+     <inter-process-auth>` and *without* {{role}} requires clients to connect
+     using :ref:`user access controls <authorization>`. Update clients to
+     connect to the {{program}} using the appropriate :ref:`user <users>`
+     prior to restarting {{program}} without {{role}}.
+
+optional: true
+---
+program: mongod
+name: redactClientLogData
+args: null
+directive: option
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  A {{program}} running with {{role}} redacts any message accompanying a given
+  log event before logging. This prevents the {{program}} from writing
+  potentially sensitive data stored on the database to the diagnostic log.
+  Metadata such as error or operation codes, line numbers, and source file
+  names are still visible in the logs.
+  
+  Use {{role}} in conjunction with :doc:`encryption
+  </core/security-encryption>` to assist compliance with regulatory
+  requirements.
+  
+  For example, a MongoDB deployment might store Personally Identifiable
+  Information (PII) in one or more collections. The {{program}} logs events
+  such as those related to CRUD operations, sharding metadata, etc. It is
+  possible that the {{program}} may expose PII as a part of these logging
+  operations. A {{program}} running with {{role}} removes any message
+  accompanying these events before being output to the log, effectively
+  removing the PII.
+  
+  Diagnostics on a {{program}} running with {{role}} may be more difficult
+  due to the lack of data related to a log event. See the 
+  :ref:`process logging <monitoring-log-redaction>` manual page for an 
+  example of the effect of {{role}} on log output.
+  
+  You can enable or disable log redaction on a running {{program}}
+  using the :dbcommand:`setParameter` database command. 
+  
+  .. code-block:: javascript
+  
+     db.getSiblingDB("admin").runCommand( 
+       { setParameter: { redactClientLogData : "true | false" } } 
+     )
+---
+program: mongod
+name: ldapServers
+args: "<host1>:<port>,<host2>:<port>,...,<hostN>:<port>"
+directive: option
+optional: true
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  Takes a quote-enclosed comma-separated string of one or more LDAP servers,
+  each in ``host:port`` format. {{program}} executes LDAP operations against
+  these servers to authenticate users or determine what actions a user is
+  authorized to perform on a given database. 
+  
+  This setting can be configured on a running {{program}} using 
+  :dbcommand:`setParameter`.
+  
+  If unset, {{program}} cannot use :doc:`LDAP authentication or authorization
+  </core/security-ldap>`.
+---
+program: mongod
+name: ldapQueryUser
+args: <string>
+directive: option
+optional: true
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  The identity with which {{program}} binds as, when connecting to or
+  performing queries on an LDAP server.
+  
+  Only required if any of the following are true:
+    
+  - Using :ref:`LDAP authorization <security-ldap-external>`.
+  - Using an LDAP query for {{transform}}.
+  - The LDAP server disallows anonymous binds
+  
+  You must use {{role}} with {{queryPassword}}. 
+  
+  If unset, {{program}} will not attempt to bind to the LDAP server.
+  
+  This setting can be configured on a running {{program}} using 
+  :dbcommand:`setParameter`.
+  
+  .. note::
+     
+     Windows MongoDB deployments can use {{bindWithOSDefaults}}
+     instead of {{role}} and {{queryPassword}}. You cannot specify
+     both {{role}} and {{bindWithOSDefaults}} at the same time.
+replacement:
+  queryPassword: ":option:`--ldapQueryPassword`"
+  bindWithOSDefaults: ":option:`--ldapBindWithOSDefaults`"
+  transform: ":option:`username transformation <--ldapUserToDNMapping>`"
+---
+program: mongod
+name: ldapQueryPassword
+args: <string>
+directive: option
+optional: true
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+    The password used to bind to an LDAP server when using
+    {{queryUser}}. You must use {{role}} with
+    {{queryUser}}.
+  
+  If unset, {{program}} will not attempt to bind to the LDAP server.
+  
+  This setting can be configured on a running {{program}} using 
+  :dbcommand:`setParameter`.
+  
+  .. note::
+     
+     Windows MongoDB deployments can use :option:`--ldapBindWithOSDefaults`
+     instead of {{role}} and :option:`--ldapQueryPassword`. You cannot specify
+     both {{role}} and :option:`--ldapBindWithOSDefaults` at the same time.
+replacement:
+  queryUser: ":option:`--ldapQueryUser`"
+---
+program: mongod
+name: ldapBindWithOSDefaults
+args: <bool>
+directive: option
+optional: true
+default: false
+description: |
+  .. versionadded:: 3.4 
+  
+     Available in MongoDB Enterprise for the Windows platform only.
+
+  Allows {{program}} to authenticate, or bind, using your Windows login
+  credentials when connecting to the LDAP server.
+  
+  Only required if:
+    
+  - Using :ref:`LDAP authorization <security-ldap-external>`.
+  - Using an LDAP query for :option:`username transformation 
+    <--ldapUserToDNMapping>`.
+  - The LDAP server disallows anonymous binds
+
+  Use {{role}} to replace :option:`--ldapQueryUser` and
+  :option:`--ldapQueryPassword`.
+replacement:
+  queryUser: ":option:`--ldapQueryUser`"
+  queryPassword: ":option:`--ldapQueryPassword`"
+---
+program: mongod
+name: ldapBindMethod
+args: <string>
+directive: option
+optional: true
+default: simple
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  The method {{program}} uses to authenticate to an LDAP server. 
+  Use with {{queryUser}} and {{queryPassword}} to
+  connect to the LDAP server.
+  
+  {{role}} supports the following values:
+    
+  * ``simple`` - {{program}} uses simple authentication.
+  
+  * ``sasl`` - {{program}} uses SASL protocol for authentication
+  
+  If you specify ``sasl``, you can configure the available SASL mechanisms
+  using {{bindSaslMech}}. {{program}} defaults to
+  using ``DIGEST-MD5`` mechanism.
+replacement:
+  queryUser: ":option:`--ldapQueryUser`"
+  queryPassword: ":option:`--ldapQueryPassword`"
+  bindSASLMech: ":option:`--ldapBindSASLMechanisms`"
+---
+program: mongod
+name: ldapBindSASLMechanisms
+args: <string>
+directive: option
+optional: true
+default: DIGEST-MD5
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  A comma-separated list of SASL mechanisms {{program}} can
+  use when authenticating to the LDAP server. The {{program}} and the
+  LDAP server must agree on at least one mechanism. 
+  
+  Set {{bindMethod}} to ``sasl`` to use this option.
+  
+  .. note::
+  
+     A complete list of SASL mechanisms is out of scope for this
+     documentation. See the IANA list of `SASL mechanisms
+     <http://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml>`_,
+     as well as the documentation for your LDAP service.
+replacement:
+  bindMethod: ":option:`--ldapBindMethod`"
+---
+program: mongod
+name: ldapTransportSecurity
+args: <string>
+directive: option
+optional: true
+default: tls
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  By default, {{program}} creates a TLS/SSL secured connection to the LDAP
+  server.
+  
+  For Linux deployments, you must configure the appropriate TLS Options in
+  ``/etc/openldap/ldap.conf`` file. Your operating system's package manager
+  creates this file as part of the MongoDB Enterprise installation, via the
+  ``libldap`` dependency. See the documentation for ``TLS Options`` in the
+  `ldap.conf OpenLDAP documentation
+  <http://www.openldap.org/software/man.cgi?query=ldap.conf&manpath=OpenLDAP+2.4-Release>`_
+  for more complete instructions.
+  
+  For Windows deployment, you must add the LDAP server CA certificates to the
+  Windows certificate management tool. The exact name and functionality of the
+  tool may vary depending on operating system version. Please see the
+  documentation for your version of Windows for more information on
+  certificate management.
+  
+  Set {{role}} to ``none`` to disable TLS/SSL between {{program}} and the LDAP
+  server.
+  
+  .. warning::
+     
+     Setting {{role}} to ``none`` transmits plaintext information and possibly
+     credentials between {{program}} and the LDAP server.
+
+---
+program: mongod
+name: ldapTimeoutMS
+args: <long>
+directive: option
+optional: true
+default: 10000
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  The amount of time in milliseconds {{program}} should wait for an LDAP server
+  to respond to a request.
+  
+  Increasing the value of {{role}} may prevent connection failure between the
+  MongoDB server and the LDAP server, if the source of the failure is a
+  connection timeout. Decreasing the value of {{role}} reduces the time
+  MongoDB waits for a response from the LDAP server.
+  
+  This setting can be configured on a running {{program}} using 
+  :dbcommand:`setParameter`. 
+  
+---
+program: mongod
+name: ldapUserToDNMapping
+args: <string>
+directive: option
+optional: true
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+
+  Maps the username provided to {{program}} for authentication to a LDAP
+  Distinguished Name (DN). You may need to use {{role}} to transform a
+  username into an LDAP DN in the following scenarios:
+    
+  - Performing LDAP authentication with simple LDAP binding, where users
+    authenticate to MongoDB with usernames that are not full LDAP DNs.
+  
+  - Using an :option:`LDAP authorization query template
+    <--ldapAuthzQueryTemplate>` that requires a DN.
+    
+  - Transforming the usernames of clients authenticating to Mongo DB using
+    different authentication mechanisms (e.g. x.509, kerberos) to a full LDAP
+    DN for authorization.
+  
+  {{role}} expects a quote-enclosed JSON-string representing an ordered array
+  of documents. Each document contains a regular expression ``match`` and
+  either a ``substitution`` or ``ldapQuery`` template used for transforming the
+  incoming username.
+  
+  Each document in the array has the following form:
+    
+  .. code-block:: javascript
+  
+     {
+       match: "<regex>"
+       substitution: "<LDAP DN>" | ldapQuery: "<LDAP Query>"
+     }
+
+  .. list-table::
+     :header-rows: 1
+     :widths: 10 70 20
+
+     * - Field
+       - Description
+       - Example
+       
+     * - ``match``
+       - An ECMAScript-formatted regular expression (regex) to match against a 
+         provided username. Each parenthesis-enclosed section represents a 
+         regex capture group used by ``substitution`` or ``ldapQuery``.
+       - ``"(.+)ENGINEERING"``
+         ``"(.+)DBA"``
+       
+     * - ``substitution``
+     
+       - An LDAP distinguished name (DN) formatting template that converts the
+         authentication name matched by the ``match`` regex into a LDAP DN.
+         Each curly bracket-enclosed numeric value is replaced by the
+         corresponding `regex capture group
+         <http://www.regular-expressions.info/refcapture.html>`_ extracted
+         from the authentication username via the ``match`` regex.
+         
+       - ``"cn={0},ou=engineering,
+         dc=example,dc=com"``
+       
+     * - ``ldapQuery``
+     
+       - A LDAP query formatting template that inserts the authentication
+         name matched by the ``match`` regex into an LDAP query URI encoded
+         respecting RFC4515 and RFC4516. Each curly bracket-enclosed numeric
+         value is replaced by the corresponding `regex capture group
+         <http://www.regular-expressions.info/refcapture.html>`_ extracted
+         from the authentication username via the ``match`` expression. 
+         {{program}} executes the query against the LDAP server to retrieve
+         the LDAP DN for the authenticated user. {{program}} requires
+         exactly one returned result for the transformation to be
+         successful, or {{program}} skips this transformation.
+         
+       - ``"ou=engineering,dc=example,
+         dc=com??one?(user={0})"``
+
+  For each document in the array, you must use either ``substitution`` or
+  ``ldapQuery``. You *cannot* specify both in the same document.
+
+  When performing authentication or authorization, {{program}} steps through
+  each document in the array in the given order, checking the authentication
+  username against the ``match`` filter.  If a match is found,
+  {{program}} applies the transformation and uses the output for 
+  authenticating the user. {{program}} does not check the remaining documents
+  in the array.
+  
+  If the given document does not match the provided authentication name, or
+  the transformation described by the document fails, {{program}} continues
+  through the list of documents to find additional matches. If no matches are
+  found in any document, {{program}} returns an error.
+
+  .. example::
+
+    The following shows two transformation documents. The first
+    document matches against any string ending in ``@ENGINEERING``, placing
+    anything preceeding the suffix into a regex capture group. The
+    second document matches against any string ending in ``@DBA``, placing
+    anything preceeding the suffix into a regex capture group.
+  
+    .. important::  You must pass the array to {{role}} as a string.
+  
+    .. code-block:: text
+    
+       "[
+          {
+             match: "(.+)@ENGINEERING.EXAMPLE.COM",
+             substitution: "cn={0},ou=engineering,dc=example,dc=com"
+          },
+          {
+             match: "(.+)@DBA.EXAMPLE.COM",
+             ldapQuery: "ou=dba,dc=example,dc=com??one?(user={0})"
+                  
+          }
+        
+       ]"
+  
+    A user with username ``alice@ENGINEERING.EXAMPLE.COM`` matches the first
+    document. The regex capture group ``{0}`` corresponds to the string
+    ``alice``. The resulting output is the DN
+    ``"cn=alice,ou=engineering,dc=example,dc=com"``.
+  
+    A user with username ``bob@DBA.EXAMPLE.COM`` matches the second document.
+    The regex capture group ``{0}`` corresponds to the string ``bob``.  The
+    resulting output is the LDAP query
+    ``"ou=dba,dc=example,dc=com??one?(user=bob)"``. {{program}} executes this
+    query against the LDAP server, returning the result
+    ``"cn=bob,ou=dba,dc=example,dc=com"``.
+
+  If {{role}} is unset, {{program}} applies no transformations to the username
+  when attempting to authenticate or authorize a user against the LDAP server.
+
+  This setting can be configured on a running {{program}} using the 
+  :dbcommand:`setParameter` database command.
+
+  .. note:: 
+    
+     An explanation of `RFC4515 <https://tools.ietf.org/search/rfc4515>`_,
+     `RFC4516 <https://tools.ietf.org/html/rfc4516>`_ or LDAP queries is out
+     of scope for the MongoDB Documentation. Please review the RFC directly or
+     use your preferred LDAP resource.
+     
+---
+program: mongod
+name: ldapAuthzQueryTemplate
+args: <string>
+directive: option
+optional: true
+description: |
+  .. versionadded:: 3.4 Available in MongoDB Enterprise only.
+  
+  A relative LDAP query URL formatted conforming to `RFC4515
+  <https://tools.ietf.org/search/rfc4515>`_ and `RFC4516
+  <https://tools.ietf.org/html/rfc4516>`_ that {{program}} executes to obtain
+  the LDAP groups to which the authenticated user belongs to. The query is
+  relative to the host or hosts specified in :option:`--ldapServer`.
+  
+  Use the ``{USER}`` placeholder in the URL to substitute the authenticated
+  username, or the transformed username if a {{mapping}} is specified.
+  
+  When constructing the query URL, ensure that the order of LDAP parameters
+  respects RFC4516:
+    
+  .. code-block:: shell
+    
+    [ dn  [ ? [attributes] [ ? [scope] [ ? [filter] [ ? [Extensions] ] ] ] ] ]
+  
+  If your query includes an attribute, {{program}} assumes that the query
+  retrieves a the DNs which this entity is member of.
+  
+  If your query does not include an attribute, {{program}} assumes
+  the query retrieves all entities which the user is member of.
+  
+  For each LDAP DN returned by the query, {{program}} assigns the authorized
+  user a corresponding role on the ``admin`` database. If a role on the on the
+  ``admin`` database exactly matches the DN, {{program}} grants the user the
+  roles and privileges assigned to that role. See the
+  :method:`db.createRole()` method for more information on creating roles.
+  
+  .. example::
+  
+    This LDAP query returns any groups listed in the LDAP user object's
+    ``memberOf`` attribute.
+  
+    .. code-block:: shell
+  
+       "{USER}?memberOf?base"
+    
+    Your LDAP configuration may not include the ``memberOf`` attribute as part
+    of the user schema, may possess a different attribute for reporting group
+    membership, or may not track group membership through attributes.
+    Configure your query with respect to your own unique LDAP configuration.
+  
+  If unset, {{program}} cannot authorize users using LDAP.
+  
+  This setting can be configured on a running {{program}} using the 
+  :dbcommand:`setParameter` database command.
+  
+  .. note:: 
+    
+     An explanation of `RFC4515 <https://tools.ietf.org/search/rfc4515>`_,
+     `RFC4516 <https://tools.ietf.org/html/rfc4516>`_ or LDAP queries is out
+     of scope for the MongoDB Documentation. Please review the RFC directly or
+     use your preferred LDAP resource.
+replacement:
+  mapping: ":option:`username mapping <--ldapUserToDNMapping>`"
 ...

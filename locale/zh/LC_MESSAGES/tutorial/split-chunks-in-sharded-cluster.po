@@ -3,91 +3,100 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Language: zh\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 61304a27383b409091ab6595eba80f82
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:3
 msgid "Split Chunks in a Sharded Cluster"
 msgstr "在集群中分裂数据块"
 
+# 1f69f6ed509d46758dd76c2272e4e432
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:13
 msgid ""
 "Normally, MongoDB splits a :term:`chunk` after an insert if the chunk "
-"exceeds the maximum :ref:`chunk size <sharding-chunk-size>`. However, you "
-"may want to split chunks manually if:"
+"exceeds the maximum :ref:`chunk size <sharding-chunk-size>`. However, you"
+" may want to split chunks manually if:"
 msgstr ""
 "正常情况下,如果数据块的大小已经达到设定的最大值 :ref:`数据块大小 <sharding-"
 "chunk-size>` ,MongoDB会在数据再次插入时进行分裂,不过有时候,需要手动进行数据块"
 "分裂."
 
+# d2c6d37ab18e4277a0f299cf5ee89943
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:17
 msgid ""
-"you have a large amount of data in your cluster and very few :term:`chunks "
-"<chunk>`, as is the case after deploying a cluster using existing data."
+"you have a large amount of data in your cluster and very few "
+":term:`chunks <chunk>`, as is the case after deploying a cluster using "
+"existing data."
 msgstr ""
 "在使用已有的数据部署完一个集群之后,可能会发生数据很多,但是集群中的 :term:"
 "`chunks <chunk>` 很少的情况."
 
+# ea78acd8d658422e90656db9a7b6aaaf
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:21
 msgid ""
-"you expect to add a large amount of data that would initially reside in a "
-"single chunk or shard. For example, you plan to insert a large amount of "
-"data with :term:`shard key` values between ``300`` and ``400``, *but* all "
-"values of your shard keys are between ``250`` and ``500`` are in a single "
-"chunk."
+"you expect to add a large amount of data that would initially reside in a"
+" single chunk or shard. For example, you plan to insert a large amount of"
+" data with :term:`shard key` values between ``300`` and ``400``, *but* "
+"all values of your shard keys are between ``250`` and ``500`` are in a "
+"single chunk."
 msgstr ""
 "你希望插入大量的数据,但是这些数据所属的数据块集中在一个分片上.比如,你想插入大"
 "量 :term:`shard key` 在 ``300`` 到 ``400`` 之间的数据,*但是* 范围在 ``250`` "
 "到 ``500`` 之间的数据块都在一个分片上."
 
+# 7f885e97c44c40b6aa93a7ca2f377fbe
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:29
 msgid ""
-"MongoDB provides the :dbcommand:`mergeChunks` command to combine contiguous "
-"chunk ranges into a single chunk. See :doc:`/tutorial/merge-chunks-in-"
-"sharded-cluster` for more information."
+"MongoDB provides the :dbcommand:`mergeChunks` command to combine "
+"contiguous chunk ranges into a single chunk. See :doc:`/tutorial/merge-"
+"chunks-in-sharded-cluster` for more information."
 msgstr ""
 "MongoDB提供了 :dbcommand:`mergeChunks` 命令将两个邻近的数据块合并为一个数据"
 "块,参见 :doc:`/tutorial/merge-chunks-in-sharded-cluster` 获得更多信息."
 
+# 4ee10c53d19e41d9ad29c36c99f0a384
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:35
 msgid ""
 "The :term:`balancer` may migrate recently split chunks to a new shard "
-"immediately if :program:`mongos` predicts future insertions will benefit "
-"from the move. The balancer does not distinguish between chunks split "
-"manually and those split automatically by the system."
+"immediately if the move benefits future insertions. The balancer does not"
+" distinguish between chunks split manually and those split automatically "
+"by the system."
 msgstr ""
 "如果 :program:`mongos` 认为以后的写入会从数据迁移中获益,它会立刻将新分裂的数"
 "据块迁移到一个新的分片上,均衡器并不区分数据块是人工分裂的还是系统自动分裂的."
 
+# b9b7627c07aa491aa559f4c9c2ed6eb5
 #: ../source/includes/warning-splitting-chunks.rst:3
 msgid ""
-"Be careful when splitting data in a sharded collection to create new chunks. "
-"When you shard a collection that has existing data, MongoDB automatically "
-"creates chunks to evenly distribute the collection. To split data "
-"effectively in a sharded cluster you must consider the number of documents "
-"in a chunk and the average document size to create a uniform chunk size. "
-"When chunks have irregular sizes, shards may have an equal number of chunks "
-"but have very different data sizes. Avoid creating splits that lead to a "
-"collection with differently sized chunks."
+"Be careful when splitting data in a sharded collection to create new "
+"chunks. When you shard a collection that has existing data, MongoDB "
+"automatically creates chunks to evenly distribute the collection. To "
+"split data effectively in a sharded cluster you must consider the number "
+"of documents in a chunk and the average document size to create a uniform"
+" chunk size. When chunks have irregular sizes, shards may have an equal "
+"number of chunks but have very different data sizes. Avoid creating "
+"splits that lead to a collection with differently sized chunks."
 msgstr ""
 "在已经存在数据的集群中进行数据块分裂要十分小心,MongoDB自动分裂数据块并进行数"
 "据均衡,此时进行数据块分裂要考虑到分裂之后各个数据块的大小,如果分裂之后数据块"
 "大小变得不规则,有可能出现各个分片间数据块数量均衡但是数据量不均衡的情况.避免"
 "做导致数据块大小不均衡的数据块分裂."
 
+# 7be43d52ccd845b696b17b3fa296bc4d
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:42
 msgid ""
-"Use :method:`sh.status()` to determine the current chunk ranges across the "
-"cluster."
-msgstr "使用 :method:`sh.status()` 来查看集群中当前的数据块范围."
+"Use :method:`sh.status()` to determine the current chunk ranges across "
+"the cluster."
+msgstr ""
 
+# d3a8466e1bc6473a8c8e37c92588de91
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:45
 msgid ""
 "To split chunks manually, use the :dbcommand:`split` command with either "
@@ -98,33 +107,35 @@ msgstr ""
 "参数. :program:`mongo` 提供了:method:`sh.splitFind()` 与 :method:`sh."
 "splitAt()` 的使用帮助."
 
+# 36e7ea49518d4e53b95da0c295ea71c9
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:49
 msgid ""
 ":method:`~sh.splitFind()` splits the chunk that contains the *first* "
-"document returned that matches this query into two equally sized chunks. You "
-"must specify the full namespace (i.e. \"``<database>.<collection>``\") of "
-"the sharded collection to :method:`~sh.splitFind()`. The query in :method:"
-"`~sh.splitFind()` does not need to use the shard key, though it nearly "
-"always makes sense to do so."
+"document returned that matches this query into two equally sized chunks. "
+"You must specify the full namespace (i.e. "
+"\"``<database>.<collection>``\") of the sharded collection to "
+":method:`~sh.splitFind()`. The query in :method:`~sh.splitFind()` does "
+"not need to use the shard key, though it nearly always makes sense to do "
+"so."
 msgstr ""
-":method:`~sh.splitFind()` 方法将包含 *第一条* 符合查询条件的数据块分为相同大"
-"小的两部分.在使用这个方法时需要传递完整的namespace (即 \"``<database>."
-"<collection>``\"),方法的查询参数中可以不包含片键,但在大多数情况下,包含片键比"
-"较合理."
 
-#: ../source/tutorial/split-chunks-in-sharded-cluster.txt:0
+# ac0f88a863e14463bd17b97b126c1d92
+# 5f35b3ddc4fe49789226bc305b1624f7
+#: ../source/tutorial/split-chunks-in-sharded-cluster.txt
 msgid "Example"
 msgstr "举例"
 
+# ce700d5594da4456bd7009f2393e1c3a
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:58
 msgid ""
-"The following command splits the chunk that contains the value of ``63109`` "
-"for the ``zipcode`` field in the ``people`` collection of the ``records`` "
-"database:"
+"The following command splits the chunk that contains the value of "
+"``63109`` for the ``zipcode`` field in the ``people`` collection of the "
+"``records`` database:"
 msgstr ""
 "下面的命令将 ``records`` 数据库中 ``people`` 集合包含 ``zipcode`` 值为 "
 "``63109`` 的数据块分为两个数据块:"
 
+# 1a6e612606874528bb51a16877a82a2e
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:66
 msgid ""
 "Use :method:`~sh.splitAt()` to split a chunk in two, using the queried "
@@ -133,20 +144,32 @@ msgstr ""
 "使用 :method:`~sh.splitAt()` 将数据块分为两个数据块,新数据块使用查询的值作为"
 "最小值."
 
+# aa45d88e287c446da6b86db89615229f
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:71
 msgid ""
-"The following command splits the chunk that contains the value of ``63109`` "
-"for the ``zipcode`` field in the ``people`` collection of the ``records`` "
-"database."
+"The following command splits the chunk that contains the value of "
+"``63109`` for the ``zipcode`` field in the ``people`` collection of the "
+"``records`` database."
 msgstr ""
 "下面的命令将 ``records`` 数据库中 ``people`` 集合包含 ``zipcode`` 值为 "
 "``63109`` 的数据块分为两个数据块:"
 
+# fedbef146bd64eb8882596b43dbf9937
 #: ../source/tutorial/split-chunks-in-sharded-cluster.txt:79
 msgid ""
 ":method:`~sh.splitAt()` does not necessarily split the chunk into two "
 "equally sized chunks. The split occurs at the location of the document "
 "matching the query, regardless of where that document is in the chunk."
 msgstr ""
-":method:`~sh.splitAt()` 并不确保将数据块分为相同大小的两部分,这个方法按照传递"
-"的参数将数据块分为两部分,并不管查询的数据是不是在数据块中."
+
+#~ msgid ""
+#~ "The :term:`balancer` may migrate recently "
+#~ "split chunks to a new shard "
+#~ "immediately if :program:`mongos` predicts "
+#~ "future insertions will benefit from the"
+#~ " move. The balancer does not "
+#~ "distinguish between chunks split manually "
+#~ "and those split automatically by the "
+#~ "system."
+#~ msgstr ""
+

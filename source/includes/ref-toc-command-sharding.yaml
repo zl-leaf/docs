@@ -6,6 +6,18 @@ name: ":dbcommand:`addShard`"
 file: /reference/command/addShard
 description: "Adds a :term:`shard` to a :term:`sharded cluster`."
 ---
+name: ":dbcommand:`balancerStart`"
+file: /reference/command/balancerStart
+description: "Starts a balancer thread."
+---
+name: ":dbcommand:`balancerStatus`"
+file: /reference/command/balancerStatus
+description: "Returns information on the balancer status."
+---
+name: ":dbcommand:`balancerStop`"
+file: /reference/command/balancerStop
+description: "Stops the balancer thread."
+---
 name: ":dbcommand:`cleanupOrphaned`"
 file: /reference/command/cleanupOrphaned
 description: "Removes orphaned data with shard key values outside of the ranges of the chunks owned by a shard."
@@ -81,4 +93,16 @@ description: "Reassigns the :term:`primary shard` when removing a shard from a s
 name: ":dbcommand:`isdbgrid`"
 file: /reference/command/isdbgrid
 description: "Verifies that a process is a :program:`mongos`."
+---
+name: ":dbcommand:`addShardToZone`"
+file: /reference/command/addShardToZone
+description: "Associates a shard with a :term:`zone`. Supports configuring :ref:`zones <zone-sharding>` in sharded clusters."
+---
+name: ":dbcommand:`removeShardFromZone`"
+file: /reference/command/removeShardFromZone
+description: "Removes the association between a shard and a :term:`zone`. Supports configuring :ref:`zones <zone-sharding>` in sharded clusters."
+---
+name: ":dbcommand:`updateZoneKeyRange`"
+file: /reference/command/updateZoneKeyRange
+description: "Adds or removes the association between a range of sharded data and a :term:`zone`. Supports configuring :ref:`zones <zone-sharding>` in sharded clusters."
 ...

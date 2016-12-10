@@ -60,13 +60,26 @@ Replication
        downtime windows to avoid the need for a full resync.
 
      - The replication oplog window should cover the time needed to
-       restore a replica set member, either by an initial sync or
-       by restoring from the last backup.
+       restore a replica set member from the last backup.
 
-   - Ensure that your replica set includes at least three data-bearing nodes
-     with ``w:majority`` :doc:`write concern
-     </reference/write-concern>`. Three data-bearing nodes are
-     required for replica set-wide data durability.
+       .. versionchanged:: 3.4
+
+          The replication oplog window no longer needs to cover the
+          time needed to restore a replica set member via initial sync
+          as the oplog records are pulled during the data copy.
+          However, the member being restored must have enough disk
+          space in the :ref:`local <replica-set-local-database>`
+          database to temporarily store these oplog records for the
+          duration of this data copy stage.
+
+          With earlier versions of MongoDB, replication oplog window
+          should cover the time needed to restore a replica set member
+          by initial sync.
+
+   - Ensure that your replica set includes at least three data-bearing
+     nodes that run with journaling and that you issue writes
+     with ``w:"majority"`` :doc:`write concern
+     </reference/write-concern>` for availability and durability.
 
    - Use hostnames when configuring replica set members, rather than IP
      addresses.
@@ -168,11 +181,23 @@ Linux
      </tutorial/transparent-huge-pages>` for more information.
 
    - :ref:`Adjust the readahead settings <readahead>` on the devices
-     storing your database files to suit your use case. If your working
+     storing your database files to suit your use case.
+     
+     For the MMAPv1 storage engine, if your working
      set is bigger that the available RAM, and the document access
      pattern is random, consider lowering the readahead to 32 or 16.
      Evaluate different settings to find an optimal value that maximizes
      the resident memory and lowers the number of page faults.
+
+     For the WiredTiger storage engine, set readahead to 0 or 16.
+
+   - Disable the ``tuned`` tool if you are running RHEL 7 / CentOS 7 in a
+     virtual environment.
+
+     When RHEL 7 / CentOS 7 run in a virtual environment, the ``tuned`` tool
+     automatically invokes a performance profile derived from
+     performance throughput, which automatically sets the readahead
+     settings to 4MB. This can negatively impact performance.
 
    - Use the ``noop`` or ``deadline`` disk schedulers for SSD drives.
 

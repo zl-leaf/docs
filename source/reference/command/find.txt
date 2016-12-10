@@ -47,7 +47,8 @@ Definition
          "oplogReplay": <bool>,
          "noCursorTimeout": <bool>,
          "awaitData": <bool>,
-         "allowPartialResults": <bool>
+         "allowPartialResults": <bool>,
+         "collation": <document>
       }
 
    The command accepts the following fields:
@@ -91,11 +92,7 @@ The following operation on a replica set specifies a :term:`read
 concern` of :readconcern:`"majority"` to read the most recent copy of
 the data confirmed as having been written to a majority of the nodes.
 
-.. note::
-
-   - .. include:: /includes/fact-enable-majority-readConcern.rst
-
-   - .. include:: /includes/fact-readConcern-most-recent-data-in-node.rst
+.. include:: /includes/fact-enable-majority-readConcern.rst
 
 .. code-block:: javascript
 
@@ -107,7 +104,7 @@ the data confirmed as having been written to a majority of the nodes.
       }
    )
 
-.. include:: /includes/usage-read-concern-majority.rst
+.. include:: /includes/fact-readConcern-most-recent-data-in-node.rst
 
 The :dbcommand:`getMore` command uses the ``readConcern`` level
 specified in the originating :dbcommand:`find` command.
@@ -119,5 +116,31 @@ method:
 .. code-block:: javascript
 
    db.restaurants.find( { rating: { $lt: 5 } } ).readConcern("majority")
+
+For more information on available read concerns, see
+:ref:`read-concern`.
+
+Specify Collation
+~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/extracts/collation-versionadded.rst
+
+The following operation runs the :dbcommand:`find`
+command with the collation specified:
+
+.. code-block:: javascript
+
+   db.runCommand(
+      {
+        find: "myColl",
+        filter: { category: "cafe", status: "a" },
+        sort: { category: 1 },
+        collation: { locale: "fr", strength: 1 }
+      }
+   )
+
+The :program:`mongo` shell provides the :method:`cursor.collation()` to
+specify :ref:`collation <collation>` for a
+:method:`db.collection.find()` operation.
 
 .. seealso:: :ref:`3.2-driver-compatibility`

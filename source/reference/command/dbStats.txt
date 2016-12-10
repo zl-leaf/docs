@@ -45,12 +45,13 @@ The time required to run the command depends on the total size of the
 database. Because the command must touch all data files, the command
 may take several seconds to run.
 
-For MongoDB instances using the :doc:`WiredTiger </core/wiredtiger>`
-storage engine, after an unclean shutdown, statistics on size and count
-may off by up to 1000 documents as reported by :dbcommand:`collStats`,
-:dbcommand:`dbStats`, :dbcommand:`count`. To restore the correct
-statistics for the collection, run :dbcommand:`validate` on the
-collection.
+Accuracy after Unexpected Shutdown
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. |cmd| replace:: :dbcommand:`dbStats`
+.. |opt| replace:: count and size
+
+.. include:: /includes/fact-unexpected-shutdown-accuracy.rst
 
 .. _dbstats-output:
 
@@ -77,10 +78,17 @@ Output
 
 .. data:: dbStats.dataSize
 
-   The total size in bytes of the data held in this database including the
-   :term:`padding factor`. The ``scale`` argument affects this
-   value. The :data:`~dbStats.dataSize` will not decrease when :term:`documents
-   <document>` shrink, but will decrease when you remove documents.
+   The total size in bytes of the uncompressed data held in this database. The
+   ``scale`` argument affects this value. The :data:`~dbStats.dataSize` will decrease
+   when you remove :term:`documents <document>`.
+
+   For databases using the :doc:`MMAPv1 </core/mmapv1>` storage engine, ``dataSize`` includes
+   preallocated space and the :term:`padding factor`. The ``dataSize`` will not decrease when
+   documents shrink. 
+
+   For databases using the :ref:`WiredTiger <storage-wiredtiger-compression>` storage engine,
+   ``dataSize`` may be larger than ``storageSize`` if compression is enabled.  The ``dataSize``
+   will decrease when documents shrink.
 
    .. sum of all records not counting deleted records
 
@@ -89,7 +97,9 @@ Output
    The total amount of space in bytes allocated to collections in this database
    for :term:`document` storage. The ``scale`` argument affects this
    value. The :data:`~dbStats.storageSize` does not decrease as you remove or
-   shrink documents.
+   shrink documents. This value may be smaller than ``dataSize`` for databases
+   using the WiredTiger storage engine with :ref:`compression <storage-wiredtiger-compression>`
+   enabled.
 
    .. sum of all extents (no indexes or the $freelist)
    .. include links to eventual documentation of storage management

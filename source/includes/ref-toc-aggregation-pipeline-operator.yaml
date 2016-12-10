@@ -1,3 +1,8 @@
+name: :pipeline:`$collStats`
+file: /reference/operator/aggregation/collStats
+description: |
+   Returns statistics regarding a collection or view.
+---
 name: :pipeline:`$project`
 file: /reference/operator/aggregation/project
 description: |
@@ -73,7 +78,8 @@ name: :pipeline:`$geoNear`
 file: /reference/operator/aggregation/geoNear
 description: |
    Returns an ordered stream of documents based on the proximity to a
-   geospatial point. Incorporates the functionality of :pipeline:`$match`,
+   geospatial point. Incorporates the functionality of 
+   :pipeline:`$match`,
    :pipeline:`$sort`, and :pipeline:`$limit` for geospatial data. The
    output documents include an additional distance field and can
    include a location identifier field.
@@ -97,4 +103,62 @@ file: /reference/operator/aggregation/indexStats
 description: |
    Returns statistics regarding the use of each index for the
    collection.
+---
+name: :pipeline:`$facet`
+file: /reference/operator/aggregation/facet
+description: |
+   Processes multiple :ref:`aggregation pipelines
+   <aggregation-pipeline>` within a single stage on the same set of
+   input documents. Enables the creation of multi-faceted
+   aggregations capable of characterizing data across multiple 
+   dimensions, or facets, in a single stage.
+---
+name: :pipeline:`$bucket`
+file: /reference/operator/aggregation/bucket
+description: |
+   Categorizes incoming documents into groups, called buckets, based on
+   a specified expression and bucket boundaries.
+---
+name: :pipeline:`$bucketAuto`
+file: /reference/operator/aggregation/bucketAuto
+description: |
+   Categorizes incoming documents into a specific number of groups,
+   called buckets, based on a specified expression. Bucket 
+   boundaries are automatically determined in an attempt to evenly
+   distribute the documents into the specified number of buckets.
+---
+name: :pipeline:`$sortByCount`
+file: /reference/operator/aggregation/sortByCount
+description: |
+   Groups incoming documents based on the value of a specified
+   expression, then computes the count of documents in each distinct
+   group.
+---
+name: :pipeline:`$addFields`
+file: /reference/operator/aggregation/addFields
+description: |
+   Adds new fields to documents. Outputs documents that
+   contain all existing fields from the input documents and newly
+   added fields.
+---
+name: :pipeline:`$replaceRoot`
+file: /reference/operator/aggregation/replaceRoot
+description: |
+  Replaces a document with the specified embedded document. The
+  operation replaces all existing fields in the input document,
+  including the ``_id`` field. Specify a document embedded in the
+  input document to promote the embedded document to the top level.
+---
+name: :pipeline:`$count`
+file: /reference/operator/aggregation/count
+description: |
+  Returns a count of the number of documents at this stage of the
+  aggregation pipeline.
+---
+name: :pipeline:`$graphLookup`
+file: /reference/operator/aggregation/graphLookup
+description: |
+  Performs a recursive search on a collection. To each output document,
+  adds a new array field that contains the traversal results of the
+  recursive search for that document.
 ...

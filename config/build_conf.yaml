@@ -10,8 +10,8 @@ project:
   branched: true
   siteroot: true
 version:
-  release: '3.2.6'
-  branch: '3.2'
+  release: '3.4.0'
+  branch: '3.4'
 system:
   files:
     - 'pdfs.yaml'
@@ -24,9 +24,11 @@ system:
     - 'integration.yaml'
 #    - 'jira.yaml'
     - htaccess: ['htaccess.yaml', 'htaccess-operators.yaml',
-                 'redirects-next.yaml', 'redirects.yaml', 
+                 'redirects.yaml', 'redirects-next.yaml',
                  'redirects-meta-driver.yaml', 'redirects-pdfs.yaml',
-                 'redirects-contributors-guide.yaml', 'redirects-products.yaml']
+                 'redirects-contributors-guide.yaml', 'redirects-products.yaml',
+                 'redirects-internal-commands.yaml',
+                 'redirects-tar-gz.yaml']
     - images: '/source/images/metadata.yaml'
     - includes: '/source/includes/metadata.yaml'
     - migrations: 'manual-migrations.yaml'

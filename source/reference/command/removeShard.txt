@@ -13,9 +13,9 @@ removeShard
 .. dbcommand:: removeShard
 
    Removes a shard from a :term:`sharded cluster`. When you run
-   :dbcommand:`removeShard`, MongoDB drains the shard by moving the shard's
-   chunks to other shards in the cluster. Once the shard is drained, MongoDB
-   removes the shard from the cluster.
+   :dbcommand:`removeShard`, MongoDB drains the shard by using the balancer to
+   move the shard's chunks to other shards in the cluster. Once the shard is
+   drained, MongoDB removes the shard from the cluster.
    
    .. |command| replace:: ``removeShard``
 
@@ -47,6 +47,11 @@ want to remove is also the primary of one of the cluster's databases, then
 you must manually move the databases to a new shard after migrating
 all data from the shard. See the :dbcommand:`movePrimary` command and
 the :doc:`/tutorial/remove-shards-from-cluster` for more information.
+
+Chunk Balancing
+~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-remove-shard-balance-order.rst
 
 Example
 -------

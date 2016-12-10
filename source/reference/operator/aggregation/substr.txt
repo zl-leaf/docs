@@ -14,7 +14,11 @@ Definition
 ----------
 
 .. expression:: $substr
-
+   
+   .. deprecated:: 3.4
+      :expression:`$substr` is now an alias for
+      :expression:`$substrBytes`.
+   
    Returns a substring of a string, starting at a specified index
    position and including the specified number of characters. The index
    is zero-based.
@@ -57,7 +61,7 @@ Consider an ``inventory`` collection with the following documents:
    { "_id" : 3, "item" : "XYZ1", quarter: "14Q2", "description" : null }
 
 The following operation uses the :expression:`$substr` operator
-separate the ``quarter`` value into a ``yearSubstring`` and a
+to separate the ``quarter`` value into a ``yearSubstring`` and a
 ``quarterSubstring``:
 
 .. code-block:: javascript

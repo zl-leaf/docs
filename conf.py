@@ -71,12 +71,14 @@ extlinks = {
     'issue': ('https://jira.mongodb.org/browse/%s', '' ),
     'api': ('https://api.mongodb.com/%s', ''),
     'gettingstarted': ('https://docs.mongodb.com/getting-started%s', ''),
-    'manual': ('https://docs.mongodb.org/manual%s', ''),
+    'manual': ('https://docs.mongodb.com/manual%s', ''),
     'ecosystem': ('https://docs.mongodb.com/ecosystem%s', ''),
-    'mms-docs': ('https://docs.cloud.mongodb.com%s', ''),
-    'mms-home': ('https://cloud.mongodb.com%s', ''),
+    'mms-docs': ('https://docs.cloudmanager.mongodb.com%s', ''),
+    'mms-home': ('https://www.mongodb.com/cloud/cloud-manager%s', ''),
     'opsmgr': ('https://docs.opsmanager.mongodb.com/current%s', ''),
-    'products': ('https://www.mongodb.com/products%s', '')
+    'products': ('https://www.mongodb.com/products%s', ''),
+    'wtdocs': ('http://source.wiredtiger.com/mongodb-3.4%s', ''),
+
 }
 
 ## add `extlinks` for each published version.
@@ -149,6 +151,7 @@ html_theme_options = {
     'stable': conf.version.stable,
     'sitename': sconf.theme.sitename,
     'nav_excluded': sconf.theme.nav_excluded,
+    'upcoming': conf.version.upcoming,
 }
 
 html_sidebars = sconf.sidebars

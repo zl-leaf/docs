@@ -27,7 +27,7 @@ content: |
   - `MongoDB Rapid Start Consultation Services <https://www.mongodb.com/products/consulting?jmp=docs#rapid_start>`_
 ---
 ref: additional-resources-sharding-introduction
-append: /core/sharding-introduction.txt
+append: /sharding.txt
 title: "Additional Resources"
 style: commref
 content: |
@@ -107,7 +107,7 @@ title: "Additional Resource"
 append:
   - /data-center-awareness.txt
   - /core/operational-segregation.txt
-  - /core/tag-aware-sharding.txt
+  - /core/zone-sharding.txt
   - /tutorial/administer-shard-tags.txt
   - /core/replica-set-architecture-geographically-distributed.txt
 content: |
@@ -259,6 +259,16 @@ style: commref
 content: |
   - `Blog Post: New Compression Options in MongoDB 3.0 <https://www.mongodb.com/blog/post/new-compression-options-mongodb-30?jmp=docs>`_
 ---
+ref: additional-resources-storage-engines
+append: /core/storage-engines.txt
+title: "Additional Resources"
+style: commref
+content: |
+  - `Blog Post: Building Applications with MongoDB's Pluggable Storage Engines Part 1 <https://www.mongodb.com/blog/post/building-applications-with-mongodbs-pluggable-storage-engines-part-1?jmp=docs>`_
+  - `Blog Post: Building Applications with MongoDB's Pluggable Storage Engines Part 2 <https://www.mongodb.com/blog/post/building-applications-with-mongodbs-pluggable-storage-engines-part-2?jmp=docs>`_
+  - `Whitepaper: Pluggable Storage Engine Architecture <https://www.mongodb.com/collateral/storage-engine-white-paper?jmp=docs>`_
+
+---
 ref: additional-resources-performance-eval
 style: commref
 title: "Additional Resources"
@@ -278,7 +288,6 @@ append:
   - /tutorial/backup-sharded-cluster-with-filesystem-snapshots.txt
   - /tutorial/backup-sharded-cluster-with-database-dumps.txt
   - /tutorial/backup-with-filesystem-snapshots.txt
-  - /tutorial/backup-small-sharded-cluster-with-mongodump.txt
 content: |
   See also |mms-home| for seamless automation, backup, and monitoring.
 

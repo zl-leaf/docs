@@ -855,4 +855,169 @@ output:
   - type: web
     dpi: 72
     width: 600
+---
+name: sharded-cluster-monotonic-distribution
+alt: "Diagram of poor shard key distribution due to monotonically increasing or decreasing shard key"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-ranged-distribution-good
+alt: "Diagram of good shard key distribution"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-ranged-distribution-low-cardinal
+alt: "Diagram of poor shard key distribution due to low cardinality"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-ranged-distribution-frequency
+alt: "Diagram of poor shard key distribution due to high frequency"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-hashed-distribution
+alt: "Diagram of hashed shard key distribution"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-zones
+alt: "Diagram of data distribution based on zones in a sharded cluster"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-segmenting-data-by-location-overview
+alt: "Diagram geo distribution based on zones"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-segmenting-data-by-location-architecture
+alt: "Diagram of zones used for supporting geo distribution architecture"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-segmenting-shards-tags
+alt: "Diagram of zones used for supporting data segmentation"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-segmenting-shards-overview
+alt: "Overview of zones used for supporting data segmentation"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-segmenting-shards-architecture
+alt: "Diagram of Data Segmentation Architecture using zones"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-tiered-slas-overview
+alt: "Diagram of sharded cluster architecture for tiered SLA"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-tiered-slas-architecture
+alt: "Diagram of sharded cluster architecture for tiered SLA"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharding-tiered-slas-tags
+alt: "Diagram of sharded cluster architecture for tiered SLA"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
+---
+name: sharded-cluster-high-availability-architecture
+alt: "Diagram of sharded cluster architecture for high availability"
+output:
+  - type: print
+    tag: 'print'
+    dpi: 300
+    width: 900
+  - type: web
+    dpi: 72
+    width: 700
 ...

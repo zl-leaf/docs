@@ -239,6 +239,13 @@ on your own servers. Most are open source.
 
      - A simple Nagios check script, written in Python.
 
+   * - `SPM Performance Monitoring <https://sematext.com/spm/>`_
+
+     - `MongoDB Docker Agent <https://hub.docker.com/r/sematext/spm-agent-mongodb/>`_
+
+     - `Monitoring, Anomaly Detection and Alerting <https://sematext.com/spm/integrations/mongodb-monitoring/>`_ SPM monitors all key MongoDB metrics together with infrastructure incl. Docker and other application metrics e.g. Node.js, Java, NGINX, Apache, HAProxy or Elasticsearch. SPM is available On Premises and in the Cloud (SaaS) and provides correlation of metrics and logs. 
+      
+
 Also consider `dex <https://github.com/mongolab/dex>`_, an index and
 query analyzing tool for MongoDB that compares MongoDB log files and
 indexes to make indexing recommendations.
@@ -264,7 +271,7 @@ a paid subscription.
 
      - |MMS| is a cloud-based suite of services for managing MongoDB
        deployments. |MMS| provides monitoring, backup, and automation
-       functionality. For an on-premise solution, see also 
+       functionality. For an on-premise solution, see also
        :products:`Ops Manager, available in MongoDB Enterprise Advanced
        </mongodb-enterprise-advanced?jmp=docs>`.
 
@@ -300,6 +307,11 @@ a paid subscription.
      - `Infrastructure monitoring
        <http://docs.datadoghq.com/integrations/mongodb/>`_ to visualize
        the performance of your MongoDB deployments.
+       
+   * - `SPM Performance Monitoring <https://sematext.com/spm>`_
+
+     - `Monitoring, Anomaly Detection and Alerting
+       <https://sematext.com/spm/integrations/mongodb-monitoring/>`_ SPM monitors all key MongoDB metrics together with infrastructure incl. Docker and other application metrics, e.g. Node.js, Java, NGINX, Apache, HAProxy or Elasticsearch. SPM provides correlation of metrics and logs. 
 
 .. _stdout:
 .. _standard-output:
@@ -353,6 +365,61 @@ affect logging:
 
 - :dbcommand:`logRotate`. Rotates the log files for :program:`mongod`
   processes only. See :doc:`/tutorial/rotate-log-files`.
+
+.. _monitoring-log-redaction:
+
+Log Redaction
+~~~~~~~~~~~~~
+
+.. versionadded:: 3.4 Available in MongoDB Enterprise only
+
+A :program:`mongod` running with :setting:`security.redactClientLogData`
+redacts :doc:`messages </reference/log-messages>` associated with any given
+log event before logging, leaving only metadata, source files, or line numbers
+related to the event. :setting:`security.redactClientLogData` prevents
+potentially sensitive information from entering the system log at the cost of
+diagnostic detail.
+
+For example, the following operation inserts a document into a 
+:program:`mongod` running without log redaction. The :program:`mongod` 
+has :setting:`systemLog.component.query.verbosity` set to ``0``:
+
+.. code-block:: javascript
+
+   db.clients.insertOne( { "name" : Joe, "PII" : "Sensitive Information" } )
+   
+This operation produces the following log event:
+
+.. code-block:: text
+
+   2016-09-23T13:51:43.572-0400 I COMMAND  [conn1] command employeeData.directory 
+      appName: "MongoDB Shell" 
+      command: insert {
+         insert: "directory", 
+         documents: [ 
+            { 
+               _id: ObjectId('57e56baf6a71e2b785153aec'), 
+               name: "Joe", 
+               PII: "Sensitive Information" 
+            } 
+         ],
+         ...
+
+A :program:`mongod` running with :setting:`security.redactClientLogData` 
+performing the same insert operation produces the following log event:
+
+.. note:: 
+
+   The exact redacted output may change leading up to the MongoDB 3.4 release.
+   This output is based on the 3.3 development series build.
+
+.. code-block:: text
+
+   2016-09-23T13:51:43.572-0400 I COMMAND  [conn1] ###
+   
+Use :setting:`~security.redactClientLogData` in conjunction with
+:doc:`encryption </core/security-encryption>` to assist compliance with
+regulatory requirements.
 
 Diagnosing Performance Issues
 -----------------------------
@@ -425,7 +492,7 @@ instances. In addition, clusters require further monitoring to ensure
 that data is effectively distributed among nodes and that sharding
 operations are functioning appropriately.
 
-.. seealso:: See the :doc:`/core/sharding` documentation for more
+.. seealso:: See the :doc:`/sharding` documentation for more
    information.
 
 Config Servers
@@ -466,29 +533,36 @@ database name, and a list of the chunks.
 Stale Locks
 ~~~~~~~~~~~
 
-In nearly every case, all locks used by the balancer are automatically
-released when they become stale. However, because any long lasting
-lock can block future balancing, it's important to ensure that all
-locks are legitimate. To check the lock status of the database,
-connect to a :program:`mongos` instance using the :program:`mongo`
-shell. Issue the following command sequence to switch to the
-``config`` database and display all outstanding locks on the shard database:
+To check the lock status of the database, connect to a
+:program:`mongos` instance using the :program:`mongo` shell. Issue the
+following command sequence to switch to the ``config`` database and
+display all outstanding locks on the shard database:
 
 .. code-block:: javascript
 
    use config
    db.locks.find()
 
-For active deployments, the above query can provide insights.
-The balancing process, which originates on a randomly selected
-:program:`mongos`, takes a special "balancer" lock that prevents other
-balancing activity from transpiring. Use the following command, also
-to the ``config`` database, to check the status of the "balancer"
-lock.
+The balancing process takes a special "balancer" lock that prevents
+other balancing activity from transpiring. In the ``config`` database,
+use the following command to view the "balancer" lock.
 
 .. code-block:: javascript
 
    db.locks.find( { _id : "balancer" } )
 
-If this lock exists, make sure that the balancer process is actively
-using this lock.
+.. versionchanged:: 3.4
+
+   Starting in 3.4, the primary of the CSRS config server holds the
+   "balancer" lock, using a process id named "ConfigServer". This lock
+   is never released. To determine if the balancer is running, see
+   :ref:`sharding-balancing-is-running`.
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /tutorial/monitor-with-snmp
+      /tutorial/monitor-with-snmp-on-windows
+      /tutorial/troubleshoot-snmp

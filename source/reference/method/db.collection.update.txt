@@ -114,6 +114,8 @@ expressions, then:
 Upsert Option
 ~~~~~~~~~~~~~
 
+.. _upsert-behavior:
+
 Upsert Behavior
 ```````````````
 
@@ -122,13 +124,18 @@ criteria, :method:`~db.collection.update()` inserts a *single* document.
 The update creates the new document with either:
 
 - The fields and values of the ``<update>`` parameter if the
-  ``<update>`` parameter contains only field and value pairs, or
+  ``<update>`` parameter is a replacement document (i.e., contains
+  only field and value pairs). If neither the ``<query>`` nor the
+  ``<update>`` document specifies an ``_id`` field, MongoDB adds
+  the ``_id`` field with an :ref:`objectid` value.
 
 - The fields and values of both the ``<query>`` and ``<update>``
   parameters if the ``<update>`` parameter contains :ref:`update
   operator <update-operators>` expressions. The update creates a base
   document from the equality clauses in the ``<query>`` parameter, and
   then applies the update expressions from the ``<update>`` parameter.
+  :doc:`Comparison </reference/operator/query>` operations from the
+  ``<query>`` will not be included in the new document.
 
 If ``upsert`` is ``true`` and there are documents that match the query
 criteria, :method:`~db.collection.update()` performs an update.
@@ -512,6 +519,30 @@ result in the insertion of a document using the fields from both the
 
 For more information on ``upsert`` option and the inserted document,
 :ref:`upsert-parameter`.
+
+Specify Collation
+~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/extracts/collation-versionadded.rst
+
+A collection ``myColl`` has the following documents:
+
+.. code-block:: javascript
+
+   { _id: 1, category: "café", status: "A" }
+   { _id: 2, category: "cafe", status: "a" }
+   { _id: 3, category: "cafE", status: "a" }
+
+The following operation includes the :ref:`collation <collation>`
+option:
+
+.. code-block:: javascript
+
+   db.myColl.update(
+      { category: "cafe" },
+      { $set: { status: "Updated" } },
+      { collation: { locale: "fr", strength: 1 } }
+   );
 
 .. _writeresults-update:
 

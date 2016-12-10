@@ -3,39 +3,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 19:13-0400\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 5450edd7aeed4250909af4661ef7a66f
 #: ../source/tutorial/manage-mongodb-processes.txt:3
 msgid "Manage ``mongod`` Processes"
 msgstr "管理 ``mongod`` 进程"
 
+# 77dc852e88eb460fbe0b7b2c1d0f874d
+#: ../source/tutorial/manage-mongodb-processes.txt
+msgid "On this page"
+msgstr ""
+
+# 2c1f88c8afe8442c9fa83a1c2fc75c15
 #: ../source/tutorial/manage-mongodb-processes.txt:13
 msgid ""
 "MongoDB runs as a standard program. You can start MongoDB from a command "
-"line by issuing the :program:`mongod` command and specifying options.  For a"
-" list of options, see the :program:`mongod` reference. MongoDB can also run "
-"as a Windows service. For details, see :ref:`manually-create-windows-"
-"service`. To install MongoDB, see :doc:`/installation`."
+"line by issuing the :program:`mongod` command and specifying options.  "
+"For a list of options, see the :program:`mongod` reference. MongoDB can "
+"also run as a Windows service. For details, see :ref:`manually-create-"
+"windows-service`. To install MongoDB, see :doc:`/installation`."
 msgstr ""
 "MongoDB是作为一个标准程序来运行的。您可以从命令行发送 :program:`mongod` 命令"
 "并指定选项来启动MongoDB。 具体选项会在 :doc:`/reference/program/mongod` 里列出。"
 "MongoDB也能作为Windows服务来运行。具体细节，请见  :ref:`manually-create-windows-"
 "service` 。安装MongoDB，请见 :doc:`/installation`"
 
+# e8597efa67104b4587454f91817f36b8
 #: ../source/tutorial/manage-mongodb-processes.txt:20
 msgid ""
-"The following examples assume the directory containing the :program:`mongod`"
-" process is in your system paths. The :program:`mongod` process is the "
-"primary database process that runs on an individual server. "
-":program:`mongos` provides a coherent MongoDB interface equivalent to a "
-":program:`mongod` from the perspective of a client. The :program:`mongo` "
-"binary provides the administrative shell."
+"The following examples assume the directory containing the "
+":program:`mongod` process is in your system paths. The :program:`mongod` "
+"process is the primary database process that runs on an individual "
+"server. :program:`mongos` provides a coherent MongoDB interface "
+"equivalent to a :program:`mongod` from the perspective of a client. The "
+":program:`mongo` binary provides the administrative shell."
+msgstr ""
+
+# 7af1e07ed95c4610b2e696e1d2db4385
+#: ../source/tutorial/manage-mongodb-processes.txt:28
+msgid ""
+"This document discusses the :program:`mongod` process; however, some "
+"portions of this document may be applicable to :program:`mongos` "
+"instances."
 msgstr ""
 "接下来的例子会假设包含 :program:`mongod` 进程的目录在您的系统路径下。"
 " :program:`mongod` 进程是运行在单独的服务器上的主要数据库进程。"
@@ -43,68 +60,84 @@ msgstr ""
 "二进制程序 :program:`mongo` 则提供了用了管理的shell。"
 
 
+# f1e42660a9794e2aac78fc79b8f11fba
 #: ../source/tutorial/manage-mongodb-processes.txt:33
 
 msgid "Start ``mongod`` Processes"
 msgstr "开启``mongod``进程"
 
+# 649485dea2b2471fb8f95f738f98622a
 #: ../source/tutorial/manage-mongodb-processes.txt:35
 msgid ""
-"By default, MongoDB stores data in the ``/data/db`` directory. On Windows, "
-"MongoDB stores data in ``C:\\data\\db``. On all platforms, MongoDB listens "
-"for connections from clients on port ``27017``."
+"By default, MongoDB listens for connections from clients on port "
+"``27017``, and stores data in the ``/data/db`` directory."
 msgstr ""
 "默认情况下，MongoDB将数据存储在 ``/data/db`` 目录里。在Windows里，"
 "MongoDB将数据存储在 ``C:\\data\\db`` 里。在所有平台上，MongoDB对来自 ``27017`` 端口上"
 "的客户端连接进行监听。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:39
+# 7eed3b691c9f4c5ba55b5560de530d4a
+#: ../source/tutorial/manage-mongodb-processes.txt:38
+msgid ""
+"On Windows, this path is on the drive from which you start MongoDB. For "
+"example, if you do not specify a :option:`--dbpath`, starting a MongoDB "
+"server on the ``C:\\`` drive stores all data files in ``C:\\data\\db``."
+msgstr ""
+
+# bdb62ff8144e474e9522643541995aea
+#: ../source/tutorial/manage-mongodb-processes.txt:42
 msgid ""
 "To start MongoDB using all defaults, issue the following command at the "
 "system shell:"
 msgstr "全部使用默认配置来启动MongoDB，只需要在系统shell里发出以下命令即可:"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:47
+# d02149de04d3441eac5a60997bbde360
+#: ../source/tutorial/manage-mongodb-processes.txt:50
 msgid "Specify a Data Directory"
 msgstr "指定数据目录"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:49
+# 81af6e4f2f8d4b6e85847e1f8eab7163
+#: ../source/tutorial/manage-mongodb-processes.txt:52
 msgid ""
 "If you want :program:`mongod` to store data files at a path *other than* "
 "``/data/db`` you can specify a :setting:`~storage.dbPath`. The "
-":setting:`~storage.dbPath` must exist before you start :program:`mongod`. If"
-" it does not exist, create the directory and the permissions so that "
-":program:`mongod` can read and write data to this path. For more information"
-" on permissions, see the :doc:`security operations documentation "
-"</administration/security-checklist>`."
+":setting:`~storage.dbPath` must exist before you start :program:`mongod`."
+" If it does not exist, create the directory and the permissions so that "
+":program:`mongod` can read and write data to this path. For more "
+"information on permissions, see the :doc:`security operations "
+"documentation </administration/security-checklist>`."
 msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:57
+# f0fe18aa41ad48f89f2feeb17aa89bc9
+#: ../source/tutorial/manage-mongodb-processes.txt:60
 msgid ""
-"To specify a :setting:`~storage.dbPath` for :program:`mongod` to use as a "
-"data directory, use the :option:`--dbpath <mongod --dbpath>` option. The "
-"following invocation will start a :program:`mongod` instance and store data "
-"in the ``/srv/mongodb`` path"
+"To specify a :setting:`~storage.dbPath` for :program:`mongod` to use as a"
+" data directory, use the :option:`--dbpath <mongod --dbpath>` option. The"
+" following invocation will start a :program:`mongod` instance and store "
+"data in the ``/srv/mongodb`` path"
 msgstr ""
 "可以使用 :option:`--dbpath <mongod --dbpath>` 选项，为 :program:`mongod` 指定一个 :setting:`~storage.dbPath` 来当做数据目录使用。"
 "下面的调用将会启动一个 :program:`mongod` 实例并将数据存储在 ``/srv/mongodb`` 路径下。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:67
+# 2fce311275f047cb96a2f056febb480a
+#: ../source/tutorial/manage-mongodb-processes.txt:70
 msgid "Specify a TCP Port"
 msgstr "指定TCP端口"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:69
+# 687c829a7714448ba85988de216ea41c
+#: ../source/tutorial/manage-mongodb-processes.txt:72
 msgid ""
-"Only a single process can listen for connections on a network interface at a"
-" time. If you run multiple :program:`mongod` processes on a single machine, "
-"or have other processes that must use this port, you must assign each a "
-"different port to listen on for client connections."
+"Only a single process can listen for connections on a network interface "
+"at a time. If you run multiple :program:`mongod` processes on a single "
+"machine, or have other processes that must use this port, you must assign"
+" each a different port to listen on for client connections."
 msgstr ""
 "在只有一个进程的时候，可以在一个网络接口上监听所有连接。如果您"
 "在一台服务器上运行多个  :program:`mongod` 进程，或者有其他一些进程必须使用这个"
 "端口，那么您必须分配不同的端口去监听每一个客户端的连接。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:75
+# 5814290bb68e4261b4cf52594c6a5664
+#: ../source/tutorial/manage-mongodb-processes.txt:78
 msgid ""
 "To specify a port to :program:`mongod`, use the :option:`--port <mongod "
 "--port>` option on the command line. The following command starts "
@@ -113,79 +146,111 @@ msgstr ""
 "为 :program:`mongod` 指定一个端口，请在命令行使用 :option:`--port <mongod --port>` "
 "选项。下面的命令将启动 :program:`mongod` 并在``12345``: 端口监听它。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:83
+# 1f13ba86c059425c86928b5e474ad80e
+#: ../source/tutorial/manage-mongodb-processes.txt:86
 msgid "Use the default port number when possible, to avoid confusion."
 msgstr "为了避免混淆，请尽可能的使用默认的端口号。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:86
+# 90083833eeec4cd49c05f554f909e01e
+#: ../source/tutorial/manage-mongodb-processes.txt:89
 msgid "Start ``mongod`` as a Daemon"
 msgstr "将 mongodb 以守护进程的方式启动"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:88
+# a66870efc20945d8b29713d17b64a3bf
+#: ../source/tutorial/manage-mongodb-processes.txt:91
 msgid ""
 "To run a :program:`mongod` process as a daemon (i.e. "
-":setting:`~processManagement.fork`), *and* write its output to a log file, "
-"use the :option:`--fork <mongod --fork>` and :option:`--logpath <mongod "
-"--logpath>` options. You must create the log directory; however, "
+":setting:`~processManagement.fork`), *and* write its output to a log "
+"file, use the :option:`--fork <mongod --fork>` and :option:`--logpath "
+"<mongod --logpath>` options. You must create the log directory; however, "
 ":program:`mongod` will create the log file if it does not exist."
 msgstr ""
 "要运行一个 :program:`mongod` 进程来作为一个守护进程（也就是 :setting:`~processManagement.fork`），*并且* 将输出写入到一个日志文件里，"
 "可以使用 :option:`--fork <mongod --fork>` 和  :option:`--logpath <mongod --logpath>` 选项。您必须创建一个log目录；可是，如果这个日志"
 "文件不存在的话，:program:`mongod` 会代劳。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:94
+# 0e9d5d36ad054a4b88ca0c8c703668f4
+#: ../source/tutorial/manage-mongodb-processes.txt:97
 msgid ""
-"The following command starts :program:`mongod` as a daemon and records log "
-"output to ``/var/log/mongodb.log``."
-msgstr "下面的命令将启动 :program:`mongod` 作为一个守护进程并将日志输出记录到 ``/var/log/mongodb.log`` 里。"
+"The following command starts :program:`mongod` as a daemon and records "
+"log output to ``/var/log/mongodb.log``."
+msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:102
+# 396d014c05b64439ba2f0d64c8bc2ac8
+#: ../source/tutorial/manage-mongodb-processes.txt:105
 msgid "Additional Configuration Options"
 msgstr "附加的配置选项"
 
 
-#: ../source/tutorial/manage-mongodb-processes.txt:111
+# da74eb8fdb92438ead93422f8d56643a
+#: ../source/tutorial/manage-mongodb-processes.txt:107
+msgid ""
+"For an overview of common configurations and deployments for common use "
+"cases, see :doc:`/administration/configuration`."
+msgstr ""
 
+# a76d85ae129f4048974aa56ec768128e
+#: ../source/tutorial/manage-mongodb-processes.txt:114
 msgid "Stop ``mongod`` Processes"
 msgstr "停止 ``mongod`` 进程"
 
 
-#: ../source/tutorial/manage-mongodb-processes.txt:124
+# 7b1215624896400c8781bf9585303206
+#: ../source/tutorial/manage-mongodb-processes.txt:116
+msgid ""
+"In a clean shutdown a :program:`mongod` completes all pending operations,"
+" flushes all data to data files, and closes all data files. Other "
+"shutdowns are *unclean* and can compromise the validity of the data "
+"files."
+msgstr ""
 
+# ce94fd2f4e6c4fd59d99d5a6733ed02c
+#: ../source/tutorial/manage-mongodb-processes.txt:127
 msgid ""
 "To ensure a clean shutdown, always shutdown :program:`mongod` instances "
 "using one of the following methods:"
 msgstr "为了确保正常关闭实例，通常会用下列方法的一种来关闭 :program:`mongod` 实例。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:128
+# eb2495d905234c0cbaff21c8cbd7dc16
+#: ../source/tutorial/manage-mongodb-processes.txt:131
 msgid "Use ``shutdownServer()``"
 msgstr "使用 ``shutdownServer()``"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:130
+# 638a12745e3f4810a3ab8b6bcd047629
+#: ../source/tutorial/manage-mongodb-processes.txt:133
 msgid ""
-"Shut down the :program:`mongod` from the :program:`mongo` shell using the "
-":method:`db.shutdownServer()` method as follows:"
+"Shut down the :program:`mongod` from the :program:`mongo` shell using the"
+" :method:`db.shutdownServer()` method as follows:"
 msgstr ""
 "在 :program:`mongo` shell中使用 :method:`db.shutdownServer()` 方法来关闭  :program:`mongod` ，如下所示："
 
 
-#: ../source/tutorial/manage-mongodb-processes.txt:140
-
+# b86739646f1549adad4d91139638ad3d
+#: ../source/tutorial/manage-mongodb-processes.txt:141
 msgid ""
-"For systems with :setting:`~security.authorization` enabled, users may only "
-"issue :method:`db.shutdownServer()` when authenticated to the ``admin`` "
-"database or via the localhost interface on systems without authentication "
-"enabled."
+"Calling the same method from a :term:`init script` accomplishes the same "
+"result."
 msgstr ""
 "对于启用 :setting:`~security.authorization` 的系统，通过验证登陆到 ``admin`` 数据库，"
 "或者在为开启验证的情况下经由本地主机的系统接口登陆到 ``admin`` 数据库时，"
 "用户可以仅仅通过发送 :method:`db.shutdownServer()` 来关闭实例。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:146
+# 2c529cc8d4284e828fcda077b890a312
+#: ../source/tutorial/manage-mongodb-processes.txt:143
+msgid ""
+"For systems with :setting:`~security.authorization` enabled, users may "
+"only issue :method:`db.shutdownServer()` when authenticated to the "
+"``admin`` database or via the localhost interface on systems without "
+"authentication enabled."
+msgstr ""
+
+# d86446baf2894b4ebd0e3e5e504ff282
+#: ../source/tutorial/manage-mongodb-processes.txt:149
 msgid "Use ``--shutdown``"
 msgstr "使用 ``--shutdown``"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:148
+# ccdfd4269aeb41ff82a988fba4ceb151
+#: ../source/tutorial/manage-mongodb-processes.txt:151
 msgid ""
 "From the Linux command line, shut down the :program:`mongod` using the "
 ":option:`--shutdown <mongod --shutdown>` option in the following command:"
@@ -193,169 +258,146 @@ msgstr ""
 "从Linux命令行关闭 :program:`mongod` ，可以使用 :option:`--shutdown <mongod --shutdown>` 选项 "
 "如下所示："
 
-#: ../source/tutorial/manage-mongodb-processes.txt:156
+# 9a3e6cc9310d4c13abbaa1b5d301450a
+#: ../source/tutorial/manage-mongodb-processes.txt:159
 msgid "Use ``CTRL-C``"
 msgstr "使用 ``CTRL-C``"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:158
+# d4e6b990af1749fa80e8fdd939328b41
+#: ../source/tutorial/manage-mongodb-processes.txt:161
 msgid ""
 "When running the :program:`mongod` instance in interactive mode (i.e. "
-"without :option:`--fork <mongod --fork>`), issue ``Control-C`` to perform a "
-"clean shutdown."
+"without :option:`--fork <mongod --fork>`), issue ``Control-C`` to perform"
+" a clean shutdown."
 msgstr ""
 "当正在运行一个交互模式 (i.e. without :option:`--fork <mongod --fork>`) 的 :program:`mongod` 实例时，"
 "发送 ``Control-C`` 来进行正常关闭。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:163
+# bf671e748d62450b8b5997a820919752
+#: ../source/tutorial/manage-mongodb-processes.txt:166
 msgid "Use ``kill``"
 msgstr "使用 ``kill``"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:165
+# 8d903cd9cf9346c7be2076c334d3d18e
+#: ../source/tutorial/manage-mongodb-processes.txt:168
 msgid ""
-"From the Linux command line, shut down a specific :program:`mongod` instance"
-" using the following command:"
-msgstr "使用以下命令从Linux命令行关闭一个特定的 :program:`mongod` 实例："
-
-#: ../source/tutorial/manage-mongodb-processes.txt:174
-msgid ""
-"Never use ``kill -9`` (i.e. ``SIGKILL``) to terminate a mongod instance."
+"From the Linux command line, shut down a specific :program:`mongod` "
+"instance using one of the following commands:"
 msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:177
+# afcffc58b1194119a5e4f6de8a8cb1e8
+#: ../source/tutorial/manage-mongodb-processes.txt:178
+msgid "Never use ``kill -9`` (i.e. ``SIGKILL``) to terminate a mongod instance."
+msgstr ""
+
+# e9829c89f4114166a5c5923fcfa93803
+#: ../source/tutorial/manage-mongodb-processes.txt:181
 msgid "Stop a Replica Set"
 msgstr "停止一个复制集"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:180
+# 5fe2732bca66479393c1cd1b055845b3
+#: ../source/tutorial/manage-mongodb-processes.txt:184
 msgid "Procedure"
 msgstr "步骤"
 
 
+# 99a1ae346f104555acc16e16388e1374
 #: ../source/tutorial/manage-mongodb-processes.txt:186
+msgid ""
+"If the :program:`mongod` is the :term:`primary` in a :term:`replica set`,"
+" the shutdown process for this :program:`mongod` instance has the "
+"following steps:"
+msgstr ""
 
+# 05eb820b177d4f16b267f1472da4ab3b
+#: ../source/tutorial/manage-mongodb-processes.txt:190
 msgid "Check how up-to-date the :term:`secondaries <secondary>` are."
 msgstr "检查 :term:`secondaries <secondary>` 的oplog时间戳。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:188
+# c4d9e287ee0042f1aa7a05909f820714
+#: ../source/tutorial/manage-mongodb-processes.txt:192
 msgid ""
-"If no secondary is within 10 seconds of the primary, :program:`mongod` will "
-"return a message that it will not shut down. You can pass the "
+"If no secondary is within 10 seconds of the primary, :program:`mongod` "
+"will return a message that it will not shut down. You can pass the "
 ":dbcommand:`shutdown` command a ``timeoutSecs`` argument to wait for a "
 "secondary to catch up."
 msgstr ""
 "如果从节点的时间戳落后于主节点10秒， :program:`mongod` 将会返回节点不会被关闭的消息。"
 "您可以传递一个 ``timeoutSecs`` 参数给 :dbcommand:`shutdown` 命令来等待从节点追上主节点。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:193
+# dd34c942f4e24773a75cfdc979cf74d9
+#: ../source/tutorial/manage-mongodb-processes.txt:197
 msgid ""
-"If there is a secondary within 10 seconds of the primary, the primary will "
-"step down and wait for the secondary to catch up."
-msgstr "如果有从节点与主节点oplog时间戳的差值在10秒之内，接下来主节点会降级为从节点并等待从节点来追赶进度。"
+"If there is a secondary within 10 seconds of the primary, the primary "
+"will step down and wait for the secondary to catch up."
+msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:196
+# 007cc9090da14ab6a47865f03d665093
+#: ../source/tutorial/manage-mongodb-processes.txt:200
 msgid ""
-"After 60 seconds or once the secondary has caught up, the primary will shut "
-"down."
+"After 60 seconds or once the secondary has caught up, the primary will "
+"shut down."
 msgstr ""
 "一旦从节点追上进度或者60秒之后，主节点将会关闭。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:200
+# 672525d3566f4bcab5d566a811f7d4a6
+#: ../source/tutorial/manage-mongodb-processes.txt:204
 msgid "Force Replica Set Shutdown"
 msgstr "强制关闭复制集"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:202
+# 485faa9c6e5449ec8bb2388f606d9c45
+#: ../source/tutorial/manage-mongodb-processes.txt:206
 msgid ""
-"If there is no up-to-date secondary and you want the primary to shut down, "
-"issue the :dbcommand:`shutdown` command with the ``force`` argument, as in "
-"the following :program:`mongo` shell operation:"
+"If there is no up-to-date secondary and you want the primary to shut "
+"down, issue the :dbcommand:`shutdown` command with the ``force`` "
+"argument, as in the following :program:`mongo` shell operation:"
 msgstr ""
 "如果从节点没有最新的数据并且您想关闭主节点，发送  :dbcommand:`shutdown`  命令加上 ``force``  参数"
 "就像下面 :program:`mongo` shell里的操作一样:"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:210
+# 61b02bbe3e124f47b7ef7e1449e18633
+#: ../source/tutorial/manage-mongodb-processes.txt:214
 msgid ""
-"To keep checking the secondaries for a specified number of seconds if none "
-"are immediately up-to-date, issue :dbcommand:`shutdown` with the "
-"``timeoutSecs`` argument. MongoDB will keep checking the secondaries for the"
-" specified number of seconds if none are immediately up-to-date. If any of "
-"the secondaries catch up within the allotted time, the primary will shut "
-"down. If no secondaries catch up, it will not shut down."
+"To keep checking the secondaries for a specified number of seconds if "
+"none are immediately up-to-date, issue :dbcommand:`shutdown` with the "
+"``timeoutSecs`` argument. MongoDB will keep checking the secondaries for "
+"the specified number of seconds if none are immediately up-to-date. If "
+"any of the secondaries catch up within the allotted time, the primary "
+"will shut down. If no secondaries catch up, it will not shut down."
 msgstr ""
 "如果没有节点能立刻更新到最新的数据，发送 :dbcommand:`shutdown` 加上 ``timeoutSecs``  参数来在指定的时间（秒）"
 "内保持对从节点的检查。如果在分配的时间内有任意一个从节点追上，主节点将会关闭。反之，主节点将不会关闭。"
 
-#: ../source/tutorial/manage-mongodb-processes.txt:217
+# 7fd49e408091400c9a58e13142e6d56e
+#: ../source/tutorial/manage-mongodb-processes.txt:221
 msgid ""
-"The following command issues :dbcommand:`shutdown` with ``timeoutSecs`` set "
-"to ``5``:"
-msgstr "下面的命令发送 :dbcommand:`shutdown` 并将 ``timeoutSecs`` 设成 ``5``:"
+"The following command issues :dbcommand:`shutdown` with ``timeoutSecs`` "
+"set to ``5``:"
+msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:224
+# 042337d8f4774f52bfc2b9f30b1fd76c
+#: ../source/tutorial/manage-mongodb-processes.txt:228
 msgid ""
 "Alternately you can use the ``timeoutSecs`` argument with the "
 ":method:`db.shutdownServer()` method:"
 
 msgstr ""
 
-#: ../source/tutorial/manage-mongodb-processes.txt:0
-msgid "On this page"
-msgstr ""
-
-#: ../source/tutorial/manage-mongodb-processes.txt:28
-msgid ""
-"This document discusses the :program:`mongod` process; however, some "
-"portions of this document may be applicable to :program:`mongos` instances."
-msgstr ""
-
-#: ../source/tutorial/manage-mongodb-processes.txt:104
-msgid ""
-"For an overview of common configurations and deployments for common use "
-"cases, see :doc:`/administration/configuration`."
-msgstr ""
-
-#: ../source/tutorial/manage-mongodb-processes.txt:113
-msgid ""
-"In a clean shutdown a :program:`mongod` completes all pending operations, "
-"flushes all data to data files, and closes all data files. Other shutdowns "
-"are *unclean* and can compromise the validity of the data files."
-msgstr ""
-
-#: ../source/tutorial/manage-mongodb-processes.txt:138
-msgid ""
-"Calling the same method from a :term:`init script` accomplishes the same "
-"result."
-msgstr ""
-
-#: ../source/tutorial/manage-mongodb-processes.txt:182
-msgid ""
-"If the :program:`mongod` is the :term:`primary` in a :term:`replica set`, "
-"the shutdown process for this :program:`mongod` instance has the following "
-"steps:"
-msgstr ""
-
 #~ msgid ""
-#~ "This document  page discusses the :program:`mongod` process; however, some "
-#~ "portions of this document may be applicable to :program:`mongos` instances."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "For an overview of common configurations and common configuration "
-#~ "deployments. configurations for common use cases, see "
-#~ ":doc:`/administration/configuration`."
+#~ "By default, MongoDB stores data in "
+#~ "the ``/data/db`` directory. On Windows, "
+#~ "MongoDB stores data in ``C:\\data\\db``. "
+#~ "On all platforms, MongoDB listens for"
+#~ " connections from clients on port "
+#~ "``27017``."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "In a clean shutdown a :program:`mongod` completes all pending operations, "
-#~ "flushes all data to data files, and closes all data files. Other shutdowns "
-#~ "are *unclean* and can compromise the validity the data files."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Calling the same method from a control script accomplishes the same result."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If the :program:`mongod` is the :term:`primary` in a :term:`replica set`, "
-#~ "the shutdown process for these :program:`mongod` instances has the following"
-#~ " steps:"
+#~ "From the Linux command line, shut "
+#~ "down a specific :program:`mongod` instance "
+#~ "using the following command:"
 #~ msgstr ""
 

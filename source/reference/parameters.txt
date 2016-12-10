@@ -79,10 +79,9 @@ Authentication Parameters
 
       * - :ref:`PLAIN <security-auth-ldap>` (LDAP SASL)
 
-        - External authentication using LDAP. ``PLAIN`` transmits
-          passwords in plain text. This mechanism is available only in
-          `MongoDB Enterprise
-          <http://www.mongodb.com/products/mongodb-enterprise?jmp=docs>`_.
+        - ``PLAIN`` transmits passwords in plain text. Required for
+          :ref:`security-ldap`. Optional for authenticating non-``$external``
+          users.
 
    .. todo:: Per DOCS-2940, combine this with similar info in
              /includes/options-conf
@@ -131,6 +130,23 @@ Authentication Parameters
    command line.
 
    See :ref:`localhost-exception` for more information.
+
+.. parameter:: ldapUserCacheInvalidationInterval
+
+   For use with MongoDB servers using :ref:`security-ldap-external`.
+
+   The interval (in seconds) MongoDB waits
+   between external user cache flushes. After MongoDB flushes the external
+   user cache, the next operation an LDAP-authorized user, MongoDB
+   reacquires authorization data from the LDAP server.
+  
+   Increasing the value specified increases the amount of time
+   MongoDB and the LDAP server can be out of sync, but reduces the load on
+   the LDAP server. Conversely, decreasing the value specified
+   decreases the time MongoDB and the LDAP server can be out of sync while
+   increasing the load on the LDAP server.
+   
+   Defaults to 30 seconds.
 
 .. parameter:: saslauthdPath
 
@@ -344,38 +360,6 @@ General Parameters
 
       db.getSiblingDB('admin').runCommand( { setParameter: 1, cursorTimeoutMillis: 300000 } )
 
-.. parameter:: enableTestCommands
-
-   .. versionadded:: 2.4
-
-   |both|
-
-   :parameter:`enableTestCommands` enables a set of internal commands
-   useful for internal testing operations.
-   :parameter:`enableTestCommands` is only available at startup and you
-   cannot use :dbcommand:`setParameter` to modify this parameter.
-   Consider the following :program:`mongod` invocation, which sets
-   :parameter:`enableTestCommands`:
-
-   .. code-block:: sh
-
-      mongod --setParameter enableTestCommands=1
-
-   :parameter:`enableTestCommands` provides access to the following
-   internal commands:
-
-   - :dbcommand:`captrunc`
-   - :dbcommand:`configureFailPoint`
-   - :dbcommand:`emptycapped`
-   - :dbcommand:`godinsert`
-   - :dbcommand:`_hashBSONElement`
-   - :dbcommand:`journalLatencyTest`
-   - :dbcommand:`replSetTest`
-   - :dbcommand:`_skewClockCommand`
-   - :dbcommand:`sleep`
-   - :dbcommand:`_testDistLockWithSkew`
-   - :dbcommand:`_testDistLockWithSyncCluster`
-
 .. parameter:: failIndexKeyTooLong
 
    .. versionadded:: 2.6
@@ -463,18 +447,6 @@ General Parameters
    Don't run production :program:`mongod` instances with
    :parameter:`notablescan` because preventing collection scans can potentially
    affect queries in all databases, including administrative queries.
-
-.. parameter:: textSearchEnabled
-
-   .. deprecated:: 2.6
-      MongoDB enables the text search feature by default.
-      Manual enabling of this feature is unnecessary.
-
-   |both|
-
-   Enables the :doc:`text search </core/index-text>` feature. When
-   manually enabling, you must enable on **each and every**
-   :program:`mongod` for replica sets.
 
 .. parameter:: ttlMonitorEnabled
 
@@ -749,9 +721,12 @@ parameters:
 
    .. versionadded:: 3.2
 
+   .. versionchanged:: 3.4
+      Increased default size to 200 megabytes.
+
    *Type*: integer
 
-   *Default*: 100
+   *Default*: 200
 
    |mongod-only|
 
@@ -762,11 +737,11 @@ parameters:
    the timestamp in the file name.
 
    For example, the following sets the maximum size of the directory to
-   ``200`` megabytes:
+   ``250`` megabytes:
 
    .. code-block:: sh
 
-      mongod --setParameter diagnosticDataCollectionDirectorySizeMB=200
+      mongod --setParameter diagnosticDataCollectionDirectorySizeMB=250
 
    The minimum value for
    :parameter:`diagnosticDataCollectionDirectorySizeMB` is ``10``
@@ -980,8 +955,8 @@ WiredTiger Parameters
          "wiredTigerEngineRuntimeConfig": "<option>=<setting>,<option>=<setting>"
       })
 
-   See the WiredTiger documentation for all available `WiredTiger
-   configuration options <http://source.wiredtiger.com/2.4.1/struct_w_t___c_o_n_n_e_c_t_i_o_n.html#a579141678af06217b22869cbc604c6d4>`_.
+   See the WiredTiger documentation for all available :wtdocs:`WiredTiger
+   configuration options </struct_w_t___c_o_n_n_e_c_t_i_o_n.html#>`.
 
 Auditing Parameters
 ~~~~~~~~~~~~~~~~~~~~

@@ -33,8 +33,101 @@ Minor Releases
 
       /release-notes/3.2-changelog
 
-.. _3.2.7-release-notes:
+.. _3.2.11-release-notes:
 
+3.2.11 -- Nov 18, 2016
+~~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- :issue:`SERVER-26182`: In a mixed version replica set with v3.2 and
+  v3.0 members, a sync of a v3.2 member from a v3.0 member can result
+  in a query response that exceed 16 MB BSON size limit and crash the
+  v3.2 member.
+
+- :issue:`SERVER-24662`: Upgrade to Perl compatible regular expressions
+  (PCRE 8.39).
+
+- :issue:`SERVER-26652` Invalid definitions in ``systemd`` configuration
+  for Debian.
+
+- :issue:`SERVER-24386`: ``killCursor`` operation during aggregation
+  pipeline can cause segmentation fault.
+
+- :ref:`3.2.11-changelog`
+
+- `All JIRA issues closed in 3.2.11
+  <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2CTOOLS%2CWT)%20AND%20resolution%3D%27Fixed%27%20and%20fixversion%3D%273.2.11%27>`_
+
+
+.. _3.2.10-release-notes:
+
+3.2.10 -- Sep 30, 2016
+~~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- :issue:`SERVER-25974`: When WT cache utilization is full, application
+  threads can stall for an extended period of time.
+
+- :issue:`SERVER-20306`: MongoDB with WiredTiger may experience
+  excessive memory fragmentation, leading to swapping and/or
+  out-of-memory errors.
+
+- :issue:`SERVER-16801`: When updating a field of one numerical type to
+  the same number of different numerical type, update operation
+  considers it as a noop.
+
+- :ref:`3.2.10-changelog`
+
+- `All JIRA issues closed in 3.2.10
+  <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2CTOOLS%2CWT)%20AND%20resolution%3D%27Fixed%27%20and%20fixversion%3D%273.2.10%27>`_
+
+
+.. _3.2.9-release-notes:
+
+3.2.9 -- Aug 16, 2016
+~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- :issue:`SERVER-7285`: Support systemd in future compatible Ubuntu distributions.
+
+- :issue:`WT-2798`: Create operations on WiredTiger when journaling is disabled may
+  lead to inconsistent data in the event of a crash.
+
+- :issue:`SERVER-17856`: On :program:`mongod` instances, users can run
+  :dbcommand:`currentOp` and :dbcommand:`killOp` on own operations.
+
+- :ref:`3.2.9-changelog`
+
+- `All JIRA issues closed in 3.2.9
+  <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2CTOOLS%2CWT)%20AND%20resolution%3D%27Fixed%27%20and%20fixversion%3D%273.2.9%27>`_
+
+.. _3.2.8-release-notes:
+
+3.2.8 -- Jul 12, 2016
+~~~~~~~~~~~~~~~~~~~~~
+
+Issues fixed:
+
+- :issue:`SERVER-18329`: Debian 8(Jessie) packages.
+
+- :issue:`SERVER-24580`: Improve performance when WiredTiger cache is
+  full.
+
+- :issue:`WT-2696`: Race condition on unclean shutdown may miss log
+  records with large updates.
+
+- :issue:`WT-2706`: Race condition on log file switch can cause missing
+  log records.
+
+- :ref:`3.2.8-changelog`
+
+- `All JIRA issues closed in 3.2.8
+  <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2CTOOLS%2CWT)%20AND%20resolution%3D%27Fixed%27%20and%20fixversion%3D%273.2.8%27>`_
+
+.. _3.2.7-release-notes:
 
 3.2.7 -- Jun 7, 2016
 ~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +140,9 @@ Issues fixed:
 
 - :issue:`SERVER-24117`: Mongo binaries ELF stack has become executable.
 
-- `All issues closed in 3.2.7
+- :ref:`3.2.7-changelog`
+
+- `All JIRA issues closed in 3.2.7
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.7%20AND%20resolution%20%3D%20Fixed%20>`_
 
 .. _3.2.6-release-notes:
@@ -66,7 +161,9 @@ Issues fixed:
 - :issue:`SERVER-22043`: :program:`mongo` shell method :method:`~cursor.count()`
   ignores read preference.
 
-- `All issues closed in 3.2.6
+- :ref:`3.2.6-changelog`
+
+- `All JIRA issues closed in 3.2.6
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.6%20AND%20resolution%20%3D%20Fixed%20>`_
 
 .. _3.2.5-release-notes:
@@ -85,7 +182,9 @@ Issues fixed:
 - :issue:`SERVER-21681`: Include index size stats for in-memory storage
   engine.
 
-- `All issues closed in 3.2.5
+- :ref:`3.2.5-changelog`
+
+- `All JIRA issues closed in 3.2.5
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.5%20AND%20resolution%20%3D%20Fixed%20>`_
 
 .. _3.2.4-release-notes:
@@ -108,7 +207,9 @@ Issues fixed:
 - :issue:`SERVER-22043`: :method:`~cursor.count()` method in the
   :program:`mongo` shell does not apply the read preferences.
 
-- `All issues closed in 3.2.4
+- :ref:`3.2.4-changelog`
+
+- `All JIRA issues closed in 3.2.4
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.4%20AND%20resolution%20%3D%20Fixed%20>`_
 
 .. _3.2.3-release-notes:
@@ -128,7 +229,9 @@ Issues fixed:
 - :issue:`SERVER-22456`: Increased timeout for querying oplog to 1
   minute.
 
-- `All issues closed in 3.2.3
+- :ref:`3.2.3-changelog`
+
+- `All JIRA issues closed in 3.2.3
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.3%20AND%20resolution%20%3D%20Fixed%20>`_
 
 3.2.2 -- Feb 16, 2016
@@ -153,7 +256,9 @@ Issues fixed:
 
 - :issue:`SERVER-21366`: Long-running transactions during chunk moves.
 
-- `All issues closed in 3.2.1
+- :ref:`3.2.1-changelog`
+
+- `All JIRA issues closed in 3.2.1
   <https://jira.mongodb.org/issues/?jql=project%20in%20(SERVER%2C%20TOOLS)%20AND%20fixVersion%20%3D%203.2.1%20AND%20resolution%20%3D%20Fixed%20>`_
 
 WiredTiger as Default
@@ -196,8 +301,8 @@ engine setting either:
 WiredTiger Default Cache Size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in MongoDB 3.2, the WiredTiger cache, by default, will use
-the larger of either:
+Starting in MongoDB 3.2, the WiredTiger internal cache, by default,
+will use the larger of either:
 
 - 60% of RAM minus 1 GB, or
 
@@ -278,8 +383,6 @@ the :doc:`MMAPv1 storage engine </core/mmapv1>`, you can only specify a
 ``readConcern`` of ``"local"``.
 
 ``readConcern`` requires MongoDB drivers updated for MongoDB 3.2.
-
-.. include:: /includes/fact-readConcern-majority-protocolVersion.rst
 
 For details on ``readConcern``, including operations that support the
 option, see :doc:`/reference/read-concern`.
@@ -1082,3 +1185,6 @@ To download MongoDB 3.2, go to the `downloads page`_.
 .. seealso::
    - `All Third Party License Notices <https://github.com/mongodb/mongo/blob/v3.2/distsrc/THIRD-PARTY-NOTICES>`_.
    - `All JIRA issues resolved in 3.2 <http://bit.ly/1XXomL9>`_.
+
+
+.. include:: /includes/extracts/additional-resources-upgrades.rst

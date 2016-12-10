@@ -3,28 +3,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 19:15-0400\n"
-"PO-Revision-Date: 2016-06-26 22:57+0800\n"
+"POT-Creation-Date: 2016-12-08 12:02-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Yingminzhou(csuyingminzhou@gmail.com)"
-"Language-Team: \n"
-"Language: zh_TW\n"
-"X-Generator: Poedit 1.8.8\n"
+"Generated-By: Babel 2.3.4\n"
 
+# 64225a4c106948bfa15bd3d4ff6f0e4d
 #: ../source/core/text-search-operators.txt:3
 msgid "Text Search Operators"
 msgstr "文本检索操作符"
 
-#: ../source/core/text-search-operators.txt:0
+# a20dd7e8626649d18349b5d7d643c580
+#: ../source/core/text-search-operators.txt
 msgid "On this page"
 msgstr "本页内容"
 
-#: ../source/core/text-search-operators.txt:14
+# 3c07cc45bcf14811a7a4f61e288def34
+#: ../source/includes/extracts/views-unsupported-text-search.rst:1
+msgid ":doc:`Views </core/views>` do not support text search."
+msgstr ""
+
+# 5be587429ab24ad3915802c9af138058
+#: ../source/core/text-search-operators.txt:18
 msgid "Query Framework"
 msgstr "查询框架"
 
+# be32fea67c3f4b098b7cc43282aa4099
 #: ../source/includes/fact-use-text-operator.rst:1
 msgid ""
 "Use the :query:`$text` query operator to perform text searches on a "
@@ -33,15 +41,17 @@ msgstr ""
 "使用 :query:`$text`  查询操作符在有 :ref:`文本索引<index-feature-text>`  的"
 "集合上执行文本检索。"
 
+# 0c31a5bb5f3646828549c78a834a17b6
 #: ../source/includes/fact-use-text-operator.rst:4
 msgid ""
 ":query:`$text` will tokenize the search string using whitespace and most "
-"punctuation as delimiters, and perform a logical ``OR`` of all such tokens "
-"in the search string."
+"punctuation as delimiters, and perform a logical ``OR`` of all such "
+"tokens in the search string."
 msgstr ""
 ":query:`$text` 将会使用空格和大部分标点符号作为分隔符对检索字符串进行分词，"
 "然后对检索字符串中所有的分词执行一个逻辑的 ``OR``  操作。"
 
+# a25623afb6c8482a9b74bac89f60c7c4
 #: ../source/includes/fact-use-text-operator.rst:8
 msgid ""
 "For example, you could use the following query to find all stores "
@@ -50,16 +60,18 @@ msgstr ""
 "例如，您可以使用下面的查询找到所有存储着包含\"coffee\"， \"shop\" 以及 "
 "\"java\" 列表中任何词语的文档："
 
-#: ../source/core/text-search-operators.txt:18
+# 88ec4b56410e4e19ac46adfcb380ab10
+#: ../source/core/text-search-operators.txt:22
 msgid ""
 "Use the :projection:`$meta` query operator to obtain and sort by the "
-"relevance score of each matching document. For example, to order a list of "
-"coffee shops in order of relevance, run the following:"
+"relevance score of each matching document. For example, to order a list "
+"of coffee shops in order of relevance, run the following:"
 msgstr ""
 "使用 :projection:`$meta`  查询操作符获得并且根据每个匹配文档的相关分数进行排"
 "序。例如，按照相关度的顺序对一系列咖啡店进行排序，运行下列命令："
 
-#: ../source/core/text-search-operators.txt:29
+# 2c581fc4c1ea4172a656ebd473e71527
+#: ../source/core/text-search-operators.txt:33
 msgid ""
 "For more information on the :query:`$text` and :projection:`$meta` "
 "operators, including restrictions and behavior, see:"
@@ -67,48 +79,55 @@ msgstr ""
 "了解更多关于 :query:`$text` 和   :projection:`$meta`  操作符的更多信息，包括"
 "限制和行为，查阅："
 
-#: ../source/core/text-search-operators.txt:32
+# e128445575f14a56862c497489f65fb5
+#: ../source/core/text-search-operators.txt:36
 msgid ":query:`$text Reference Page <$text>`"
 msgstr ":query:`$文本索引页面 <$text>`"
 
-#: ../source/core/text-search-operators.txt:34
+# bf4a4936245f4dd183d3a6d0fd10cf1f
+#: ../source/core/text-search-operators.txt:38
 msgid ":ref:`$text Query Examples <text-query-examples>`"
 msgstr ":ref:`$文本查询案例<text-query-examples>`"
 
-#: ../source/core/text-search-operators.txt:36
+# f288df78b120441e80b596ad7e25b9af
+#: ../source/core/text-search-operators.txt:40
 msgid ":projection:`$meta` projection operator"
 msgstr ":projection:`$meta`  映射操作符"
 
-#: ../source/core/text-search-operators.txt:40
+# 917cac2d9f7042a1909e0deb835a6299
+#: ../source/core/text-search-operators.txt:44
 msgid "Aggregation Framework"
 msgstr "聚合框架"
 
-#: ../source/core/text-search-operators.txt:42
+# b679e2e929c64d34a6e00bc7560ee3d8
+#: ../source/core/text-search-operators.txt:46
 msgid ""
-"When working with the :doc:`/aggregation` framework, use :pipeline:`$match` "
-"with a :query:`$text` expression to execute a text search query. To sort "
-"the results in order of relevance score,use the :expression:`$meta` "
-"*aggregation operator* in the :pipeline:`$sort` stage [#meta-aggregation]_."
+"When working with the :doc:`/aggregation` framework, use "
+":pipeline:`$match` with a :query:`$text` expression to execute a text "
+"search query. To sort the results in order of relevance score,use the "
+":expression:`$meta` *aggregation operator* in the :pipeline:`$sort` stage"
+" [#meta-aggregation]_."
 msgstr ""
 "当使用  :doc:`/aggregation`  框架时，在  :pipeline:`$match` 中使用  :query:`"
 "$text`  表达式来执行一个文本检索查询，在 :pipeline:`$sort`  阶段使用  :"
 "expression:`$meta`  *聚合操作符* 对结果使用相关性分数进行排序。 "
 
-#: ../source/core/text-search-operators.txt:48
+# 4374cf47e40d454abc59904fdbc8bccd
+#: ../source/core/text-search-operators.txt:52
 msgid ""
-"For more information and examples of text search in the :doc:`/aggregation` "
-"framework, see :doc:`/tutorial/text-search-in-aggregation`."
+"For more information and examples of text search in the "
+":doc:`/aggregation` framework, see :doc:`/tutorial/text-search-in-"
+"aggregation`."
 msgstr ""
 "了解  :doc:`/aggregation` 框架中文本检索案例的更多信息，请查阅   :doc:`/"
 "tutorial/text-search-in-aggregation` 。"
 
+# 1aa692f050b544de92f22c89d52cc031
 #: ../source/includes/fact-meta-operator-disambiguation.rst:1
 msgid ""
 "The behavior and requirements of the :projection:`$meta` projection "
-"operator differ from that of the :expression:`$meta` aggregation operator. "
-"For details on the :expression:`$meta` aggregation operator, see the :"
-"expression:`$meta` aggregation operator reference page."
+"operator differ from that of the :expression:`$meta` aggregation "
+"operator. For details on the :expression:`$meta` aggregation operator, "
+"see the :expression:`$meta` aggregation operator reference page."
 msgstr ""
-" :projection:`$meta`  映射操作符的行为和要求与   :expression:`$meta` 聚合操"
-"作符的不同。了解   :expression:`$meta`  聚合操作符的更多细节，请查阅   :"
-"expression:`$meta` 聚合操作符的参考页面。"
+
