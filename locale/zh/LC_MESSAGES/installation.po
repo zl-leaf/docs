@@ -20,7 +20,7 @@ msgstr "安装MongoDB"
 # 8c75be399cc548ce95443c20daa8d36f
 #: ../source/installation.txt
 msgid "On this page"
-msgstr "在此页面"
+msgstr "本页内容"
 
 # 8bd4b7d10fc84765a9813b0b844d4948
 #: ../source/installation.txt:21
