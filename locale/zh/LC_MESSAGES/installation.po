@@ -20,27 +20,27 @@ msgstr "安装MongoDB"
 # 8c75be399cc548ce95443c20daa8d36f
 #: ../source/installation.txt
 msgid "On this page"
-msgstr ""
+msgstr "在此页面"
 
 # 8bd4b7d10fc84765a9813b0b844d4948
 #: ../source/installation.txt:21
 msgid "This section of the manual contains tutorials on installation of MongoDB."
-msgstr ""
+msgstr 这个章节主要介绍MongoDB安装""
 
 # 15ca490edb99477f9ec865df6b07e943
 #: ../source/installation.txt:25
 msgid "Supported Platforms"
-msgstr ""
+msgstr "支持的平台"
 
 # 2054e90c1aa74f5485b82e807c49302c
 #: ../source/installation.txt:29
 msgid "MongoDB no longer supports 32-bit x86 platforms."
-msgstr ""
+msgstr "MongoDB不再支持32位的x86平台"
 
 # 63206cf1ab8e499288d97efed5af6ccd
 #: ../source/installation.txt:32
 msgid "x86_64"
-msgstr ""
+msgstr "x86_64"
 
 # 690c2b096f034193a45d49d2bdea3a9c
 # afd038d25b124179a19eee9e6ef32a6c
@@ -51,34 +51,34 @@ msgstr ""
 #: ../source/includes/fact-platform-s390x.rst:6
 #: ../source/includes/fact-platform-x86_64.rst:6
 msgid "Platform"
-msgstr ""
+msgstr "平台"
 
 # 63bcbe5e6e8a45b7a4183b9f9a4536d7
 # a1584d426c0a4ab8b953f435c24e32c4
 #: ../source/includes/fact-platform-arm64.rst:7
 #: ../source/includes/fact-platform-x86_64.rst:7
 msgid "3.4 Community & Enterprise"
-msgstr ""
+msgstr "3.4 社区版&企业版"
 
 # 35b49ae6b4524eb3a4a3061d557f8edd
 #: ../source/includes/fact-platform-x86_64.rst:8
 msgid "3.2 Community & Enterprise"
-msgstr ""
+msgstr "3.2 社区版&企业版"
 
 # 8c3adb8055db4331ab02ecc06997f000
 #: ../source/includes/fact-platform-x86_64.rst:9
 msgid "3.0 Community & Enterprise"
-msgstr ""
+msgstr "3.0 社区版&企业版"
 
 # cdbf9c4335ae47b0b5008e6f485a2241
 #: ../source/includes/fact-platform-x86_64.rst:10
 msgid "2.6 Community & Enterprise"
-msgstr ""
+msgstr "2.6 社区版&企业版"
 
 # f3cbf197ff474df985afb98dbea9958e
 #: ../source/includes/fact-platform-x86_64.rst:11
 msgid "Amazon Linux"
-msgstr ""
+msgstr "Amazon Linux"
 
 # 1bfbb4060c23473ba61abf385f249ba5
 # 48404cc6fc4e4b01b90930bdcc9923bf
@@ -194,56 +194,56 @@ msgstr ""
 # 73566dac22994c7692857023c7d9ec8e
 #: ../source/includes/fact-platform-x86_64.rst:16
 msgid "Debian 8"
-msgstr ""
+msgstr "Debian 8"
 
 # 3597baec68604a628fac600953e0f523
 #: ../source/includes/fact-platform-x86_64.rst:21
 msgid "Debian 7"
-msgstr ""
+msgstr "Debian 7"
 
 # 159d734ff9a144278120a734eedb74fd
 #: ../source/includes/fact-platform-x86_64.rst:26
 msgid "Fedora 8+"
-msgstr ""
+msgstr "Fedora 8+"
 
 # 0a8f618993f84aa9b8be709018edfef7
 #: ../source/includes/fact-platform-x86_64.rst:31
 msgid "RHEL/CentOS 6.2+"
-msgstr ""
+msgstr "RHEL/CentOS 6.2+"
 
 # f22a0b9342de4cfb9e59ed449c05a57a
 #: ../source/includes/fact-platform-x86_64.rst:36
 msgid "RHEL/CentOS 7.0+"
-msgstr ""
+msgstr "RHEL/CentOS 7.0+"
 
 # d4d9533e1e054bca85d2d59dcf33c514
 # 8d247745f519423bb00977bc3712b752
 #: ../source/includes/fact-platform-s390x.rst:10
 #: ../source/includes/fact-platform-x86_64.rst:41
 msgid "SLES 11"
-msgstr ""
+msgstr "SLES 11"
 
 # 104cccffb2d14dfd9a53d6c2099ab8ac
 # d507ff2ad84b4ec8ba45a61f96ea3d99
 #: ../source/includes/fact-platform-s390x.rst:12
 #: ../source/includes/fact-platform-x86_64.rst:46
 msgid "SLES 12"
-msgstr ""
+msgstr "SLES 12"
 
 # 2ff96dc419184b30983e92eae331d43f
 #: ../source/includes/fact-platform-x86_64.rst:51
 msgid "Solaris 11 64-bit"
-msgstr ""
+msgstr "Solaris 11 64-bit"
 
 # a30e7f0719eb4160a5d46a794b22832a
 #: ../source/includes/fact-platform-x86_64.rst:56
 msgid "Ubuntu 12.04"
-msgstr ""
+msgstr "Ubuntu 12.04"
 
 # 797bf0a5cce64cc59f79ea662f829cc4
 #: ../source/includes/fact-platform-x86_64.rst:61
 msgid "Ubuntu 14.04"
-msgstr ""
+msgstr "Ubuntu 14.04"
 
 # e88dd490e70a4133b210a24d3bee5896
 # 5bf551c6952b4534836248bf9e0f4c62
@@ -254,147 +254,149 @@ msgstr ""
 #: ../source/includes/fact-platform-s390x.rst:14
 #: ../source/includes/fact-platform-x86_64.rst:66
 msgid "Ubuntu 16.04"
-msgstr ""
+msgstr "Ubuntu 16.04"
 
 # 3f58f48bb8214d31a4eaba38bd8e0436
 #: ../source/includes/fact-platform-x86_64.rst:71
 msgid "Microsoft Azure"
-msgstr ""
+msgstr "Microsoft Azure"
 
 # 58a5b53593334ece8acffd2f7e89167a
 #: ../source/includes/fact-platform-x86_64.rst:76
 msgid "Windows Vista/Server 2008R2/2012+"
-msgstr ""
+msgstr "Windows Vista/Server 2008R2/2012+"
 
 # ddd07fffd1cd4d84a38d99086636af57
 #: ../source/includes/fact-platform-x86_64.rst:81
 msgid "OS X 10.7+"
-msgstr ""
+msgstr "OS X 10.7+"
 
 # ab8f38b8a0bc45a08d3f1dc7a49eae1f
 #: ../source/installation.txt:37
 msgid "ARM64"
-msgstr ""
+msgstr "ARM64"
 
 # 091d737bd5af46dca572aabf37b5ac0e
 #: ../source/installation.txt:42
 msgid "PPC64LE (MongoDB Enterprise Edition)"
-msgstr ""
+msgstr "PPC64LE(MongoDB 企业版)"
 
 # 93b9ebc879174cf996abb408daadcc40
 # e97658ba7c794beda94d62b2a4131086
 #: ../source/includes/fact-platform-ppc64le.rst:7
 #: ../source/includes/fact-platform-s390x.rst:7
 msgid "3.4 Enterprise"
-msgstr ""
+msgstr "3.4企业版"
 
 # 7494939d439e4a7599bb9e250cc71554
 #: ../source/includes/fact-platform-ppc64le.rst:8
 msgid "RHEL/CentOS 7.1"
-msgstr ""
+msgstr "RHEL/CentOS 7.1"
 
 # 40c2c63db41442bc866460d8f9da0595
 #: ../source/installation.txt:47
 msgid "s390x (MongoDB Enterprise Edition)"
-msgstr ""
+msgstr "s390x（MongoDB 企业版）"
 
 # c55c44498d2e42b09e4287d383b8a124
 #: ../source/includes/fact-platform-s390x.rst:8
 msgid "RHEL/CentOS 7.2"
-msgstr ""
+msgstr "RHEL/CentOS 7.2"
 
 # 8bcc96dc681b451fac1feccc4f3b2526
 #: ../source/installation.txt:52
 msgid "Tutorials"
-msgstr ""
+msgstr "指导教程"
 
 # ec1a6704c1934691af589ab37271976a
 #: ../source/installation.txt:55
 msgid "MongoDB Community Edition"
-msgstr ""
+msgstr "MongoDB 社区版"
 
 # c7244454ee2d4a969e22c94d64c24c11
 #: ../source/includes/toc/dfn-list-installation-community.rst:5
 msgid ":doc:`Install on Linux </administration/install-on-linux>`"
-msgstr ""
+msgstr "基于Linux系统安装"
 
 # 3bf7bbe5e42b4ccf86cd1d1f8f052ae1
 #: ../source/includes/toc/dfn-list-installation-community.rst:4
 msgid "Install MongoDB Community Edition and required dependencies on Linux."
-msgstr ""
+msgstr "在Linux系统上安装MongoDB社区版和必要的依赖项"
 
 # 5c9a20c6bca74346ba302fdc94844407
 #: ../source/includes/toc/dfn-list-installation-community.rst:9
 msgid ":doc:`Install on OS X </tutorial/install-mongodb-on-os-x>`"
-msgstr ""
+msgstr ":doc:`基于OS X系统安装 </tutorial/install-mongodb-on-os-x>`"
 
 # 8dfd5fba18fe4228a28e2eddce4a73ce
 #: ../source/includes/toc/dfn-list-installation-community.rst:8
 msgid ""
 "Install MongoDB Community Edition on OS X systems from Homebrew packages "
 "or from MongoDB archives."
-msgstr ""
+msgstr "基于OS X系统从Homebrew包里安装社区版MongoDB"
 
 # e31d1c28fff64835b4dfbfd55f43e7fe
 #: ../source/includes/toc/dfn-list-installation-community.rst:12
 msgid ":doc:`Install on Windows </tutorial/install-mongodb-on-windows>`"
-msgstr ""
+msgstr ":doc:`基于Windows系统安装 </tutorial/install-mongodb-on-windows>`"
 
 # 47d894ee02224eeb80267874ef5f35da
 #: ../source/includes/toc/dfn-list-installation-community.rst:12
 msgid ""
 "Install MongoDB Community Edition on Windows systems and optionally start"
 " MongoDB as a Windows service."
-msgstr ""
+msgstr "基于Windows系统安装社区版MongoDB并且可以选择性作为windows服务启动MongoDB"
 
 # 8f45da8ee28b4b1da8bb00bb42cedd05
 #: ../source/installation.txt:60
 msgid "MongoDB Enterprise"
-msgstr ""
+msgstr "MongoDB 企业版"
 
 # 5eea1e9f0255435e916953c56fa22f86
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:5
 msgid ":doc:`Install on Linux </administration/install-enterprise-linux>`"
-msgstr ""
+msgstr ":doc:`基于Linux系统安装 </administration/install-enterprise-linux>`"
 
 # f715e3042bc141b9bf1d790447342333
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:4
 msgid "Install the official builds of MongoDB Enterprise on Linux-based systems."
-msgstr ""
+msgstr "基于Linux系统安装官方企业版MongoDB"
 
 # 820ff84bd2a5438fb6e6889b4a90c4d3
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:8
 msgid ":doc:`Install on OS X </tutorial/install-mongodb-enterprise-on-os-x>`"
-msgstr ""
+msgstr ":doc:`基于OS X系统安装 </tutorial/install-mongodb-enterprise-on-os-x>`"
 
 # 3f7811a5b2564024b537947579d5798c
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:8
 msgid "Install the official build of MongoDB Enterprise on OS X"
-msgstr ""
+msgstr "基于OS X系统安装官方企业版MongoDB"
 
 # 0046ec6f8a95445aa43f2aa6c9eefb7c
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:11
 msgid ""
 ":doc:`Install on Windows </tutorial/install-mongodb-enterprise-on-"
 "windows>`"
-msgstr ""
+msgstr ":doc:`基于Windows系统安装 </tutorial/install-mongodb-enterprise-on-"
+"windows>`"
 
 # 57ab1487c4b84aabb0ad54a25af8b7b3
 #: ../source/includes/toc/dfn-list-installation-enterprise.rst:11
 msgid "Install MongoDB Enterprise on Windows using the ``.msi`` installer."
-msgstr ""
+msgstr "使用``.msi``安装程序安装Windows系统的企业版MongoDB"
 
 # 5d292bf4569f43dab425ea8880f4279d
 #: ../source/includes/extracts/additional-resources-installation.rst:4
 msgid "Additional Resources"
-msgstr ""
+msgstr "更多资源"
 
 # dc1a5c9d3cb54c1a8b277ab13f1d7287
 #: ../source/includes/extracts/additional-resources-installation.rst:6
 msgid ""
 ":mms-docs:`Install MongoDB using MongoDB Cloud Manager </tutorial"
 "/getting-started?jmp=docs>`"
-msgstr ""
+msgstr "mms-docs:`使用MongoDB 云管理工具安装MongoDB </tutorial"
+"/getting-started?jmp=docs>`"
 
 # 0ea3cd5e559e4c93b9cd75b300fc8e0b
 #: ../source/includes/extracts/additional-resources-installation.rst:7
@@ -403,191 +405,194 @@ msgid ""
 "</tutorial/nav/management>`: Ops Manager is an on-premise solution "
 "available in :products:`MongoDB Enterprise Advanced </mongodb-enterprise-"
 "advanced?jmp=docs>`."
-msgstr ""
+msgstr ":opsmgr:`使用Ops Manager创建一个新的MongoDB 部署"
+"</tutorial/nav/management>`: Ops Manager 是一个基于 "
+:`MongoDB高级企业版 </mongodb-enterprise-"
+"advanced?jmp=docs>`本地部署方案."
 
 # 5cfe3533dfa44b5a8a2d335bb025bea8
 #: ../source/includes/extracts/additional-resources-installation.rst:11
 msgid ":doc:`/crud`"
-msgstr ""
+msgstr ":doc:`/crud`"
 
 # 97db4d47d73c49e39556fa2a496ad117
 #: ../source/includes/extracts/additional-resources-installation.rst:12
 msgid ":doc:`/data-modeling`"
-msgstr ""
+msgstr ":doc:`/data-modeling"
 
 # 4b223a71812b4b228d3b1f0f2465190b
 #: ../source/installation.txt:16
 msgid "tutorials"
-msgstr ""
+msgstr "教程"
 
 # 4b223a71812b4b228d3b1f0f2465190b
 # 79596fa3165a44229123d713f41f7c75
 #: ../source/installation.txt:16 ../source/installation.txt:19
 msgid "installation"
-msgstr ""
+msgstr "安装"
 
 # d8e7741bc8eb45588412170da33dd4b7
 #: ../source/installation.txt:17
 msgid "installation tutorials"
-msgstr ""
+msgstr "安装教程"
 
 # 08fd9ceb09f74d978e491b2d641b658d
 #: ../source/installation.txt:18
 msgid "installation guides"
-msgstr ""
+msgstr "安装指南"
 
 #~ msgid ""
 #~ msgstr ""
 
 #~ msgid "Recommended Operating Systems for Production Deployments"
-#~ msgstr ""
+#~ msgstr "生产环境建议操作系统"
 
 #~ msgid "MongoDB"
-#~ msgstr ""
+#~ msgstr "MongoDB"
 
 #~ msgid "**Amazon Linux**"
-#~ msgstr ""
+#~ msgstr "**Amazon Linux**"
 
 #~ msgid "supported"
-#~ msgstr ""
+#~ msgstr "支持的"
 
 #~ msgid "**Debian 7.1**"
-#~ msgstr ""
+#~ msgstr "**Debian 7.1**"
 
 #~ msgid "**RedHat / CentOS 6.2+**"
-#~ msgstr ""
+#~ msgstr "**RedHat / CentOS 6.2+**"
 
 #~ msgid "**SUSE 11**"
-#~ msgstr ""
+#~ msgstr "**SUSE 11**"
 
 #~ msgid "**Ubuntu LTS 12.04**"
-#~ msgstr ""
+#~ msgstr "**Ubuntu LTS 12.04**"
 
 #~ msgid "**Ubuntu LTS 14.04**"
-#~ msgstr ""
+#~ msgstr "**Ubuntu LTS 14.04**"
 
 #~ msgid "**Windows Server 2012 & 2012 R2**"
-#~ msgstr ""
+#~ msgstr "**Windows Server 2012 & 2012 R2**"
 
 #~ msgid "Other Supported Operating Systems"
-#~ msgstr ""
+#~ msgstr "其他支持的操作系统"
 
 #~ msgid "**Mac OSX 10.6+**"
-#~ msgstr ""
+#~ msgstr **Mac OSX 10.6+**"
 
 #~ msgid "**RedHat / CentOS 5.5+**"
-#~ msgstr ""
+#~ msgstr "**RedHat / CentOS 5.5+**"
 
 #~ msgid "**RedHat / CentOS 5.7+**"
-#~ msgstr ""
+#~ msgstr "**RedHat / CentOS 5.7+**"
 
 #~ msgid "**RedHat / CentOS 7.0+**"
-#~ msgstr ""
+#~ msgstr "**RedHat / CentOS 7.0+**"
 
 #~ msgid "**SmartOS**"
-#~ msgstr ""
+#~ msgstr "**SmartOS**"
 
 #~ msgid "**Solaris 11 / SunOS 5.11 on x86**"
-#~ msgstr ""
+#~ msgstr "**Solaris 11 / SunOS 5.11 on x86**"
 
 #~ msgid "**Windows Server 2008 R2**"
-#~ msgstr ""
+#~ msgstr "**Windows Server 2008 R2**"
 
 #~ msgid "Installation Guides"
-#~ msgstr ""
+#~ msgstr "安装指南"
 
 #~ msgid ":doc:`/administration/install-on-linux`"
-#~ msgstr ""
+#~ msgstr ":doc:`/administration/install-on-linux`"
 
 #~ msgid ":doc:`Install on Red Hat </tutorial/install-mongodb-on-red-hat>`"
-#~ msgstr ""
+#~ msgstr ":doc:`基于Red-Hat系统安装 </tutorial/install-mongodb-on-red-hat>`"
 
 #~ msgid ":doc:`Install on Amazon Linux </tutorial/install-mongodb-on-amazon>`"
-#~ msgstr ""
+#~ msgstr ":doc:`基于Amazon Linux系统安装 </tutorial/install-mongodb-on-amazon>`"
 
 #~ msgid "Install MongoDB on Amazon Linux systems using ``.rpm`` packages."
-#~ msgstr ""
+#~ msgstr "基于Amazon Linux系统使用 ``.rpm`` 包安装MongoDB."
 
 #~ msgid ":doc:`Install on SUSE </tutorial/install-mongodb-on-suse>`"
-#~ msgstr ""
+#~ msgstr ":doc:`基于SUSE系统安装 </tutorial/install-mongodb-on-suse>`"
 
 #~ msgid "Install MongoDB on SUSE Linux systems using ``.rpm`` packages."
-#~ msgstr ""
+#~ msgstr "基于SUSE Linux系统使用 ``.rpm`` 包安装MongoDB."
 
 #~ msgid ":doc:`Install on Ubuntu </tutorial/install-mongodb-on-ubuntu>`"
-#~ msgstr ""
+#~ msgstr ":doc:`基于Ubuntu系统安装 </tutorial/install-mongodb-on-ubuntu>`"
 
 #~ msgid "Install MongoDB on Ubuntu Linux systems using ``.deb`` packages."
-#~ msgstr ""
+#~ msgstr "基于Ubuntu Linux系统使用 ``.deb`` 包安装MongoDB."
 
 #~ msgid ":doc:`Install on Debian </tutorial/install-mongodb-on-debian>`"
-#~ msgstr ""
+#~ msgstr ":doc:`基于Debian系统安装 </tutorial/install-mongodb-on-debian>`"
 
 #~ msgid "Install MongoDB on Debian systems using ``.deb`` packages."
-#~ msgstr ""
+#~ msgstr "基于Debian系统使用 ``.deb`` 包安装MongoDB."
 
 #~ msgid ":doc:`/administration/install-enterprise`"
-#~ msgstr ""
+#~ msgstr ":doc:`/administration/install-enterprise`"
 
 #~ msgid "First Steps with MongoDB"
-#~ msgstr ""
+#~ msgstr "使用MongoDB第一步"
 
 #~ msgid ":doc:`/core/crud`"
-#~ msgstr ""
+#~ msgstr ":doc:`/core/crud`"
 
 #~ msgid "3.2"
-#~ msgstr ""
+#~ msgstr "3.2"
 
 #~ msgid "3.0"
-#~ msgstr ""
+#~ msgstr "3.0"
 
 #~ msgid "2.6"
-#~ msgstr ""
+#~ msgstr "2.6"
 
 #~ msgid "2.4"
-#~ msgstr ""
+#~ msgstr "2.4"
 
 #~ msgid "2.2"
-#~ msgstr ""
+#~ msgstr "2.2"
 
 #~ msgid "Solaris 64-bit"
-#~ msgstr ""
+#~ msgstr "Solaris 64-bit"
 
 #~ msgid "OSX 10.7+"
-#~ msgstr ""
+#~ msgstr "OSX 10.7+"
 
 #~ msgid "Deprecation of 32-bit Versions"
-#~ msgstr ""
+#~ msgstr "32位版本弃用"
 
 #~ msgid ""
 #~ "Starting in MongoDB 3.2, 32-bit binaries"
 #~ " are deprecated and will be "
 #~ "unavailable in future releases."
-#~ msgstr ""
+#~ msgstr "从MongoDB3.2开始32位二进制版本被弃用今后的发布版本中将不会出现"
 
 #~ msgid ""
 #~ "Commercial support is no longer provided"
 #~ " for MongoDB on 32-bit platforms "
 #~ "(Linux and Windows). See :ref:`3.0"
 #~ "-compatibility-platform-support`."
-#~ msgstr ""
+#~ msgstr "针对MongoDB 32位平台的商业支持将不再提供"
 
 #~ msgid ""
 #~ "In addition, the 32-bit versions of "
 #~ "MongoDB have the following limitations:"
-#~ msgstr ""
+#~ msgstr "而且32位版本的MongoDB有如下限制"
 
 #~ msgid ""
 #~ "32-bit versions of MongoDB do **not**"
 #~ " support the WiredTiger storage engine."
-#~ msgstr ""
+#~ msgstr "32位版本MongoDB不支持WireTiger存储引擎"
 
 #~ msgid ""
 #~ "32-bit builds disable :term:`journaling "
 #~ "<journal>` by default because journaling "
 #~ "further limits the maximum amount of "
 #~ "data that the database can store."
-#~ msgstr ""
+#~ msgstr "32位默认禁用了日志(journaling)功能，因为日志功能(journaling)会进一步限制数据库存储数据的大小"
 
 #~ msgid ""
 #~ "When running a 32-bit build of "
@@ -596,7 +601,7 @@ msgstr ""
 #~ " is 2 gigabytes. For this reason, "
 #~ "do not deploy MongoDB to production "
 #~ "on 32-bit machines."
-#~ msgstr ""
+#~ msgstr "当运行32位版本MongoDB时候，包含数据和索引，服务器总共存储的大小只有2G，因此生产环境中不要把MongoDB部署在32位的机器上"
 
 #~ msgid ""
 #~ "If you're running a 64-bit build "
@@ -604,10 +609,9 @@ msgstr ""
 #~ " to storage size. For production "
 #~ "deployments, 64-bit builds and operating "
 #~ "systems are strongly recommended."
-#~ msgstr ""
-
+#~ msgstr "如果运行64位版本MongoDB"，实际上是对于存储大小是没有限制的，对于生产部署强烈建议部署64位MongoDB和操作系统
 #~ msgid ""
 #~ "`Blog Post: 32-bit Limitations "
 #~ "<http://blog.mongodb.org/post/137788967/32-bit-limitations>`_"
-#~ msgstr ""
+#~ msgstr "`博客文章:32位限制<http://blog.mongodb.org/post/137788967/32-bit-limitations>`_"
 
