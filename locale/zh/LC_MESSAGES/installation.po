@@ -407,7 +407,7 @@ msgid ""
 "advanced?jmp=docs>`."
 msgstr ":opsmgr:`使用Ops Manager创建一个新的MongoDB 部署"
 "</tutorial/nav/management>`: Ops Manager 是一个基于 "
-:`MongoDB高级企业版 </mongodb-enterprise-"
+":products:`MongoDB高级企业版 </mongodb-enterprise-"
 "advanced?jmp=docs>`本地部署方案."
 
 # 5cfe3533dfa44b5a8a2d335bb025bea8
