@@ -25,7 +25,7 @@ msgstr "在此页面"
 # 8bd4b7d10fc84765a9813b0b844d4948
 #: ../source/installation.txt:21
 msgid "This section of the manual contains tutorials on installation of MongoDB."
-msgstr 这个章节主要介绍MongoDB安装""
+msgstr "这个章节主要介绍MongoDB安装教程"
 
 # 15ca490edb99477f9ec865df6b07e943
 #: ../source/installation.txt:25
@@ -189,7 +189,7 @@ msgstr "Amazon Linux"
 #: ../source/includes/fact-platform-x86_64.rst:82
 #: ../source/includes/fact-platform-x86_64.rst:83
 msgid "|checkmark|"
-msgstr ""
+msgstr "|checkmark|"
 
 # 73566dac22994c7692857023c7d9ec8e
 #: ../source/includes/fact-platform-x86_64.rst:16
