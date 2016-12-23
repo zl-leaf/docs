@@ -45,7 +45,7 @@ msgid ""
 "Updates at most a single document that match a specified filter even "
 "though multiple documents may match the specified filter."
 msgstr ""
-"更新最多一个匹配指定过滤条件的文档,即使可能有多个文档匹配上指定的过滤条件."
+"即使可能有多个文档通过过滤条件匹配到，但是也最多也只更新一个文档。"
 
 # 3ba6d97c11ef4bf4af2b3e1cf6d8ee76
 #: ../source/tutorial/update-documents.txt:31
@@ -55,7 +55,7 @@ msgstr ":method:`db.collection.updateMany()`"
 # 5a23b2fa717148009b1cf6f544e439e9
 #: ../source/tutorial/update-documents.txt:33
 msgid "Update all documents that match a specified filter."
-msgstr "更新所有匹配上指定过滤条件的文档."
+msgstr "更新所有通过过滤条件匹配到的文档."
 
 # c77382176ab6483c94ae8dd958f4af93
 #: ../source/tutorial/update-documents.txt:37
@@ -68,7 +68,8 @@ msgid ""
 "Replaces at most a single document that match a specified filter even "
 "though multiple documents may match the specified filter."
 msgstr ""
-"替换最多一个匹配指定过滤条件的文档,即使可能有多个文档匹配上指定的过滤条件."
+"即使可能有多个文档通过过滤条件匹配到，但是也最多也只替换一个文档。"
+#"替换最多一个匹配指定过滤条件的文档,即使可能有多个文档匹配上指定的过滤条件."
 
 # 9dda89d93457478dacd73f608eedbdce
 #: ../source/tutorial/update-documents.txt:44
@@ -81,7 +82,7 @@ msgid ""
 "Either updates or replaces a single document that match a specified "
 "filter or updates all documents that match a specified filter."
 msgstr ""
-"更新或者替换一个匹配指定过滤条件的文档或者更新所有匹配指定过滤条件的文档."
+"即使可能有多个文档通过过滤条件匹配到，但是也最多也只更新或者替换一个文档。"
 
 # b155cfeee31341dfa5087e1cb4fca095
 #: ../source/tutorial/update-documents.txt:50
@@ -90,8 +91,8 @@ msgid ""
 "**single** document. To update multiple documents, use the :ref:`multi "
 "<multi-parameter>` option."
 msgstr ""
-"默认情况下, :method:`db.collection.update()` 更新 **一个** 文档.要更新多个文"
-"档,使用  :ref:`multi <multi-parameter>` 选项."
+"默认情况下, :method:`db.collection.update()` 只更新 **一个** 文档。要更新多个文"
+"档，请使用  :ref:`multi <multi-parameter>` 选项。"
 
 # 9064a8ab64184d579722330384612515
 #: ../source/tutorial/update-documents.txt:54
@@ -104,7 +105,7 @@ msgid ""
 "a filter document to determine which documents to update. These :ref:"
 "`filters <document-query-filter>` use the same syntax as read operations:"
 msgstr ""
-"过滤条件文档----决定更些哪些文档.这些 :ref:`filters <document-query-"
+"过滤条件文档----决定更些哪些文档。 这些 :ref:`文档过滤查询 <document-query-"
 "filter>` 使用和读操作相同的语法:"
 
 # 2f40167e06af454abd21c3c9c1afdf0c
@@ -114,9 +115,9 @@ msgid ""
 "equality condition with ``<field>:<value>`` expressions to select all "
 "documents that contain the ``<field>`` with the specified ``<value>``:"
 msgstr ""
-":ref:`query filter document <document-query-filter>` 能够用 ``<field>:"
+":ref:`查询过滤文档 <document-query-filter>` 能够用 ``<field>:"
 "<value>`` 表达式指定相等条件并以此选出所有包含有指定 ``<value>`` 的 "
-"``<field>`` 的文档:"
+"``<field>`` 的文档："
 
 # a6cd91cbc31c41049ad8b2096df5c64b
 #: ../source/includes/extracts/filter-query-operators.rst:2
@@ -125,8 +126,8 @@ msgid ""
 "`query operators <query-selectors>` to specify conditions in the following "
 "form:"
 msgstr ""
-":ref:`query filter document <document-query-filter>` 能以如下的形式使用 :"
-"ref:`query operators <query-selectors>` 来指定条件:"
+":ref:`查询过滤文档 <document-query-filter>` 能使用以下 "
+"ref:`查询操作符 <query-selectors>` 来指定查询条件："
 
 # 93b862a1c5734768b4aaa06b01238944
 #: ../source/tutorial/update-documents.txt:64
@@ -159,8 +160,8 @@ msgid ""
 "document. For more information on MongoDB and atomicity, see :doc:`/core/"
 "write-operations-atomicity`."
 msgstr ""
-"MongoDB中所有的写操作在单一文档层级上是原子的.更多关于MongoDB和原子性的信息,"
-"请参见 :doc:`/core/write-operations-atomicity`."
+"MongoDB中所有的写操作在单一文档层级上是原子的。更多关于MongoDB和原子性的信息，"
+"请参见 :doc:`/core/write-operations-atomicity`。"
 
 # 16d4f8e464c74c9a8fe24567a75426e5
 #: ../source/tutorial/update-documents.txt:81
@@ -174,8 +175,8 @@ msgid ""
 "replace an existing document with a replacement document that has a "
 "different ``_id`` field value."
 msgstr ""
-"一旦设定,你不能更新 ``_id`` 字段的值,你也不能用有不同 ``_id`` 字段值的替换文"
-"档替换已经存在的文档."
+"一旦设定，你不能更新 ``_id`` 字段的值，你也不能用有不同 ``_id`` 字段值的替换文"
+"档来替换已经存在的文档。"
 
 # 08314c8f309a4057842232cc81d0153d
 #: ../source/tutorial/update-documents.txt:88
@@ -189,8 +190,8 @@ msgid ""
 "the allocated space for that document, the update operation relocates the"
 " document on disk."
 msgstr ""
-"当执行更新操作增加了文档大小,超过了为该文档分配的空间时,更新操作会在磁盘上重"
-"定位该文档."
+"当执行更新操作增加的文档大小超过了为该文档分配的空间时。更新操作会在磁盘上重"
+"定位该文档。"
 
 # 1cd8d520c8f34ebabe6743089680d75a
 #: ../source/tutorial/update-documents.txt:95
@@ -202,12 +203,12 @@ msgstr "字段顺序"
 msgid ""
 "MongoDB preserves the order of the document fields following write "
 "operations *except* for the following cases:"
-msgstr "MongoDB遵循写操作保持文档字段顺序,*除了* 如下的情况:"
+msgstr "MongoDB按照文档写入的顺序整理文档字段，*除了* 如下的情况："
 
 # 0382478c4d27467c8f089a844c1a3777
 #: ../source/includes/fact-update-field-order.rst:6
 msgid "The ``_id`` field is always the first field in the document."
-msgstr "``-id`` 字段始终是文档中的第一个字段."
+msgstr "``_id`` 字段始终是文档中的第一个字段。"
 
 # 7f46559cdba840a78aefdd69d0fe57f1
 #: ../source/includes/fact-update-field-order.rst:8
@@ -215,8 +216,8 @@ msgid ""
 "Updates that include :update:`renaming <$rename>` of field names may "
 "result in the reordering of fields in the document."
 msgstr ""
-"更新中包括 :update:`renaming <$rename>` 字段名称 可能会导致文档中的字段重新"
-"排序."
+"包括字段名称的 :update:`renaming <$rename>` 操作可能会导致文档中的字段重新"
+"排序。"
 
 # 0ba9979dfa9f4109955efbb2d324c833
 #: ../source/includes/fact-update-field-order.rst:13
@@ -225,7 +226,7 @@ msgid ""
 "order in a document. Before version 2.6, MongoDB did not actively "
 "preserve the order of the fields in a document."
 msgstr ""
-"在2.6版本开始,MongoDB主动尝试保持在文档中的字段的顺序。 2.6版本之前，MongoDB"
+"从2.6版本开始，MongoDB主动尝试保持字段在文档中的顺序。 2.6版本之前，MongoDB"
 "不会主动保持文档中的字段的顺序。"
 
 # b45b293b8c684117a9101a6d21a85f54
@@ -243,11 +244,11 @@ msgid ""
 " document and inserts it. If there are matching documents, then the "
 "operation modifies or replaces the matching document or documents."
 msgstr ""
-"如果 :method:`db.collection.update()`, :method:`db.collection."
-"updateOne()`, :method:`db.collection.updateMany()`, 或者 :method:`db."
+"如果 :method:`db.collection.update()`，:method:`db.collection."
+"updateOne()`， :method:`db.collection.updateMany()` 或者 :method:`db."
 "collection.replaceOne()` 包含 ``upsert : true``  **并且** 没有文档匹配指定的"
-"过滤器,那么此操作会创建一个新文档并插入它.如果有匹配的文档,那么此操作修改或"
-"替换匹配的单个或多个文档."
+"过滤器，那么此操作会创建一个新文档并插入它。如果有匹配的文档，那么此操作修改或"
+"替换匹配的单个或多个文档。"
 
 # 44da421e1b5d4daba8bd224c1cbfa89f
 #: ../source/tutorial/update-documents.txt:112
@@ -255,6 +256,7 @@ msgid ""
 "For details on the new document created, see the individual reference "
 "pages for the methods."
 msgstr ""
+"更多关于新文档创建的细节，请参考该方法的详细页。"
 
 # a8c6cd5b567c405f98dfab66b7366df2
 #: ../source/tutorial/update-documents.txt:116
@@ -270,10 +272,10 @@ msgid ""
 "then the cursor is automatically iterated up to 20 times [#set-shell-"
 "batch-size]_ to print up to the first 20 documents in the results."
 msgstr ""
-"本页示例使用 :program:`mongo` shell中的 :method:`db.collection.find()` 方法."
-"在  :program:`mongo` shell 中,如果返回的游标没有赋给使用 ``var`` 关键字的变"
-"量,那么该游标会自动迭代20次 [#set-shell-batch-size]_ 来打印出结果中的前20个"
-"文档."
+"本页示例使用 :program:`mongo` shell 中的 :method:`db.collection.find()` 方法。"
+"在  :program:`mongo` shell 中，如果返回的游标没有赋给使用 ``var`` 关键字的变"
+"量，那么该游标会自动迭代20次 [#set-shell-batch-size]_ 来打印出结果中的前20个"
+"文档。"
 
 # 49c11370cad142ae8fd3f3f830288e17
 #: ../source/tutorial/update-documents.txt:125
@@ -281,7 +283,7 @@ msgid ""
 "To populate the ``users`` collection referenced in the examples, run the "
 "following in :program:`mongo` shell:"
 msgstr ""
-"要添加示例中涉及的 ``users`` 集合,在 :program:`mongo` shell中运行如下命令:"
+"要添加示例中涉及的 ``users`` 集合，在 :program:`mongo` shell中运行如下命令:"
 
 # 7094d936e17c4e41adae9657cd5d117d
 #: ../source/tutorial/update-documents.txt:130
@@ -290,8 +292,8 @@ msgid ""
 "``_id`` values, you need to :method:`drop <db.collection.drop()>` the "
 "collection (``db.users.drop()``) before inserting the example documents."
 msgstr ""
-"如果 ``users`` 集合中已经包含了相同  ``_id`` 值的文档,你需要在插入示例文档"
-"前 :method:`drop <db.collection.drop()>` 该集合( ``db.users.drop()`` )."
+"如果 ``users`` 集合中已经包含了相同  ``_id`` 值的文档，你需要在插入示例文档"
+"前 :method:`drop <db.collection.drop()>` 该集合( ``db.users.drop()`` )。"
 
 # 81fc8b63efea4f65b47aed95f8492406
 #: ../source/tutorial/update-documents.txt:228
@@ -305,8 +307,8 @@ msgid ""
 "operators </reference/operator/update>`, such as :update:`$set` to modify"
 " values."
 msgstr ""
-"为了修改文档中的字段,MongoDB 提供了 :manual:`update operators </reference/"
-"operator/update>`,例如用来修改值的 :update:`$set` "
+"为了修改文档中的字段，MongoDB 提供了 :manual:`update operators </reference/"
+"operator/update>`，例如用来修改值的 :update:`$set` "
 
 # a6ca0ec4b04d4e269495c6cc0eebe7f4
 #: ../source/tutorial/update-documents.txt:234
@@ -314,6 +316,7 @@ msgid ""
 "To specify the modification to perform using update operators, use an "
 "update document of the form:"
 msgstr ""
+"为了用update操作执行指定的修改操作，可以使用如下更新文档的形式。"
 
 # dae402f7812f4ad0bd668a7fa53eeb83
 #: ../source/tutorial/update-documents.txt:245
@@ -322,8 +325,9 @@ msgid ""
 "the field does not exist. See the individual :manual:`update operator "
 "</reference/operator/update>` reference."
 msgstr ""
-"如果字段不存在,一些更新操作符,例如  :update:`$set`会创建该字段.请参阅单独"
-"的 :manual:`update operator </reference/operator/update>` 参考."
+"像:update:`$set`这样的更新操作符，如果字段不存在则会创建字段。具体参考手册 :manual:`update operator</reference/operator/update>`"
+# "如果字段不存在,一些更新操作符,例如  :update:`$set`会创建该字段.请参阅单独"
+# "的 :manual:`update operator </reference/operator/update>` 参考."
 
 # c3b6c13c5b324711b83a9dea947c2424
 #: ../source/tutorial/update-documents.txt:252
@@ -339,7 +343,7 @@ msgid ""
 "operation:"
 msgstr ""
 "下面的例子对 ``users`` 集合使用 :method:`db.collection.updateOne()` 方法来更"
-"新匹配过滤条件-- ``favorites.artist`` 等于 ``\"Picasso\"`` 的 *第一个* 文档."
+"新*第一个* 根据 过滤条件``favorites.artist`` 等于 ``\"Picasso\"`` 匹配到的文档"
 "更新操作:"
 
 # fbf6c3c992934387a34f86fdc34e5503
@@ -349,8 +353,8 @@ msgid ""
 "``favorites.food`` field to ``\"pie\"`` and the value of the ``type`` "
 "field to ``3``,"
 msgstr ""
-"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"pie\"``并更"
-"新 ``type`` 字段的值到 ``3``,"
+"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值为 ``\"pie\"`` 并更"
+"新 ``type`` 字段的值为 ``3``,"
 
 # bd6b47a1312c448fb3d876a598bc01f7
 # 555625f2acb1437b8eea5cb750249258
@@ -364,8 +368,8 @@ msgid ""
 "does not exist, :update:`$currentDate` will create the field. See "
 ":update:`$currentDate` for details."
 msgstr ""
-"使用 :update:`$currentDate` 操作符更新 ``lastModified`` 字段的值到当前日期."
-"如果  ``lastModified`` 字段不存在,  :update:`$currentDate` 会创建该字段.详情"
+"使用 :update:`$currentDate` 操作符更新 ``lastModified`` 字段的值到当前日期。"
+"如果  ``lastModified`` 字段不存在， :update:`$currentDate` 会创建该字段。详情"
 "请参阅 :update:`$currentDate`."
 
 # 6a53a6acf63f403c88aa32b99c25bc66
@@ -374,6 +378,7 @@ msgid ""
 "For more information and examples, see "
 ":method:`db.collection.updateOne()`."
 msgstr ""
+"更多信息和例子请参考 :method:`db.collection.updateOne()`。"
 
 # e3b2cd4870c849a5ab7f9cd1dc9237cf
 #: ../source/tutorial/update-documents.txt:287
@@ -389,8 +394,8 @@ msgid ""
 "operation:"
 msgstr ""
 "下面的例子对 ``users`` 集合使用 :method:`db.collection.updateMany()` 方法来"
-"更新所有匹配过滤条件-- ``favorites.artist`` 等于 ``\"Picasso\"`` 的文档.更新"
-"操作:"
+"更新所有根据过滤条件  ``favorites.artist`` 等于 ``\"Picasso\"`` 匹配的文档。"
+"更新操作:"
 
 # df90c47138d146fa8660af4b6ba5583f
 #: ../source/tutorial/update-documents.txt:295
@@ -399,8 +404,8 @@ msgid ""
 "artist`` field to ``\"Pisanello\"`` and the value of the ``type`` field to "
 "``3``,"
 msgstr ""
-"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"Pisanello"
-"\"`` 并更新 ``type`` 字段的值到 ``3``,"
+"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值为 ``\"Pisanello"
+"\"`` 并更新 ``type`` 字段的值为 ``3``,"
 
 # ec7f46e4ca034d95ac164e8861805cb6
 #: ../source/tutorial/update-documents.txt:314
@@ -408,6 +413,7 @@ msgid ""
 "For more information and examples, see "
 ":method:`db.collection.updateMany()`."
 msgstr ""
+"更多信息和例子请参考： :method:`db.collection.updateMany()`。"
 
 # 80195c3bfb5546329e54a080f104c18b
 # 11c282f677884c809060a11a8f517e6f
@@ -425,7 +431,7 @@ msgid ""
 "operation:"
 msgstr ""
 "下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法来更新"
-"匹配过滤条件-- ``favorites.artist`` 等于 ``\"Pisanello\"`` 的 *第一个* 文档."
+"根据过滤条件  ``favorites.artist`` 等于 ``\"Pisanello\"`` 匹配的 *第一个* 文档。"
 "更新操作:"
 
 # 27dc41d350ed4975ad9c38109183c64d
@@ -434,8 +440,8 @@ msgid ""
 "uses the :update:`$set` operator to update the value of the ``favorites."
 "food`` field to ``\"pizza\"`` and the value of the ``type`` field to ``0``,"
 msgstr ""
-"使用 :update:`$set` 操作符更新 ``favorites.food`` 字段的值到 ``\"pizza\"``并"
-"更新 ``type`` 字段的值到 ``0``,"
+"使用 :update:`$set` 操作符把 ``favorites.food`` 字段值更新为 ``\"pizza\"`` 并且"
+"把 ``type`` 字段的值更新为 ``0``。"
 
 # 39306c910b684223b002fe2a51ede782
 #: ../source/tutorial/update-documents.txt:343
@@ -443,8 +449,8 @@ msgid ""
 "To update multiple documents using the :method:`db.collection.update()`, "
 "include the :ref:`multi: true <multi-parameter>` option:"
 msgstr ""
-"使用  :method:`db.collection.update()`并包含 :ref:`multi: true <multi-"
-"parameter>` 选项来更新多个文档:"
+"使用  :method:`db.collection.update()` 并包含 :ref:`multi: true <multi-"
+"parameter>` 选项来更新多个文档："
 
 # c236cae2392946568160cefedb6fbedb
 #: ../source/tutorial/update-documents.txt:359
@@ -460,9 +466,9 @@ msgid ""
 " When replacing a document, the replacement document must consist of only"
 " ``<field> : <value>``."
 msgstr ""
-"要更新除 ``_id`` 字段的文档的整个内容,传递一个全新的文档给:method:`db."
-"collection.replaceOne()` 给 :method:`db.collection.update()`作为第二个参数."
-"当替换文档时,替换文档必须仅仅由  ``<field> : <value>`` 组成."
+"要更新除 ``_id`` 字段外文档的整个内容，传递一个全新的文档给 :method:`db."
+"collection.replaceOne()` 或者 :method:`db.collection.update()` 作为第二个参数。"
+"当替换文档时，替换的文档必须仅仅由  ``<field> : <value>`` 组成."
 
 # f19eb67abc7442c080673367229ca23a
 #: ../source/tutorial/update-documents.txt:367
@@ -472,9 +478,9 @@ msgid ""
 "since the ``_id`` field is immutable; however, if you do include the "
 "``_id`` field, it must have the same value as the current value."
 msgstr ""
-"替换文档可以有不同于原文档的字段.在替换文档中,由于 ``_id`` 字段是不变的,所"
-"以,你可以省略 ``_id`` 字段;不论如何,如果你包含了 ``_id`` 字段,它的值必须和当"
-"前的值相同."
+"替换文档可以有不同于原文档的字段。在替换文档中，由于 ``_id`` 字段是不变的，所"
+"以，你可以省略 ``_id`` 字段；不论如何，如果你包含了 ``_id`` 字段，它的值必须和当"
+"前的值相同。"
 
 # fc9d08a61fef426fb22b05d3bc19164b
 #: ../source/tutorial/update-documents.txt:375
@@ -488,8 +494,8 @@ msgid ""
 "method on the ``users`` collection to replace the *first* document that "
 "matches the filter ``name`` equals ``\"abc\"`` with the new document:"
 msgstr ""
-"下面的例子对 ``users`` 集合使用 :method:`db.collection.replaceOne()` 将匹配"
-"过滤条件--- ``name`` 等于 ``\"sue\"`` 的 *第一个* 文档替换为新文档:"
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.replaceOne()` 方法将通过"
+"过滤条件 ``name`` 等于 ``\"sue\"`` 匹配到的 *第一个* 文档替换为新文档:"
 
 # 8848ce04fcad43d99da26a4382818710
 #: ../source/tutorial/update-documents.txt:391
@@ -498,8 +504,8 @@ msgid ""
 " the ``users`` collection to replace the *first* document that matches "
 "the filter ``name`` equals ``\"xyz\"`` with the new document:"
 msgstr ""
-"下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法将匹配"
-"过滤条件--- ``name`` 等于 ``\"xyz\"`` 的 *第一个* 文档替换为新文档:"
+"下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法将通过"
+"过滤条件 ``name`` 等于 ``\"xyz\"`` 匹配到的 *第一个* 文档替换为新文档:"
 
 # c207a41b5cda4e36906423a6df4c3420
 #: ../source/tutorial/update-documents.txt:403
@@ -509,7 +515,7 @@ msgstr "其他方法"
 # cd328df3945d48609ffffcfad9a1fbfe
 #: ../source/tutorial/update-documents.txt:405
 msgid "The following methods can also update documents from a collection:"
-msgstr ""
+msgstr "如下方法也可以更新一个集合的文档："
 
 # d91d933c4436406abd881a0ddd0d7076
 #: ../source/tutorial/update-documents.txt:407
@@ -524,7 +530,7 @@ msgstr ":method:`db.collection.findOneAndUpdate()`."
 # 1c92c0194d6c4896bce9cda4b5867feb
 #: ../source/tutorial/update-documents.txt:411
 msgid ":method:`db.collection.findAndModify()`."
-msgstr ""
+msgstr ":method:`db.collection.findAndModify()`."
 
 # 4217ec14f7b34efca6e22cbcf23658c1
 #: ../source/tutorial/update-documents.txt:413
@@ -542,6 +548,7 @@ msgid ""
 "See the individual reference pages for the methods for more information "
 "and examples."
 msgstr ""
+"更多信息和例子请参见该方法的参考页。"
 
 # 73f7f23fc1a6444ea95b1748f33ab107
 #: ../source/tutorial/update-documents.txt:421
@@ -555,8 +562,8 @@ msgid ""
 "requested from MongoDB for write operations. For details, see "
 ":doc:`/reference/write-concern`."
 msgstr ""
-"在安全写情况下,你可以指定MongoDB写操作要求的确认级别.详情清参见 :doc:`/"
-"reference/write-concern`."
+"在安全写情况下,你可以指定MongoDB写操作要求的确认级别。详情请参见 :doc:`/"
+"reference/write-concern`。"
 
 # 57213845c3234555ae3fa2f19aad617a
 #: ../source/includes/footnote-set-shell-batch-size.rst:1
@@ -565,6 +572,7 @@ msgid ""
 "iteration from the default value ``20``. See :ref:`mongo-shell-executing-"
 "queries` for more information."
 msgstr ""
+"你可以使用``DBQuery.shellBatchSize`` 来改变迭代结果的数量，默认是展示20条记录。 更多信息请参考 :ref:`mongo-shell-executing-queries`。"
 
 #~ msgid ""
 #~ "The following example uses the "
