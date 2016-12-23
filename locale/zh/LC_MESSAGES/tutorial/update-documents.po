@@ -12,6 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
+
 # 960baaad1449401fa2fdf91365e7ca2e
 #: ../source/tutorial/update-documents.txt:3
 msgid "Update Documents"
@@ -506,6 +507,8 @@ msgid ""
 msgstr ""
 "下面的例子对 ``users`` 集合使用 :method:`db.collection.update()` 方法将通过"
 "过滤条件 ``name`` 等于 ``\"xyz\"`` 匹配到的 *第一个* 文档替换为新文档:"
+
+
 
 # c207a41b5cda4e36906423a6df4c3420
 #: ../source/tutorial/update-documents.txt:403
