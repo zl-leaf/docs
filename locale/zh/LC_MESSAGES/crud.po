@@ -28,8 +28,7 @@ msgid ""
 "CRUD operations *create*, *read*, *update*, and *delete* :ref:`documents "
 "<bson-document-format>`."
 msgstr ""
-"CRUD操作就是 *创建*，*读取*，*更新*，*删除*  :ref:`documents <bson-document-"
-"format>`。"
+"CRUD操作就是 *创建*，*读取*，*更新*，*删除*  :ref:`文档 documents <bson-document-format>`。"
 
 # 9fbf2622d0c94593bb90c8a1fad4b1e0
 #: ../source/crud.txt:17
@@ -43,9 +42,8 @@ msgid ""
 "format>` to a :ref:`collection <collections>`. If the collection does not"
 " currently exist, insert operations will create the collection."
 msgstr ""
-"创建或插入操作即向  :ref:`collection <collections>` 添加新的  :ref:"
-"`documents <bson-document-format>`。如果插入时集合不存在，插入操作会创建该集"
-"合。"
+"创建或插入操作即向  :ref:`集合 collection <collections>` 添加新的  :ref:"
+"`文档 documents <bson-document-format>`。如果插入时集合不存在，插入操作会创建该集合。"
 
 # 27db1d48d71645d89d43de56228d5d6d
 #: ../source/crud.txt:24
@@ -76,8 +74,8 @@ msgid ""
 "write operations in MongoDB are :doc:`atomic </core/write-operations-"
 "atomicity>` on the level of a single :doc:`document </core/document>`."
 msgstr ""
-"在MongoDB中，插入操作作用于单个 :term:`collection` 。MongoDB中所有的写操作在单"
-"个  :doc:`document </core/document>` 层级上是 :doc:`atomic </core/write-"
+"在MongoDB中，插入操作作用于单个 :term:`集合collection` 。MongoDB中所有的写操作在单"
+"个  :doc:`集合 document </core/document>` 的层级上是 :doc:`原子性 </core/write-"
 "operations-atomicity>`。"
 
 # 58c10675808c47b399509b07d1f43130
@@ -98,9 +96,8 @@ msgid ""
 " MongoDB provides the following methods to read documents from a "
 "collection:"
 msgstr ""
-"读操作获取 :ref:`collection <collections>` 中的 :ref:`documents <bson-"
-"document-format>` ;例查询一个集合中的文档。MongoDB提供了如下方法从集合中读取"
-"文档:"
+"读操作获取 :ref:`集合 collection <collections>` 中的 :ref:`文档 documents <bson-"
+"document-format>` ;例如查询一个集合中的文档。MongoDB提供了如下方法从集合中读取文档:"
 
 # 5ced4ee6d98246efa2b1dedfcb1735bc
 #: ../source/crud.txt:52
@@ -113,8 +110,8 @@ msgid ""
 "You can specify :ref:`query filters or criteria <read-operations-query-"
 "argument>` that identify the documents to return."
 msgstr ""
-"你可以指定 :ref:`query filters or criteria <read-operations-query-"
-"argument>` 以找到返回的文档."
+"你可以指定 :ref:`条件或者过滤器 <read-operations-query-"
+"argument>` 找到指定的文档."
 
 # bd60bc4f0e4e4bc7951b109e45ced1ae
 #: ../source/crud.txt:59
@@ -133,7 +130,7 @@ msgid ""
 " in a :ref:`collection <collections>`. MongoDB provides the following "
 "methods to update documents of a collection:"
 msgstr ""
-"更新操作修改 :ref:`collection <collections>` 中已经存在的 :ref:`documents "
+"更新操作修改 :ref:`集合 collection <collections>` 中已经存在的 :ref:`文档 documents "
 "<bson-document-format>`。MongoDB提供了以下方法去更新集合中的文档:"
 
 # b31e1972e0d1483a99bb7dde1dda8ef5
@@ -166,7 +163,7 @@ msgid ""
 "atomicity>` on the level of a single document."
 msgstr ""
 "在MongoDB中,更新操作作用于单个集合。MongoDB中所有的写操作在单个  :doc:"
-"`document </core/document>` 层级上是 :doc:`atomic </core/write-operations-"
+"`文档 document </core/document>` 层级上是 :doc:`原子性的 </core/write-operations-"
 "atomicity>`."
 
 # 893bb987de744a188d4601540802b423
@@ -176,8 +173,8 @@ msgid ""
 "update. These :ref:`filters <document-query-filter>` use the same syntax "
 "as read operations."
 msgstr ""
-"你可以指定条件或过滤器来找到要更新的文档。这些 :ref:`filters <document-query-"
-"filter>` 使用与读操作一样的语法。"
+"你可以指定条件或过滤器来找到要更新的文档。这些 :ref:`过滤器  <document-query-"
+"filter>` 的使用与读操作一样的语法。"
 
 # a85cf2e504c34127a78fe0e6260b0a6f
 #: ../source/crud.txt:86
@@ -219,7 +216,7 @@ msgid ""
 "atomicity>` on the level of a single document."
 msgstr ""
 "在MongoDB中。删除作作用于单个集合。MongoDB中所有的写操作在单个  :doc:"
-"`document </core/document>` 层级上是 :doc:`atomic </core/write-operations-"
+"`文档 document </core/document>` 层级上是 :doc:`原子性的 </core/write-operations-"
 "atomicity>`。"
 
 # 6cb21985038645eba46f304249f0eec4
@@ -229,8 +226,8 @@ msgid ""
 "remove. These :ref:`filters <document-query-filter>` use the same syntax "
 "as read operations."
 msgstr ""
-"你可以指定条件或过滤器来找到要删除的文档。这些 :ref:`filters <document-query-"
-"filter>` 使用与读操作一样的语法。"
+"你可以指定条件或过滤器来找到要删除的文档。这些 :ref:`过滤器 <document-query-"
+"filter>` 的使用与读操作一样的语法。"
 
 # 21f7eb774b7c46739cafb72579201dd6
 #: ../source/crud.txt:110
