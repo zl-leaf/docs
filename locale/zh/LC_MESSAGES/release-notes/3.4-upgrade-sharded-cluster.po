@@ -4,75 +4,84 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-03 22:35+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 # ac75fb3fad86429e99f93485cf273a6b
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:5
 msgid "Upgrade a Sharded Cluster to 3.4"
-msgstr ""
+msgstr "升级分片集群到 3.4"
 
 # 5527e6c397c24b9aabe1e1df7d31feb3
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # 512cc4ca1bbe445bbaba0ee78bd7d396
 #: ../source/includes/admonition-power-ubuntu-restriction.rst:7
 msgid "3.4 Incompatibility with Ubuntu 16.04 on IBM Power Systems"
-msgstr ""
+msgstr "3.4 与IBM Power 系统上 Ubuntu 16.04 的不兼容性"
 
 # af070f534949480698f80a6d0a8f49bc
 #: ../source/includes/admonition-power-ubuntu-restriction.rst:4
 msgid ""
-"Due to a `lock elision bug in glibc "
-"<https://bugs.launchpad.net/ubuntu/+source/glibc/+bug/1640518>`_, if you "
-"are running on Ubuntu 16.04 on IBM Power Systems, do not use MongoDB 3.4 "
-"in production until the ``glibc`` version with the fix becomes available "
-"and you have installed that version."
+"Due to a `lock elision bug in glibc <https://bugs.launchpad.net/ubuntu/"
+"+source/glibc/+bug/1640518>`_, if you are running on Ubuntu 16.04 on IBM "
+"Power Systems, do not use MongoDB 3.4 in production until the ``glibc`` "
+"version with the fix becomes available and you have installed that "
+"version."
 msgstr ""
+"由于 `lock elision bug in glibc <https://bugs.launchpad.net/ubuntu/"
+"+source/glibc/+bug/1640518>`_ ，如果你在IBM Power系统上运行 Ubuntu "
+"16.04， 请不要在生产中使用MongoDB 3.4，直到修改后的  ``glibc`` 版本发布并"
+"且您已经安装了该版本。"
 
 # cd3537aa147c421b898929d2c24fc3ed
 #: ../source/includes/upgrade-copy.rst:3
 msgid ""
 "Before you attempt any upgrade, please familiarize yourself with the "
 "content of this document."
-msgstr ""
+msgstr "在您尝试任意升级之前，请熟悉本文档的内容。"
 
 # ed55dfb36d1b4e89b1dffd9ad9aaeecb
 #: ../source/includes/upgrade-copy.rst:6
 msgid ""
 "If you need guidance on upgrading to |newversion|, `MongoDB offers major "
-"version upgrade services "
-"<https://www.mongodb.com/products/consulting?jmp=docs>`_ to help ensure a"
-" smooth transition without interruption to your MongoDB application."
+"version upgrade services <https://www.mongodb.com/products/consulting?"
+"jmp=docs>`_ to help ensure a smooth transition without interruption to "
+"your MongoDB application."
 msgstr ""
+"如果你需要升级到  |newversion| 的指导， `MongoDB offers major version "
+"upgrade services <https://www.mongodb.com/products/consulting?"
+"jmp=docs>`_  可以在没有任何中断MongoDB应用的情况下，帮助您保证一个平稳的过"
+"渡。"
 
 # a1fcd105192a4b0aa9c310684b220082
 #: ../source/includes/upgrade-copy.rst:12
 msgid "Upgrade Recommendations and Checklists"
-msgstr ""
+msgstr "升级建议及检查列表"
 
 # 84de0d83d5e546ae9806a9fa1a38490a
 #: ../source/includes/upgrade-copy.rst:14
 msgid "When upgrading, consider the following:"
-msgstr ""
+msgstr "在升级的时候，考虑下列内容："
 
 # 852d6c2b30ae4438afecb26ea77e1cc7
 #: ../source/includes/upgrade-copy.rst:17
 msgid "Upgrade Version Path"
-msgstr ""
+msgstr "升级版本路径"
 
 # 0315a31fd2c64d70b9f4604c922d1953
 #: ../source/includes/upgrade-copy.rst:19
@@ -80,29 +89,36 @@ msgid ""
 "To upgrade an existing MongoDB deployment to |newversion|, you must be "
 "running a |oldseries| release."
 msgstr ""
+"如果想将现有的MongoDB部署升级到  |newversion| ，您必须运行在 |oldseries|  "
+"版本上。"
 
 # 064c2780211d4e6bb489c612f06696c1
 #: ../source/includes/upgrade-copy.rst:22
 msgid ""
 "To upgrade from a version earlier than the |oldseries|, you must "
-"successively upgrade major releases until you have upgraded to "
-"|oldseries|. For example, if you are running a |olderseries|, you must "
+"successively upgrade major releases until you have upgraded to |"
+"oldseries|. For example, if you are running a |olderseries|, you must "
 "upgrade first to |upgradefirst| *before* you can upgrade to |newversion|."
 msgstr ""
+"为了从早于 |oldseries|  的版本中进行升级，您必须依次升级主要版本直到您升级"
+"到 |oldseries| 。 例如，如果你正在运行一个 |oldseries| ，在升级到 |"
+"newseries| *之前* ，您必须首先升级到   |upgradefirst|  。"
 
 # 20bc7f4c36954bf4a5fcaa83be8b6812
 #: ../source/includes/upgrade-copy.rst:28
 msgid "Preparedness"
-msgstr ""
+msgstr "准备工作"
 
 # b032ae4528d54f1bbacf711992e9ba8e
 #: ../source/includes/upgrade-copy.rst:30
 msgid ""
-"Before beginning your upgrade, see the |compatibility| document to ensure"
-" that your applications and deployments are compatible with MongoDB "
-"|newversion|. Resolve the incompatibilities in your deployment before "
+"Before beginning your upgrade, see the |compatibility| document to ensure "
+"that your applications and deployments are compatible with MongoDB |"
+"newversion|. Resolve the incompatibilities in your deployment before "
 "starting the upgrade."
 msgstr ""
+"在开始您的升级之前，查阅  |compatibility|  文档以保证您的应用和部署于 "
+"MongoDB |newversion| 兼容。在开始升级之前，解决部署中的不兼容性。"
 
 # 172624cf6dde4d5baedcc61315673489
 #: ../source/includes/upgrade-copy.rst:35
@@ -110,23 +126,27 @@ msgid ""
 "Before upgrading MongoDB, always test your application in a staging "
 "environment before deploying the upgrade to your production environment."
 msgstr ""
+"在升级MongoDB之前，首先在测试环境中测试您的应用，再将升级部署到您的生产环"
+"境。"
 
 # 064f1edc1406495a835d6c9f60bfcdf1
 #: ../source/includes/upgrade-copy.rst:40
 msgid "Downgrade Consideration"
-msgstr ""
+msgstr "降级考量"
 
 # 9bb1e7dace184816a393ec15bf99a3f6
 #: ../source/includes/3.4-downgrade-path.rst:1
 msgid ""
-"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version."
-" You can only downgrade to a 3.2.8 or later version."
+"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version. "
+"You can only downgrade to a 3.2.8 or later version."
 msgstr ""
+"一旦升级到 3.4，您不能降级到 3.2.7 或者是之前的版本。您只可以降级到 3.2.8 "
+"或之后的版本。"
 
 # 8cd7bc12a98243f0b68798833cf13ec1
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:21
 msgid "``mongos`` and Earlier Versions of ``mongod`` Instances"
-msgstr ""
+msgstr "``mongos``  和之前版本的  ``mongod``  实例"
 
 # 955870767ee343c4a64b078f7f34b570
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:23
@@ -134,58 +154,68 @@ msgid ""
 "Version |newversion| :program:`mongos` instances cannot connect to "
 "earlier versions of :program:`mongod` instances."
 msgstr ""
+"|newversion| 版本的 :program:`mongos` 实例不能连接到之前版本的 :program:"
+"`mongod`  实例。"
 
 # a7e8c87929e84b258a9df60917383053
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:26
 msgid ""
 "The 3.2 and earlier :program:`mongo` shell is not compatible with 3.4 "
 "clusters."
-msgstr ""
+msgstr "3.2 和之前的 :program:`mongo`  shell与3.4 集群不兼容。"
 
 # b781391bde494fd590e40552a0ad46e7
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:30
 msgid "Prerequisites"
-msgstr ""
+msgstr "必要准备"
 
 # 927ddc33f52946b4a4ce6b899d50e7c8
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:36
 msgid "Version |oldversion| or Greater"
-msgstr ""
+msgstr " |oldversion| 版本或更高"
 
 # 632ae65cf3074a62bc2f5c9864fe7d05
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:33
 msgid ""
 "To upgrade a sharded cluster to |newversion|, **all** members of the "
-"cluster must be at least version |oldversion|. The upgrade process checks"
-" all components of the cluster and will produce warnings if any component"
-" is running version earlier than |oldversion|."
+"cluster must be at least version |oldversion|. The upgrade process checks "
+"all components of the cluster and will produce warnings if any component "
+"is running version earlier than |oldversion|."
 msgstr ""
+"为了将 分片集群升级到  |newversion| ， **所有** 集群成员必须至少是 |"
+"oldversion| 版本。 升级流程检查集群的所有组件，如果任何组件运行在早于 |"
+"oldversion| 版本的MongoDB之上，将会产生警报。"
 
 # b15453cc29d04adc92bc866fb991a1c8
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:45
 msgid "Config Server as Replica Set (CSRS)"
-msgstr ""
+msgstr "配置服务器为复制集 （CSRS）"
 
 # 47eb0dd1e29541f1b5587e4752946f01
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:39
 msgid ""
-"Starting in |newversion|, the use of the deprecated mirrored "
-":program:`mongod` instances as config servers (SCCC) is no longer "
-"supported. Before you can upgrade your sharded clusters to 3.4, you must "
-"convert your config servers from SCCC to a replica set (CSRS)."
+"Starting in |newversion|, the use of the deprecated mirrored :program:"
+"`mongod` instances as config servers (SCCC) is no longer supported. "
+"Before you can upgrade your sharded clusters to 3.4, you must convert "
+"your config servers from SCCC to a replica set (CSRS)."
 msgstr ""
+"从  |newversion| 开始，不再支持 镜像  :program:`mongod`  实例作为配置服务"
+"器（SCCC）的使用。 在您将复制集升级到 3.4 之前，您必须将您的配置服务器从"
+"SCCC转化到复制集 （CSRS）。"
 
 # 52edf8ff9e334c7da02f173aafc6db7e
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:44
 msgid ""
-"To convert your config servers from SCCC to CSRS, see :doc:`/tutorial"
-"/upgrade-config-servers-to-replica-set`."
+"To convert your config servers from SCCC to CSRS, see :doc:`/tutorial/"
+"upgrade-config-servers-to-replica-set`."
 msgstr ""
+"为了将您的配置服务器从SCCC转化到CSRS，请查阅  :doc:`/tutorial/upgrade-"
+"config-servers-to-replica-set` 。"
 
 # 14f0b0841bc44859916ed52d3dc7b4bf
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:70
 msgid "Stop Metadata Changes during the Upgrade"
-msgstr ""
+msgstr "在升级的过程中停止元数据的修改"
 
 # a706b4d8ee2044388ac17538abce89dd
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:48
@@ -194,46 +224,48 @@ msgid ""
 "collection metadata. For example, during the upgrade, do **not** perform "
 "any of the following operations:"
 msgstr ""
+"在升级过程中，确保客户端不会修改客户端元数据。例如，在升级过程中，千万 **"
+"不要** 执行以下任何操作："
 
 # 81935cb2c07f45f29d94e4b5cfc03237
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:52
 msgid ":method:`sh.enableSharding()`"
-msgstr ""
+msgstr ":method:`sh.enableSharding()`"
 
 # cc7062b702804a1b872c7be7e661c2c6
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:54
 msgid ":method:`sh.shardCollection()`"
-msgstr ""
+msgstr ":method:`sh.shardCollection()`"
 
 # debdd68feab846dca3d9f919d58d98a5
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:56
 msgid ":method:`sh.addShard()`"
-msgstr ""
+msgstr ":method:`sh.addShard()`"
 
 # 48a92722524f49cba579cb579ed60fbb
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:58
 msgid ":method:`db.createCollection()`"
-msgstr ""
+msgstr ":method:`db.createCollection()`"
 
 # 1ee8c08ad6754036989fa86d7c18551f
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:60
 msgid ":method:`db.collection.drop()`"
-msgstr ""
+msgstr ":method:`db.collection.drop()`"
 
 # 3071f37280de4b71aabf6cb522254eb2
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:62
 msgid ":method:`db.dropDatabase()`"
-msgstr ""
+msgstr ":method:`db.dropDatabase()`"
 
 # baaa573bc471495696d95148f2dc5fba
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:64
 msgid "any operation that creates a database"
-msgstr ""
+msgstr "任何创建数据库的操作"
 
 # 6fe4abd1fbba4214bf9a6c65d3d0dafa
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:66
 msgid "any other operation that modifies the cluster metadata in any way."
-msgstr ""
+msgstr "任何以任何方式修改集群元数据的操作"
 
 # 4ea317f0486b4c2e8f813071bb1819a5
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:68
@@ -242,16 +274,19 @@ msgid ""
 "commands. Not all commands on the :doc:`/reference/sharding` page modify "
 "the cluster metadata."
 msgstr ""
+"查阅 :doc:`/reference/sharding`  了解分片命令的完整列表。并不是  :doc:`/"
+"reference/sharding`  页面上的所有命令都会修改集群元数据。"
 
 # 3e876063dd2142f0b02cc594495d7f1b
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:72
 msgid ":ref:`Disable the balancer <sharding-balancing-disable-temporarily>`"
 msgstr ""
+":ref:`Disable the balancer <sharding-balancing-disable-temporarily>`"
 
 # ab09f7e430954c1991f04cb35f499e2d
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:76
 msgid "Back up the ``config`` Database"
-msgstr ""
+msgstr "备份 ``config``  数据库"
 
 # 113203e5581d4537a52206a89d83cac0
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:75
@@ -259,16 +294,18 @@ msgid ""
 "*Optional but Recommended.* As a precaution, take a backup of the "
 "``config`` database *before* upgrading the sharded cluster."
 msgstr ""
+"*非必要，但推荐*。作为预防措施，在升级 分片集群 *之前* , 生成一个 ``配置"
+"`` 数据库的备份。"
 
 # 8f31fad221b84261bee5ad8c52796238
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:79
 msgid "Download |newversion| Binaries"
-msgstr ""
+msgstr "下载 |newversion|  二进制文件"
 
 # d69825cae46a49ba8cc7dd057fd024ad
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:82
 msgid "Use Package Manager"
-msgstr ""
+msgstr "通过包管理工具"
 
 # 8b694c2c8a8a482ea078b34f54290c32
 #: ../source/includes/fact-upgrade-with-package-mgr.rst:1
@@ -277,20 +314,25 @@ msgid ""
 "``zypper`` repositories, you should upgrade to |newversion| using your "
 "package manager."
 msgstr ""
+"如果您从 MongoDB  ``apt`` ，  ``yum`` ， ``dnf`` ， 或者  ``zypper``  资源"
+"库安装的MongoDB，您应该使用包管理工具升级到  |newversion|  。"
 
 # 97d2e7c3728f4348836a9e51e2760e58
 #: ../source/includes/fact-upgrade-with-package-mgr.rst:5
 msgid ""
-"Follow the appropriate :doc:`installation instructions </administration"
-"/install-on-linux>` for your Linux system. This will involve adding a "
+"Follow the appropriate :doc:`installation instructions </administration/"
+"install-on-linux>` for your Linux system. This will involve adding a "
 "repository for the new release, then performing the actual upgrade "
 "process."
 msgstr ""
+"在您的Linux系统中遵循正确的  :doc:`installation instructions </"
+"administration/install-on-linux>`  。包括了：增加新版本的资料库，然后执行"
+"真正的升级流程。"
 
 # e000b894aade466aa9309aef63a44618
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:87
 msgid "Download |newversion| Binaries Manually"
-msgstr ""
+msgstr "手动 下载  |newversion|  二进制文件"
 
 # 5970ad6647d340f8ad08d105f9bdf019
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:89
@@ -299,29 +341,31 @@ msgid ""
 "manually download the MongoDB binaries from the `MongoDB Download Center "
 "<https://www.mongodb.com/download-center?jmp=docs>`_."
 msgstr ""
+"如果您不是使用包管理工具安装MongoDB，您可以从 MongoDB Download Center "
+"<https://www.mongodb.com/download-center?jmp=docs>`_  手动下载MongoDB二进"
+"制文件。"
 
 # c4f336f3e0aa4be0b42e6d0518b7ef87
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:93
 msgid "See :doc:`/installation` for more information."
-msgstr ""
+msgstr "查阅  :doc:`/installation` 了解更多信息。"
 
 # 3fa3547ba41243adb1aa9515c9c3adec
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:96
 msgid "Upgrade Process"
-msgstr ""
+msgstr "升级流程"
 
 # 39812f4cee9f4546938ebc2786e08c43
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:101
 msgid "Additional Upgrade Procedures"
-msgstr ""
+msgstr "其它升级流程"
 
 # d53fd393d9534caba81c0bdf06cd3234
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:103
 msgid "To upgrade a standalone, see :ref:`3.4-upgrade-standalone`."
-msgstr ""
+msgstr "如果需要升级复制集，请查阅  :ref:`3.4-upgrade-replica-set` 。"
 
 # ae91099cfc4a448ba4a1c858b7599870
 #: ../source/release-notes/3.4-upgrade-sharded-cluster.txt:104
 msgid "To upgrade a replica set, see :ref:`3.4-upgrade-replica-set`."
-msgstr ""
-
+msgstr "如果需要升级复制集，请查阅  :ref:`3.4-upgrade-replica-set` 。"
