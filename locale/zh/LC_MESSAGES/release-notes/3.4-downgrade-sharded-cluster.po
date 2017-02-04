@@ -4,78 +4,85 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-04 14:18+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.8\n"
+"Language: zh_CN\n"
 
 # 5c0793bfc64441a3a072997b0b76747a
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:3
 msgid "Downgrade 3.4 Sharded Cluster to 3.2"
-msgstr ""
+msgstr "降级 3.4 分片集群到 3.2"
 
 # 64a2ad002b254430a8c4e5399872c978
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # 6e2d05c6fcb542a080d093f526c9cc75
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:13
 msgid ""
-"Before you attempt any downgrade, familiarize yourself with the content "
-"of this document."
-msgstr ""
+"Before you attempt any downgrade, familiarize yourself with the content of this "
+"document."
+msgstr "在您尝试任何降级之前，请熟悉本文档的内容。"
 
 # dffa5e35493f4452ae52080dede1c5cd
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:17
 msgid "Downgrade Path"
-msgstr ""
+msgstr "降级路径"
 
 # e83a70242d344810ae172b4136b18ce3
 #: ../source/includes/3.4-downgrade-path.rst:1
 msgid ""
-"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version."
-" You can only downgrade to a 3.2.8 or later version."
+"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version. You "
+"can only downgrade to a 3.2.8 or later version."
 msgstr ""
+"一旦升级到3.4，您就不能降级到 3.2.7 或者之前的版本。您只可以降级到 3.2.8 或者之"
+"后的版本。"
 
 # 5ae6dacb87474040877bc95a23b6cd99
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:22
 msgid "Create Backup"
-msgstr ""
+msgstr "创建备份"
 
 # c585eb15279e4d43ac67f7ac17c347ed
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:24
 msgid "*Optional but Recommended.*  Create a backup of your database."
-msgstr ""
+msgstr "*可选，但是推荐。*  创建您数据库的备份。"
 
 # 1fed869397184df2a0a162932efe713b
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:27
 msgid "Prerequisites"
-msgstr ""
+msgstr "预先准备"
 
 # 17d14688be6e48fda72cf3ff9e396cfc
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:29
 msgid ""
-"Before downgrading the binaries, you must downgrade the feature "
-"compatibility version and remove any :ref:`3.4 features incompatible <3.4"
-"-compatibility-enabled>` with 3.2 or earlier versions as outlined below. "
-"These steps are necessary only if ``featureCompatibilityVersion`` has "
-"ever been set to ``\"3.4\"``."
+"Before downgrading the binaries, you must downgrade the feature compatibility "
+"version and remove any :ref:`3.4 features incompatible <3.4-compatibility-"
+"enabled>` with 3.2 or earlier versions as outlined below. These steps are "
+"necessary only if ``featureCompatibilityVersion`` has ever been set to ``"
+"\"3.4\"``."
 msgstr ""
+"在降级二进制之前，您必须降级功能兼容版本，并且删除所有与 3.2 或者之前版本  :ref:"
+"`3.4 features incompatible <3.4-compatibility-enabled>`  ，如下面列出的功能所"
+"示。仅在 ``featureCompatibilityVersion`` 被设置为 ``\"3.4\"`` 的情况下。这些步骤"
+"是必要的。"
 
 # a5a9dd6e0c994c70a4c5f46747f0499c
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:42
 msgid "1. Downgrade Feature Compatibility Version"
-msgstr ""
+msgstr "1. 降级功能兼容性版本"
 
 # 37b3eb6fa23e49f8b11757fb863e835f
 # 85204ca170aa4ffaac872629b4ea47b1
@@ -88,231 +95,258 @@ msgstr ""
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:74
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:89
 msgid "Connect a :program:`mongo` shell to the :program:`mongos` instance."
-msgstr ""
+msgstr "连接一个  :program:`mongo` shell 到 :program:`mongod`  实例。"
 
 # 7360f9fd4ed243cabaa2baabe08fe6af
 #: ../source/includes/extracts/3.4-downgrade-feature-compatibility.rst:2
 msgid "Downgrade the ``featureCompatibilityVersion`` to ``\"3.2\"``."
-msgstr ""
+msgstr "将  ``featureCompatibilityVersion``  降级到  ``\"3.2\"`` 。"
 
 # e2adaa4f72dc4b0885a4b51ffa997e2d
 #: ../source/includes/extracts/3.4-downgrade-feature-compatibility.rst:8
 msgid ""
-"This command must perform writes to an internal system collection. If for"
-" any reason the command does not complete successfully, you can safely "
-"retry the command on the |target| as the operation is idempotent."
+"This command must perform writes to an internal system collection. If for any "
+"reason the command does not complete successfully, you can safely retry the "
+"command on the |target| as the operation is idempotent."
 msgstr ""
+"这个命令必须执行写操作到内部系统集合。如果由于任何原因该命令没有成功完整执行，由"
+"于该操作是幂等的，您可以安全地在  |target| 上重试该命令。"
 
 # 625291a85b0144b48f0bb156b0146e49
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:49
 msgid "2. Remove Views"
-msgstr ""
+msgstr "2. 删除视图"
 
 # 0b3f9d4d590644ff995d2044856c60f6
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:51
 msgid ""
-"If you have defined any views, drop the views before downgrading MongoDB "
-"3.4 to 3.2."
-msgstr ""
+"If you have defined any views, drop the views before downgrading MongoDB 3.4 to "
+"3.2."
+msgstr "如果您之前定义过任何视图，在将MongoDB 3.4 降级到 3.2 之前删除视图。"
 
 # 6c901d5bf53a4d1499b2cda906914fb1
 #: ../source/includes/extracts/3.4-downgrade-views.rst:2
 msgid "To find views, you can run the following in the :program:`mongo` shell:"
-msgstr ""
+msgstr "为了查找视图，您可以在  :program:`mongo`  shell上运行下列命令："
 
 # 6aac07514e714221b2561948da909d83
 #: ../source/includes/extracts/3.4-downgrade-views.rst:13
 msgid ""
-"In each database that contains views, drop the ``system.views`` "
-"collection to drop all views in that database."
+"In each database that contains views, drop the ``system.views`` collection to "
+"drop all views in that database."
 msgstr ""
+"对于每一个包括视图的数据库，删除 ``system.views``  集合，以删除该数据库中的所有"
+"视图。"
 
 # 5f193df49cd14e758dfca1e55a2841df
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:59
 msgid "3. Remove Collation Option from Collections and Indexes"
-msgstr ""
+msgstr "3. 从集合和索引中删除Collation选项"
 
 # ab38c302c0c343a1b7f9a5c5c85a0d8c
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:61
 msgid ""
-"If you have defined any non-\"simple\" collation for a collection or an "
-"index, remove the collection or index before downgrading MongoDB 3.4 to "
-"3.2."
+"If you have defined any non-\"simple\" collation for a collection or an index, "
+"remove the collection or index before downgrading MongoDB 3.4 to 3.2."
 msgstr ""
+"如果您之前已经定义过集合或索引的任何非  “简单” collation，在将MongoDB 3.4 降级"
+"到 3.2 之前删除集合或索引。"
 
 # fbb88799df29486bb9412ede2455aece
 #: ../source/includes/extracts/3.4-downgrade-collation-collections.rst:2
 msgid ""
-"To find collections with collation specifications, you can run the "
-"following in the :program:`mongo` shell:"
+"To find collections with collation specifications, you can run the following in "
+"the :program:`mongo` shell:"
 msgstr ""
+"为了查找collation 规范的集合，您可以在  :program:`mongo` shell 中运行下列命令："
 
 # bd758c8a58e44c7b99f3296b8849d299
 #: ../source/includes/extracts/3.4-downgrade-collation-collections.rst:14
 msgid ""
-"You can migrate the content of the collection to a new collection without"
-" the collation specification (one way is via the aggregation pipeline "
-"stage :pipeline:`$out`)."
+"You can migrate the content of the collection to a new collection without the "
+"collation specification (one way is via the aggregation pipeline stage :"
+"pipeline:`$out`)."
 msgstr ""
+"您可以将集合的内容迁移到一个没有collation规范的新集合（一个方式是通过聚合管道阶"
+"段 :pipeline:`$out` ）。"
 
 # 73d1a09274db4c928ed4659a44c1a875
 #: ../source/includes/extracts/3.4-downgrade-collation-indexes.rst:2
 msgid ""
-"To find indexes with collation specification, you can run the following "
-"in the :program:`mongo` shell:"
+"To find indexes with collation specification, you can run the following in the :"
+"program:`mongo` shell:"
 msgstr ""
+"为了查找collation 规范的索引，您可以在  :program:`mongo` shell 中运行下列命令："
 
 # ee20bd2fd46b4e4c86b730c93264e953
 #: ../source/includes/extracts/3.4-downgrade-collation-indexes.rst:19
 msgid ""
-"Drop the indexes with a collation specification. After the downgrade, "
-"recreate the dropped indexes."
-msgstr ""
+"Drop the indexes with a collation specification. After the downgrade, recreate "
+"the dropped indexes."
+msgstr "删除collation规范的索引。在降级之后，重新创建删除的索引。"
 
 # bd1c0f04d3da44d7909bf4efdb94196b
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:72
 msgid "4. Convert Data of Type Decimal"
-msgstr ""
+msgstr "4. 转化十进制类型的数据"
 
 # 01299f5dec574cc69c825f356d3b5104
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:2
 msgid ""
-"Convert any data of :ref:`decimal <3.4-decimal>` type. In versions of "
-"MongoDB earlier than 3.4, operations against documents that contain "
-":ref:`decimal <3.4-decimal>` type may fail. For some possible conversion "
-"options, see :doc:`/tutorial/model-monetary-data`."
+"Convert any data of :ref:`decimal <3.4-decimal>` type. In versions of MongoDB "
+"earlier than 3.4, operations against documents that contain :ref:`decimal <3.4-"
+"decimal>` type may fail. For some possible conversion options, see :doc:`/"
+"tutorial/model-monetary-data`."
 msgstr ""
+"转化所有 :ref:`decimal <3.4-decimal>` 类型的数据。在MongoDB 3.4 版本之前，在包"
+"含 :ref:`decimal <3.4-decimal>`  类型上的文档操作有可能会失败。您可以查阅  :doc:"
+"`/tutorial/model-monetary-data` 了解一些可能的转化选项。"
 
 # bb87105bf9994ea19986b51b8fa272c9
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:8
 msgid ""
-"To detect the presence of decimal, you can run "
-":method:`db.collection.validate(true) <db.collection.validate()>` against"
-" the collections which may contain decimal data."
+"To detect the presence of decimal, you can run :method:`db.collection."
+"validate(true) <db.collection.validate()>` against the collections which may "
+"contain decimal data."
 msgstr ""
+"为了检查十进制的存在，您可以在可能包含十进制数据的集合上运行  :method:`db."
+"collection.validate(true) <db.collection.validate()>` 。"
 
 # a1354cc95b434b32bfc76458b87108b5
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:12
 msgid ""
-":method:`db.collection.validate(true) <db.collection.validate()>` reports"
-" on decimal data only when ``featureCompatibilityVersion`` is "
-"``\"3.2\"``."
+":method:`db.collection.validate(true) <db.collection.validate()>` reports on "
+"decimal data only when ``featureCompatibilityVersion`` is ``\"3.2\"``."
 msgstr ""
+"只有在 ``featureCompatibilityVersion``  为  ``\"3.2\"`` 的时候， :method:`db."
+"collection.validate(true) <db.collection.validate()>`  才会报告十进制数据。"
 
 # 97dda2f47d194ca2b0e9b84cc04e26bb
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:79
 msgid "5. Downgrade Index Versions"
-msgstr ""
+msgstr "5. 降级索引版本"
 
 # 9d36f537ceff4bb0a73f30c271922a0b
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:81
 msgid ""
-"If you have ``v: 2`` indexes (i.e. the default version for indexes "
-"created in MongoDB 3.4 if ``featureCompatibilityVersion: \"3.4\"``), "
-":method:`reindex the collection <db.collection.reIndex()>` to recreate "
-"all indexes on the collection as ``v: 1`` before downgrading MongoDB."
+"If you have ``v: 2`` indexes (i.e. the default version for indexes created in "
+"MongoDB 3.4 if ``featureCompatibilityVersion: \"3.4\"``), :method:`reindex the "
+"collection <db.collection.reIndex()>` to recreate all indexes on the collection "
+"as ``v: 1`` before downgrading MongoDB."
 msgstr ""
+"如果您有  ``v: 2``  索引（例如，如果  ``featureCompatibilityVersion: "
+"\"3.4\"`` ， MongoDB 3.4 中创建的索引默认版本）， 在降级MongoDB之前， :method:"
+"`reindex the collection <db.collection.reIndex()>`  重新创建集合中的所有索引为 "
+"``v: 1``。"
 
 # e98c85d287cd44bcae9ac13f4968d8eb
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:86
 msgid "You must perform this operation on both the shards and the config servers:"
-msgstr ""
+msgstr "您必须在分片和配置服务器上都执行该操作："
 
 # 06a408b4588f4fce959042a7fd3cb330
 #: ../source/includes/extracts/3.4-downgrade-v2-indexes.rst:2
 msgid ""
-"To find indexes with ``v: 2``, you can run the following in the "
-":program:`mongo` shell:"
+"To find indexes with ``v: 2``, you can run the following in the :program:"
+"`mongo` shell:"
 msgstr ""
+"为了查找  ``v: 2`` 的索引，您可以在 :program:`mongo` shell 中运行下列命令："
 
 # 03e65f67a91d4a06a803ce1188e54ae0
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:93
 msgid ""
-"If a shard is a replica set, repeat this procedure on each member of the "
-"shard as the reindex operation does not propagate to the secondaries."
+"If a shard is a replica set, repeat this procedure on each member of the shard "
+"as the reindex operation does not propagate to the secondaries."
 msgstr ""
+"如果一个分片是复制集，在分片的每个成员中都重复这个操作，因为重建索引操作不会传递"
+"到从节点。"
 
 # 892d0dbdd29b41458465f90cae712f71
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt
 msgid "Tip"
-msgstr ""
+msgstr "建议"
 
 # e79ca59f5cd64a49b200d49127d0a3cd
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:99
 msgid ""
-"If connecting a :program:`mongo` shell to a secondary member, set "
-":method:`rs.slaveOk()`."
+"If connecting a :program:`mongo` shell to a secondary member, set :method:`rs."
+"slaveOk()`."
 msgstr ""
+"如果连接  :program:`mongo` shell 到一个从节点成员，设置  :method:`rs."
+"slaveOk()` 。"
 
 # f58ab5ad54df48a6887c4fefeff1b5fd
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:102
 msgid "Repeat the process on each member of the config server replica set."
-msgstr ""
+msgstr "在配置服务器复制集的每个人员中重复该流程。"
 
 # 136a7051390e4b08a08c926e62eba33d
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:105
 msgid "Procedure"
-msgstr ""
+msgstr "流程"
 
 # b84e736aa4e541cebe6134479462dbc4
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:108
 msgid "Considerations"
-msgstr ""
+msgstr "考量"
 
 # b041905309444352ac19a7dce55e9f1a
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:110
 msgid ""
-"While the downgrade is in progress, you cannot make changes to the "
-"collection metadata. For example, during the downgrade, do **not** do any"
-" of the following:"
+"While the downgrade is in progress, you cannot make changes to the collection "
+"metadata. For example, during the downgrade, do **not** do any of the following:"
 msgstr ""
+"降级进行的过程中，您不能修改集合元数据。例如，在降级过程中，千万 **不要** 执行下"
+"面的任何操作："
 
 # 244be27cb8ab444b98dab985347f87a2
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:114
 msgid ":method:`sh.enableSharding()`"
-msgstr ""
+msgstr ":method:`sh.enableSharding()`"
 
 # fd93c1148bb24a559de7a5fb01fb3ccd
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:116
 msgid ":method:`sh.shardCollection()`"
-msgstr ""
+msgstr ":method:`sh.shardCollection()`"
 
 # 056ab69686ca4351bab410045e8ed765
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:118
 msgid ":method:`sh.addShard()`"
-msgstr ""
+msgstr ":method:`sh.addShard()`"
 
 # bb7ca6b0d51f427c8d6f453832e27ec6
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:120
 msgid ":method:`db.createCollection()`"
-msgstr ""
+msgstr ":method:`db.createCollection()`"
 
 # 905033854b25456db6d7c240dfb72cc8
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:122
 msgid ":method:`db.collection.drop()`"
-msgstr ""
+msgstr ":method:`db.collection.drop()`"
 
 # 488361fc84f14415980bf7799ebb9121
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:124
 msgid ":method:`db.dropDatabase()`"
-msgstr ""
+msgstr ":method:`db.dropDatabase()`"
 
 # 8e3712af57aa4f6db5bf553d5d33156c
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:126
 msgid "any operation that creates a database"
-msgstr ""
+msgstr "任何创建数据库的操作"
 
 # 8d7d5f736aac434abe02fca8470b0cde
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:128
 msgid ""
-"any other operation that modifies the cluster meta-data in any way. See "
-":doc:`/reference/sharding` for a complete list of sharding commands. "
-"Note, however, that not all commands on the :doc:`/reference/sharding` "
-"page modify the cluster meta-data."
+"any other operation that modifies the cluster meta-data in any way. See :doc:`/"
+"reference/sharding` for a complete list of sharding commands. Note, however, "
+"that not all commands on the :doc:`/reference/sharding` page modify the cluster "
+"meta-data."
 msgstr ""
+"任何以任何方式修改集群元数据的操作。请查阅 :doc:`/reference/sharding`  了解分片"
+"命令的完整列表。但是，注意：并且所有在 :doc:`/reference/sharding`  页面上的命令"
+"都会修改集群元数据。"
 
 # c50a7bf0f7c941d6a6c19a3d8f4c66eb
 #: ../source/release-notes/3.4-downgrade-sharded-cluster.txt:134
 msgid "Downgrade a Sharded Cluster"
-msgstr ""
-
+msgstr "降级分片集群"
