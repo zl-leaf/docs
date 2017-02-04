@@ -4,78 +4,85 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-04 14:13+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 # 8ad981d00b44458fba60c77fc947d24c
 #: ../source/release-notes/3.4-downgrade-standalone.txt:3
 msgid "Downgrade 3.4 Standalone to 3.2"
-msgstr ""
+msgstr "降级 3.4 单机 到 3.2"
 
 # af39eb6a63014c38bdcfd4fb5d8e6306
 #: ../source/release-notes/3.4-downgrade-standalone.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # a5d5727436674e75ad754b7d9c03d649
 #: ../source/release-notes/3.4-downgrade-standalone.txt:13
 msgid ""
-"Before you attempt any downgrade, familiarize yourself with the content "
-"of this document."
-msgstr ""
+"Before you attempt any downgrade, familiarize yourself with the content of "
+"this document."
+msgstr "在您尝试任何降级之前，请熟悉本文档的内容。"
 
 # e8f1bb5288b64430845707f9a95c5376
 #: ../source/release-notes/3.4-downgrade-standalone.txt:17
 msgid "Downgrade Path"
-msgstr ""
+msgstr "降级路径"
 
 # 16f30e9547ce4ffa9eb93bdca5e3c850
 #: ../source/includes/3.4-downgrade-path.rst:1
 msgid ""
-"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version."
-" You can only downgrade to a 3.2.8 or later version."
+"Once upgraded to 3.4, you cannot downgrade to a 3.2.7 or earlier version. "
+"You can only downgrade to a 3.2.8 or later version."
 msgstr ""
+"一旦升级到3.4，您就不能降级到 3.2.7 或者之前的版本。您只可以降级到 3.2.8 或者"
+"之后的版本。"
 
 # 58bcb55225d840d4bc34b81128400d44
 #: ../source/release-notes/3.4-downgrade-standalone.txt:22
 msgid "Create Backup"
-msgstr ""
+msgstr "创建备份"
 
 # 96a4886e51774bbbba57ad01feb80a3c
 #: ../source/release-notes/3.4-downgrade-standalone.txt:24
 msgid "*Optional but Recommended.*  Create a backup of your database."
-msgstr ""
+msgstr "*可选，但是推荐。*  创建您数据库的备份。"
 
 # 010df837a2be400fa57a66adb23e4090
 #: ../source/release-notes/3.4-downgrade-standalone.txt:27
 msgid "Prerequisites"
-msgstr ""
+msgstr "预先准备"
 
 # 3da9bf18bc8d4cbeb1c5a232818bd10d
 #: ../source/release-notes/3.4-downgrade-standalone.txt:29
 msgid ""
 "Before downgrading the binaries, you must downgrade the feature "
-"compatibility version and remove any :ref:`3.4 features incompatible <3.4"
-"-compatibility-enabled>` with 3.2 or earlier versions as outlined below. "
-"These steps are necessary only if ``featureCompatibilityVersion`` has "
-"ever been set to ``\"3.4\"``."
+"compatibility version and remove any :ref:`3.4 features incompatible <3.4-"
+"compatibility-enabled>` with 3.2 or earlier versions as outlined below. "
+"These steps are necessary only if ``featureCompatibilityVersion`` has ever "
+"been set to ``\"3.4\"``."
 msgstr ""
+"在降级二进制之前，您必须降级功能兼容版本，并且删除所有与 3.2 或者之前版本  :"
+"ref:`3.4 features incompatible <3.4-compatibility-enabled>`  ，如下面列出的功"
+"能所示。仅在 ``featureCompatibilityVersion`` 被设置为 ``\"3.4\"`` 的情况下。"
+"这些步骤是必要的。"
 
 # 0b1d1126bc204a1d923a01da7a067546
 #: ../source/release-notes/3.4-downgrade-standalone.txt:42
 msgid "1. Downgrade Feature Compatibility Version"
-msgstr ""
+msgstr "1. 降级功能兼容性版本"
 
 # 97271a2bb2fa4378b6d0ac332957fc5b
 # a7d619b5353943bd8d165386a0ec9d54
@@ -88,140 +95,161 @@ msgstr ""
 #: ../source/release-notes/3.4-downgrade-standalone.txt:74
 #: ../source/release-notes/3.4-downgrade-standalone.txt:86
 msgid "Connect a :program:`mongo` shell to the :program:`mongod` instance."
-msgstr ""
+msgstr "连接一个  :program:`mongo` shell 到 :program:`mongod`  实例。"
 
 # 8763e1afba3a4491a69015d8176469d2
 #: ../source/includes/extracts/3.4-downgrade-feature-compatibility.rst:2
 msgid "Downgrade the ``featureCompatibilityVersion`` to ``\"3.2\"``."
-msgstr ""
+msgstr "将  ``featureCompatibilityVersion``  降级到  ``\"3.2\"`` 。"
 
 # 2afb50ef95d4404c988c56565523a0ed
 #: ../source/includes/extracts/3.4-downgrade-feature-compatibility.rst:8
 msgid ""
-"This command must perform writes to an internal system collection. If for"
-" any reason the command does not complete successfully, you can safely "
-"retry the command on the |target| as the operation is idempotent."
+"This command must perform writes to an internal system collection. If for "
+"any reason the command does not complete successfully, you can safely retry "
+"the command on the |target| as the operation is idempotent."
 msgstr ""
+"这个命令必须执行写操作到内部系统集合。如果由于任何原因该命令没有成功完整执"
+"行，由于该操作是幂等的，您可以安全地在  |target| 上重试该命令。"
 
 # 95e151b099414b8da8ef7b9f616b99cc
 #: ../source/release-notes/3.4-downgrade-standalone.txt:49
 msgid "2. Remove Views"
-msgstr ""
+msgstr "2. 删除视图"
 
 # 340e3cbd43644b75ab77fd649d6b6ae6
 #: ../source/release-notes/3.4-downgrade-standalone.txt:51
 msgid ""
-"If you have defined any views, drop the views before downgrading MongoDB "
-"3.4 to 3.2."
-msgstr ""
+"If you have defined any views, drop the views before downgrading MongoDB 3.4 "
+"to 3.2."
+msgstr "如果您之前定义过任何视图，在将MongoDB 3.4 降级到 3.2 之前删除视图。"
 
 # bb6cb0429c9140e290acdb7b152b5451
 #: ../source/includes/extracts/3.4-downgrade-views.rst:2
 msgid "To find views, you can run the following in the :program:`mongo` shell:"
-msgstr ""
+msgstr "为了查找视图，您可以在  :program:`mongo`  shell上运行下列命令："
 
 # 430d03f3adde47369e6d6c21c99c6d9c
 #: ../source/includes/extracts/3.4-downgrade-views.rst:13
 msgid ""
-"In each database that contains views, drop the ``system.views`` "
-"collection to drop all views in that database."
+"In each database that contains views, drop the ``system.views`` collection "
+"to drop all views in that database."
 msgstr ""
+"对于每一个包括视图的数据库，删除 ``system.views``  集合，以删除该数据库中的所"
+"有视图。"
 
 # 083aad0efb0a4335893d883de696faa3
 #: ../source/release-notes/3.4-downgrade-standalone.txt:59
 msgid "3. Remove Collation Option from Collections and Indexes"
-msgstr ""
+msgstr "3. 从集合和索引中删除Collation选项"
 
 # d1bc18f1a9d14f12a630b8177be18d45
 #: ../source/release-notes/3.4-downgrade-standalone.txt:61
 msgid ""
 "If you have defined any non-\"simple\" collation for a collection or an "
-"index, remove the collection or index before downgrading MongoDB 3.4 to "
-"3.2."
+"index, remove the collection or index before downgrading MongoDB 3.4 to 3.2."
 msgstr ""
+"如果您之前已经定义过集合或索引的任何非  “简单” collation，在将MongoDB 3.4 降"
+"级到 3.2 之前删除集合或索引。"
 
 # 78b9ca037202465eab85333c712b3948
 #: ../source/includes/extracts/3.4-downgrade-collation-collections.rst:2
 msgid ""
-"To find collections with collation specifications, you can run the "
-"following in the :program:`mongo` shell:"
+"To find collections with collation specifications, you can run the following "
+"in the :program:`mongo` shell:"
 msgstr ""
+"为了查找collation 规范的集合，您可以在  :program:`mongo` shell 中运行下列命"
+"令："
 
 # 7942970d8f704850beccaf6ce1814ed2
 #: ../source/includes/extracts/3.4-downgrade-collation-collections.rst:14
 msgid ""
-"You can migrate the content of the collection to a new collection without"
-" the collation specification (one way is via the aggregation pipeline "
-"stage :pipeline:`$out`)."
+"You can migrate the content of the collection to a new collection without "
+"the collation specification (one way is via the aggregation pipeline stage :"
+"pipeline:`$out`)."
 msgstr ""
+"您可以将集合的内容迁移到一个没有collation规范的新集合（一个方式是通过聚合管道"
+"阶段 :pipeline:`$out` ）。"
 
 # 56323e5fc5254a65a88df3faa535b03f
 #: ../source/includes/extracts/3.4-downgrade-collation-indexes.rst:2
 msgid ""
-"To find indexes with collation specification, you can run the following "
-"in the :program:`mongo` shell:"
+"To find indexes with collation specification, you can run the following in "
+"the :program:`mongo` shell:"
 msgstr ""
+"为了查找collation 规范的索引，您可以在  :program:`mongo` shell 中运行下列命"
+"令："
 
 # 6f06999797d942c39d6f27d9aecb951c
 #: ../source/includes/extracts/3.4-downgrade-collation-indexes.rst:19
 msgid ""
 "Drop the indexes with a collation specification. After the downgrade, "
 "recreate the dropped indexes."
-msgstr ""
+msgstr "删除collation规范的索引。在降级之后，重新创建删除的索引。"
 
 # 3b9c5bec25e844d8859909738e707b29
 #: ../source/release-notes/3.4-downgrade-standalone.txt:72
 msgid "4. Convert Data of Type Decimal"
-msgstr ""
+msgstr "4. 转化十进制类型的数据"
 
 # f05708fc53134a788cbed8d49e1be2b1
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:2
 msgid ""
 "Convert any data of :ref:`decimal <3.4-decimal>` type. In versions of "
-"MongoDB earlier than 3.4, operations against documents that contain "
-":ref:`decimal <3.4-decimal>` type may fail. For some possible conversion "
-"options, see :doc:`/tutorial/model-monetary-data`."
+"MongoDB earlier than 3.4, operations against documents that contain :ref:"
+"`decimal <3.4-decimal>` type may fail. For some possible conversion options, "
+"see :doc:`/tutorial/model-monetary-data`."
 msgstr ""
+"转化所有 :ref:`decimal <3.4-decimal>` 类型的数据。在MongoDB 3.4 版本之前，在"
+"包含 :ref:`decimal <3.4-decimal>`  类型上的文档操作有可能会失败。您可以查"
+"阅  :doc:`/tutorial/model-monetary-data` 了解一些可能的转化选项。"
 
 # dda84cf1e39f4b8ead727a2bf89039e9
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:8
 msgid ""
-"To detect the presence of decimal, you can run "
-":method:`db.collection.validate(true) <db.collection.validate()>` against"
-" the collections which may contain decimal data."
+"To detect the presence of decimal, you can run :method:`db.collection."
+"validate(true) <db.collection.validate()>` against the collections which may "
+"contain decimal data."
 msgstr ""
+"为了检查十进制的存在，您可以在可能包含十进制数据的集合上运行  :method:`db."
+"collection.validate(true) <db.collection.validate()>` 。"
 
 # fba90eb7374942beac28aca7ae92f728
 #: ../source/includes/extracts/3.4-downgrade-decimal.rst:12
 msgid ""
-":method:`db.collection.validate(true) <db.collection.validate()>` reports"
-" on decimal data only when ``featureCompatibilityVersion`` is "
-"``\"3.2\"``."
+":method:`db.collection.validate(true) <db.collection.validate()>` reports on "
+"decimal data only when ``featureCompatibilityVersion`` is ``\"3.2\"``."
 msgstr ""
+"只有在 ``featureCompatibilityVersion``  为  ``\"3.2\"`` 的时候， :method:`db."
+"collection.validate(true) <db.collection.validate()>`  才会报告十进制数据。"
 
 # 798047f203a84a4b9ca019e57751fb9e
 #: ../source/release-notes/3.4-downgrade-standalone.txt:79
 msgid "5. Downgrade Index Versions"
-msgstr ""
+msgstr "5. 降级索引版本"
 
 # 2510e76f89964fe39f31180ba3c3b8f0
 #: ../source/release-notes/3.4-downgrade-standalone.txt:81
 msgid ""
-"If you have ``v: 2`` indexes (i.e. the default version for indexes "
-"created in MongoDB 3.4 if ``featureCompatibilityVersion: \"3.4\"``), "
-":method:`reindex the collection <db.collection.reIndex()>` to recreate "
-"all indexes on the collection as ``v: 1`` before downgrading MongoDB."
+"If you have ``v: 2`` indexes (i.e. the default version for indexes created "
+"in MongoDB 3.4 if ``featureCompatibilityVersion: \"3.4\"``), :method:"
+"`reindex the collection <db.collection.reIndex()>` to recreate all indexes "
+"on the collection as ``v: 1`` before downgrading MongoDB."
 msgstr ""
+"如果您有  ``v: 2``  索引（例如，如果  ``featureCompatibilityVersion: "
+"\"3.4\"`` ， MongoDB 3.4 中创建的索引默认版本）， 在降级MongoDB之前， :"
+"method:`reindex the collection <db.collection.reIndex()>`  重新创建集合中的所"
+"有索引为 ``v: 1``。"
 
 # 4d1c3cbea46440169947bbbfba7c89c1
 #: ../source/includes/extracts/3.4-downgrade-v2-indexes.rst:2
 msgid ""
-"To find indexes with ``v: 2``, you can run the following in the "
-":program:`mongo` shell:"
+"To find indexes with ``v: 2``, you can run the following in the :program:"
+"`mongo` shell:"
 msgstr ""
+"为了查找  ``v: 2`` 的索引，您可以在 :program:`mongo` shell 中运行下列命令："
 
 # 62f01c9799db433eb197a8867da5b316
 #: ../source/release-notes/3.4-downgrade-standalone.txt:92
 msgid "Procedure"
-msgstr ""
-
+msgstr "流程"
