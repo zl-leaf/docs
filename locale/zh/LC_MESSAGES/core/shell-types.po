@@ -4,285 +4,226 @@ msgstr ""
 "Project-Id-Version: mongodb-manual 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-04 22:32+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 # ba89e8a3767048f981460b1ddd514fdd
 #: ../source/core/shell-types.txt:3
 msgid "Data Types in the ``mongo`` Shell"
-msgstr ""
+msgstr " ``mongo`` Shell 中的数据类型"
 
 # 1ad4bdde964849ec9ed4e7f69d2bc33c
 #: ../source/core/shell-types.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # f00b783b07464ff3a82e6e9707ccfb7d
 #: ../source/core/shell-types.txt:13
-msgid ""
-"MongoDB :term:`BSON` provides support for additional data types than "
-":term:`JSON`. :doc:`Drivers </applications/drivers>` provide native "
-"support for these data types in host languages and the :program:`mongo` "
-"shell also provides several helper classes to support the use of these "
-"data types in the :program:`mongo` JavaScript shell. See the "
-":doc:`Extended JSON </reference/mongodb-extended-json>` reference for "
-"additional information."
-msgstr ""
+msgid "MongoDB :term:`BSON` provides support for additional data types than :term:`JSON`. :doc:`Drivers </applications/drivers>` provide native support for these data types in host languages and the :program:`mongo` shell also provides several helper classes to support the use of these data types in the :program:`mongo` JavaScript shell. See the :doc:`Extended JSON </reference/mongodb-extended-json>` reference for additional information."
+msgstr "MongoDB :term:`BSON`  提供了除  :term:`JSON` 之外其它数据类型的支持。 :doc:`Drivers </applications/drivers>`  提供了对这些数据类型在主机语言的本地化支持，:program:`mongo` shell  也提供了一些帮助类来支持这些数据类型在 :program:`mongo` JavaScript shell 中的使用。 请查阅  :doc:`Extended JSON </reference/mongodb-extended-json>`  参考了解其它信息。"
 
 # b9cb1a8584914127b432ba10697493eb
 #: ../source/core/shell-types.txt:24
 msgid "Types"
-msgstr ""
+msgstr "类型"
 
 # e80007bcad014499a137f2c7012b0965
 #: ../source/core/shell-types.txt:29
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 # ec7c01ce34c94f5e88a15494513f113c
 #: ../source/core/shell-types.txt:31
-msgid ""
-"The :program:`mongo` shell provides various methods to return the date, "
-"either as a string or as a ``Date`` object:"
-msgstr ""
+msgid "The :program:`mongo` shell provides various methods to return the date, either as a string or as a ``Date`` object:"
+msgstr ":program:`mongo` shell  提供了多种方法返回日期，要么通过字符串要么通过  ``Date``  对象。"
 
 # 87b9ad00854f443c9d7b628b3f611433
 #: ../source/core/shell-types.txt:34
 msgid "``Date()`` method which returns the current date as a string."
-msgstr ""
+msgstr "``Date()``  方法返回当前日期为一个字符串。"
 
 # 54a0bee9cceb4fbe81fad442460a258d
 #: ../source/core/shell-types.txt:36
-msgid ""
-"``new Date()`` constructor which returns a ``Date`` object using the "
-"``ISODate()`` wrapper."
-msgstr ""
+msgid "``new Date()`` constructor which returns a ``Date`` object using the ``ISODate()`` wrapper."
+msgstr "``new Date()``  构造函数返回一个使用 ``ISODate()`` 包装返回的  ``Date`` 对象。"
 
 # c0d02563dfca4784ac452957d2577a76
 #: ../source/core/shell-types.txt:39
-msgid ""
-"``ISODate()`` constructor which returns a ``Date`` object using the "
-"``ISODate()`` wrapper."
-msgstr ""
+msgid "``ISODate()`` constructor which returns a ``Date`` object using the ``ISODate()`` wrapper."
+msgstr "``ISODate()``  构造函数返回一个使用 ``ISODate()``  包装返回的 ``Date`` 对象。"
 
 # 7f5f87cbfd3c4c4b84cf63bc607b0b45
 #: ../source/includes/fact-bson-date-internals.rst:1
-msgid ""
-"Internally, :ref:`document-bson-type-date` objects are stored as a 64 bit"
-" integer representing the number of milliseconds since the Unix epoch "
-"(Jan 1, 1970), which results in a representable date range of about 290 "
-"millions years into the past and future."
-msgstr ""
+msgid "Internally, :ref:`document-bson-type-date` objects are stored as a 64 bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970), which results in a representable date range of about 290 millions years into the past and future."
+msgstr "内部来看， ref:`document-bson-type-date`  对象被存储为一个表示距离 Unix 纪元（1970年1月1日）毫秒数的64位整数，这就意味着一个可表示的日期范围：从距离过去到将来的29亿年。"
 
 # 8158bf1e12b14cdab632c9eac4dcb9f2
 #: ../source/core/shell-types.txt:45
 msgid "Return Date as a String"
-msgstr ""
+msgstr "返回日期为一个字符串"
 
 # aaf445d12db645018098041482bc4499
 #: ../source/core/shell-types.txt:47
-msgid ""
-"To return the date as a string, use the ``Date()`` method, as in the "
-"following example:"
-msgstr ""
+msgid "To return the date as a string, use the ``Date()`` method, as in the following example:"
+msgstr "如果想要返回日期为一个字符串，使用  ``Date()`` 方法，如下面的示例所示："
 
 # df7281d4698e4e09b76db14771fc2093
 # 3040aacc89534eaab465e92d03b99316
 #: ../source/core/shell-types.txt:54 ../source/core/shell-types.txt:92
-msgid ""
-"To print the value of the variable, type the variable name in the shell, "
-"as in the following:"
-msgstr ""
+msgid "To print the value of the variable, type the variable name in the shell, as in the following:"
+msgstr "如果想要输出变量的值，在shell中输入变量，如下所示："
 
 # 50e49c0155ad4862b937173628faefc3
 #: ../source/core/shell-types.txt:61
 msgid "The result is the value of ``myDateString``:"
-msgstr ""
+msgstr "结果为 ``myDateString`` 的值："
 
 # eaa88650fc7f42d39ab2a017230b904c
 #: ../source/core/shell-types.txt:67
 msgid "To verify the type, use the ``typeof`` operator, as in the following:"
-msgstr ""
+msgstr "如果想要验证类型，使用 ``typeof`  操作符，如下所示："
 
 # 1cc708954d7c42e790f9146ab6b52f86
 #: ../source/core/shell-types.txt:73
 msgid "The operation returns ``string``."
-msgstr ""
+msgstr "该操作返回 ``string`` 。"
 
 # 5a562a0a0f15472089cdf71e2583a153
 #: ../source/core/shell-types.txt:76
 msgid "Return ``Date``"
-msgstr ""
+msgstr "返回  ``Date``"
 
 # 3e37023f370d4207b8e2021503da2a59
 #: ../source/core/shell-types.txt:78
-msgid ""
-"The :program:`mongo` shell wraps objects of ``Date`` type with the "
-"``ISODate`` helper; however, the objects remain of type ``Date``."
-msgstr ""
+msgid "The :program:`mongo` shell wraps objects of ``Date`` type with the ``ISODate`` helper; however, the objects remain of type ``Date``."
+msgstr " :program:`mongo` shell 将  ``Date``  类型的对象与 ``ISODate`` 帮助类进行了封装；然而，对象仍然为类型  ``Date`` 。"
 
 # d98c2119b085484284c356f7c0dbb8e5
 #: ../source/core/shell-types.txt:81
-msgid ""
-"The following example uses both the ``new Date()`` constructor and the "
-"``ISODate()`` constructor to return ``Date`` objects."
-msgstr ""
+msgid "The following example uses both the ``new Date()`` constructor and the ``ISODate()`` constructor to return ``Date`` objects."
+msgstr "下面的实例使用了  ``new Date()``  构造函数以及 ``ISODate()`` 构造函数返回 ``Date``  对象。"
 
 # 7f63ade6ce5c48bbb6a9d7c930008e28
 #: ../source/core/shell-types.txt:89
-msgid ""
-"You can use the ``new`` operator with the ``ISODate()`` constructor as "
-"well."
-msgstr ""
+msgid "You can use the ``new`` operator with the ``ISODate()`` constructor as well."
+msgstr "你也可以使用  ``new` 操作符与 ``ISODate()`` 构造函数一起。"
 
 # 2fb94a23a8c84b3e9fdb1975aaf2239a
 #: ../source/core/shell-types.txt:99
-msgid ""
-"The result is the ``Date`` value of ``myDate`` wrapped in the "
-"``ISODate()`` helper:"
-msgstr ""
+msgid "The result is the ``Date`` value of ``myDate`` wrapped in the ``ISODate()`` helper:"
+msgstr "结果为包装在  ``ISODate()``  帮助类中 ``myDate``  的 ``Date`` 值："
 
 # 9b650950b69546c9af15af5980ef6bd2
 #: ../source/core/shell-types.txt:106
 msgid "To verify the type, use the ``instanceof`` operator, as in the following:"
-msgstr ""
+msgstr "如果想要验证类型，使用  ``instanceof`` 操作符，如下所示："
 
 # 4c59f32e2e8e4ecfbe63022002256014
 #: ../source/core/shell-types.txt:114
 msgid "The operation returns ``true`` for both."
-msgstr ""
+msgstr "操作符两个都返回 ``true``  。"
 
 # a978871250484752b5aeaebeafab89a0
 #: ../source/core/shell-types.txt:117
 msgid "ObjectId"
-msgstr ""
+msgstr "ObjectId"
 
 # 09f99c369ea440379d97f0df34028a20
 #: ../source/core/shell-types.txt:119
-msgid ""
-"The :program:`mongo` shell provides the ``ObjectId()`` wrapper class "
-"around the :ref:`objectid` data type. To generate a new ObjectId, use the"
-" following operation in the :program:`mongo` shell:"
-msgstr ""
+msgid "The :program:`mongo` shell provides the ``ObjectId()`` wrapper class around the :ref:`objectid` data type. To generate a new ObjectId, use the following operation in the :program:`mongo` shell:"
+msgstr " :program:`mongo` shell  为 :ref:`objectid`  数据类型提供了  ``ObjectId()``  封装类。为了生成新的 ObjectId，在 :program:`mongo` shell 中使用下列操作："
 
 # c72c121c427344d98e3a8793386aab6a
 #: ../source/core/shell-types.txt
 msgid "See"
-msgstr ""
+msgstr "查阅"
 
 # 84a26a207ebb4529b33cb24b119650c0
 #: ../source/core/shell-types.txt:132
 msgid "NumberLong"
-msgstr ""
+msgstr "NumberLong"
 
 # 10ffea8c07614c75a058c3627e6c2fae
 #: ../source/core/shell-types.txt:134
-msgid ""
-"The :program:`mongo` shell treats all numbers as floating-point values by"
-" default. The :program:`mongo` shell provides the ``NumberLong()`` "
-"wrapper to handle 64-bit integers."
-msgstr ""
+msgid "The :program:`mongo` shell treats all numbers as floating-point values by default. The :program:`mongo` shell provides the ``NumberLong()`` wrapper to handle 64-bit integers."
+msgstr " :program:`mongo` shell 默认将所有数字处理为浮点值。  :program:`mongo` shell 提供了 ``NumberLong()``  封装器处理 64位整数。"
 
 # 44d68b818eda4ced829d669b45430621
 #: ../source/core/shell-types.txt:138
 msgid "The ``NumberLong()`` wrapper accepts the long as a string:"
-msgstr ""
+msgstr "``NumberLong()``  封装器接收long为字符串："
 
 # b3d4fa26f8af4921ad09aab901321e30
 #: ../source/core/shell-types.txt:144
-msgid ""
-"The following examples use the ``NumberLong()`` wrapper to write to the "
-"collection:"
-msgstr ""
+msgid "The following examples use the ``NumberLong()`` wrapper to write to the collection:"
+msgstr "下面的示例使用 ``NumberLong()`` 封装器写入到集合："
 
 # d764b7a6a4644933b92afc23272d3e6d
 #: ../source/core/shell-types.txt:155
 msgid "Retrieve the document to verify:"
-msgstr ""
+msgstr "检索文档以验证："
 
 # ae7479e8d0b84feb9f80e77652da7615
 #: ../source/core/shell-types.txt:161
-msgid ""
-"In the returned document, the ``calc`` field contains a ``NumberLong`` "
-"object:"
-msgstr ""
+msgid "In the returned document, the ``calc`` field contains a ``NumberLong`` object:"
+msgstr "在返回的文档中， ``calc``  字段包含一个 ``NumberLong``  对象："
 
 # 47678edbdd15407bbf7628bd7d797a8a
 #: ../source/core/shell-types.txt:168
-msgid ""
-"If you use the :update:`$inc` to increment the value of a field that "
-"contains a ``NumberLong`` object by a **float**, the data type changes to"
-" a floating point value, as in the following example:"
-msgstr ""
+msgid "If you use the :update:`$inc` to increment the value of a field that contains a ``NumberLong`` object by a **float**, the data type changes to a floating point value, as in the following example:"
+msgstr "如果您使用了  :update:`$inc` 来增加包含 ``NumberLong``  对象的字段，增加为 **浮点数**，数据类型修改为 浮点值，如下面的示例所示："
 
 # 6106ab0883bd4514beb729b24175c218
 #: ../source/core/shell-types.txt:172
-msgid ""
-"Use :update:`$inc` to increment the ``calc`` field by ``5``, which the "
-":program:`mongo` shell treats as a float:"
-msgstr ""
+msgid "Use :update:`$inc` to increment the ``calc`` field by ``5``, which the :program:`mongo` shell treats as a float:"
+msgstr "使用  :update:`$inc`  将 ``calc``  字段值增加 ``5`` ， :program:`mongo` shell  将这些值处理为浮点型："
 
 # 281b7457755b4a1c9a4ab89f9a472d4c
 #: ../source/core/shell-types.txt:180
 msgid "Retrieve the updated document:"
-msgstr ""
+msgstr "检索更新的文档："
 
 # 0c711c41677149ff825985152bb5e6f3
 #: ../source/core/shell-types.txt:186
-msgid ""
-"In the updated document, the ``calc`` field contains a floating point "
-"value:"
-msgstr ""
+msgid "In the updated document, the ``calc`` field contains a floating point value:"
+msgstr "在更新的文档中，  ``calc`` 字段包含一个浮点值："
 
 # c718bde15d344e15b0602f000d42521f
 #: ../source/core/shell-types.txt:196
 msgid "NumberInt"
-msgstr ""
+msgstr "NumberInt"
 
 # 3197da676b35455a91f7543ecbf1b515
 #: ../source/core/shell-types.txt:198
-msgid ""
-"The :program:`mongo` shell treats all numbers as floating-point values by"
-" default. The :program:`mongo` shell provides the ``NumberInt()`` "
-"constructor to explicitly specify 32-bit integers."
-msgstr ""
+msgid "The :program:`mongo` shell treats all numbers as floating-point values by default. The :program:`mongo` shell provides the ``NumberInt()`` constructor to explicitly specify 32-bit integers."
+msgstr ":program:`mongo` shell 默认将所有的数字处理为浮点值。  :program:`mongo` shell 提供了  ``NumberInt()``  构造函数来显式指定 32位整数。"
 
 # 5a4cae625dd6404a9532b89ea8473916
 #: ../source/core/shell-types.txt:205
 msgid "NumberDecimal"
-msgstr ""
+msgstr "NumberDecimal"
 
 # db2db5cf3d00417abafa3060ebb349c4
 #: ../source/core/shell-types.txt:209
-msgid ""
-"The :program:`mongo` shell treats all numbers as 64-bit floating-point "
-"``double`` values by default. The :program:`mongo` shell provides the "
-"``NumberDecimal()`` constructor to explicitly specify 128-bit decimal-"
-"based floating-point values capable of emulating decimal rounding with "
-"exact precision. This functionality is intended for applications that "
-"handle :doc:`monetary data </tutorial/model-monetary-data>`, such as "
-"financial, tax, and scientific computations."
-msgstr ""
+msgid "The :program:`mongo` shell treats all numbers as 64-bit floating-point ``double`` values by default. The :program:`mongo` shell provides the ``NumberDecimal()`` constructor to explicitly specify 128-bit decimal-based floating-point values capable of emulating decimal rounding with exact precision. This functionality is intended for applications that handle :doc:`monetary data </tutorial/model-monetary-data>`, such as financial, tax, and scientific computations."
+msgstr ":program:`mongo` shell  默认将所有的数字处理为 64位浮点的  ``double``  值。  :program:`mongo` shell 提供了  ``NumberDecimal()`` 构造函数限制指定 128位 基于十进制的浮点值，能够以精确的精度仿效十进制近似值。 这个功能专为处理 :doc:`monetary data </tutorial/model-monetary-data>` 的应用而设计，例如金融、税务以及科学计算等。"
 
 # e84ab950faec4ba7879bddc15a5fcf2b
 #: ../source/core/shell-types.txt:218
-msgid ""
-"The ``decimal`` :doc:`BSON type </reference/bson-types>` uses the IEEE "
-"754 decimal128 floating-point numbering format which supports 34 decimal "
-"digits (i.e. significant digits) and an exponent range of −6143 to +6144."
-msgstr ""
+msgid "The ``decimal`` :doc:`BSON type </reference/bson-types>` uses the IEEE 754 decimal128 floating-point numbering format which supports 34 decimal digits (i.e. significant digits) and an exponent range of −6143 to +6144."
+msgstr "``decimal`` :doc:`BSON type </reference/bson-types>` 使用 IEEE 754十进制 128为浮点数的格式，支持34位十进制位（例如，大数）以及指数范围从 −6143 到 +6144 。"
 
 # a545359f6fd644eb8bf4143d6933b7e8
 #: ../source/core/shell-types.txt:223
-msgid ""
-"The ``NumberDecimal()`` constructor accepts the ``decimal`` value as a "
-"string:"
-msgstr ""
+msgid "The ``NumberDecimal()`` constructor accepts the ``decimal`` value as a string:"
+msgstr "``NumberDecimal()`` 构造函数接收 ``decimal``  为字符串："
 
 # 35f4ce69983248bb8a66f0acf0ffa5dc
 # 2ab314421eff4e70a464ce7511810689
@@ -290,219 +231,170 @@ msgstr ""
 #: ../source/core/shell-types.txt:230 ../source/core/shell-types.txt:249
 #: ../source/core/shell-types.txt:262
 msgid "The value is stored in the database as follows:"
-msgstr ""
+msgstr "存储在数据库中的值如下："
 
 # f05dae8e98de4091b8102d56cd3bc364
 #: ../source/core/shell-types.txt:236
-msgid ""
-"The ``NumberDecimal()`` constructor also accepts ``double`` values from "
-"the :program:`mongo` shell (i.e. without quotes), although this is not "
-"recommended due to the risk of losing precision. The constructor creates "
-"a binary-based ``double`` precision representation of the decimal-based "
-"parameter (potentially losing precision), then converts that value to a "
-"``decimal`` value with a precision of 15 digits. The following example "
-"passes the value implicitly as a ``double`` and shows how it is created "
-"with a precision of 15 digits:"
-msgstr ""
+msgid "The ``NumberDecimal()`` constructor also accepts ``double`` values from the :program:`mongo` shell (i.e. without quotes), although this is not recommended due to the risk of losing precision. The constructor creates a binary-based ``double`` precision representation of the decimal-based parameter (potentially losing precision), then converts that value to a ``decimal`` value with a precision of 15 digits. The following example passes the value implicitly as a ``double`` and shows how it is created with a precision of 15 digits:"
+msgstr "``NumberDecimal()``  构造函数也从 :program:`mongo` shell  中接收  ``double`` 值（例如，没有引号），但是不推荐这样操作，因为会存在丢失精度的风险。构造函数创建了基于十进制参数的二进制的 ``double`` 精度表示（可能会丢失进度），然后将该值转化为15位精度的 ``decimal`` 值。下面的示例将值隐式地传递为 ``double`` ，并且显示了如何将其创建为15位精度的值："
 
 # ee411699d4c943d6af80b85cc12178f3
 #: ../source/core/shell-types.txt:255
-msgid ""
-"The following example passes the value implicitly as a ``double`` and "
-"shows how a loss of precision can occur:"
-msgstr ""
+msgid "The following example passes the value implicitly as a ``double`` and shows how a loss of precision can occur:"
+msgstr "。下面的示例将值隐式地传递为 ``double`` ，并且显示了可能会存在精度丢失的情况："
 
 # ce862bb69ebb464992e64ad3c7f8ceb8
 #: ../source/core/shell-types.txt:269
-msgid ""
-"To use the ``decimal`` data type with a :ecosystem:`MongoDB driver "
-"</drivers/>`, be sure to use a driver version that supports it."
-msgstr ""
+msgid "To use the ``decimal`` data type with a :ecosystem:`MongoDB driver </drivers/>`, be sure to use a driver version that supports it."
+msgstr "如果想在  :ecosystem:`MongoDB driver </drivers/>` 中使用  ``decimal``  数据类型，请确保驱动程序版本支持该数据类型。"
 
 # 99c1941f16794acd8eb79f52838fe2ce
 #: ../source/core/shell-types.txt:274
 msgid "Equality and Sort Order"
-msgstr ""
+msgstr "等式及排列顺序"
 
 # 5cb1b0abdf5e4a678efb923827f728b8
 #: ../source/core/shell-types.txt:276
-msgid ""
-"Values of the ``decimal`` type are compared and sorted with other numeric"
-" types based on their actual numeric value.  Numeric values of the "
-"binary-based ``double`` type generally have approximate representations "
-"of decimal-based values and may not be exactly equal to their ``decimal``"
-" representations, so use the ``NumberDecimal()`` constructor when "
-"checking the equality of ``decimal`` values. Consider the following "
-"examples with the following documents in the ``numbers`` collection:"
-msgstr ""
+msgid "Values of the ``decimal`` type are compared and sorted with other numeric types based on their actual numeric value.  Numeric values of the binary-based ``double`` type generally have approximate representations of decimal-based values and may not be exactly equal to their ``decimal`` representations, so use the ``NumberDecimal()`` constructor when checking the equality of ``decimal`` values. Consider the following examples with the following documents in the ``numbers`` collection:"
+msgstr " ``decimal`` 类型的值与其它数字类型进行比较和排序时基于它们真实的数字值。二进制 ``double`` 类型的数值一般有基于十进制值的近似表示，并且可能不是精确等于它们的  ``decimal``  表示。因此，在检查 ``decimal``  的相等性时，使用 ``NumberDecimal()`` 构造函数。考虑   ``numbers``  集合中下列文档的示例："
 
 # 2ddddd4adf1a40178778f5df1dd07269
 #: ../source/core/shell-types.txt:293
-msgid ""
-"When the queries from the table below are plugged into the "
-"``db.numbers.find(<query>)`` method, the following results are returned:"
-msgstr ""
+msgid "When the queries from the table below are plugged into the ``db.numbers.find(<query>)`` method, the following results are returned:"
+msgstr "当下面表格中的查询被嵌入到  ``db.numbers.find(<query>)``  方法中时，返回下列结果："
 
 # 92719e6f80694ac5a4807e046191dc48
 #: ../source/core/shell-types.txt:301
 msgid "Query"
-msgstr ""
+msgstr "查询"
 
 # e1d9895c30bb447d9a395fe879c19dda
 #: ../source/core/shell-types.txt:302
 msgid "Results"
-msgstr ""
+msgstr "结果"
 
 # 8882d5420be44e1d860535bd4ad46b23
 #: ../source/core/shell-types.txt:304
 msgid "**{ \"val\": 9.99 }**"
-msgstr ""
+msgstr "**{ \"val\": 9.99 }**"
 
 # e2733f30c7d34b06a5456c68511d3982
 #: ../source/core/shell-types.txt:305
 msgid "**{ \"_id\": 2, \"val\": 9.99, \"description\": \"Double\" }**"
-msgstr ""
+msgstr "**{ \"_id\": 2, \"val\": 9.99, \"description\": \"Double\" }**"
 
 # 4a8c5a0ef3314cc4b3fe562238957331
 #: ../source/core/shell-types.txt:307
 msgid "**{ \"val\": NumberDecimal( \"9.99\" ) }**"
-msgstr ""
+msgstr "**{ \"val\": NumberDecimal( \"9.99\" ) }**"
 
 # b6b1bec91642408ca8f58152a66ddea7
 #: ../source/core/shell-types.txt:308
-msgid ""
-"**{ \"_id\": 1, \"val\": NumberDecimal( \"9.99\" ), \"description\": "
-"\"Decimal\" }**"
-msgstr ""
+msgid "**{ \"_id\": 1, \"val\": NumberDecimal( \"9.99\" ), \"description\": \"Decimal\" }**"
+msgstr "**{ \"_id\": 1, \"val\": NumberDecimal( \"9.99\" ), \"description\": \"Decimal\" }**"
 
 # 722ad80702fc46cab328ba6d4d1b3396
 #: ../source/core/shell-types.txt:310
 msgid "**{ val: 10 }**"
-msgstr ""
+msgstr "**{ val: 10 }**"
 
 # 31ee6e489e2a4e7d8e386f0b5f589cdd
 # e4ce455d62e2457f9b89ac624af65d52
 #: ../source/core/shell-types.txt
 msgid "**{ \"_id\": 3, \"val\": 10, \"description\": \"Double\" }**"
-msgstr ""
+msgstr "**{ \"_id\": 3, \"val\": 10, \"description\": \"Double\" }**"
 
 # f8b85d75c6a3478194ce35442039645d
 # c81e05b765c24328947704740e50db97
 #: ../source/core/shell-types.txt
 msgid "**{ \"_id\": 4, \"val\": NumberLong(10), \"description\": \"Long\" }**"
-msgstr ""
+msgstr "**{ \"_id\": 4, \"val\": NumberLong(10), \"description\": \"Long\" }**"
 
 # ab21017323084e99872376073657b201
 # 49df4410cd244a9a8a90f62ad2cd5aa4
 #: ../source/core/shell-types.txt
-msgid ""
-"**{ \"_id\": 5, \"val\": NumberDecimal( \"10.0\" ), \"description\": "
-"\"Decimal\" }**"
-msgstr ""
+msgid "**{ \"_id\": 5, \"val\": NumberDecimal( \"10.0\" ), \"description\": \"Decimal\" }**"
+msgstr "**{ \"_id\": 5, \"val\": NumberDecimal( \"10.0\" ), \"description\": \"Decimal\" }**"
 
 # 219f66f83dd84012b16bcc70b36028c9
 #: ../source/core/shell-types.txt:315
 msgid "**{ val: NumberDecimal( \"10\" ) }**"
-msgstr ""
+msgstr "**{ val: NumberDecimal( \"10\" ) }**"
 
 # 75a62bd36a1a455ea52f45d16ba7c420
 #: ../source/core/shell-types.txt:321
-msgid ""
-"The first query, ``{ \"val\": 9.99 }``, implicitly searches for the "
-"``double`` representation of ``9.99`` which is not equal to the "
-"``decimal`` representation of the value."
-msgstr ""
+msgid "The first query, ``{ \"val\": 9.99 }``, implicitly searches for the ``double`` representation of ``9.99`` which is not equal to the ``decimal`` representation of the value."
+msgstr "第一个查询 ``{ \"val\": 9.99 }`` ，隐式搜索  ``9.99``  的 ``double`` 表示 ，不等于该值的  ``decimal`` 表示。"
 
 # 72ba1f85db114960ad4b8bf8580b82d8
 #: ../source/core/shell-types.txt:325
-msgid ""
-"The ``NumberDecimal()`` constructor is used to query for the document "
-"with the ``decimal`` representation of ``9.99``. Values of the ``double``"
-" type are excluded because they do not match the exact value of the "
-"``decimal`` representation of ``9.99``."
-msgstr ""
+msgid "The ``NumberDecimal()`` constructor is used to query for the document with the ``decimal`` representation of ``9.99``. Values of the ``double`` type are excluded because they do not match the exact value of the ``decimal`` representation of ``9.99``."
+msgstr "``NumberDecimal()`` 构造函数用于查询  ``9.99``  ``decimal`` 表示的文档。 ``double`` 的值被排除，因为它们与  ``9.99`` ``decimal`` 表示的精确值不匹配。"
 
 # 7dfe279441f245bbb99f2a2330135eff
 #: ../source/core/shell-types.txt:330
-msgid ""
-"Matching values of all numeric types are returned when querying for whole"
-" numbers. For example, querying for a ``double`` representation of ``10``"
-" will include a ``decimal`` representation of ``10.0`` in the results and"
-" vice versa."
-msgstr ""
+msgid "Matching values of all numeric types are returned when querying for whole numbers. For example, querying for a ``double`` representation of ``10`` will include a ``decimal`` representation of ``10.0`` in the results and vice versa."
+msgstr "在查询所有数字时，匹配所有的数字类型值。例如，查询 ``10`` 的 ``double``  表示将会在结果中包括 ``10.0`` 的 ``decimal`` 表示，反之亦然。"
 
 # 6c5d1720833e45a193e720ca0821e3af
 #: ../source/core/shell-types.txt:336
 msgid "Checking for ``decimal`` Type"
-msgstr ""
+msgstr "检查 ``decimal`` 类型"
 
 # c3046ede67954cf7aa4f34a01b31a11c
 #: ../source/core/shell-types.txt:338
-msgid ""
-"To test for ``decimal`` type, use the :query:`$type` operator with the "
-"string alias ``\"decimal\"`` or ``19``, the numeric code for the "
-"``decimal`` type."
-msgstr ""
+msgid "To test for ``decimal`` type, use the :query:`$type` operator with the string alias ``\"decimal\"`` or ``19``, the numeric code for the ``decimal`` type."
+msgstr "如果想要测试 ``decimal``  类型，使用  :query:`$type`  操作符以及字符串，  ``\"decimal\"``  或者  ``19`` ，其中  ``19``  是 ``decimal``  类型的数值编号。"
 
 # 729ce3f2d2944c0e98ab07e07eacfba3
 #: ../source/core/shell-types.txt:349
 msgid "Check Types in the ``mongo`` Shell"
-msgstr ""
+msgstr "在  ``mongo`` Shell 中检查类型"
 
 # 49ca1270e4424cd8afc5f336a1f08327
 #: ../source/core/shell-types.txt:351
-msgid ""
-"To determine the type of fields, the :program:`mongo` shell provides the "
-"``instanceof`` and ``typeof`` operators."
-msgstr ""
+msgid "To determine the type of fields, the :program:`mongo` shell provides the ``instanceof`` and ``typeof`` operators."
+msgstr "如果想要确定字段类型，  :program:`mongo` shell  提供了 ``instanceof``  和  ``typeof`` 操作符。"
 
 # 97f0238bb6d04899b1a85ed625d3034d
 #: ../source/core/shell-types.txt:356
 msgid "``instanceof``"
-msgstr ""
+msgstr "``instanceof``"
 
 # dc5b967c20774938b78d612a8e00a615
 #: ../source/core/shell-types.txt:358
-msgid ""
-"``instanceof`` returns a boolean to test if a value is an instance of "
-"some type."
-msgstr ""
+msgid "``instanceof`` returns a boolean to test if a value is an instance of some type."
+msgstr "``instanceof``  返回一个布尔值来验证一个值是否为某些类型的实例。"
 
 # 4ead2c40b3e948d79ae36c3e073a44ee
 #: ../source/core/shell-types.txt:361
-msgid ""
-"For example, the following operation tests whether the ``_id`` field is "
-"an instance of type ``ObjectId``:"
-msgstr ""
+msgid "For example, the following operation tests whether the ``_id`` field is an instance of type ``ObjectId``:"
+msgstr "例如，下面的操作验证了 ``_id``  字段是否是  ``ObjectId`` 类型的实例："
 
 # 4492d2e585334a258bd9773c79edd149
 #: ../source/core/shell-types.txt:368
 msgid "The operation returns ``true``."
-msgstr ""
+msgstr "该操作返回 ``true`` 。"
 
 # fc9c9474eec24e2791acacd1d37201c5
 #: ../source/core/shell-types.txt:371
 msgid "``typeof``"
-msgstr ""
+msgstr "``typeof``"
 
 # a705c97bbe6b40dbb4d3a81e145668c9
 #: ../source/core/shell-types.txt:373
 msgid "``typeof`` returns the type of a field."
-msgstr ""
+msgstr "``typeof`` 返回一个字段的类型。"
 
 # 620b02f8a7e648a8940b00cd35fa649e
 #: ../source/core/shell-types.txt:375
-msgid ""
-"For example, the following operation returns the type of the ``_id`` "
-"field:"
-msgstr ""
+msgid "For example, the following operation returns the type of the ``_id`` field:"
+msgstr "例如，下面的操作返回 ``_id``  字段的类型："
 
 # 743a3d6148b8462ebf2403d40f907412
 #: ../source/core/shell-types.txt:382
-msgid ""
-"In this case ``typeof`` will return the more generic ``object`` type "
-"rather than ``ObjectId`` type."
-msgstr ""
+msgid "In this case ``typeof`` will return the more generic ``object`` type rather than ``ObjectId`` type."
+msgstr "在本案例中，  ``typeof`` 将会返回更加普通的 ``object`` 类型而不是 ``ObjectId``  类型。"
 
 #~ msgid ""
 #~ msgstr ""
@@ -522,4 +414,3 @@ msgstr ""
 #~ " the ``NumberInt()`` constructor to "
 #~ "explicitly specify 32-bit integers."
 #~ msgstr ""
-
