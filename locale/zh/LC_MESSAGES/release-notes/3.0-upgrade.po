@@ -157,10 +157,11 @@ msgstr ""
 #: ../source/release-notes/3.0-upgrade.txt:111
 msgid "Upgrade a Replica Set to 3.0"
 msgstr ""
+"升级一个复制集到3.0"
 
 #: ../source/release-notes/3.0-upgrade.txt:114
 msgid "Prerequisites"
-msgstr ""
+msgstr "前提条件"
 
 #: ../source/release-notes/3.0-upgrade.txt:116
 msgid ""
@@ -169,6 +170,8 @@ msgid ""
 "versions *before* you can upgrade to MongoDB 3.0. For more information, see "
 ":ref:`3.0-oplog-format-change`"
 msgstr ""
+"如果oplog包含MongoDB2.2.1之前版本生成的条目，你必须等待这些条目被以后的版本覆盖*之后*才可以升级到3.0。"
+"查看更多信息，见:ref:`3.0-oplog-format-change`。"
 
 #: ../source/release-notes/3.0-upgrade.txt:121
 msgid ""
@@ -177,6 +180,10 @@ msgid ""
 "replica set configuration, preventing replica sets from starting in MongoDB "
 "3.0. For more information, see :ref:`3.0-compatibility-repl-set-config`."
 msgstr ""
+":ref:`MongoDB 3.0中对复制集配置严格验证 <3.0-compatibility-repl-set-"
+"config>`可能会使之前有效的副本集配置失效，从而阻碍MongoDB 3.0中复制集的启动。"
+"更多信息，见:ref:`3.0-compatibility-repl-set-config`。"
+
 
 #: ../source/release-notes/3.0-upgrade.txt:127
 msgid ""
@@ -186,6 +193,9 @@ msgid ""
 "</release-notes/2.6-upgrade>` *first*, and then follow the procedure to "
 "upgrade from MongoDB 2.6 to 3.0."
 msgstr ""
+"在把复制集成员升级到3.0版本之前，他们都必须运行在2.6版本，要从更早的版本升级的话，*首先*应该升级到2.6，"
+"见:doc:`upgrade all members of the replica set to version 2.6 "
+"</release-notes/2.6-upgrade>`，然后跟随这步骤从2.6升级到3.0。"
 
 #: ../source/release-notes/3.0-upgrade.txt:136
 msgid ""
@@ -193,6 +203,7 @@ msgid ""
 "minimize downtime by upgrading the members individually while the other "
 "members are available:"
 msgstr ""
+"你可以使用\"滚动\"的方式从MongoDB 2.6升级到3.0来最小化你的宕机时间，这是指在其他成员可用的时候分别升级复制集的成员："
 
 #: ../source/release-notes/3.0-upgrade.txt:142
 msgid ""
@@ -200,15 +211,16 @@ msgid ""
 "accept writes until the failover process completes. This may take 30 seconds"
 " or more: schedule the upgrade procedure during a scheduled maintenance "
 "window."
-msgstr ""
+msgstr "复制集高可用并不是立即实施的，实施时会导致集群暂时无法接受写操作直至错误恢复过程完成。"
+"这个过程可能需要30秒或者更多：请在预定的维护时间窗内执行更新。"
 
 #: ../source/release-notes/3.0-upgrade.txt:150
 msgid "Change Replica Set Storage Engine to WiredTiger"
-msgstr ""
+msgstr "改变复制集的存储引擎为WiredTiger"
 
 #: ../source/release-notes/3.0-upgrade.txt:158
 msgid "Upgrade a Sharded Cluster to 3.0"
-msgstr ""
+msgstr "升级分片集群到3.0"
 
 #: ../source/release-notes/3.0-upgrade.txt:160
 msgid ""
@@ -218,10 +230,14 @@ msgid ""
 "components of the cluster and will produce warnings if any component is "
 "running version 2.4."
 msgstr ""
+"只有所有的集群成员当前运行的实例为2.6的时候才可以升级分片集群到3.0。"
+"运行中的2.4的分片集群唯一的升级途径是先升级到2.6。升级的过程会验证集群中的所有成员，"
+"并且如果任何成员运行在2.4的时候都会发出警告。"
 
 #: ../source/release-notes/3.0-upgrade.txt:167
 msgid "Considerations"
 msgstr ""
+"注意事项"
 
 #: ../source/release-notes/3.0-upgrade.txt:169
 msgid ""
@@ -230,6 +246,8 @@ msgid ""
 "collection meta-data. For example, during the upgrade, do **not** do any of "
 "the following:"
 msgstr ""
+"升级的过程不需要任何的宕机时间。然而，当你升级一个分片集群时，"
+"确保客户端不会改变集合的元数据，例如，在升级的过程中，**不能**进行以下的任何操作："
 
 #: ../source/release-notes/3.0-upgrade.txt:174
 msgid ":method:`sh.enableSharding()`"
@@ -258,6 +276,7 @@ msgstr ""
 #: ../source/release-notes/3.0-upgrade.txt:186
 msgid "any operation that creates a database"
 msgstr ""
+"创建数据库的任何操作"
 
 #: ../source/release-notes/3.0-upgrade.txt:188
 msgid ""
@@ -266,20 +285,25 @@ msgid ""
 "however, that not all commands on the :doc:`/reference/sharding` page "
 "modifies the cluster meta-data."
 msgstr ""
+"任何形式的会修改集群元数据的其他操作。见:doc:`/reference/sharding`查看完整的分片命令的列表。"
+"注意，不是:doc:`/reference/sharding`中提到的所有操作都会修改集群的元数据。"
 
 #: ../source/release-notes/3.0-upgrade.txt:195
 msgid "Upgrade Sharded Clusters"
 msgstr ""
+"升级分片集群"
 
 #: ../source/release-notes/3.0-upgrade.txt:197
 msgid ""
 "*Optional but Recommended.* As a precaution, take a backup of the ``config``"
 " database *before* upgrading the sharded cluster."
 msgstr ""
+"*可选但推荐的做法。*作为预防，在对分片集群做升级*之前*对``config``数据库做一个备份。"
 
 #: ../source/release-notes/3.0-upgrade.txt:205
 msgid "Change Sharded Cluster Storage Engine to WiredTiger"
 msgstr ""
+"修改存储引擎为WiredTiger"
 
 #: ../source/release-notes/3.0-upgrade.txt:207
 msgid ""
@@ -288,58 +312,70 @@ msgid ""
 "you update the config servers to use WiredTiger, you must update all three "
 "config servers to use WiredTiger."
 msgstr ""
+"对于MongoDB 3.0的分片集群，你可以选择升级分片使用WiredTiger存储引擎，但config sever使用MMAPv1，"
+"如果你升级了config server使用WiredTiger，那必须升级所有3个config server使用WiredTiger。"
 
 #: ../source/release-notes/3.0-upgrade.txt:222
 msgid "Upgrade Existing ``MONGODB-CR`` Users to Use ``SCRAM-SHA-1``"
 msgstr ""
+"升级现存的``MONGODB-CR``认证机制到``SCRAM-SHA-1``"
 
 #: ../source/release-notes/3.0-upgrade.txt:224
 msgid ""
 "After upgrading the binaries, see :ref:`3.0-scram` for details on ``SCRAM-"
 "SHA-1`` upgrade scenarios."
 msgstr ""
+"升级完二进制文件后，见:ref:`3.0-scram`来获取``SCRAM-SHA-1``的升级场景。"
 
 #: ../source/includes/2.6-3.0-upgrade-downgrade-procedure.rst:4
 msgid "General |action| Procedure"
 msgstr ""
+"一般的|action|步骤"
 
 #: ../source/includes/2.6-3.0-upgrade-downgrade-procedure.rst:6
 msgid ""
 "**Except** as described on this page, moving between 2.6 and 3.0 is a drop-"
 "in replacement:"
 msgstr ""
+"**除了**这一页的描述，在2.6到3.0的升级是一个移除-加入的替换："
 
 #: ../source/release-notes/3.0-upgrade.txt:0
 msgid "On this page"
 msgstr ""
+"在本页中"
 
 #: ../source/includes/fact-3.0-downgrade-path.rst:1
 msgid ""
 "Once upgraded to MongoDB 3.0, you **cannot** downgrade to a version lower "
 "than **2.6.8**."
 msgstr ""
+"一旦升级到MongoDB 3.0，你将**不能**降级到**2.6.8**以前的版本。"
 
 #: ../source/release-notes/3.0-upgrade.txt:102
 msgid "Change Storage Engine for Standalone to WiredTiger"
 msgstr ""
+"为独立模式的实例修改存储引擎到WiredTiger"
 
 #: ../source/release-notes/3.0-upgrade.txt:104
 msgid ""
 "To change the storage engine for a standalone :program:`mongod` instance to "
 "WiredTiger, see :doc:`/tutorial/change-standalone-wiredtiger`."
 msgstr ""
+"为了修改独立模式:program:`mongod`实例的存储引擎到WiredTiger，参考：:doc:`/tutorial/change-standalone-wiredtiger`。"
 
 #: ../source/release-notes/3.0-upgrade.txt:152
 msgid ""
 "To change the storage engine for a replica set to WiredTiger, see "
 ":doc:`/tutorial/change-replica-set-wiredtiger`."
 msgstr ""
+"为了修改复制集模式的实例到WiredTiger，参考:doc:`/tutorial/change-replica-set-wiredtiger`。"
 
 #: ../source/release-notes/3.0-upgrade.txt:212
 msgid ""
 "To change a sharded cluster to use WiredTiger, see :doc:`/tutorial/change-"
 "sharded-cluster-wiredtiger`."
 msgstr ""
+"为了修改分片集模式的实例到WiredTiger，参考:doc:`/tutorial/change-sharded-cluster-wiredtiger`。"
 
 #~ msgid ""
 #~ "Once upgraded to MongoDB 3.0, you **cannot** downgrade to a version lower "
