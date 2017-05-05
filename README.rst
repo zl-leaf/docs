@@ -3,12 +3,12 @@ MongoDB Documentation
 =====================
 
 This repository contains a major revision of the MongoDB documentation,
-currently accessible at http://docs.mongodb.org/manual/. You can build
+currently accessible at http://docs.mongoing.com/manual-zh. You can build
 the documentation locally if you have `giza
 <https://pypi.python.org/pypi/giza>`_ and Inkscape installed: ::
 
      pip install giza
-     git clone https://github.com/mongodb/docs.git
+     git clone https://github.com/mongodb-china/docs.git
      cd docs/
      make html
 
