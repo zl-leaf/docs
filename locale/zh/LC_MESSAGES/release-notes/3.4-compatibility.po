@@ -4,51 +4,52 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-02-04 11:35+0800\n"
 "Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 # 3621ba1e705f4ff0ae7072af4d9701c1
 #: ../source/release-notes/3.4-compatibility.txt:5
 msgid "Compatibility Changes in MongoDB 3.4"
-msgstr ""
+msgstr "MongoDB 3.4 中的兼容性变化"
 
 # cb5e69dfd7d04c8aa5f8e1c376b1729c
 #: ../source/release-notes/3.4-compatibility.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # a8f4bd232288438c9b07685a5dcabcb8
 #: ../source/release-notes/3.4-compatibility.txt:15
 msgid ""
 "The following 3.4 changes can affect the compatibility with older "
 "versions of MongoDB."
-msgstr ""
+msgstr "下面的 3.4 变化可能会影响与之前版本MongoDB的兼容性。"
 
 # dc62fdf2e5e548969470f6d6fb333189
 #: ../source/release-notes/3.4-compatibility.txt:18
 msgid "See also :doc:`/release-notes/3.4`."
-msgstr ""
+msgstr "也可查阅 :doc:`/release-notes/3.4` 。"
 
 # 275c2b87b2514d548ac12736f5c9e6b6
 #: ../source/release-notes/3.4-compatibility.txt:21
 msgid "Sharded Cluster Changes"
-msgstr ""
+msgstr "分片集群变化"
 
 # 1e48c1c2644d4682b1b5d63d636ee056
 #: ../source/release-notes/3.4-compatibility.txt:26
 msgid "``shardsvr`` Requirement"
-msgstr ""
+msgstr "``shardsvr`` 要求"
 
 # d06317fff160481e8325252543801689
 #: ../source/release-notes/3.4-compatibility.txt:28
@@ -58,6 +59,9 @@ msgid ""
 "configuration file setting :setting:`sharding.clusterRole` or via the "
 "command line option :option:`--shardsvr`."
 msgstr ""
+"对于一个 3.4 分片集群， 分片的 :program:`mongod`  实例 **必须** 显式指定"
+"它的角色为  ``shardsvr`` ，要么通过配置文件设置 :setting:`sharding."
+"clusterRole`  或者通过命令行选项  :option:`--shardsvr` 进行设置。"
 
 # f336e28399e544c9a45ba3fe29eb665e
 #: ../source/release-notes/3.4-compatibility.txt:36
@@ -66,11 +70,14 @@ msgid ""
 "is ``27018``. To use a different port, specify :setting:`net.port` "
 "setting or ``--port`` option."
 msgstr ""
+" ``shardsvr``  角色  :program:`mongod` 实例的默认端口为 ``27018`` 。 如果"
+"需要使用一个不同的端口，指定  :setting:`net.port` 设置或者  ``--port``  "
+"选项。"
 
 # 8ae335339ade433daf281f63c57d900f
 #: ../source/release-notes/3.4-compatibility.txt:43
 msgid "3.4 ``mongos`` and Earlier Versions of ``mongod``"
-msgstr ""
+msgstr "3.4 的  ``mongos`` 以及之前版本的  ``mongod``"
 
 # 1bfb1557279d4840b449c0f1efad2d04
 #: ../source/release-notes/3.4-compatibility.txt:45
@@ -78,60 +85,71 @@ msgid ""
 "Version 3.4 :program:`mongos` instances cannot connect to earlier "
 "versions of :program:`mongod` instances."
 msgstr ""
+"3.4 版本的  :program:`mongos` 实例无法连接到之前版本的 :program:`mongod` "
+"实例。"
 
 # bc4d3944e7a043fd88a04060cca8108f
 #: ../source/release-notes/3.4-compatibility.txt:49
 msgid "Removal for Configuration Options"
-msgstr ""
+msgstr "配置选项的删除"
 
 # 3042d649a59a4a739f9c330e14274546
 #: ../source/release-notes/3.4-compatibility.txt:51
 msgid ""
-"MongoDB 3.4 removes the following configuration options from the "
-":program:`mongos`:"
-msgstr ""
+"MongoDB 3.4 removes the following configuration options from the :"
+"program:`mongos`:"
+msgstr "MongoDB 3.4  从  :program:`mongos` 中删除了以下配置选项："
 
 # 7265e8fe0e104308a4b63d64fe51edb6
 #: ../source/release-notes/3.4-compatibility.txt:54
 msgid ""
-"``sharding.chunkSize`` configuration file setting and "
-":option:`--chunkSize` command-line option"
+"``sharding.chunkSize`` configuration file setting and :option:`--"
+"chunkSize` command-line option"
 msgstr ""
+"``sharding.chunkSize``  配置文件设置以及 :option:`--chunkSize`  命令行选"
+"项"
 
 # b30796b9765e46c68a9cc89e7ef8ea53
 #: ../source/release-notes/3.4-compatibility.txt:57
 msgid ""
-"``sharding.autoSplit`` configuration file setting and "
-":option:`--noAutoSplit` command line option"
+"``sharding.autoSplit`` configuration file setting and :option:`--"
+"noAutoSplit` command line option"
 msgstr ""
+"``sharding.autoSplit``  配置文件设置以及  :option:`--noAutoSplit` 命令行"
+"选项"
 
 # 9dd87ebd9dc84c31801060e9c359ab8f
 #: ../source/release-notes/3.4-compatibility.txt:61
 msgid "Removal of Support for SCCC Config Servers"
-msgstr ""
+msgstr "SCCC配置服务器支持的删除"
 
 # c2286c487b9f4487b19e32edf5a9e341
 #: ../source/release-notes/3.4-compatibility.txt:63
 msgid ""
-"3.4 sharded clusters no longer support the use of mirrored (SCCC) "
-":program:`mongod` instances as config servers. The use of SCCC config "
+"3.4 sharded clusters no longer support the use of mirrored (SCCC) :"
+"program:`mongod` instances as config servers. The use of SCCC config "
 "servers, deprecated in the 3.2 release, is no longer valid. Instead, "
 "deploy your config servers as a replica set (CSRS)."
 msgstr ""
+"3.4 分片集群不再支持镜像（SCCC）  :program:`mongod`  实例作为配置服务器的"
+"使用。 SCCC配置服务器的使用已经在3.2版本中弃用，不再有效。相反地，部署您"
+"的配置服务器为复制集（CSRS）。"
 
 # 1257943436344987a98eca57a7e3f1c1
 #: ../source/release-notes/3.4-compatibility.txt:68
 msgid ""
 "To upgrade your sharded cluster to version 3.4, the config servers must "
 "be running as a replica set."
-msgstr ""
+msgstr "为了将您的分片集群升级到3.4 版本，配置服务器必须运行为复制集。"
 
 # df903a98aa864544ab2b71c5f84dc895
 #: ../source/release-notes/3.4-compatibility.txt:71
 msgid ""
-"To convert your existing config servers from SCCC to CSRS, see "
-":doc:`/tutorial/upgrade-config-servers-to-replica-set`."
+"To convert your existing config servers from SCCC to CSRS, see :doc:`/"
+"tutorial/upgrade-config-servers-to-replica-set`."
 msgstr ""
+"为了将您现有的配置服务器从SCCC转化到CSRS，请查阅  :doc:`/tutorial/"
+"upgrade-config-servers-to-replica-set` 。"
 
 # a66b40b0a5d84cbf8b0b8037f905e344
 #: ../source/release-notes/3.4-compatibility.txt:76
@@ -139,154 +157,173 @@ msgid ""
 ":ref:`Sharded Cluster Release Notes Section <3.4-rel-notes-sharded-"
 "cluster>`"
 msgstr ""
+":ref:`Sharded Cluster Release Notes Section <3.4-rel-notes-sharded-"
+"cluster>`"
 
 # 48b8d5b41f374113beb531dbdb5fd474
 #: ../source/release-notes/3.4-compatibility.txt:81
 msgid "Deprecated Operations"
-msgstr ""
+msgstr "已弃用的操作"
 
 # facd1626739840a8bdf17fe0f7e23e3a
 #: ../source/release-notes/3.4-compatibility.txt:86
 msgid "``group``"
-msgstr ""
+msgstr "``group``"
 
 # cd544b6423b04840a65bc8d31163cc2b
 #: ../source/release-notes/3.4-compatibility.txt:88
 msgid ""
 "Mongodb 3.4 deprecates the following commands and :program:`mongo` shell "
 "methods:"
-msgstr ""
+msgstr "Mongodb 3.4  弃用了下列命令以及 :program:`mongo`  shell方法："
 
 # 7e2a821a726743ccbc2f5e1b2dc30dc8
 #: ../source/release-notes/3.4-compatibility.txt:91
 msgid ""
-":dbcommand:`group` command and :method:`db.collection.group()`. Use "
-":method:`db.collection.aggregate()` or "
-":method:`db.collection.mapReduce()` instead."
+":dbcommand:`group` command and :method:`db.collection.group()`. Use :"
+"method:`db.collection.aggregate()` or :method:`db.collection."
+"mapReduce()` instead."
 msgstr ""
+":dbcommand:`group`  命令以及  :method:`db.collection.group()` 。 使用  :"
+"method:`db.collection.aggregate()`  或者  :method:`db.collection."
+"mapReduce()`  代替。"
 
 # 47207f4896a247b381a90a05427794a6
 #: ../source/release-notes/3.4-compatibility.txt:98
 msgid "``aggregate`` without ``cursor``"
-msgstr ""
+msgstr "无 ``cursor`` 的 ``aggregate``"
 
 # 8770e90ad8324fe3adec5d3d2ec63139
 #: ../source/includes/deprecation-aggregate-wo-cursor.rst:1
 msgid ""
 "MongoDB 3.4 deprecates the use of :dbcommand:`aggregate` command "
 "**without** the ``cursor`` option, unless the pipeline includes the "
-"``explain`` option. When returning aggregation results inline using the "
-":dbcommand:`aggregate` command, specify the cursor option using the "
-"default batch size ``cursor: {}`` or specify the batch size in the cursor"
-" option ``cursor: { batchSize: <num> }``."
+"``explain`` option. When returning aggregation results inline using the :"
+"dbcommand:`aggregate` command, specify the cursor option using the "
+"default batch size ``cursor: {}`` or specify the batch size in the "
+"cursor option ``cursor: { batchSize: <num> }``."
 msgstr ""
+"MongoDB 3.4 弃用了 **无**  ``cursor``  选项 :dbcommand:`aggregate`  命令"
+"的使用，除非管道中包含  ``explain``  选项。使用 :dbcommand:`aggregate`  "
+"命令返回聚合结果的时候，使用默认的批大小 ``cursor: {}`` 指定游标选项或者"
+"在游标选项  ``cursor: { batchSize: <num> }`` 中指定批大小。"
 
 # a1cec4150e524188822b788d8f5b9d75
 #: ../source/release-notes/3.4-compatibility.txt:103
 msgid "Stricter Validation of Collection and Index Specifications"
-msgstr ""
+msgstr "更严格的集合验证和索引规范"
 
 # e3b2c68d39f34a75bb7685f123e1fec1
 #: ../source/release-notes/3.4-compatibility.txt:106
 msgid "Stricter Validation of Collection Options"
-msgstr ""
+msgstr "更严格的集合验证选项"
 
 # 68feb755b7534ce1a1614c2574428c73
 #: ../source/release-notes/3.4-compatibility.txt:108
 msgid ""
-"MongoDB 3.4 enforces a stricter validation of collection options during "
-":dbcommand:`create` and :method:`db.createCollection()` operations; "
-"namely, the specified options must be valid options supported by "
-":dbcommand:`create` and :method:`db.createCollection()`."
+"MongoDB 3.4 enforces a stricter validation of collection options during :"
+"dbcommand:`create` and :method:`db.createCollection()` operations; "
+"namely, the specified options must be valid options supported by :"
+"dbcommand:`create` and :method:`db.createCollection()`."
 msgstr ""
+"MongoDB 3.4 强制要求在  :dbcommand:`create` 以及 :method:`db."
+"createCollection()` 操作中进行更严格的集合验证选项；即：指定的选项必须"
+"是  :dbcommand:`create`  和  :method:`db.createCollection()` 支持的可靠选"
+"项。"
 
 # fcc082a87d6a42a5b2f09c5b2d807614
 #: ../source/release-notes/3.4-compatibility.txt:113
 msgid "For example, the following operation are no longer valid:"
-msgstr ""
+msgstr "例如，下列操作不再有效："
 
 # efac822e75cc4f61a88dbd10e71926c8
 #: ../source/release-notes/3.4-compatibility.txt:120
 msgid "Stricter Validation of Index Specifications"
-msgstr ""
+msgstr "更严格的索引规范验证"
 
 # ff2b6e72b3004059a4d49567d94ab515
 #: ../source/release-notes/3.4-compatibility.txt:122
 msgid ""
-"MongoDB 3.4 enforces a stricter validation of index specification during "
-":dbcommand:`createIndexes` and :method:`db.collection.createIndex()` "
-"operations. The enforcement does not apply to existing indexes."
+"MongoDB 3.4 enforces a stricter validation of index specification "
+"during :dbcommand:`createIndexes` and :method:`db.collection."
+"createIndex()` operations. The enforcement does not apply to existing "
+"indexes."
 msgstr ""
+"MongoDB 3.4 强制要求在  :dbcommand:`createIndexes`  和  :method:`db."
+"collection.createIndex()`  操作期间更严格的索引规范。这些强制要求不会应用"
+"与现有索引。"
 
 # f81d56d30e4d44aeaa7d048c354bddf3
 #: ../source/release-notes/3.4-compatibility.txt:127
 msgid "Stricter validation include the following:"
-msgstr ""
+msgstr "更严格的验证包括："
 
 # e2996c6f77a74e14ba09e96a17778e14
 #: ../source/release-notes/3.4-compatibility.txt:129
 msgid ""
-"Ensuring that the value in the index key pattern ``key: value`` is valid."
-" Specifically, value can be:"
-msgstr ""
+"Ensuring that the value in the index key pattern ``key: value`` is "
+"valid. Specifically, value can be:"
+msgstr "保证 索引键模式  ``key: value``  是有效的。详细说来，值可以是："
 
 # 9695773a1d66493597dc4173fcc07c64
 #: ../source/release-notes/3.4-compatibility.txt:135
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 # dc3b5be97dc24cdf85aeea2e394f389a
 #: ../source/release-notes/3.4-compatibility.txt:136
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 # 739163243ef94479816826b22917c95e
 #: ../source/release-notes/3.4-compatibility.txt:138
 msgid "A number greater than 0"
-msgstr ""
+msgstr "大于0的数"
 
 # 8737b58b2e4d4f178954dffc4b066bd7
 #: ../source/release-notes/3.4-compatibility.txt:139
 msgid "For ascending index"
-msgstr ""
+msgstr "对于递增的索引"
 
 # 1ffa1aa4e32d4052a16f82c70fbaa27b
 #: ../source/release-notes/3.4-compatibility.txt:141
 msgid "A number less than 0"
-msgstr ""
+msgstr "小于0的数"
 
 # fdf35308fbfc4139827bf67bd3a9439c
 #: ../source/release-notes/3.4-compatibility.txt:142
 msgid "For descending index"
-msgstr ""
+msgstr "对于递减的索引"
 
 # 48f67bdbf77d499ab7b606d9799c175e
 #: ../source/release-notes/3.4-compatibility.txt:144
 msgid "String \"text\", \"2dsphere\", \"2d\", or \"hashed\""
-msgstr ""
+msgstr "字符串 \"text\" ，  \"2dsphere\" ，  \"2d\" ， 或者  \"hashed\""
 
 # 6c840dcd57ce4982862978aa948fa2c8
 #: ../source/release-notes/3.4-compatibility.txt:145
 msgid "For special index types"
-msgstr ""
+msgstr "对于特殊的索引类型"
 
 # d998ce4947b64d51857321c82e2f7e17
 #: ../source/release-notes/3.4-compatibility.txt:147
 msgid "For example, the following operations are no longer valid:"
-msgstr ""
+msgstr "例如，下面的操作不再有效："
 
 # cb5e66f34e8340878f82fd24fc75be3f
 #: ../source/release-notes/3.4-compatibility.txt:156
 msgid ""
-"Ensuring that the specified :doc:`index options </core/index-properties>`"
-" are valid. Previous versions ignored invalid options. For example, the "
-"following operations are no longer valid:"
+"Ensuring that the specified :doc:`index options </core/index-"
+"properties>` are valid. Previous versions ignored invalid options. For "
+"example, the following operations are no longer valid:"
 msgstr ""
+"保证指定的 :doc:`index options </core/index-properties>` 是有效的。之前的"
+"版本忽略了无效的选项。例如，下面的操作不再有效："
 
 # 5223490683b149f89beb01c79963e5fb
 #: ../source/release-notes/3.4-compatibility.txt:169
 msgid "General Compatibility Changes"
-msgstr ""
+msgstr "一般性兼容性变化"
 
 # 2d9eb2473c29473f9b62b1b080dfe75c
 #: ../source/release-notes/3.4-compatibility.txt:171
@@ -294,6 +331,8 @@ msgid ""
 "Removal of deprecated ``textSearchEnabled`` parameter. Starting from "
 "version 2.6, MongoDB enables the text search feature by default."
 msgstr ""
+"删除了弃用 的 ``textSearchEnabled`` 参数。从2.6版本开始，MongoDB默认开启"
+"文本检索功能。"
 
 # d706450af00d43ceb94ad9b653549198
 #: ../source/release-notes/3.4-compatibility.txt:174
@@ -302,82 +341,100 @@ msgid ""
 "is replaced by :program:`mongoreplay`, which offers a more flexible "
 "superset of :program:`mongosniff`'s functionality."
 msgstr ""
+"删除了  :program:`mongosniff` 。 在MongoDB 3.4 中，  :program:"
+"`mongoreplay` 替换了  :program:`mongosniff`，提供了 :program:"
+"`mongosniff` 的功能更加灵活的超集。"
 
 # dc0ca92bc6764bdb9658565de571f715
 #: ../source/release-notes/3.4-compatibility.txt:182
 msgid "User Roles Changes"
-msgstr ""
+msgstr "用户角色变化"
 
 # 751473a5774a4a74a02d98256e5d374b
 #: ../source/release-notes/3.4-compatibility.txt:184
 msgid ""
 "The privileges of the following built-in roles do not apply to the "
 "``local`` and ``config`` databases:"
-msgstr ""
+msgstr "下列内置角色的权限不应用于 ``local``  和 ``config``  数据库。"
 
 # 075463d9a9864096a53844033c374b99
 #: ../source/release-notes/3.4-compatibility.txt:187
 msgid ":authrole:`readAnyDatabase`"
-msgstr ""
+msgstr ":authrole:`readAnyDatabase`"
 
 # 22c642da870f4e9e99eaf32cffb62c31
 #: ../source/release-notes/3.4-compatibility.txt:189
 msgid ""
 "To provide ``read`` privileges on the ``local`` database, create a user "
 "in the ``admin`` database with :authrole:`read` role in the ``local`` "
-"database. See also :authrole:`clusterManager` and "
-":authrole:`clusterMonitor` role for access to the ``config`` and "
-"``local`` databases."
+"database. See also :authrole:`clusterManager` and :authrole:"
+"`clusterMonitor` role for access to the ``config`` and ``local`` "
+"databases."
 msgstr ""
+"为了提供在  ``local``  数据库上 的  ``read``  权限，可以在 ``admin``  数"
+"据库中创建一个用户， 授予 ``local``  数据库中的  :authrole:`read` 角色。"
+"也可查阅 :authrole:`clusterManager`  和  :authrole:`clusterMonitor`  角色"
+"了解对 ``config``  和 ``local`` 数据库的读取操作。"
 
 # 6acd5cc2ecfd42598ed4a29f4ded8f5a
 #: ../source/release-notes/3.4-compatibility.txt:195
 msgid ":authrole:`readWriteAnyDatabase`"
-msgstr ""
+msgstr ":authrole:`readWriteAnyDatabase`"
 
 # 4238343ee3534bb394a2a170e0cb8eb7
 #: ../source/release-notes/3.4-compatibility.txt:197
 msgid ""
 "To provide ``readWrite`` privileges on the ``local`` database, create a "
 "user in the ``admin`` database with :authrole:`readWrite` role in the "
-"``local`` database. See also :authrole:`clusterManager` and "
-":authrole:`clusterMonitor` role for access to the ``config`` and "
-"``local`` databases."
+"``local`` database. See also :authrole:`clusterManager` and :authrole:"
+"`clusterMonitor` role for access to the ``config`` and ``local`` "
+"databases."
 msgstr ""
+"为了提供在  ``local``  数据库上 的  ``readWrite``  权限，可以在 "
+"``admin``  数据库中创建一个用户， 授予 ``local``  数据库中的  :authrole:"
+"`readWrite` 角色。也可查阅 :authrole:`clusterManager`  和  :authrole:"
+"`clusterMonitor`  角色了解对 ``config``  和 ``local`` 数据库的读取操作。"
 
 # abb2ffe48592404c853ef29d0969ac74
 #: ../source/release-notes/3.4-compatibility.txt:203
 msgid ":authrole:`userAdminAnyDatabase`, and"
-msgstr ""
+msgstr ":authrole:`userAdminAnyDatabase` ， 以及"
 
 # a0484d083c9a4d908858b9d669eaa6f8
 #: ../source/release-notes/3.4-compatibility.txt:205
 msgid ":authrole:`dbAdminAnyDatabase`"
-msgstr ""
+msgstr ":authrole:`dbAdminAnyDatabase`"
 
 # ac274dbde23442fd9b2514be2cbc2aca
 #: ../source/release-notes/3.4-compatibility.txt:207
 msgid ""
 "To provide ``dbAdmin`` privileges on the ``local`` database, create a "
 "user in the ``admin`` database with :authrole:`dbAdmin` role in the "
-"``local`` database. See also :authrole:`clusterManager` and "
-":authrole:`clusterMonitor` role for access to the ``config`` and "
-"``local`` databases."
+"``local`` database. See also :authrole:`clusterManager` and :authrole:"
+"`clusterMonitor` role for access to the ``config`` and ``local`` "
+"databases."
 msgstr ""
+"为了提供在  ``local``  数据库上 的  ``dbAdmin``  权限，可以在 ``admin``  "
+"数据库中创建一个用户， 授予 ``local``  数据库中的  :authrole:`dbAdmin` 角"
+"色。也可查阅 :authrole:`clusterManager`  和  :authrole:`clusterMonitor`  "
+"角色了解对 ``config``  和 ``local`` 数据库的读取操作。"
 
 # 2d904fbba8804804b03181dac248e3ae
 #: ../source/release-notes/3.4-compatibility.txt:213
 msgid ""
-"Correspondingly, the :authrole:`clusterManager`, "
-":authrole:`clusterMonitor`, :authrole:`backup`, and :authrole:`restore` "
-"roles include additional read and write privileges on ``local`` and "
-"``config`` databases."
+"Correspondingly, the :authrole:`clusterManager`, :authrole:"
+"`clusterMonitor`, :authrole:`backup`, and :authrole:`restore` roles "
+"include additional read and write privileges on ``local`` and ``config`` "
+"databases."
 msgstr ""
+"相对应地，  :authrole:`clusterManager` ，  :authrole:"
+"`clusterMonitor` ，  :authrole:`backup` ， 和 :authrole:`restore`  角色包"
+"括在  ``local``  和 ``config`` 数据库上其它的读写权限。"
 
 # 4d538572365e4b5da4ff6d1a424a65c8
 #: ../source/release-notes/3.4-compatibility.txt:221
 msgid "Backwards Incompatible Features"
-msgstr ""
+msgstr "逆向不兼容的功能"
 
 # 100b51a6b51a4eee8152861dd4cde16f
 #: ../source/includes/3.4-backwards-incompatible-features.rst:1
@@ -386,21 +443,23 @@ msgid ""
 "cannot correctly handle and require that ``featureCompatibilityVersion`` "
 "be set to ``\"3.4\"``:"
 msgstr ""
+"下面的3.4 功能保存之前MongoDB版本不能正确处理的数据，要求 "
+"``featureCompatibilityVersion`` 设置为  ``\"3.4\"`` ："
 
 # d8cf18923d80460eac24d77a33cc8733
 #: ../source/includes/3.4-backwards-incompatible-features.rst:5
 msgid ":ref:`3.4-relnotes-views`"
-msgstr ""
+msgstr ":ref:`3.4-relnotes-views`"
 
 # b1c5c48ed4464515912c48590d70b0e9
 #: ../source/includes/3.4-backwards-incompatible-features.rst:7
 msgid ":ref:`3.4-relnotes-collation`"
-msgstr ""
+msgstr ":ref:`3.4-relnotes-collation`"
 
 # 5155e8bdd61b44d6a80aea5357985037
 #: ../source/includes/3.4-backwards-incompatible-features.rst:9
 msgid ":ref:`3.4-decimal`"
-msgstr ""
+msgstr ":ref:`3.4-decimal`"
 
 # 270107b4fcc54bb6b1e461daa57f0a1c
 #: ../source/includes/3.4-backwards-incompatible-features.rst:11
@@ -409,6 +468,8 @@ msgid ""
 "decimal data type. Earlier index versions support neither collation nor "
 "the decimal data type."
 msgstr ""
+"索引版本   ``v: 2`` 。  ``v:2``  索引增加了对collation和十进制数据的支"
+"持。之前的索引版本既不支持collation也不支持十进制数据类型。"
 
 # 432f679b586148c280f6727bc5f954ee
 #: ../source/includes/3.4-backwards-incompatible-features.rst:15
@@ -416,21 +477,28 @@ msgid ""
 "If ``featureCompatibilityVersion: \"3.4\"``, indexes created in MongoDB "
 "3.4 default to ``v: 2`` . Otherwise, new indexes default to ``v: 1``."
 msgstr ""
+"如果是 ``featureCompatibilityVersion: \"3.4\"`` ， 那么在MongoDB 3.4 中创"
+"建的索引默认为  ``v: 2`` 。否则的话，新索引默认为  ``v: 1`` 。"
 
 # 5848542915ea4fa487f0fa41b321bd81
 #: ../source/release-notes/3.4-compatibility.txt:225
 msgid ""
-"To set the ``featureCompatibilityVersion``, see "
-":dbcommand:`setFeatureCompatibilityVersion` command."
+"To set the ``featureCompatibilityVersion``, see :dbcommand:"
+"`setFeatureCompatibilityVersion` command."
 msgstr ""
+"如果想要设置  ``featureCompatibilityVersion`` ，请查阅  :dbcommand:"
+"`setFeatureCompatibilityVersion` 命令。"
 
 # 7908f98a6bda45ddb3a962933b85cbc6
 #: ../source/includes/3.4-featureCompatibility-caveat.rst:1
 msgid ""
 "Enabling these backwards-incompatible features can :ref:`complicate the "
-"downgrade process <3.4-downgrade-features-prereq>`. For details, see "
-":ref:`3.4-downgrade-features-prereq`."
+"downgrade process <3.4-downgrade-features-prereq>`. For details, see :"
+"ref:`3.4-downgrade-features-prereq`."
 msgstr ""
+"启动这些 向后不兼容的功能可以查阅 :ref:`complicate the downgrade process "
+"<3.4-downgrade-features-prereq>` 。查阅  :ref:`3.4-downgrade-features-"
+"prereq` 了解更多细节。"
 
 # 4d83bec60e4f408f99a026761a22b54b
 #: ../source/includes/3.4-featureCompatibility-caveat.rst:5
@@ -440,67 +508,76 @@ msgid ""
 "likelihood of downgrade is minimal. When you are confident that the "
 "likelihood of downgrade is minimal, enable these features."
 msgstr ""
+"推荐在升级之后，您允许您的部署在预模拟阶段在不启动这些功能的情况下运行，"
+"以保证降级可能性为最小。当您确认了降级的可能性最小时，开启这些功能。"
 
 # 892405edca964e63ab2f3cc587ee5a1a
 #: ../source/release-notes/3.4-compatibility.txt:232
 msgid ""
 "3.4 deployments have the following default "
 "``featureCompatibilityVersion`` values:"
-msgstr ""
+msgstr "3.4 部署有下列默认的  ``featureCompatibilityVersion`` 值："
 
 # 0f515fe773254823b44f084c0af630ac
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:5
 msgid "3.4 Deployments"
-msgstr ""
+msgstr "3.4 部署"
 
 # a9cfc973e7e04e68aa195feeebde5f72
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:6
 msgid "``featureCompatibilityVersion``"
-msgstr ""
+msgstr "``featureCompatibilityVersion``"
 
 # e188c856fbb343a7aa10d95e6196df4c
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:8
 msgid "For new deployments"
-msgstr ""
+msgstr "对于新部署"
 
 # 5c107f3067e046a4b34624e1583efec3
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:9
 msgid "``\"3.4\"``"
-msgstr ""
+msgstr "``\"3.4\"``"
 
 # dabbe0a659ba4752b8ed7deff78791f2
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:11
 msgid "For deployments :ref:`upgraded from 3.2 <3.4-upgrade>`"
-msgstr ""
+msgstr "对于 :ref:`upgraded from 3.2 <3.4-upgrade>` 的部署"
 
 # 2544b356c86943f2975929bb5250955d
 #: ../source/includes/list-table-featureCompatibilityVersion-defaults.rst:13
 msgid ""
-"``\"3.2\"`` until you :dbcommand:`setFeatureCompatibilityVersion` to "
-"``\"3.4\"``."
+"``\"3.2\"`` until you :dbcommand:`setFeatureCompatibilityVersion` to ``"
+"\"3.4\"``."
 msgstr ""
+"``\"3.2\"``  直到您 :dbcommand:`setFeatureCompatibilityVersion`  为 ``"
+"\"3.4\"`` 。"
 
 # a72b6a1736954ad1a7f2f03d463bf348
 #: ../source/release-notes/3.4-compatibility.txt:237
 msgid ""
 "Earlier versions of MongoDB will not start if the database contains "
-"views, collation specifications, or ``v:2`` indexes. If the data contains"
-" the decimal data type, operations against these documents may fail. See "
-":doc:`/release-notes/3.4-downgrade` for details. If you need to "
-"downgrade, you must remove data related to these incompatible features "
-"from your database before downgrading the binaries."
+"views, collation specifications, or ``v:2`` indexes. If the data "
+"contains the decimal data type, operations against these documents may "
+"fail. See :doc:`/release-notes/3.4-downgrade` for details. If you need "
+"to downgrade, you must remove data related to these incompatible "
+"features from your database before downgrading the binaries."
 msgstr ""
+"如果数据库包含视图、collation规范，或者  ``v:2`` 索引，之前版本的 MongoDB"
+"将不会启动。如果数据包含十进制数据类型，这些文档上的操作也许会失败。请查"
+"阅 :doc:`/release-notes/3.4-downgrade`  了解更多细节。 如果您想要降级，您"
+"必须在降级二进制之前删除数据库中不兼容功能相关的数据。"
 
 # 1b1f796d5e8a4540b5af937391193476
 #: ../source/release-notes/3.4-compatibility.txt:247
 msgid "Driver Compatibility Changes"
-msgstr ""
+msgstr "驱动程序兼容性变化"
 
 # 03b36b4834944675a197a2ab35f7ba79
 #: ../source/release-notes/3.4-compatibility.txt:249
 msgid ""
-"To use the various new features such as the new :ref:`3.4-decimal` and "
-":ref:`collation` with a MongoDB driver, an upgrade to a driver version "
+"To use the various new features such as the new :ref:`3.4-decimal` and :"
+"ref:`collation` with a MongoDB driver, an upgrade to a driver version "
 "that supports these features is necessary."
 msgstr ""
-
+"为了使用MongoDB 驱动程序中多样的新功能，例如新的  :ref:`3.4-decimal`  以"
+"及  :ref:`collation` ，需要升级到能够支持这些功能的驱动版本。"

@@ -1,116 +1,128 @@
-Yi# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2008-2016
 # This file is distributed under the same license as the mongodb-manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: mongodb-manual 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-08 12:02-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-01-27 20:51+0800\n"
 "Last-Translator: Yingminzhou <csuyingminzhou@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
 
 # bb7cae575e3b4f5ebb0b8ea15c96b1a2
 #: ../source/release-notes/3.4.txt:3
 msgid "Release Notes for MongoDB 3.4"
-msgstr ""
+msgstr "MongoDB 3.4 发布笔记"
 
 # 451129dbae4d49938224596d6e722b7e
 #: ../source/release-notes/3.4.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # 3a8094815cb54a7f99d4e1607fd5ea9e
 #: ../source/release-notes/3.4.txt:13
 msgid "MongoDB 3.4 Released Nov 29, 2016"
-msgstr ""
+msgstr "MongoDB 3.4 发布于2016年11月29日"
 
 # 3dbcba422db1480b9b3f8de3be84130a
 #: ../source/release-notes/3.4.txt:15
 msgid ""
 "MongoDB 3.4 is now available. Key features include linearizable read "
 "concerns, views, and collation."
-msgstr ""
+msgstr "MongoDB 3.4 已经上线。 关键功能包括：线性读关注、视图以及collation。"
 
 # b7e813ebb3d54647a0c7c22f4b2afa0f
 #: ../source/release-notes/3.4.txt:18
 msgid ""
-"OpsManager 3.4 is also available. See the `Ops Manager documentation "
-"<http://docs.opsmanager.mongodb.com/current/>`_ and the `Ops Manager "
-"release notes <http://docs.opsmanager.mongodb.com/current/release-"
-"notes/application/>`_ for more information."
+"OpsManager 3.4 is also available. See the `Ops Manager documentation <http://"
+"docs.opsmanager.mongodb.com/current/>`_ and the `Ops Manager release notes "
+"<http://docs.opsmanager.mongodb.com/current/release-notes/application/>`_ for "
+"more information."
 msgstr ""
+"OpsManager 3.4 也已经上线。 查阅  `Ops Manager documentation <http://docs."
+"opsmanager.mongodb.com/current/>`_  和  `Ops Manager release notes <http://"
+"docs.opsmanager.mongodb.com/current/release-notes/application/>`_  了解更多信"
+"息。"
 
 # 17873a97c6ba43de8b033a6c2f2d6954
 #: ../source/release-notes/3.4.txt:27
 msgid "Sharded Cluster"
-msgstr ""
+msgstr "分片集群"
 
 # 494a3e05b13d430c872fcea9a5eab684
 #: ../source/release-notes/3.4.txt:30
 msgid "Membership Awareness"
-msgstr ""
+msgstr "成员意识"
 
 # d7a1eb1e53684988bfaabcfdb26905cc
 #: ../source/release-notes/3.4.txt:32
 msgid ""
-"Starting in 3.4, sharded cluster components (shards, config servers, "
-":program:`mongos` instances) recognize their membership in a sharded "
-"cluster, including the name of the sharded cluster, the location of the "
-"config servers."
+"Starting in 3.4, sharded cluster components (shards, config servers, :program:"
+"`mongos` instances) recognize their membership in a sharded cluster, "
+"including the name of the sharded cluster, the location of the config servers."
 msgstr ""
+"从3.4 开始，分片集群组件（分片、配置服务器、 :program:`mongos`  实例）可以识别"
+"分片集群中的隶属关系，包括分片集群的名称以及配置服务器的位置。"
 
 # 1af156a01ad446319c510a11fda569ac
 #: ../source/release-notes/3.4.txt:39
 msgid "To support this awareness:"
-msgstr ""
+msgstr "为了支持这种认知："
 
 # 92c122680da341c8a46f823a886c66c3
 #: ../source/release-notes/3.4.txt:54
 msgid "``shardsvr`` Requirement"
-msgstr ""
+msgstr "``shardsvr`` 需求"
 
 # c3ccb26d977d4d75ae946ac672145c00
 #: ../source/release-notes/3.4.txt:42
 msgid ""
 "For a 3.4 sharded cluster, :program:`mongod` instances for the shards "
 "**must** explicitly specify its role as a ``shardsvr``, either via the "
-"configuration file setting :setting:`sharding.clusterRole` or via the "
-"command line option :option:`--shardsvr`."
+"configuration file setting :setting:`sharding.clusterRole` or via the command "
+"line option :option:`--shardsvr`."
 msgstr ""
+"对于一个3.4 分片集群， 分片的 :program:`mongod`  实例 **必须** 显式指定它的角"
+"色为一个 ``shardsvr``  ，可以通过配置文件设置  :setting:`sharding."
+"clusterRole`  或者通过命令行选项  :option:`--shardsvr` 进行指定。"
 
 # 987176a5eeb44450929e432133a44219
 #: ../source/release-notes/3.4.txt:50
 msgid ""
-"Default port for :program:`mongod` instances with the ``shardsvr`` role "
-"is ``27018``. To use a different port, specify :setting:`net.port` "
-"setting or ``--port`` option."
+"Default port for :program:`mongod` instances with the ``shardsvr`` role is "
+"``27018``. To use a different port, specify :setting:`net.port` setting or "
+"``--port`` option."
 msgstr ""
+"``shardsvr``  角色的  :program:`mongod`  实例的默认端口为 ``27018`` 。 如果需"
+"要使用一个不同的端口， 指定  :setting:`net.port`  设置或者 ``--port`` 选项。"
 
 # daa694e6e8d245d6af22126a11dc1085
 #: ../source/release-notes/3.4.txt:58
 msgid "3.4 ``mongos`` Incompatibility with Earlier Versions of ``mongod``"
-msgstr ""
+msgstr "3.4 版本 ``mongos``  与之前版本 ``mongod`` 的不兼容性"
 
 # 3e30c4dbf02b4d76a69b9b83fa4b8c57
 #: ../source/release-notes/3.4.txt:57
 msgid ""
-"Version 3.4 :program:`mongos` instances cannot connect to earlier "
-"versions of :program:`mongod` instances."
+"Version 3.4 :program:`mongos` instances cannot connect to earlier versions "
+"of :program:`mongod` instances."
 msgstr ""
+"3.4 版本的 :program:`mongos`  实例不能连接到之前版本的  :program:`mongod`  实"
+"例。"
 
 # 068f1a759ca8480c9ed1acb6e0fab833
 #: ../source/release-notes/3.4.txt:61
 msgid "Balancer on Config Server Primary"
-msgstr ""
+msgstr "配置服务器主节点上的均衡器"
 
 # acc437b4b29a41a3a5eb615b2f5b4673
 #: ../source/release-notes/3.4.txt:63
@@ -118,345 +130,406 @@ msgid ""
 "The balancer process has moved from the :program:`mongos` to the primary "
 "member of the config server replica set. Associated with this change:"
 msgstr ""
+"均衡器进程已经从  :program:`mongos` 迁移到配置服务器复制集的主节点成员上。 与"
+"这个修改相关的有："
 
 # f032b992fdb54ee1ae49e5f11ab438e1
 #: ../source/release-notes/3.4.txt:67
 msgid ""
-"The primary of the CSRS config server holds the ``\"balancer\"`` lock, "
-"using a process id named ``\"ConfigServer\"``, which is never released."
+"The primary of the CSRS config server holds the ``\"balancer\"`` lock, using "
+"a process id named ``\"ConfigServer\"``, which is never released."
 msgstr ""
+"CSRS  配置服务器的主节点持有  ``\"balancer\"``  锁，使用的进程ID为  ``"
+"\"ConfigServer\"`` ，永不释放。"
 
 # 2adb8f0b17424bf283c418a999967e93
 #: ../source/release-notes/3.4.txt:70
 msgid "MongoDB 3.4 adds:"
-msgstr ""
+msgstr "MongoDB 3.4增加了："
 
 # 3a922c243e4e40c78d93a9b52284f098
 #: ../source/release-notes/3.4.txt:72
 msgid ""
-":dbcommand:`balancerStart` command and updates the 3.4 :program:`mongo` "
-"shell method :method:`sh.startBalancer()` to wrap the new command. A 3.2 "
-"or earlier :program:`mongo` shell method :method:`sh.startBalancer()` is "
+":dbcommand:`balancerStart` command and updates the 3.4 :program:`mongo` shell "
+"method :method:`sh.startBalancer()` to wrap the new command. A 3.2 or "
+"earlier :program:`mongo` shell method :method:`sh.startBalancer()` is "
 "incompatible with a 3.4 sharded cluster."
 msgstr ""
+":dbcommand:`balancerStart` 命令，并且更新了3.4 的  :program:`mongo`  shell方"
+"法 :method:`sh.startBalancer()` 来封装新命令。 3.2 或之前版本的  :program:"
+"`mongo`  shell方法  :method:`sh.startBalancer()`  与3.4分片集群不兼容。"
 
 # 5fbc2210c22741d488c9d7ea76478537
 #: ../source/release-notes/3.4.txt:78
 msgid ""
-":dbcommand:`balancerStop` command and updates the 3.4 :program:`mongo` "
-"shell method :method:`sh.stopBalancer()` to wrap the new command. A 3.2 "
-"or earlier :program:`mongo` shell method :method:`sh.stopBalancer()` is "
-"incompatible with a 3.4 sharded cluster."
+":dbcommand:`balancerStop` command and updates the 3.4 :program:`mongo` shell "
+"method :method:`sh.stopBalancer()` to wrap the new command. A 3.2 or earlier :"
+"program:`mongo` shell method :method:`sh.stopBalancer()` is incompatible with "
+"a 3.4 sharded cluster."
 msgstr ""
+":dbcommand:`balancerStop`  命令，并且更新了 3.4 的  :program:`mongo` shell 方"
+"法 :method:`sh.stopBalancer()`  来封装新命令。 3.2 或之前版本的  :program:"
+"`mongo`  shell方法  :method:`sh.stopBalancer()`  与3.4分片集群不兼容。"
 
 # 9043bcff217b41ddb8d97f09dfd2f38b
 #: ../source/release-notes/3.4.txt:84
 msgid ":dbcommand:`balancerStatus` command."
-msgstr ""
+msgstr ":dbcommand:`balancerStatus` 命令。"
 
 # fefac2d76523437ab33366d73692ee3b
 #: ../source/release-notes/3.4.txt:86
 msgid ""
-"MongoDB 3.4 deprecates :program:`mongo` shell method "
-":method:`sh.getBalancerHost()`. A 3.2 or earlier :program:`mongo` shell "
-"method :method:`sh.getBalancerHost()` is incompatible with a 3.4 sharded "
-"cluster."
+"MongoDB 3.4 deprecates :program:`mongo` shell method :method:`sh."
+"getBalancerHost()`. A 3.2 or earlier :program:`mongo` shell method :method:"
+"`sh.getBalancerHost()` is incompatible with a 3.4 sharded cluster."
 msgstr ""
+":program:`mongo` shell 方法 :method:`sh.getBalancerHost()` 已经在 MongoDB 3.4 "
+"中不适用。 3.2 或之前版本的  :program:`mongo`  shell方法  :method:`sh."
+"getBalancerHost()`  与3.4分片集群不兼容。"
 
 # 7854da5958674eaea5ee0e507257a187
 #: ../source/release-notes/3.4.txt:91
 msgid ""
-"MongoDB 3.4 removes the following configuration options from the "
-":program:`mongos`:"
-msgstr ""
+"MongoDB 3.4 removes the following configuration options from the :program:"
+"`mongos`:"
+msgstr "MongoDB 3.4 删除了  :program:`mongos`  中的以下配置选项："
 
 # 5099cfd579124befb57270ff93ac7237
 #: ../source/release-notes/3.4.txt:94
 msgid ""
-":setting:`sharding.chunkSize` configuration file setting and "
-":option:`--chunkSize` command-line option"
+":setting:`sharding.chunkSize` configuration file setting and :option:`--"
+"chunkSize` command-line option"
 msgstr ""
+":setting:`sharding.chunkSize` 配置文件设置以及 :option:`--chunkSize`  命令行选"
+"项"
 
 # df1c353ff06a4b36b0ee0f3de74f9d48
 #: ../source/release-notes/3.4.txt:97
 msgid ""
-":setting:`sharding.autoSplit` configuration file setting and "
-":option:`--noAutoSplit` command line option"
+":setting:`sharding.autoSplit` configuration file setting and :option:`--"
+"noAutoSplit` command line option"
 msgstr ""
+":setting:`sharding.autoSplit` 配置文件设置以及 :option:`--noAutoSplit`  命令行"
+"选项"
 
 # 7c4c2af8328c416cb6b845835a6874d1
 #: ../source/release-notes/3.4.txt:101
 msgid "Faster Balancing"
-msgstr ""
+msgstr "更快的均衡"
 
 # 89f5025fef154f289662e72b1a13fb5d
 #: ../source/release-notes/3.4.txt:103
 msgid "Starting in MongoDB 3.4:"
-msgstr ""
+msgstr "从MongoDB 3.4 开始："
 
 # 74d6a639054d4d42b5c98c7d59c18195
 #: ../source/release-notes/3.4.txt:105
 msgid ""
 "For :ref:`WiredTiger <storage-wiredtiger>`, the default value "
-"``secondaryThrottle`` is ``false`` for all chunk migrations. The balancer"
-" does not wait for replication to a secondary and instead continues with "
-"the next document."
+"``secondaryThrottle`` is ``false`` for all chunk migrations. The balancer "
+"does not wait for replication to a secondary and instead continues with the "
+"next document."
 msgstr ""
+"对于 :ref:`WiredTiger <storage-wiredtiger> ， 所有块迁移的  "
+"``secondaryThrottle``  默认值是  ``false`` 。均衡器不会等待复制到从节点，相"
+"反，她会继续处理下一个文档。"
 
 # 25ff1740d07e4c3dbf9973dd21cb1d6e
 #: ../source/release-notes/3.4.txt:110
 msgid ""
-"MongoDB can perform parallel chunk migrations. Similar to earlier "
-"versions, a shard can participate in at most one migration at a time. "
-"Observing this restriction, for a sharded cluster with *n* shards, "
-"MongoDB can perform at most *n/2* (rounded down) simultaneous chunk "
-"migrations."
+"MongoDB can perform parallel chunk migrations. Similar to earlier versions, a "
+"shard can participate in at most one migration at a time. Observing this "
+"restriction, for a sharded cluster with *n* shards, MongoDB can perform at "
+"most *n/2* (rounded down) simultaneous chunk migrations."
 msgstr ""
+"MongoDB 可以执行并行的块迁移。 和之前的版本类似，一个分片一次最多可以参与一次"
+"迁移。 基于这个限制，对于一个 *n* 块分片的集群，MongoDB最多可以执行 *n/2* （向"
+"下舍入）个同步块迁移。"
 
 # 721bfae4658a4c4ea5dccfc865360b81
 #: ../source/release-notes/3.4.txt:117
 msgid "Removal of Support for SCCC Config Servers"
-msgstr ""
+msgstr "删除对SCCC配置服务器的支持"
 
 # 891d06b0dd284c11a236afe7271089f1
 #: ../source/release-notes/3.4.txt:119
 msgid ""
-"3.4 sharded clusters no longer support the use of mirrored (SCCC) "
-":program:`mongod` instances as config servers. The use of SCCC config "
-"servers, deprecated in the 3.2 release, is no longer valid. Instead, "
-"deploy your config servers as a replica set (CSRS)."
+"3.4 sharded clusters no longer support the use of mirrored (SCCC) :program:"
+"`mongod` instances as config servers. The use of SCCC config servers, "
+"deprecated in the 3.2 release, is no longer valid. Instead, deploy your "
+"config servers as a replica set (CSRS)."
 msgstr ""
+"3.4 分片集群不再支持 镜像 （SCCC）  :program:`mongod` 实例作为配置服务器的使"
+"用。 SCCC配置服务器的使用在3.2版本中已经过期，不再有效。相反地，将您的配置服务"
+"器部署为一个复制集（CSRS）。"
 
 # bdf0a18cc70f438c9dced975affb3af5
 #: ../source/release-notes/3.4.txt:124
 msgid ""
-"To upgrade your sharded cluster to version 3.4, the config servers must "
-"be running as a replica set."
-msgstr ""
+"To upgrade your sharded cluster to version 3.4, the config servers must be "
+"running as a replica set."
+msgstr "如果想将您的分片集群升级到3.4版本，配置服务器必须运行为一个复制集。"
 
 # 670042de34f74e7aa5fb69bd59f1eaef
 #: ../source/release-notes/3.4.txt:127
 msgid ""
-"To convert your existing config servers from SCCC to CSRS, see "
-":doc:`/tutorial/upgrade-config-servers-to-replica-set`."
+"To convert your existing config servers from SCCC to CSRS, see :doc:`/"
+"tutorial/upgrade-config-servers-to-replica-set`."
 msgstr ""
+"为了将您现有的配置服务器从SCCC转为CSRS，请查阅  :doc:`/tutorial/upgrade-"
+"config-servers-to-replica-set` 。"
 
 # 39cf5430a5a94f9893950188ab839b15
 #: ../source/release-notes/3.4.txt:131
 msgid "Sharding Zones"
-msgstr ""
+msgstr "分片区域"
 
 # 68867e8afdff47a0b8bcee0beb193382
 #: ../source/release-notes/3.4.txt:133
 msgid ""
-"MongoDB 3.4 introduces :doc:`/core/zone-sharding`, which supersedes tag-"
-"aware sharding available in earlier versions."
+"MongoDB 3.4 introduces :doc:`/core/zone-sharding`, which supersedes tag-aware "
+"sharding available in earlier versions."
 msgstr ""
+"MongoDB 3.4 引入了  :doc:`/core/zone-sharding` ， 替代了之前版本中提供的基于"
+"tag的分片。"
 
 # b5a5fe9e60164292aa7940094daf9798
 #: ../source/release-notes/3.4.txt:136
 msgid ""
-"To support zones, MongoDB introduces the following commands and "
-":program:`mongo` shell helpers:"
-msgstr ""
+"To support zones, MongoDB introduces the following commands and :program:"
+"`mongo` shell helpers:"
+msgstr "为了支持区域，MongoDB 引入了下列命令以及  :program:`mongo` shell帮助："
 
 # 3c9f213a385e497dab42b4c76be4089c
 # cba5202032874b6ba1cc247d2a6fbcc7
 #: ../source/includes/extracts/collation-operations-table.rst:5
 #: ../source/release-notes/3.4.txt:142
 msgid "Commands"
-msgstr ""
+msgstr "命令"
 
 # 17736085cfa444e29adb82b9d13f89dd
 #: ../source/release-notes/3.4.txt:143
 msgid "`mongo` Shell Methods"
-msgstr ""
+msgstr "`mongo` Shell 方法"
 
 # 70616821ab3842dc834336be33ae3106
 #: ../source/release-notes/3.4.txt:145
 msgid ":dbcommand:`addShardToZone`"
-msgstr ""
+msgstr ":dbcommand:`addShardToZone`"
 
 # 0bea3d90e34449c29213b503d29d408f
 #: ../source/release-notes/3.4.txt:146
 msgid ":method:`sh.addShardToZone()`"
-msgstr ""
+msgstr ":method:`sh.addShardToZone()`"
 
 # 94b83b880b844b32aa8c41d9065f6379
 #: ../source/release-notes/3.4.txt:148
 msgid ":dbcommand:`removeShardFromZone`"
-msgstr ""
+msgstr ":dbcommand:`removeShardFromZone`"
 
 # 93b8b2eaa8cd4f52b15a6831a46c528e
 #: ../source/release-notes/3.4.txt:149
 msgid ":method:`sh.removeShardFromZone()`"
-msgstr ""
+msgstr ":method:`sh.removeShardFromZone()`"
 
 # a79bc48c83304c008474afc34f942f86
 #: ../source/release-notes/3.4.txt:151
 msgid ":dbcommand:`updateZoneKeyRange`"
-msgstr ""
+msgstr ":dbcommand:`updateZoneKeyRange`"
 
 # 153eb21a705d4ff5a625e3f9151b6a68
 #: ../source/release-notes/3.4.txt
 msgid ":method:`sh.updateZoneKeyRange()`"
-msgstr ""
+msgstr ":method:`sh.updateZoneKeyRange()`"
 
 # 323d895e6e1047b7807e4283e4bfcbbe
 #: ../source/release-notes/3.4.txt
 msgid ":method:`sh.removeRangeFromZone()`"
-msgstr ""
+msgstr ":method:`sh.removeRangeFromZone()`"
 
 # c5d4787151304b438a265627624d5dcd
 #: ../source/release-notes/3.4.txt:158
 msgid "Replica Set"
-msgstr ""
+msgstr "复制集"
 
 # 6ed38af05a7e4b90b1dc98aa31c1627b
 #: ../source/release-notes/3.4.txt:161
 msgid "Default Journaling Behavior of ``majority`` Write Concern"
-msgstr ""
+msgstr " ``majority`` 写关注的默认日志行为"
 
 # 937f2e38d5a34df79c22fe135068135c
 #: ../source/release-notes/3.4.txt:163
 msgid ""
-"A new replica set configuration setting "
-":rsconf:`writeConcernMajorityJournalDefault` determines whether an "
-"acknowledgement for a write concern of :writeconcern:`majority "
-"<\"majority\">` returns after the majority of the voting members apply "
-"the write in memory or to the on-disk journal *if* the :ref:`j <wc-j>` "
-"option is unspecified in the write concern."
+"A new replica set configuration setting :rsconf:"
+"`writeConcernMajorityJournalDefault` determines whether an acknowledgement "
+"for a write concern of :writeconcern:`majority <\"majority\">` returns after "
+"the majority of the voting members apply the write in memory or to the on-"
+"disk journal *if* the :ref:`j <wc-j>` option is unspecified in the write "
+"concern."
 msgstr ""
+"*如果* 写入关注没有指明  :ref:`j <wc-j>`  选项， 一个新的复制集配置设置 :"
+"rsconf:`writeConcernMajorityJournalDefault`  决定写关注 :writeconcern:"
+"`majority <\"majority\">` 的确认是否在大多数投票节点将写入运用到内存之后或者磁"
+"盘上的日志之后返回。"
 
 # e38be6ff0be54d358f7b92f792a2a72f
 #: ../source/release-notes/3.4.txt:171
 msgid "Adjustable Catchup Period for Newly Elected Primary"
-msgstr ""
+msgstr "新选举主节点的可调节catchup时间"
 
 # 6a50319f77504c78af0e55a9c2b2de3e
 #: ../source/release-notes/3.4.txt:173
 msgid ""
-"A new replica set configuration setting "
-":rsconf:`settings.catchUpTimeoutMillis` defines the time limit for a "
-"newly elected primary to catch up with the other replica set members that"
-" may have more recent writes."
+"A new replica set configuration setting :rsconf:`settings."
+"catchUpTimeoutMillis` defines the time limit for a newly elected primary to "
+"catch up with the other replica set members that may have more recent writes."
 msgstr ""
+"一个新的复制集配置设置 :rsconf:`settings.catchUpTimeoutMillis` 定义了一个新选"
+"举的主节点与其它有最近写入的复制集成员保持一致的时间限制。"
 
 # b307c9be65e142feafdf3c28b4b38f22
 #: ../source/release-notes/3.4.txt:179
 msgid "Linearizable Read Concern"
-msgstr ""
+msgstr "线性读关注"
 
 # fb80cbbe98c24491a6c639ee0982c5db
 #: ../source/release-notes/3.4.txt:181
 msgid ""
-"MongoDB 3.4 introduces a read concern level of "
-":readconcern:`\"linearizable\"` to read data that reflects all successful"
-" writes issued with a :writeconcern:`\"majority\"` *and* acknowledged "
-"prior to the start of the read operation. Linearizable read concern "
-"guarantees only apply if read operations specify a query filter that "
-"uniquely identifies a single document."
+"MongoDB 3.4 introduces a read concern level of :readconcern:`\"linearizable"
+"\"` to read data that reflects all successful writes issued with a :"
+"writeconcern:`\"majority\"` *and* acknowledged prior to the start of the read "
+"operation. Linearizable read concern guarantees only apply if read operations "
+"specify a query filter that uniquely identifies a single document."
 msgstr ""
+"MongoDB 3.4 引入了一个读关注等级 readconcern:`\"linearizable\"` 来在读取操作开"
+"始之前读取数据，这些数据反映了 :writeconcern:`\"majority\"`  *以及* 确认的所有"
+"成功写入。线性读关注保证只会应用于读操作指定一个唯一指定单一文档的查询过滤器的"
+"情况下。"
 
 # 60e58a91b9654bd0a13366b2846aad1e
 #: ../source/release-notes/3.4.txt:188
 msgid ""
-"Linearizable read concern is available for all MongoDB supported "
-":doc:`storage engines </core/storage-engines>`."
+"Linearizable read concern is available for all MongoDB supported :doc:"
+"`storage engines </core/storage-engines>`."
 msgstr ""
+"线性读操作适用于所有支持 :doc:`storage engines </core/storage-engines>` 的"
+"MongoDB。"
 
 # cceaff8622464e249ad5cde9f747694b
 #: ../source/release-notes/3.4.txt:191
 msgid ""
-"Combined with :writeconcern:`\"majority\"` write concern, "
-":readconcern:`\"linearizable\"` read concern enables multiple threads to "
-"perform reads and writes on a single document as if a single thread "
-"performed these operations in real time; that is, the corresponding "
-"schedule for these reads and writes is considered linearizable."
+"Combined with :writeconcern:`\"majority\"` write concern, :readconcern:`"
+"\"linearizable\"` read concern enables multiple threads to perform reads and "
+"writes on a single document as if a single thread performed these operations "
+"in real time; that is, the corresponding schedule for these reads and writes "
+"is considered linearizable."
 msgstr ""
+"与 :writeconcern:`\"majority\"`  写关注想结合，  :readconcern:`\"linearizable"
+"\"`  读关注允许多线程对一个单一文档执行读写操作，类似一个单线程实时执行这些操"
+"作，也就是说：这些读操作的对应顺序可以看做线性化。"
 
 # 6dd3ce107c144038bc8a752cd9572b84
 #: ../source/release-notes/3.4.txt:197
 msgid ""
-"Reads with linearizable read concern may be significantly slower than "
-"reads with :readconcern:`\"majority\"` or :readconcern:`\"local\"` read "
-"concerns. Always use ``maxTimeMS`` with linearizable read concern, in "
-"case a majority of data bearing members are unavailable. For example:"
+"Reads with linearizable read concern may be significantly slower than reads "
+"with :readconcern:`\"majority\"` or :readconcern:`\"local\"` read concerns. "
+"Always use ``maxTimeMS`` with linearizable read concern, in case a majority "
+"of data bearing members are unavailable. For example:"
 msgstr ""
+"线性多关注的读取可能会慢于  :readconcern:`\"majority\"` 或者 :readconcern:`"
+"\"local\"`  读关注的读取。经常在线性读关注中使用 ``maxTimeMS`` ， 以防大部分数"
+"据保存成员访问不到的情况。例如："
 
 # 1a64f188fede4fd98fc0d62d18153a65
 #: ../source/release-notes/3.4.txt:213
 msgid ""
-"For more information on read concern, including operations that support "
-"read concerns, see :doc:`/reference/read-concern`."
+"For more information on read concern, including operations that support read "
+"concerns, see :doc:`/reference/read-concern`."
 msgstr ""
+"了解更多关于读关注的信息，包括支持读关注的操作，请查阅  :doc:`/reference/read-"
+"concern` 。"
 
 # 22066b0fb7764e829e2cb45b4df4bba7
 #: ../source/release-notes/3.4.txt:217
 msgid "Improved Initial Sync"
-msgstr ""
+msgstr "改进的初始化同步"
 
 # 3bcea8788a82426983256b7d83d9e3ea
 #: ../source/release-notes/3.4.txt:219
 msgid ""
 "MongoDB 3.4 improves the performance of :ref:`initial sync <replica-set-"
-"initial-sync>` by having initial sync build the indexes as the documents "
-"are copied."
+"initial-sync>` by having initial sync build the indexes as the documents are "
+"copied."
 msgstr ""
+"MongoDB 3.4 通过在复制文档的过程中初始化同步构建索引，提高了 :ref:`initial "
+"sync <replica-set-initial-sync>` 的性能。"
 
 # d238ac62907d4f0f94df8d5ee036cff6
 #: ../source/release-notes/3.4.txt:223
 msgid ""
-"MongoDB 3.4 improves the :ref:`initial sync retry logic <init-sync-"
-"retry>` to be more resilient to intermittent failures on the network."
+"MongoDB 3.4 improves the :ref:`initial sync retry logic <init-sync-retry>` to "
+"be more resilient to intermittent failures on the network."
 msgstr ""
+"MongoDB 3.4 改进了 :ref:`initial sync retry logic <init-sync-retry>`  更弹性地"
+"处理网络中断断续续故障的情况。"
 
 # 6962370271864338ad2297571a049eeb
 #: ../source/release-notes/3.4.txt:227
 msgid ""
-"Modified :ref:`rs.status() output <rs-status-output>` to report on "
-"initial sync status and progress."
+"Modified :ref:`rs.status() output <rs-status-output>` to report on initial "
+"sync status and progress."
 msgstr ""
+"修改的 :ref:`rs.status() output <rs-status-output>`  报告 初始同步状态和进程。"
 
 # 6db28cda24eb4e0a93338fe99ca94120
 #: ../source/release-notes/3.4.txt:233
 msgid "Decimal Type"
-msgstr ""
+msgstr "十进制烈性"
 
 # 663e9052f8144cfd90e8b488d02c6698
 #: ../source/release-notes/3.4.txt:235
 msgid ""
-"3.4 adds support for the `decimal128 format "
-"<https://en.wikipedia.org/wiki/Decimal128_floating-point_format>`_ with "
-"the new ``decimal`` data type. The decimal128 format supports numbers "
-"with up to 34 decimal digits (i.e. significant digits) and an exponent "
-"range of −6143 to +6144."
+"3.4 adds support for the `decimal128 format <https://en.wikipedia.org/wiki/"
+"Decimal128_floating-point_format>`_ with the new ``decimal`` data type. The "
+"decimal128 format supports numbers with up to 34 decimal digits (i.e. "
+"significant digits) and an exponent range of −6143 to +6144."
 msgstr ""
+"3.4 通过使用新的 ``decimal`` 数据类型增加了对 `decimal128 format <https://en."
+"wikipedia.org/wiki/Decimal128_floating-point_format>`_  的支持。decimal128 形"
+"式支持最多 34个十进制数（例如，有效位数） 以及指数范围 −6143 到 +6144 的支持。"
 
 # f15d91c9ba214ff18c5d8b0757f27a82
 #: ../source/release-notes/3.4.txt:241
 msgid ""
-"To support the format, the :program:`mongo` shell adds the "
-":ref:`NumberDecimal <shell-type-decimal>` wrapper."
+"To support the format, the :program:`mongo` shell adds the :ref:"
+"`NumberDecimal <shell-type-decimal>` wrapper."
 msgstr ""
+"为了支持这种形成，  :program:`mongo` shell增加了  :ref:`NumberDecimal <shell-"
+"type-decimal>`  包装器。"
 
 # 380e6b40120c44d9a5e437e3f7481d87
 #: ../source/release-notes/3.4.txt:248
 msgid ""
 "When performing :ref:`comparisons <bson-types-comparison-order>` among "
-"different numerical types, MongoDB performs comparison on the exact "
-"stored numerical values without first converting values to a common type."
+"different numerical types, MongoDB performs comparison on the exact stored "
+"numerical values without first converting values to a common type."
 msgstr ""
+"在不同的数值类型之间执行  :ref:`comparisons <bson-types-comparison-order>`  "
+"时， MongoDB直接在实际存储的数值上进行比较，不会先将数值转化到同一个类型。"
 
 # 03829a6ae2854c379ea7d952c3d07052
 #: ../source/release-notes/3.4.txt:253
 msgid ""
-"Unlike the ``double`` data type, which only stores an approximation of "
-"the decimal values, the ``decimal`` data type stores the exact value. For"
-" example, a ``decimal`` ``NumberDecimal(\"9.99\")`` has a precise value "
-"of ``9.99`` where as a double ``9.99`` would have an approximate value of"
-" ``9.9900000000000002131628...``."
+"Unlike the ``double`` data type, which only stores an approximation of the "
+"decimal values, the ``decimal`` data type stores the exact value. For "
+"example, a ``decimal`` ``NumberDecimal(\"9.99\")`` has a precise value of "
+"``9.99`` where as a double ``9.99`` would have an approximate value of "
+"``9.9900000000000002131628...``."
 msgstr ""
+"不像 ``double`` 数据类型，只存储十进制值的近似值， ``decimal`` 数据类型存储精"
+"确值。 例如， ``decimal`` ``NumberDecimal(\"9.99\")``   存储为精确值 "
+"``9.99``  ，但是 double ``9.99`` 将会存储为近似值 "
+"``9.9900000000000002131628...``  。"
 
 # 23ff6405690c4ce5b5ddf20a55ec8eac
 #: ../source/release-notes/3.4.txt:259
@@ -464,30 +537,36 @@ msgid ""
 "To test for ``decimal`` type, use the :query:`$type` operator with the "
 "literal ``\"decimal\"`` or ``19``."
 msgstr ""
+"为了测试 ``decimal``  类型，在  :query:`$type`  中使用 文字 l ``\"decimal\"`` "
+"或者 ``19`` 。"
 
 # 5697a50f59fe40fb89968332a42ab720
 #: ../source/release-notes/3.4.txt:266
 msgid ""
-"To use the new ``decimal`` data type with a MongoDB driver, an upgrade to"
-" a driver version that supports the feature is necessary."
+"To use the new ``decimal`` data type with a MongoDB driver, an upgrade to a "
+"driver version that supports the feature is necessary."
 msgstr ""
+"为了在MongoDB驱动程序中使用新的 ``decimal``  数据类型，需要升级到支持这个功能"
+"的驱动程序版本。"
 
 # 7d203e3521b54f4190d17be27d195a56
 #: ../source/release-notes/3.4.txt:272
 msgid "Aggregation"
-msgstr ""
+msgstr "聚合"
 
 # e42ec9f740e2402b9626d81c5ed3b07d
 #: ../source/release-notes/3.4.txt:275
 msgid "New Aggregation Stage for Recursive Search"
-msgstr ""
+msgstr "遍历搜索的新聚合阶段"
 
 # 5e5c7c0a3d3e46fab013e43f902d8bd6
 #: ../source/release-notes/3.4.txt:277
 msgid ""
-"3.4 introduces a stage to the :doc:`aggregation pipeline </core"
-"/aggregation-pipeline>` that allows for recursive search."
+"3.4 introduces a stage to the :doc:`aggregation pipeline </core/aggregation-"
+"pipeline>` that allows for recursive search."
 msgstr ""
+"3.4 在  :doc:`aggregation pipeline </core/aggregation-pipeline>`  中引入了一个"
+"新的阶段支持遍历搜索。"
 
 # 6a197fc6b5e74ac09360381663d2884c
 # e156ee2f24874dc89f89889e07e93b97
@@ -496,7 +575,7 @@ msgstr ""
 #: ../source/release-notes/3.4.txt:284 ../source/release-notes/3.4.txt:309
 #: ../source/release-notes/3.4.txt:350 ../source/release-notes/3.4.txt:375
 msgid "Stage"
-msgstr ""
+msgstr "阶段"
 
 # ecca41e0b99547dd976d3b690c50bc83
 # 2620219919724d80bd09cacff842bc83
@@ -514,163 +593,184 @@ msgstr ""
 #: ../source/release-notes/3.4.txt:483 ../source/release-notes/3.4.txt:499
 #: ../source/release-notes/3.4.txt:526 ../source/release-notes/3.4.txt:540
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 # 7733567d72564846b6312ee8b1a67489
 #: ../source/release-notes/3.4.txt:287
 msgid ":pipeline:`$graphLookup`"
-msgstr ""
+msgstr ":pipeline:`$graphLookup`"
 
 # e79f66cebafc4f31843d4f4afd7189f0
 #: ../source/release-notes/3.4.txt:289
 msgid ""
-"Performs a recursive search on a collection. To each output document, "
-"adds a new array field that contains the traversal results of the "
-"recursive search for that document."
+"Performs a recursive search on a collection. To each output document, adds a "
+"new array field that contains the traversal results of the recursive search "
+"for that document."
 msgstr ""
+"在集合上执行一次遍历搜索。对于每一个输出的文档，增加一个包含针对该文档遍历搜索"
+"遍历结果的新数组字段。"
 
 # b7fec480ac144146b36646f35f412533
 #: ../source/release-notes/3.4.txt:294
 msgid "New Aggregation Stages for Faceted Search"
-msgstr ""
+msgstr "分成检索的新聚合阶段"
 
 # e0109cc85c144700b5a1f17f913d5fd5
 #: ../source/release-notes/3.4.txt:296
 msgid ""
 "Faceted search allows for the categorization of documents into "
-"classifications. For example, given a collection of inventory documents, "
-"you may want to classify items by a single category, such as by the price"
-" range, or by multiple categories, such as by price range as well as "
-"separately by the departments."
+"classifications. For example, given a collection of inventory documents, you "
+"may want to classify items by a single category, such as by the price range, "
+"or by multiple categories, such as by price range as well as separately by "
+"the departments."
 msgstr ""
+"分层搜索支持文档类别的分类。例如，给定一个目录文档集合，您也许希望通过一个单一"
+"的类别对物品进行分类，例如通过价格范围或者多个类别进行分配，例如通过价格范围以"
+"及单独通过部门。"
 
 # 9da9fe6c7d604acba2f04fa9a1ce4c1c
 #: ../source/release-notes/3.4.txt:302
 msgid ""
-"3.4 introduces stages to the :doc:`aggregation pipeline </core"
-"/aggregation-pipeline>` that allow for faceted search."
+"3.4 introduces stages to the :doc:`aggregation pipeline </core/aggregation-"
+"pipeline>` that allow for faceted search."
 msgstr ""
+"3.4 在  :doc:`aggregation pipeline </core/aggregation-pipeline>`  中引入了新的"
+"阶段支持 分层搜索。"
 
 # 9cada8ab9e884ec2bd883a93cac796dc
 #: ../source/release-notes/3.4.txt:312
 msgid ":pipeline:`$bucket`"
-msgstr ""
+msgstr ":pipeline:`$bucket`"
 
 # 4844afea9cf64fbfa5c1d9a44abaef58
 #: ../source/release-notes/3.4.txt:314
 msgid ""
-"Categorizes or groups incoming documents into buckets that represent a "
-"range of values for a specified expression."
-msgstr ""
+"Categorizes or groups incoming documents into buckets that represent a range "
+"of values for a specified expression."
+msgstr "将接下来的文档分类或分组到代表某一指定表达式范围值的篮子中。"
 
 # 8baa32aa1a7e4c9e90c9337729d78bb5
 #: ../source/release-notes/3.4.txt:317
 msgid ":pipeline:`$bucketAuto`"
-msgstr ""
+msgstr ":pipeline:`$bucketAuto`"
 
 # 319bc2c574d741dba35210da481013f1
 #: ../source/release-notes/3.4.txt:319
 msgid ""
-"Categorizes or groups incoming documents into specified number of buckets"
-" that represent a range of values for a specified expression. MongoDB "
+"Categorizes or groups incoming documents into specified number of buckets "
+"that represent a range of values for a specified expression. MongoDB "
 "automatically determines the bucket boundaries."
 msgstr ""
+"将接下来的文档分类或分组到代表某一指定表达式范围值的篮子中。MongoDB自动确定篮"
+"子范围。"
 
 # 5f7da5c9307c47a0aabb251f90e1f1d6
 #: ../source/release-notes/3.4.txt:324
 msgid ":pipeline:`$facet`"
-msgstr ""
+msgstr ":pipeline:`$facet`"
 
 # becb3b67f54d4ca7a8c98e5fcb3fa471
 #: ../source/release-notes/3.4.txt:326
 msgid ""
 "Processes multiple :ref:`pipelines <aggregation-pipeline>` on the input "
 "documents and outputs a document that contains the results of these "
-"pipelines. By specifying facet-related stages (:pipeline:`$bucket`, "
-":pipeline:`$bucketAuto`, and :pipeline:`$sortByCount`) in these "
-"pipelines, :pipeline:`$facet` allows for multi-faceted search."
+"pipelines. By specifying facet-related stages (:pipeline:`$bucket`, :pipeline:"
+"`$bucketAuto`, and :pipeline:`$sortByCount`) in these pipelines, :pipeline:`"
+"$facet` allows for multi-faceted search."
 msgstr ""
+"对输入文档进行多  :ref:`pipelines <aggregation-pipeline>`  处理，输出包含这些"
+"管道结果的文档。通过在这些管道中指定分层相关的阶段（:pipeline:`$bucket` ，  :"
+"pipeline:`$bucketAuto` ，以及 :pipeline:`$sortByCount` ），  :pipeline:`"
+"$facet`  支持多分层检索。"
 
 # 004e253cc7d04236b3f94ee5c0d1c756
 #: ../source/release-notes/3.4.txt:333
 msgid ":pipeline:`$sortByCount`"
-msgstr ""
+msgstr ":pipeline:`$sortByCount`"
 
 # 346a58fa771f461bbcf15a1ebbdd5bf3
 #: ../source/release-notes/3.4.txt:335
 msgid ""
-"Categorizes or groups incoming documents by a specified expression to "
-"compute the count for each group. Output documents are sorted in "
-"descending order by the count."
+"Categorizes or groups incoming documents by a specified expression to compute "
+"the count for each group. Output documents are sorted in descending order by "
+"the count."
 msgstr ""
+"将结写来的文档通过一个指定的表达式进行分类或分支以计算每组的计数。根据计数的降"
+"序排列输出这些文档。"
 
 # 32c9a5627d9e47ac907182387a40a061
 #: ../source/release-notes/3.4.txt:340
 msgid "New Aggregation Stages to Facilitate Reshaping Documents"
-msgstr ""
+msgstr "改进重塑文档的新聚合阶段"
 
 # 480203fb73ee4dbeaae0084e40060918
 #: ../source/release-notes/3.4.txt:342
 msgid ""
-"3.4 introduces stages to the :doc:`aggregation pipeline </core"
-"/aggregation-pipeline>` that faciliate replacing documents as well as "
-"adding new fields."
+"3.4 introduces stages to the :doc:`aggregation pipeline </core/aggregation-"
+"pipeline>` that faciliate replacing documents as well as adding new fields."
 msgstr ""
+"3.4 在  :doc:`aggregation pipeline </core/aggregation-pipeline>`  中引入了新阶"
+"段以帮助替换文档以及增加新的字段。"
 
 # 8dbe6e4386bf47058c950ebd63b2ee97
 #: ../source/release-notes/3.4.txt:353
 msgid ":pipeline:`$addFields`"
-msgstr ""
+msgstr ":pipeline:`$addFields`"
 
 # 5b481968b24f491d827c5d5d603f88d5
 #: ../source/release-notes/3.4.txt:355
 msgid ""
-"Adds new fields to documents. The stage outputs documents that contains "
-"all existing fields from the input documents as well as the newly added "
-"fields."
+"Adds new fields to documents. The stage outputs documents that contains all "
+"existing fields from the input documents as well as the newly added fields."
 msgstr ""
+"向文档中增加新字段。 这个阶段输出包含输入文档中所有已有字段以及新增加字段的文"
+"档。"
 
 # a0e08094653a4ba782417009417104d4
 #: ../source/release-notes/3.4.txt:359
 msgid ":pipeline:`$replaceRoot`"
-msgstr ""
+msgstr ":pipeline:`$addFields`"
 
 # 4c53ab6afdc74ca5920dd45377a3d6a3
 #: ../source/release-notes/3.4.txt:361
 msgid ""
-"Replaces a document with the specified document. You can specify a "
-"document embedded in the input document to promote the embedded document "
-"to the top level."
+"Replaces a document with the specified document. You can specify a document "
+"embedded in the input document to promote the embedded document to the top "
+"level."
 msgstr ""
+"使用指定文档替换文档。您可以指定一个嵌入在输入文档中的文档，并将其提升到最高级"
+"别。"
 
 # 79fb7467058c4ba09591a16e30acd51c
 #: ../source/release-notes/3.4.txt:366
 msgid "New Aggregation Stage to Count"
-msgstr ""
+msgstr "计数的新聚合阶段"
 
 # 3ea9ce2805a44f52aa2cae3ae4cc50e8
 #: ../source/release-notes/3.4.txt:368
 msgid ""
-"3.4 introduces a new stage to the :doc:`aggregation pipeline </core"
-"/aggregation-pipeline>` that faciliate counting document."
+"3.4 introduces a new stage to the :doc:`aggregation pipeline </core/"
+"aggregation-pipeline>` that faciliate counting document."
 msgstr ""
+"3.4 在  :doc:`aggregation pipeline </core/aggregation-pipeline>`  中引入了一个"
+"新的阶段来帮助统计文档。"
 
 # 3f14ae5abbd441fca5e3004de3ca48c3
 #: ../source/release-notes/3.4.txt:378
 msgid ":pipeline:`$count`"
-msgstr ""
+msgstr ":pipeline:`$count`"
 
 # 513e79bfbbe3439f9dd0a2263f6b1358
 #: ../source/release-notes/3.4.txt:380
 msgid ""
-"Returns a document that contains a count of the number of documents input"
-" to the stage."
-msgstr ""
+"Returns a document that contains a count of the number of documents input to "
+"the stage."
+msgstr "返回一个文档，包含输入到该阶段的文档数目的计数。"
 
 # 5ae7e4a56e874c40a9a66a972bdc38d6
 #: ../source/release-notes/3.4.txt:384
 msgid "New Aggregation Array Operators"
-msgstr ""
+msgstr "新的聚合数组操作"
 
 # 815488a466c2431283dcb892f4bb2f26
 # dd5806c77fa24ca4bcd269f5d687f7c5
@@ -682,56 +782,57 @@ msgstr ""
 #: ../source/release-notes/3.4.txt:482 ../source/release-notes/3.4.txt:498
 #: ../source/release-notes/3.4.txt:525 ../source/release-notes/3.4.txt:539
 msgid "Operator"
-msgstr ""
+msgstr "操作符"
 
 # fa6ad119196949cdb0fe33ad84763b37
 #: ../source/release-notes/3.4.txt:393
 msgid ":expression:`$in`"
-msgstr ""
+msgstr ":expression:`$in`"
 
 # d8116ebaeb0347d2a77d2764c54aec3e
 #: ../source/release-notes/3.4.txt:395
 msgid "Returns a boolean that indicates if a specified value is in an array."
-msgstr ""
+msgstr "返回指示某一个特定值是否存在于数组中的布尔值。"
 
 # 7859d636351444e0b9d9e178bdc24e96
 #: ../source/release-notes/3.4.txt:398
 msgid ":expression:`$indexOfArray`"
-msgstr ""
+msgstr ":expression:`$in`"
 
 # 0578a90fe94b480fa6486d47289325f7
 #: ../source/release-notes/3.4.txt:400
 msgid ""
-"Searches an array for an occurence of a specified value and returns the "
-"array index (zero-based) of the first occurence."
+"Searches an array for an occurence of a specified value and returns the array "
+"index (zero-based) of the first occurence."
 msgstr ""
+"检索数组是否存在某个特定值，并且返回第一次出现该值的数组索引（从0开始计数）。"
 
 # 85c9d8a08c45419d89aab892001fdb8f
 #: ../source/release-notes/3.4.txt:403
 msgid ":expression:`$range`"
-msgstr ""
+msgstr ":expression:`$range`"
 
 # bf30b6c3388c443eba232e9fd86c9ab1
 #: ../source/release-notes/3.4.txt:405
 msgid "Returns an array whose elements are a generated sequence of numbers."
-msgstr ""
+msgstr "返回一个数组，数组元素为数字的生成顺序。"
 
 # 1a3a6849c79e4569836522a8f79af9b8
 #: ../source/release-notes/3.4.txt:408
 msgid ":expression:`$reverseArray`"
-msgstr ""
+msgstr ":expression:`$reverseArray`"
 
 # f0926cbcd58c4751903eef172599c5a4
 #: ../source/release-notes/3.4.txt:410
 msgid ""
-"Returns an output array whose elements are those of the input array but "
-"in reverse order."
-msgstr ""
+"Returns an output array whose elements are those of the input array but in "
+"reverse order."
+msgstr "返回一个输出数组，数组元素为输入数组，但是为逆序。"
 
 # 7cd1b00c794b45d7a5b78f7d84393379
 #: ../source/release-notes/3.4.txt:413
 msgid ":expression:`$reduce`"
-msgstr ""
+msgstr ":expression:`$reduce`"
 
 # 1d490e9b635545e4ab67f8b4a857aab0
 #: ../source/release-notes/3.4.txt:415
@@ -739,415 +840,440 @@ msgid ""
 "Takes an array as input and applies an expression to each element in the "
 "array to return the final result of the expression."
 msgstr ""
+"将一个数组作为输入，然后对数组中的每一个元素执行一个表达式，然后返回表达式的最"
+"后结果。"
 
 # df179e47561844e9af764259cf7241df
 #: ../source/release-notes/3.4.txt:419
 msgid ":expression:`$zip`"
-msgstr ""
+msgstr ":expression:`$zip`"
 
 # 5527ef3fc63e40a1825707e48c96d00d
 #: ../source/release-notes/3.4.txt:421
 msgid ""
-"Returns an output array where each element is itself an array, consisting"
-" of elements in the corresponding array index position from the input "
-"arrays."
+"Returns an output array where each element is itself an array, consisting of "
+"elements in the corresponding array index position from the input arrays."
 msgstr ""
+"返回一个输出数组，每个元素都是都是它本身，由输入数组中对应数组索引位置的元素组"
+"成。"
 
 # b141c5c8bb2a42d2aa55b7ae220ada57
 #: ../source/release-notes/3.4.txt:426
 msgid "New Aggregation String Operators"
-msgstr ""
+msgstr "新的聚合字符串操作符"
 
 # a6596b0a7ccf4f5c91a22d0df3367f84
 #: ../source/release-notes/3.4.txt:435
 msgid ":expression:`$indexOfBytes`"
-msgstr ""
+msgstr ":expression:`$indexOfBytes`"
 
 # f1d74e3ef63e4900a42a9b9fa358cc7f
 #: ../source/release-notes/3.4.txt:437
 msgid ""
-"Searches a string for an occurence of a substring and returns the UTF-8 "
-"byte index (zero-based) of the first occurence."
+"Searches a string for an occurence of a substring and returns the UTF-8 byte "
+"index (zero-based) of the first occurence."
 msgstr ""
+"在字符串中检索一个子字符串，并且返回第一次出现该子字符串的UTT-8字节索引（从0开"
+"始计数）。"
 
 # 2f646d58955d4c2aabf0781266fb994f
 #: ../source/release-notes/3.4.txt:440
 msgid ":expression:`$indexOfCP`"
-msgstr ""
+msgstr ":expression:`$indexOfCP`"
 
 # 1cc78950d55542eca1ea56292bc14ba3
 #: ../source/release-notes/3.4.txt:442
 msgid ""
-"Searches a string for an occurence of a substring and returns the UTF-8 "
-"`code point <http://www.unicode.org/glossary/#code_point>`_ index (zero-"
-"based) of the first occurence."
+"Searches a string for an occurence of a substring and returns the UTF-8 `code "
+"point <http://www.unicode.org/glossary/#code_point>`_ index (zero-based) of "
+"the first occurence."
 msgstr ""
+"在字符串中检索一个子字符串，并且返回第一次出现该子字符串的UTT-8 `code point "
+"<http://www.unicode.org/glossary/#code_point>`_  索引（从0开始计数）。"
 
 # c771f52af1124735a05699936a8450f5
 #: ../source/release-notes/3.4.txt:447
 msgid ":expression:`$split`"
-msgstr ""
+msgstr ":expression:`$split`"
 
 # 25712afcc50c4ae69da202c6a04ef9b1
 #: ../source/release-notes/3.4.txt:449
 msgid ""
-"Splits a string by a specified delimiter into string components and "
-"returns an array of the string components."
-msgstr ""
+"Splits a string by a specified delimiter into string components and returns "
+"an array of the string components."
+msgstr "使用一个指定的分隔符将字符串分割为字符组件，并且返回字符串组件的数组。"
 
 # 6e0f05900c0b4aa5a518a63dae3147e9
 #: ../source/release-notes/3.4.txt:453
 msgid ":expression:`$strLenBytes`"
-msgstr ""
+msgstr ":expression:`$strLenBytes`"
 
 # 06273874ac3f499e8fbf2cb8160d6338
 #: ../source/release-notes/3.4.txt:455
 msgid "Returns the number of UTF-8 bytes for a string."
-msgstr ""
+msgstr "返回字符串的UTF-8字节数。"
 
 # 71bcd8c8516144b187177db2e2099998
 #: ../source/release-notes/3.4.txt:457
 msgid ":expression:`$strLenCP`"
-msgstr ""
+msgstr ":expression:`$strLenCP`"
 
 # 01cb87cfb4c04fbfb11bb0b8d10ad1eb
 #: ../source/release-notes/3.4.txt:459
 msgid ""
-"Returns the number of UTF-8 `code points "
-"<http://www.unicode.org/glossary/#code_point>`_ for a string."
+"Returns the number of UTF-8 `code points <http://www.unicode.org/glossary/"
+"#code_point>`_ for a string."
 msgstr ""
+"返回字符串的 UTF-8 `code points <http://www.unicode.org/glossary/"
+"#code_point>`_  数。"
 
 # b8848c7c369f4631a3b796f998e920c0
 #: ../source/release-notes/3.4.txt:462
 msgid ":expression:`$substrBytes`"
-msgstr ""
+msgstr ":expression:`$substrBytes`"
 
 # 8bc2a95ce89c4f07be0b927ad652fac9
 #: ../source/release-notes/3.4.txt:464
 msgid ""
-"Returns the substring of a string. The substring starts with the "
-"character at the specified UTF-8 byte index (zero-based) in the string "
-"for the length specified."
+"Returns the substring of a string. The substring starts with the character at "
+"the specified UTF-8 byte index (zero-based) in the string for the length "
+"specified."
 msgstr ""
+"返回一个字符串的子字符串。该子字符串从字符串中指定的UTF-8字节索引（从0开始计"
+"数）对应的字符开始到指定的长度为止。"
 
 # 2fc49d2f551c42669eede1c46fc9f39c
 #: ../source/release-notes/3.4.txt:468
 msgid ":expression:`$substrCP`"
-msgstr ""
+msgstr ":expression:`$substrCP`"
 
 # aacc2fcdfd424d54bd9bad5fbb3607ff
 #: ../source/release-notes/3.4.txt:470
 msgid ""
-"Returns the substring of a string. The substring starts with the "
-"character at the specified UTF-8 `code point "
-"<http://www.unicode.org/glossary/#code_point>`_ index (zero-based) in the"
-" string for the length specified."
+"Returns the substring of a string. The substring starts with the character at "
+"the specified UTF-8 `code point <http://www.unicode.org/glossary/"
+"#code_point>`_ index (zero-based) in the string for the length specified."
 msgstr ""
+"返回一个字符串的子字符串。该子字符串从字符串中指定的UTF-8 `code point <http://"
+"www.unicode.org/glossary/#code_point>`_  索引（从0开始计数）对应的字符开始到指"
+"定的长度为止。"
 
 # 9faf1e4809a3479fb19945da80287518
 #: ../source/release-notes/3.4.txt:476
 msgid "New Aggregation Control Flow Expression"
-msgstr ""
+msgstr "新的集合控制流表达式"
 
 # 3fbf7490d0184c25974a30ce3ad57567
 #: ../source/release-notes/3.4.txt:485
 msgid ":expression:`$switch`"
-msgstr ""
+msgstr ":expression:`$switch`"
 
 # 52190f005b8d4478a9e67193423a0280
 #: ../source/release-notes/3.4.txt:487
 msgid ""
-"Evaluates, in sequential order, the ``case`` expressions of the specified"
-" branches to enter the first branch for which the ``case`` expression "
+"Evaluates, in sequential order, the ``case`` expressions of the specified "
+"branches to enter the first branch for which the ``case`` expression "
 "evaluates to ``true``."
 msgstr ""
+"依次判断指定分支的 ``case`` 表达式，进入第一个 ``case`` 表达式计算为 ``true`` "
+"的第一个分支。"
 
 # 5fed79db54fc491ab8c22dac998a8f63
 #: ../source/release-notes/3.4.txt:492
 msgid "New Date Aggregation Operators"
-msgstr ""
+msgstr "新的日期聚合操作符"
 
 # 55564c601a184ae298a40c33045aade2
 #: ../source/release-notes/3.4.txt:501
 msgid ":expression:`$isoDayOfWeek`"
-msgstr ""
+msgstr ":expression:`$isoDayOfWeek`"
 
 # bb26c4077ccc46c58831dfa1f15d327a
 #: ../source/release-notes/3.4.txt:503
 msgid ""
-"Returns the ISO 8601 weekday number, ranging from ``1`` (for Monday) to "
-"``7`` (for Sunday)."
+"Returns the ISO 8601 weekday number, ranging from ``1`` (for Monday) to ``7`` "
+"(for Sunday)."
 msgstr ""
+"返回 ISO 8601 工作日编号，从 ``1`` （表示星期一）到 ``7`` （表示星期日）。"
 
 # 1b4ffa15e18144729ecbf32fee10da70
 #: ../source/release-notes/3.4.txt:506
 msgid ":expression:`$isoWeek`"
-msgstr ""
+msgstr ":expression:`$isoWeek`"
 
 # f8a497077d084172bbbd89978017f749
 #: ../source/release-notes/3.4.txt:508
 msgid ""
-"Returns the ISO 8601 week number, which can range from ``1`` to ``53``. "
-"Week numbers start at ``1`` with the week (Monday through Sunday) that "
-"contains the year's first Thursday."
+"Returns the ISO 8601 week number, which can range from ``1`` to ``53``. Week "
+"numbers start at ``1`` with the week (Monday through Sunday) that contains "
+"the year's first Thursday."
 msgstr ""
+"返回 ISO 8601 星期编号，范围从 ``1`` 到 ``53`` 。 包含该年第一个周二的那一周"
+"（从周一到周日）的星期编号为 ``1`` 。"
 
 # 2626264c0a5543888a1242cbb2e2e502
 #: ../source/release-notes/3.4.txt:512
 msgid ":expression:`$isoWeekYear`"
-msgstr ""
+msgstr ":expression:`$isoWeekYear`"
 
 # 784429e0ce1c450b871a669b23ffdb48
 #: ../source/release-notes/3.4.txt:514
 msgid ""
-"Returns the ISO 8601 year number, where the year starts with the Monday "
-"of week 1 (ISO 8601) and ends with the Sundays of the last week (ISO "
-"8601)."
+"Returns the ISO 8601 year number, where the year starts with the Monday of "
+"week 1 (ISO 8601) and ends with the Sundays of the last week (ISO 8601)."
 msgstr ""
+"返回 ISO 8601 年编号，其中 年 从第一周（ISO 8601）的周一开始，于最后一周（ISO "
+"8601）的星期日结束。"
 
 # d358bfe6b6d04f8689dc74d5c5979e1b
 #: ../source/release-notes/3.4.txt:519
 msgid "New Monitoring Aggregation Sources"
-msgstr ""
+msgstr "新的监控聚合资源"
 
 # 2a7c9064c63a4305a8aee813cce9761c
 #: ../source/release-notes/3.4.txt:528
 msgid ":pipeline:`$collStats`"
-msgstr ""
+msgstr ":pipeline:`$collStats`"
 
 # 1eb304a81f7a49dfaf1d1db0fd54c987
 #: ../source/release-notes/3.4.txt:530
 msgid "Returns statistics regarding a collection or view."
-msgstr ""
+msgstr "返回一个集合或试图的统计。"
 
 # dbbb32a7d6174b508f0dd3d0e5469f00
 #: ../source/release-notes/3.4.txt:533
 msgid "New Type Operator"
-msgstr ""
+msgstr "新的类型操作符"
 
 # cf632caf4cc24b5999db38bca0e9f6e5
 #: ../source/release-notes/3.4.txt:542
 msgid ":expression:`$type`"
-msgstr ""
+msgstr ":expression:`$type`"
 
 # e827911a5c0c427292c1194da5c09ae7
 #: ../source/release-notes/3.4.txt:544
 msgid ""
-"Returns a string which specifies the :doc:`/reference/bson-types/` of the"
-" argument."
-msgstr ""
+"Returns a string which specifies the :doc:`/reference/bson-types/` of the "
+"argument."
+msgstr "返回一个表示参数  :doc:`/reference/bson-types/` 的字符串。"
 
 # 25f2ba3066b147faab79509f52109d24
 #: ../source/release-notes/3.4.txt:548
 msgid "Additional Changes"
-msgstr ""
+msgstr "其它变化"
 
 # 7fc4be2d2d1641e5aa4e357c4d4ff476
 #: ../source/release-notes/3.4.txt:550
 msgid ""
-":pipeline:`$project` stage adds support for field exclusion in the output"
-" document. Previously, you could only exclude the ``_id`` field in the "
-"stage. If you specify the exclusion of a field or fields,"
+":pipeline:`$project` stage adds support for field exclusion in the output "
+"document. Previously, you could only exclude the ``_id`` field in the stage. "
+"If you specify the exclusion of a field or fields,"
 msgstr ""
+":pipeline:`$project`  阶段增加了排除输出文档中某些字段的支持。 之前，您只可以"
+"在该阶段排除 ``_id`` 字段。如果你指定排除一个字段或者几个字段，"
 
 # f95720299ff5436eb85032cc26cccd2f
 #: ../source/release-notes/3.4.txt:554
 msgid "All other fields are returned in the output documents."
-msgstr ""
+msgstr "所有其它字段都会在输出文档中返回。"
 
 # 8bab790e310c48249db453c0d22756a7
 #: ../source/release-notes/3.4.txt:556
 msgid "You cannot specify new fields or the inclusion of other fields."
-msgstr ""
+msgstr "您不可以指定新字段或者包含其它字段。"
 
 # b19193a9f8f54e6dbbe9d514d05abbe8
 #: ../source/release-notes/3.4.txt:561
 msgid "Collation and Case-Insensitive Indexes"
-msgstr ""
+msgstr "校对及大小写敏感的索引"
 
 # d175f73377a9418f85e9880fd8a239f3
 #: ../source/release-notes/3.4.txt:563
 msgid ""
 "To allow for language-specific rules for string comparison, MongoDB 3.4 "
-"introduces :doc:`collation </reference/collation>` to its query language "
-"and indexes."
+"introduces :doc:`collation </reference/collation>` to its query language and "
+"indexes."
 msgstr ""
+"为了支持字符串比较中面向语言的特定规则，MongoDB 3.4 向查询语言和索引引入了 :"
+"doc:`collation </reference/collation>` 。"
 
 # cdac22669bc54636a3ef5d5e28b4ab02
 #: ../source/release-notes/3.4.txt:567
 msgid "The following operations support collation:"
-msgstr ""
+msgstr "下面的操作支持校对："
 
 # 7ab5678311aa4cb090a58dc40f1c1238
 #: ../source/includes/extracts/collation-operations-table.rst:6
 msgid "``mongo`` Shell Methods"
-msgstr ""
+msgstr "``mongo``  Shell 方法"
 
 # f2d16d8435e1495ca805bdab402731e7
 #: ../source/includes/extracts/collation-operations-table.rst:8
 msgid ":dbcommand:`create`"
-msgstr ""
+msgstr ":dbcommand:`create`"
 
 # 85d2b88bc9bb43a2af911f94f9f9ca42
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.createCollection()`"
-msgstr ""
+msgstr ":method:`db.createCollection()`"
 
 # 51c20619fdd24ff0bc0878edabd38c2b
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.createView()`"
-msgstr ""
+msgstr ":method:`db.createView()`"
 
 # 8d48836d4b07460ca81b790143047d7d
 #: ../source/includes/extracts/collation-operations-table.rst:12
 msgid ":dbcommand:`createIndexes`"
-msgstr ""
+msgstr ":dbcommand:`createIndexes`"
 
 # d769c970e03943b4a3c1869e3ec57573
 #: ../source/includes/extracts/collation-operations-table.rst:13
 msgid ":method:`db.collection.createIndex()`"
-msgstr ""
+msgstr ":method:`db.collection.createIndex()`"
 
 # 28ed6527377d4047920c00efe2183187
 # f7a9f0bfe0954f49a5d1b4360937d3e5
 #: ../source/includes/extracts/collation-operations-table.rst:15
 #: ../source/includes/fact-diagnostic-info.rst:6
 msgid ":dbcommand:`aggregate`"
-msgstr ""
+msgstr ":dbcommand:`aggregate`"
 
 # 3b1bbddfa751466abf29e8d625951ecc
 #: ../source/includes/extracts/collation-operations-table.rst:16
 msgid ":method:`db.collection.aggregate()`"
-msgstr ""
+msgstr ":dbcommand:`aggregate`"
 
 # a3540129cf144cf9b42dd5dfb29fe42d
 # 7106bc3751af4a41bfacea224122604c
 #: ../source/includes/extracts/collation-operations-table.rst:18
 #: ../source/includes/fact-diagnostic-info.rst:9
 msgid ":dbcommand:`distinct`"
-msgstr ""
+msgstr ":dbcommand:`distinct`"
 
 # f2c6cb652b9b4a1a8c3229edf9e7089f
 #: ../source/includes/extracts/collation-operations-table.rst:19
 msgid ":method:`db.collection.distinct()`"
-msgstr ""
+msgstr ":method:`db.collection.distinct()`"
 
 # 3f34a9667849449eb645e853bb147fbb
 # a30f4d478c2b4e08a0bcb5a87a61df9f
 #: ../source/includes/extracts/collation-operations-table.rst:21
 #: ../source/includes/fact-diagnostic-info.rst:12
 msgid ":dbcommand:`findAndModify`"
-msgstr ""
+msgstr ":dbcommand:`findAndModify`"
 
 # ad59658af2b14344b061580242452c70
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.findAndModify()`"
-msgstr ""
+msgstr ":method:`db.collection.findAndModify()`"
 
 # d3b2e72c46d14474808bdf71621d820c
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.findOneAndDelete()`"
-msgstr ""
+msgstr ":method:`db.collection.findOneAndDelete()`"
 
 # 548c43f5adb749c4b0965fc390a64b0f
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.findOneAndReplace()`"
-msgstr ""
+msgstr ":method:`db.collection.findOneAndDelete()`"
 
 # 6e90279c67fc463784e2bf73d772d7a0
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.findOneAndUpdate()`"
-msgstr ""
+msgstr ":method:`db.collection.findOneAndUpdate()`"
 
 # 4bd1a6cbc49547a386aa66f5349e4060
 #: ../source/includes/extracts/collation-operations-table.rst:27
 msgid ":dbcommand:`find`"
-msgstr ""
+msgstr ":dbcommand:`find`"
 
 # 8c8eb85cac3b47dbb11abe98292ec8e4
 #: ../source/includes/extracts/collation-operations-table.rst:29
 msgid ""
-":method:`cursor.collation()` to specify collation for "
-":method:`db.collection.find()`"
+":method:`cursor.collation()` to specify collation for :method:`db.collection."
+"find()`"
 msgstr ""
+":method:`cursor.collation()`  用于指明 :method:`db.collection.find()`  的校对"
 
 # b91acbefef854264861e207780d992dd
 # f32f854c440041e69c28f577fca64e3c
 #: ../source/includes/extracts/collation-operations-table.rst:32
 #: ../source/includes/fact-diagnostic-info.rst:18
 msgid ":dbcommand:`mapReduce`"
-msgstr ""
+msgstr ":dbcommand:`mapReduce`"
 
 # 4e70f49fe92a4a59a4b1b6bcd8e59924
 #: ../source/includes/extracts/collation-operations-table.rst:34
 msgid ":method:`db.collection.mapReduce()`"
-msgstr ""
+msgstr ":method:`db.collection.mapReduce()`"
 
 # 2b7755800bb240faa4deee1cfabad544
 # 74b53a9203214410ad74260303f2490e
 #: ../source/includes/extracts/collation-operations-table.rst:36
 #: ../source/includes/fact-diagnostic-info.rst:8
 msgid ":dbcommand:`delete`"
-msgstr ""
+msgstr ":dbcommand:`delete`"
 
 # 23ec2c2d7d7b4d5a8b489e8eee4385cd
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.deleteOne()`"
-msgstr ""
+msgstr ":method:`db.collection.deleteOne()`"
 
 # 64ef41a5a3b84cdcb02f998557770a89
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.deleteMany()`"
-msgstr ""
+msgstr ":method:`db.collection.deleteMany()`"
 
 # 89050f356d2f4f14bce0687a3dbfe536
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.remove()`"
-msgstr ""
+msgstr ":method:`db.collection.remove()`"
 
 # 5442d888771741c580c901451cdeab6f
 # 40d547c93b1e4b40b7e3a62c812abf16
 #: ../source/includes/extracts/collation-operations-table.rst:41
 #: ../source/includes/fact-diagnostic-info.rst:19
 msgid ":dbcommand:`update`"
-msgstr ""
+msgstr ":dbcommand:`update`"
 
 # 85714276c7fe4b008c61b6e26216501f
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.update()`"
-msgstr ""
+msgstr ":method:`db.collection.update()`"
 
 # 583bc66f3d9640649e885d7f159a660f
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.updateOne()`,"
-msgstr ""
+msgstr ":method:`db.collection.updateOne()`,"
 
 # 3894dba86b25438eb0b6771096ca7804
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.updateMany()`,"
-msgstr ""
+msgstr ":method:`db.collection.updateMany()`,"
 
 # ac2ac14110264ba182f3afe0e15e354c
 #: ../source/release-notes/3.4.txt
 msgid ":method:`db.collection.replaceOne()`"
-msgstr ""
+msgstr ":method:`db.collection.replaceOne()`"
 
 # 18d9b0105b514f8ea28e11fd99fa96a8
 #: ../source/includes/extracts/collation-operations-table.rst:50
 msgid ""
-"Individual update, replace, and delete operations in "
-":method:`db.collection.bulkWrite()`."
+"Individual update, replace, and delete operations in :method:`db.collection."
+"bulkWrite()`."
 msgstr ""
+"单个的更新、替换以及删除  :method:`db.collection.bulkWrite()` 中的操作。"
 
 # 438cc0befee947dab9d1eb8bd3cf176e
 #: ../source/release-notes/3.4.txt:571
 msgid "For details, see :doc:`Collation </reference/collation>`."
-msgstr ""
+msgstr "请查阅  :doc:`Collation </reference/collation>` 了解更多细节。"
 
 # a9d46af0397d4e41bc0a2a6701998c6d
 #: ../source/release-notes/3.4.txt:576
 msgid "Views"
-msgstr ""
+msgstr "视图"
 
 # dd392ab50828466fb754fdbf0bd0873a
 #: ../source/release-notes/3.4.txt:578
@@ -1156,52 +1282,56 @@ msgid ""
 "collections or other views. To specify or define a view, MongoDB 3.4 "
 "introduces:"
 msgstr ""
+"MongoDB 3.4 增加了对现有集合或其它视图创建只读视图的支持。为了指定或定义一个视"
+"图，MongoDB 3.4 引入了："
 
 # 273358c0fc444e2da08814b9f998716f
 #: ../source/release-notes/3.4.txt:582
 msgid ""
-"the ``viewOn`` and ``pipeline`` options to the existing "
-":dbcommand:`create` command:"
+"the ``viewOn`` and ``pipeline`` options to the existing :dbcommand:`create` "
+"command:"
 msgstr ""
+"向现有的  :dbcommand:`create`  命令 增加 ``viewOn``  及  ``pipeline``  选项："
 
 # 0edd26a95328472e9b0b95acf458034e
 #: ../source/release-notes/3.4.txt:589
 msgid ""
-"or if specifying a default :ref:`collation <3.4-relnotes-collation>` for "
-"the view:"
-msgstr ""
+"or if specifying a default :ref:`collation <3.4-relnotes-collation>` for the "
+"view:"
+msgstr "或者指定视图的一个默认的 :ref:`collation <3.4-relnotes-collation>` ："
 
 # 0e5be930fc334646987bb0c19f374331
 #: ../source/release-notes/3.4.txt:595
 msgid ""
-"and a corresponding :program:`mongo` shell helper "
-":method:`db.createView()`:"
-msgstr ""
+"and a corresponding :program:`mongo` shell helper :method:`db.createView()`:"
+msgstr "和一个对应的  :program:`mongo` shell帮助  :method:`db.createView()` ："
 
 # 2bddc2240e1f45c1905288f22701327b
 #: ../source/release-notes/3.4.txt:602
 msgid "For more information on creating views, see :ref:`3.4-reference-views`."
-msgstr ""
+msgstr "请查阅   :ref:`3.4-reference-views` 了解关于创建视图的更多信息。"
 
 # 09a5bf6f9aa84d5aa1ffeacbf318c245
 #: ../source/release-notes/3.4.txt:605
 msgid "Security Enhancement"
-msgstr ""
+msgstr "安全性提高"
 
 # 8a2b20250ebe4e7bace969a666b1e6a7
 #: ../source/release-notes/3.4.txt:608
 msgid "Transition to Auth"
-msgstr ""
+msgstr "转换到授权"
 
 # a721a1c0c3ba442e8510dd342ccf2f35
 #: ../source/release-notes/3.4.txt:610
 msgid ""
-"MongoDB 3.4 adds support for rolling transition to internal "
-"authentication for replica sets and sharded clusters. For details, see "
-":setting:`security.transitionToAuth` setting and "
-":option:`--transitionToAuth` command line option for :program:`mongod` "
-"and:program:`mongos`."
+"MongoDB 3.4 adds support for rolling transition to internal authentication "
+"for replica sets and sharded clusters. For details, see :setting:`security."
+"transitionToAuth` setting and :option:`--transitionToAuth` command line "
+"option for :program:`mongod` and:program:`mongos`."
 msgstr ""
+"MongoDB 3.4 增加了复制集和分片集群滚动转换到内部认证的支持。 查阅  :setting:"
+"`security.transitionToAuth`  配置和  :program:`mongod` 及 :program:`mongos`  "
+"中命令行选项 :option:`--transitionToAuth` 的更多细节。"
 
 # 776372f311884702bfe843a9b0f45112
 #: ../source/release-notes/3.4.txt:616
@@ -1209,306 +1339,351 @@ msgid ""
 ":doc:`/tutorial/enforce-keyfile-access-control-in-existing-replica-set-"
 "without-downtime`"
 msgstr ""
+":doc:`/tutorial/enforce-keyfile-access-control-in-existing-replica-set-"
+"without-downtime`"
 
 # 66c71875fee546c1886e2337d0fe067c
 #: ../source/release-notes/3.4.txt:619
 msgid "MongoDB Tools"
-msgstr ""
+msgstr "MongoDB工具"
 
 # c12bbaa8aa93462a8fa6a959149e2f0c
 #: ../source/release-notes/3.4.txt:622
 msgid "``mongoreplay``"
-msgstr ""
+msgstr "``mongoreplay``"
 
 # 480fff128d7244a08d1260ecd6c7aee2
 #: ../source/release-notes/3.4.txt:624
 msgid ""
-"MongoDB introduces :program:`mongoreplay`, a workload capture and "
-"analysis tool that replaces :program:`mongosniff`. You can use "
-":program:`mongoreplay` to inspect and record commands sent to a MongoDB "
-"instance, and then replay the commands back onto another host at a later "
-"time."
+"MongoDB introduces :program:`mongoreplay`, a workload capture and analysis "
+"tool that replaces :program:`mongosniff`. You can use :program:`mongoreplay` "
+"to inspect and record commands sent to a MongoDB instance, and then replay "
+"the commands back onto another host at a later time."
 msgstr ""
+"MongoDB引入了  :program:`mongoreplay` ，一个替代  :program:`mongosniff` 的工作"
+"负载获取和分析工具。 你可以使用  :program:`mongoreplay`  来检查和记录发送到"
+"MongoDB实例的命令，然后过一段时间之后将命令重放发送到另外一个主机上。"
 
 # ce74ce4ac64b47f2bdae4a9aaa8a9f23
 #: ../source/release-notes/3.4.txt:631
 msgid "General Enhancements"
-msgstr ""
+msgstr "一般改进"
 
 # 34a8b9defb3f44b799a3c3e4fc3d7f4e
 #: ../source/release-notes/3.4.txt:633
 msgid "MongoDB 3.4 includes the following enhancements:"
-msgstr ""
+msgstr "MongoDB 3.4 包括下列改进："
 
 # 739009a25cfc4ac3b15b65ae76a175f2
 #: ../source/release-notes/3.4.txt:635
 msgid "Added ``systemd`` support in distributions."
-msgstr ""
+msgstr "在分布中增加了 ``systemd``  支持。"
 
 # 932c9b37053a4270b080b4078e8e005c
 #: ../source/release-notes/3.4.txt:637
 msgid ""
-"Increased :parameter:`diagnosticDataCollectionDirectorySizeMB` default "
-"size to 200 megabytes from 100 megabytes."
+"Increased :parameter:`diagnosticDataCollectionDirectorySizeMB` default size "
+"to 200 megabytes from 100 megabytes."
 msgstr ""
+"将  :parameter:`diagnosticDataCollectionDirectorySizeMB` 默认大小从 100 "
+"megabytes 提高到了 200 megabytes。"
 
 # 13e4d40c9e6347168d7b49964f6644bd
 #: ../source/release-notes/3.4.txt:640
 msgid ""
-"Decreased the lower bound and the default setting of the "
-":option:`WiredTiger internal cache <--wiredTigerCacheSizeGB>`. Both the "
-":option:`WiredTiger Storage Engine internal cache "
-"<--wiredTigerCacheSizeGB>` and the :option:`inMemory Storage Engine "
-"maximum memory size <--inMemorySizeGB>` can accept floating-point values."
+"Decreased the lower bound and the default setting of the :option:`WiredTiger "
+"internal cache <--wiredTigerCacheSizeGB>`. Both the :option:`WiredTiger "
+"Storage Engine internal cache <--wiredTigerCacheSizeGB>` and the :option:"
+"`inMemory Storage Engine maximum memory size <--inMemorySizeGB>` can accept "
+"floating-point values."
 msgstr ""
+"降低了 :option:`WiredTiger internal cache <--wiredTigerCacheSizeGB>` 的默认设"
+"置及下界。 :option:`WiredTiger Storage Engine internal cache <--"
+"wiredTigerCacheSizeGB>`  和  :option:`inMemory Storage Engine maximum memory "
+"size <--inMemorySizeGB>`  都可以接受浮点值。"
 
 # cf8549ee595e416395f4c79185e41cc7
 #: ../source/release-notes/3.4.txt:646
 msgid ""
-":method:`~db.collection.find()`, :method:`~db.collection.aggregate()`, "
-":dbcommand:`listIndexes`, and :dbcommand:`listCollections` operations "
-"return a :ref:`maximum of 16 megabytes per batch <cursor-batches>`."
+":method:`~db.collection.find()`, :method:`~db.collection.aggregate()`, :"
+"dbcommand:`listIndexes`, and :dbcommand:`listCollections` operations return "
+"a :ref:`maximum of 16 megabytes per batch <cursor-batches>`."
 msgstr ""
+":method:`~db.collection.find()` ，  :method:`~db.collection.aggregate()` ，  :"
+"dbcommand:`listIndexes` ， 以及 :dbcommand:`listCollections`  操作返回 :ref:"
+"`maximum of 16 megabytes per batch <cursor-batches>` 。"
 
 # 8f6adcb915bd453dbd5c793812034f94
 #: ../source/includes/fact-diagnostic-info.rst:1
 msgid ""
-":method:`db.currentOp()` and the :doc:`database profiler</reference"
-"/database-profiler>` report the same basic diagnostic information for all"
-" CRUD operations, including the following."
+":method:`db.currentOp()` and the :doc:`database profiler</reference/database-"
+"profiler>` report the same basic diagnostic information for all CRUD "
+"operations, including the following."
 msgstr ""
+":method:`db.currentOp()`  以及 :doc:`database profiler</reference/database-"
+"profiler>`  记录了所有CRUD操作相同的基本诊断信息，包括以下内容。"
 
 # 64b013bdc4dd4f27b4f2b198aae4bd2b
 #: ../source/includes/fact-diagnostic-info.rst:7
 msgid ":dbcommand:`count`"
-msgstr ""
+msgstr ":dbcommand:`count`"
 
 # d27b99c295a3458db0d58da3e07f1275
 #: ../source/includes/fact-diagnostic-info.rst:10
 msgid "``find`` (:ref:`OP_QUERY<wire-op-query>` and :dbcommand:`command<find>`)"
 msgstr ""
+"``find``  （ :ref:`OP_QUERY<wire-op-query>`  以及  :dbcommand:"
+"`command<find>` ）"
 
 # 720219ea5fbd4e1d8511d9f05ade53ca
 #: ../source/includes/fact-diagnostic-info.rst:13
 msgid ":dbcommand:`geoNear`"
-msgstr ""
+msgstr ":dbcommand:`geoNear`"
 
 # 803662a6fa4640bfa6a2aa96f885ce15
 #: ../source/includes/fact-diagnostic-info.rst:14
 msgid ""
-"``getMore`` (:ref:`OP_GET_MORE<wire-op-query>` and "
-":dbcommand:`command<getMore>`)"
+"``getMore`` (:ref:`OP_GET_MORE<wire-op-query>` and :dbcommand:"
+"`command<getMore>`)"
 msgstr ""
+"``getMore``  （ :ref:`OP_GET_MORE<wire-op-query>`  以及  :dbcommand:"
+"`command<getMore>` ）"
 
 # 47ef4a4e34c441fe88e4b1331d321d86
 #: ../source/includes/fact-diagnostic-info.rst:16
 msgid ":dbcommand:`group`"
-msgstr ""
+msgstr ":dbcommand:`group`"
 
 # 8bb60b378d2f48db993eaed363a3fc3f
 #: ../source/includes/fact-diagnostic-info.rst:17
 msgid ":dbcommand:`insert`"
-msgstr ""
+msgstr ":dbcommand:`group`"
 
 # bc9be038567e48eba39e5eded6e71e57
 #: ../source/includes/fact-diagnostic-info.rst:21
 msgid ""
-"These operations are also included in the logging of slow queries (see "
-":setting:`~operationProfiling.slowOpThresholdMs` for more information "
-"about slow query logging)."
+"These operations are also included in the logging of slow queries (see :"
+"setting:`~operationProfiling.slowOpThresholdMs` for more information about "
+"slow query logging)."
 msgstr ""
+"这些操作也包括在慢查询的日志中（查阅  :setting:`~operationProfiling."
+"slowOpThresholdMs` 了解关于慢查询日志的更多信息）。"
 
 # d28079c456a444dc96e019190427a746
 #: ../source/release-notes/3.4.txt:653
 msgid ""
-":program:`mongo` shell adds support for marshalling fields of type "
-":ref:`javascript<bson-types>` and :ref:`javascriptWithScope<bson-types>` "
-"to JavaScript functions. See :option:`--disableJavaScriptProtection`."
+":program:`mongo` shell adds support for marshalling fields of type :ref:"
+"`javascript<bson-types>` and :ref:`javascriptWithScope<bson-types>` to "
+"JavaScript functions. See :option:`--disableJavaScriptProtection`."
 msgstr ""
+":program:`mongo` shell  增加了对类型 :ref:`javascript<bson-types>` 和  :ref:"
+"`javascriptWithScope<bson-types>`  解组字段到JavaScript函数的支持。 查阅  :"
+"option:`--disableJavaScriptProtection` 。"
 
 # 1f107abede5a4c78b3fbb252f14bae89
 #: ../source/release-notes/3.4.txt:658
 msgid ""
 "Added support for system certificates. If a :program:`mongod` instance "
-"presents a certificate signed with a CA trusted by the operating system, "
-"the :program:`mongo` shell will connect without any errors. Previously, "
-"the :program:`mongo` shell exited with an error that it could not "
-"validate the certificate."
+"presents a certificate signed with a CA trusted by the operating system, the :"
+"program:`mongo` shell will connect without any errors. Previously, the :"
+"program:`mongo` shell exited with an error that it could not validate the "
+"certificate."
 msgstr ""
+"增加了对系统认证的支持。 如果 一个  :program:`mongod` 实例有一个操作系统信任的"
+"CA认证，  :program:`mongo`  shell将会不报错地连接。之前，  :program:`mongo`  "
+"shell将会因为一个不能验证认证的错误而退出。"
 
 # 5ab436a39118454c9cd3ee0e053b3faf
 #: ../source/release-notes/3.4.txt:665
 msgid "Platform Support"
-msgstr ""
+msgstr "平台支持"
 
 # a2caad36d44a4468b9032eaff0888b4f
 #: ../source/release-notes/3.4.txt:667
 msgid ""
-"MongoDB 3.4 introduces support for ARM64, PPC64LE, and s390x "
-"architectures. See :ref:`prod-notes-supported-platforms` to see the full "
-"platform support matrix."
+"MongoDB 3.4 introduces support for ARM64, PPC64LE, and s390x architectures. "
+"See :ref:`prod-notes-supported-platforms` to see the full platform support "
+"matrix."
 msgstr ""
+"MongoDB 3.4 引入了对 ARM64， PPC64LE， 以及 s390x 架构的支持。 查阅  :ref:"
+"`prod-notes-supported-platforms`  查阅完成的平台支持矩阵。"
 
 # a997915453264930a05d429181be35ac
 #: ../source/includes/admonition-power-ubuntu-restriction.rst:7
 msgid "3.4 Incompatibility with Ubuntu 16.04 on IBM Power Systems"
-msgstr ""
+msgstr "3.4 与IBM Power系统上的Ubuntu16.04 不兼容"
 
 # 75ad7de0e2224911813de3de23b2970e
 #: ../source/includes/admonition-power-ubuntu-restriction.rst:4
 msgid ""
-"Due to a `lock elision bug in glibc "
-"<https://bugs.launchpad.net/ubuntu/+source/glibc/+bug/1640518>`_, if you "
-"are running on Ubuntu 16.04 on IBM Power Systems, do not use MongoDB 3.4 "
-"in production until the ``glibc`` version with the fix becomes available "
-"and you have installed that version."
+"Due to a `lock elision bug in glibc <https://bugs.launchpad.net/ubuntu/"
+"+source/glibc/+bug/1640518>`_, if you are running on Ubuntu 16.04 on IBM "
+"Power Systems, do not use MongoDB 3.4 in production until the ``glibc`` "
+"version with the fix becomes available and you have installed that version."
 msgstr ""
+"由于  `lock elision bug in glibc <https://bugs.launchpad.net/ubuntu/+source/"
+"glibc/+bug/1640518>`_ ， 如果系统运行在IBMPower系统的Ubuntu16.04上，在 "
+"``glibc`` 版本修复可用并且安装了对应的版本之前，请不要在生产系统中使用"
+"MongoDB3.4."
 
 # 80a8d0ea8bc046fe8ca0cd5528407e44
 #: ../source/release-notes/3.4.txt:674
 msgid "MongoDB Enterprise Features"
-msgstr ""
+msgstr "MongoDB企业版功能"
 
 # a5b439cbc58f4327b65ae0ebabba66e4
 #: ../source/release-notes/3.4.txt:677
 msgid "Log Redaction"
-msgstr ""
+msgstr "日志编校"
 
 # 4e25df485457456a8c2a0512edea67b7
 #: ../source/release-notes/3.4.txt:679
 msgid ""
-"MongoDB Enterprise adds support for log redaction for use in conjunction "
-"with MongoDB's :doc:`encrypted storage engine </core/security-encryption-"
-"at-rest>`. Log redaction prevents potentially sensitive information from "
-"being written to the diagnostic log; however, diagnostics on redacted "
-"logs may be more difficult due to the lack of data related to a log "
-"event."
+"MongoDB Enterprise adds support for log redaction for use in conjunction with "
+"MongoDB's :doc:`encrypted storage engine </core/security-encryption-at-"
+"rest>`. Log redaction prevents potentially sensitive information from being "
+"written to the diagnostic log; however, diagnostics on redacted logs may be "
+"more difficult due to the lack of data related to a log event."
 msgstr ""
+"MongoDB 企业版增加了 MongoDB的  :doc:`encrypted storage engine </core/"
+"security-encryption-at-rest>` 与日志编校同时使用的支持。 日志编校防止了敏感信"
+"息被写入到诊断日志中的潜在可能性。然而，由于日志事件相关数据的缺失，在编校日志"
+"上的诊断将会变得更加困难。"
 
 # 6da3e8bf2ec44502b1d7e2eb68467506
 #: ../source/release-notes/3.4.txt:686
 msgid ""
 "To enable log redaction, see the :setting:`security.redactClientLogData` "
-"setting and the :option:`--redactClientLogData` option for "
-":program:`mongod`."
+"setting and the :option:`--redactClientLogData` option for :program:`mongod`."
 msgstr ""
+"为了开启日志编校，请查阅   :program:`mongod` 中 的 :setting:`security."
+"redactClientLogData`  设置和  :option:`--redactClientLogData` 选项。"
 
 # 436290e02d0e4a09b4f8199423c966ec
 #: ../source/release-notes/3.4.txt:691
 msgid "LDAP Enhancements"
-msgstr ""
+msgstr "LDAP 增强"
 
 # 16f22c204fb5401fb6cc0b2d34f7045b
 #: ../source/release-notes/3.4.txt:694
 msgid "LDAP Authorization"
-msgstr ""
+msgstr "LDAP 认证"
 
 # beff218141fc4b99a521eb6a54e93c66
 #: ../source/release-notes/3.4.txt:696
 msgid ""
-"MongoDB Enterprise supports the use of :doc:`Lightweight Directory Access"
-" Protocol (LDAP) service to authorize (i.e. determine access) </core"
-"/security-ldap-external>` a user authenticated via one of the following "
-"authentication mechanism:"
+"MongoDB Enterprise supports the use of :doc:`Lightweight Directory Access "
+"Protocol (LDAP) service to authorize (i.e. determine access) </core/security-"
+"ldap-external>` a user authenticated via one of the following authentication "
+"mechanism:"
 msgstr ""
+"MongoDB 企业版支持 :doc:`Lightweight Directory Access Protocol (LDAP) service "
+"to authorize (i.e. determine access) </core/security-ldap-external>`  的使用，"
+"可以通过以下的认证机制之一对用户进行认证："
 
 # 035f1e0f64b7410a8c82af4530856e53
 #: ../source/release-notes/3.4.txt:701
 msgid ""
-":doc:`/core/security-ldap`. For a tutorial on using both LDAP "
-"Authentication and Authorization, see :doc:`/tutorial/authenticate-"
-"nativeldap-activedirectory`."
+":doc:`/core/security-ldap`. For a tutorial on using both LDAP Authentication "
+"and Authorization, see :doc:`/tutorial/authenticate-nativeldap-"
+"activedirectory`."
 msgstr ""
+":doc:`/core/security-ldap` 。查阅 :doc:`/tutorial/authenticate-nativeldap-"
+"activedirectory` 了解同时使用LDAP认证和授权的指南。"
 
 # e9b2f9202e6f4870b68fc7763e850870
 #: ../source/release-notes/3.4.txt:705
 msgid ""
-":doc:`/core/kerberos`. For a tutorial on using Kerberos authentication "
-"and Active Directory, see :doc:`/tutorial/kerberos-auth-activedirectory-"
-"authz`."
+":doc:`/core/kerberos`. For a tutorial on using Kerberos authentication and "
+"Active Directory, see :doc:`/tutorial/kerberos-auth-activedirectory-authz`."
 msgstr ""
+":doc:`/core/kerberos` 。查阅  :doc:`/tutorial/kerberos-auth-activedirectory-"
+"authz` 了解使用Kerberos 认证和自动目录的指南。"
 
 # d951d85b2497448a9768322d4be37232
 #: ../source/release-notes/3.4.txt:709
 msgid ":doc:`/core/security-x.509`."
-msgstr ""
+msgstr ":doc:`/core/security-x.509` 。"
 
 # 278427f2aeef407497c63505d2e332b1
 #: ../source/release-notes/3.4.txt:711
 msgid "For more information, see :doc:`/core/security-ldap-external`."
-msgstr ""
+msgstr "查阅 :doc:`/core/security-ldap-external` 了解更多信息。"
 
 # 36f03f665d2044419a844a3d4bf848ad
 #: ../source/release-notes/3.4.txt:714
 msgid "``mongoldap``"
-msgstr ""
+msgstr "``mongoldap``"
 
 # 6ae1b385f0eb49239b6a120f08c72101
 #: ../source/release-notes/3.4.txt:716
 msgid ""
-"MongoDB Enterprise provides a new tool :program:`mongoldap` for testing "
-"your MongoDB :ref:`LDAP configuration options <security.ldap.options>` "
-"against a running LDAP server or set of servers. When configuring options"
-" related to :ref:`LDAP authentication <security-ldap>`, you can use "
-":program:`mongoldap` to ensure that the authentication operation works as"
-" expected."
+"MongoDB Enterprise provides a new tool :program:`mongoldap` for testing your "
+"MongoDB :ref:`LDAP configuration options <security.ldap.options>` against a "
+"running LDAP server or set of servers. When configuring options related to :"
+"ref:`LDAP authentication <security-ldap>`, you can use :program:`mongoldap` "
+"to ensure that the authentication operation works as expected."
 msgstr ""
+"MongoDB企业版提供了一个新工具 :program:`mongoldap` 用于测试您的MongoDB  :ref:"
+"`LDAP configuration options <security.ldap.options>`  运行在一个运行的LDAP服务"
+"器或一系列服务器上。当配置 `LDAP authentication <security-ldap>` 相关的选项"
+"时，你可以使用  :program:`mongoldap`  保证认证操作正常进行。"
 
 # ac86d81b4b954f9ba705c494c38b36a5
 #: ../source/release-notes/3.4.txt:724
 msgid "Bind via OS Libraries"
-msgstr ""
+msgstr "通过操作系统库绑定"
 
 # 7b50274bffe94126bdbc2d3c25e4ad24
 #: ../source/release-notes/3.4.txt:726
 msgid ""
-"MongoDB 3.4 supports :doc:`binding to an LDAP server </core/security-"
-"ldap>` via operating system libraries. This allows Linux and Windows "
-"MongoDB 3.4 servers to use an LDAP server for authentication."
+"MongoDB 3.4 supports :doc:`binding to an LDAP server </core/security-ldap>` "
+"via operating system libraries. This allows Linux and Windows MongoDB 3.4 "
+"servers to use an LDAP server for authentication."
 msgstr ""
+"MongoDB 3.4  支持通过操作系统库 :doc:`binding to an LDAP server </core/"
+"security-ldap>` 。这就允许 Linux和Windows的MongoDB 3.4服务器使用LDAP用于认证。"
 
 # 046293ad7dab4a288c12d4d63bae0211
 #: ../source/release-notes/3.4.txt:731
 msgid ""
-"Linux MongoDB deployments continue to support binding via `saslauthd "
-"<http://www.linuxcommand.org/man_pages/saslauthd8.html>`_."
+"Linux MongoDB deployments continue to support binding via `saslauthd <http://"
+"www.linuxcommand.org/man_pages/saslauthd8.html>`_."
 msgstr ""
+"Linux  MongoDB部署仍然支持通过 `saslauthd <http://www.linuxcommand.org/"
+"man_pages/saslauthd8.html>`_ 绑定。"
 
 # bc889dc9abba407cb5782442e8a74f32
 #: ../source/release-notes/3.4.txt:735
 msgid "Changes Affecting Compatibility"
-msgstr ""
+msgstr "影响兼容性的修改"
 
 # fc10eb1f9f9148bc8d1c576613d2106a
 #: ../source/release-notes/3.4.txt:737
 msgid ""
-"Some changes can affect compatibility and may require user actions. For a"
-" detailed list of compatibility changes, see :doc:`/release-"
-"notes/3.4-compatibility`."
+"Some changes can affect compatibility and may require user actions. For a "
+"detailed list of compatibility changes, see :doc:`/release-notes/3.4-"
+"compatibility`."
 msgstr ""
+"一些修改可能会影响兼容性，需要用户操作。查阅  :doc:`/release-notes/3.4-"
+"compatibility` 了解兼容性改变的详细列表。"
 
 # eed96353570d4be4bfb7e7921bf7000f
 #: ../source/release-notes/3.4.txt:750
 msgid "Upgrade Procedures"
-msgstr ""
+msgstr "升级流程"
 
 # 6c14732ef61d4a8c8211eba3f0a69544
 #: ../source/release-notes/3.4.txt:752
 msgid ":doc:`/release-notes/3.4-upgrade-standalone`."
-msgstr ""
+msgstr ":doc:`/release-notes/3.4-upgrade-standalone` 。"
 
 # 48e3dc50287c41b0a053499c7aa0955b
 #: ../source/release-notes/3.4.txt:754
 msgid ":doc:`/release-notes/3.4-upgrade-replica-set`."
-msgstr ""
+msgstr ":doc:`/release-notes/3.4-upgrade-sharded-cluster` 。"
 
 # 267d1090239e490cb4dc8f87743ccc75
 #: ../source/release-notes/3.4.txt:756
 msgid ":doc:`/release-notes/3.4-upgrade-sharded-cluster`."
-msgstr ""
-
-# a8a01897e6b14bde91d8c2f8fdb08f70
-#: ../source/release-notes/3.4.txt:758
-msgid ""
-"If you need guidance on upgrading to 3.4, `MongoDB offers major version "
-"upgrade services <https://www.m
+msgstr ":doc:`/release-notes/3.4-upgrade-sharded-cluster` 。"
