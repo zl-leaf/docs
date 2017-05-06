@@ -151,7 +151,7 @@ msgstr ""
 # c906836b0632404f986eca215888f743
 #: ../source/indexes.txt:105
 msgid "Compound Index"
-msgstr ""
+msgstr "复合索引"
 
 # 5bac19e2cf5b402884fa702167706e86
 #: ../source/indexes.txt:107
