@@ -106,7 +106,7 @@ msgstr ""
 # a4262046f05a40c485aeed8b61cdad44
 #: ../source/indexes.txt:76
 msgid "MongoDB indexes use a B-tree data structure."
-msgstr ""
+msgstr "MongoDB 索引使用一个B树数据结构。"
 
 # c02e2a29a81d45c3b791d05b21b34506
 #: ../source/indexes.txt:81
