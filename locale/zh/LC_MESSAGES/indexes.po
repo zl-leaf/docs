@@ -147,6 +147,8 @@ msgid ""
 "See :doc:`/core/index-single` and :ref:`sort-results-single-field` for "
 "more information on single-field indexes."
 msgstr ""
+"查阅 :doc:`/core/index-single` and :ref:`sort-results-single-field` 了解更多关于"
+"单字段索引的信息。"
 
 # c906836b0632404f986eca215888f743
 #: ../source/indexes.txt:105
