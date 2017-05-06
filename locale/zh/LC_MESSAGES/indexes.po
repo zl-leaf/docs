@@ -111,7 +111,7 @@ msgstr ""
 # c02e2a29a81d45c3b791d05b21b34506
 #: ../source/indexes.txt:81
 msgid "Index Types"
-msgstr ""
+msgstr "索引类型"
 
 # 98d0f8060079410a839ff6caeca2099f
 #: ../source/indexes.txt:83
