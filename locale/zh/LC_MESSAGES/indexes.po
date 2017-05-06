@@ -15,12 +15,12 @@ msgstr ""
 # 3d793a3b9f6d49b6ad04ec369b44bcf6
 #: ../source/indexes.txt:5
 msgid "Indexes"
-msgstr ""
+msgstr "索引"
 
 # 3da327c399ae409f8f6cfec4aab5a4cc
 #: ../source/indexes.txt
 msgid "On this page"
-msgstr ""
+msgstr "本页内容"
 
 # ec53dfac939e4076a064f8048050e967
 #: ../source/indexes.txt:15
