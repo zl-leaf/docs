@@ -62,7 +62,7 @@ msgstr ""
 # b0cc6491c5334734a985b6a0d208166a
 #: ../source/indexes.txt:47
 msgid "Default ``_id`` Index"
-msgstr ""
+msgstr "默认 ``_id``  索引"
 
 # 4dc969b1d4264bdebaeb7188b22d7d0b
 #: ../source/indexes.txt:49
@@ -87,7 +87,7 @@ msgstr ""
 # 4afe143251994f6a85e6300e54d32952
 #: ../source/indexes.txt:64
 msgid "Create an Index"
-msgstr ""
+msgstr "创建一个索引"
 
 # 37b1f4124697426e80fe6a537eebd8c7
 #: ../source/indexes.txt:66
