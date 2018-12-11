@@ -122,7 +122,7 @@ msgid ""
 "see :ref:`replica-set-troubleshooting-check-connection`."
 msgstr ""
 "在初始化复制集之前，我们应该检测我们的网络配置，保证各节点之间通讯正常。为了"
-"成功的完成复制集的部署，每个节点都必须能够与其他节点进行功勋。关于如何确认各"
+"成功的完成复制集的部署，每个节点都必须能够与其他节点进行通讯。关于如何确认各"
 "个节点之间的通讯情况，请参见 :ref:`replica-set-troubleshooting-check-"
 "connection` 。"
 
